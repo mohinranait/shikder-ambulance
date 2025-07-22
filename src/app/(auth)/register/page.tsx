@@ -6,7 +6,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/shared/header";
-import { Footer } from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -31,6 +30,7 @@ import {
   Phone,
 } from "lucide-react";
 import Image from "next/image";
+import FooterComponent from "@/components/shared/footer";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -368,7 +368,7 @@ export default function RegisterPage() {
         </div>
       </main>
 
-      <Footer />
+      <FooterComponent />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import { Header } from "@/components/shared/header";
-import { Footer } from "@/components/shared/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Clock, Award, Shield } from "lucide-react";

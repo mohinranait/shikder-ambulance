@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default function Footer() {
+const FooterComponent = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
@@ -249,4 +249,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default FooterComponent;

@@ -6,7 +6,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Header } from "@/components/shared/header";
-import { Footer } from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -25,6 +24,7 @@ import Image from "next/image";
 import { toast } from "sonner";
 import { loginUser } from "@/actions/userApi";
 import { useAuth } from "@/providers/AuthProvider";
+import FooterComponent from "@/components/shared/footer";
 
 export default function LoginPage() {
   const { user, setUser } = useAuth();
@@ -240,7 +240,7 @@ export default function LoginPage() {
         </div>
       </main>
 
-      <Footer />
+      <FooterComponent />
     </div>
   );
 }
