@@ -25,6 +25,8 @@ export function BlogTeasers() {
     })();
   }, []);
 
+  console.log({ blogs });
+
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +48,7 @@ export function BlogTeasers() {
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src={blog.image?.thumbnail || "/placeholder.svg"}
+                  src={blog.image?.featuresImage || "/placeholder.svg"}
                   alt={blog.postTitle}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -72,7 +74,7 @@ export function BlogTeasers() {
                 <Link href={`/${blog.slug}`}>
                   <Button
                     variant="ghost"
-                    className="p-0 h-auto font-semibold text-blue-600 hover:text-blue-700 group"
+                    className=" h-auto font-semibold text-blue-600 hover:text-white hover:bg-blue-600 group"
                   >
                     Read More
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
