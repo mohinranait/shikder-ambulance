@@ -1,21 +1,10 @@
-"use client";
-
 import type React from "react";
 
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+
 import { Badge } from "@/components/ui/badge";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import {
   Phone,
   Mail,
@@ -25,27 +14,36 @@ import {
   Send,
   CheckCircle,
 } from "lucide-react";
+import ContactForm from "@/components/pages/contact/contact-form";
+
+export const metadata = {
+  title: "Contact Us: Shikder Ambulance Service",
+  description:
+    "Shikder Ambulance Service in Bangladesh. We provide different types of Ambulances. The Largest and Trusted Ambulacne Company in Bangladesh. When you need Ambulance the Contact Us.",
+  keywords: [
+    "Shikder Ambulance service",
+    "emergency ambulance",
+    "Dhaka ambulance",
+  ],
+  openGraph: {
+    title: "Contact Us: Shikder Ambulance Service",
+    description:
+      "Shikder Ambulance Service in Bangladesh. We provide different types of Ambulances. The Largest and Trusted Ambulacne Company in Bangladesh. When you need Ambulance the Contact Us.",
+    url: "https://shikderambulance.com",
+    siteName: "Shikder Ambulance",
+    images: [
+      {
+        url: "https://yourwebsite.com/your-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ambulance Service Banner",
+      },
+    ],
+    type: "website",
+  },
+};
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-    serviceType: "",
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
-
   const contactInfo = [
     {
       icon: Phone,
@@ -200,137 +198,7 @@ export default function ContactPage() {
                 </p>
               </CardHeader>
               <CardContent>
-                {isSubmitted ? (
-                  <div className="text-center py-8">
-                    <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-slate-800 mb-2">
-                      Message Sent Successfully!
-                    </h3>
-                    <p className="text-slate-600">
-                      We'll get back to you within 24 hours.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="name">Full Name *</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              name: e.target.value,
-                            }))
-                          }
-                          required
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="email">Email Address *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              email: e.target.value,
-                            }))
-                          }
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              phone: e.target.value,
-                            }))
-                          }
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="serviceType">Service Type</Label>
-                        <Select
-                          value={formData.serviceType}
-                          onValueChange={(value) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              serviceType: value,
-                            }))
-                          }
-                        >
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select service" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="emergency">
-                              Emergency Services
-                            </SelectItem>
-                            <SelectItem value="non-emergency">
-                              Non-Emergency Transport
-                            </SelectItem>
-                            <SelectItem value="critical-care">
-                              Critical Care Transport
-                            </SelectItem>
-                            <SelectItem value="event">
-                              Event Medical Services
-                            </SelectItem>
-                            <SelectItem value="general">
-                              General Inquiry
-                            </SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="subject">Subject *</Label>
-                      <Input
-                        id="subject"
-                        value={formData.subject}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            subject: e.target.value,
-                          }))
-                        }
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message">Message *</Label>
-                      <Textarea
-                        id="message"
-                        rows={5}
-                        value={formData.message}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            message: e.target.value,
-                          }))
-                        }
-                        required
-                      />
-                    </div>
-
-                    <Button type="submit" className="w-full" size="lg">
-                      <Send className="mr-2 h-5 w-5" />
-                      Send Message
-                    </Button>
-                  </form>
-                )}
+                <ContactForm />
               </CardContent>
             </Card>
 

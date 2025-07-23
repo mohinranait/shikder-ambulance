@@ -187,7 +187,7 @@ export default function LoginPage() {
                     )}
                   </Button>
                 </form>
-
+                {/* 
                 <div className="mt-6">
                   <div className="relative">
                     <div className="absolute inset-0 flex items-center">
@@ -222,9 +222,9 @@ export default function LoginPage() {
                       Facebook
                     </Button>
                   </div>
-                </div>
+                </div> */}
               </CardContent>
-              <CardFooter className="flex flex-col">
+              {/* <CardFooter className="flex flex-col">
                 <p className="text-center text-sm text-muted-foreground mt-2">
                   Don't have an account?{" "}
                   <Link
@@ -234,7 +234,7 @@ export default function LoginPage() {
                     Sign up
                   </Link>
                 </p>
-              </CardFooter>
+              </CardFooter> */}
             </Card>
           </div>
         </div>

@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { TUser } from "@/types/usersTypes";
 
 import { getAuthUser, logoutUser } from "@/actions/userApi";
+import FrontendPageLoader from "@/components/shared/frontend-loader";
 
 type TContextType = {
   user: TUser | null;
@@ -62,7 +63,7 @@ const AuthProvider: FC<Props> = ({ children }) => {
   }, []);
 
   if (isLoading) {
-    return <div>Loader</div>;
+    return <FrontendPageLoader />;
   }
 
   return (

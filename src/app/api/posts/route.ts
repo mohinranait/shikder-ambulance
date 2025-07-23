@@ -134,3 +134,30 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
+
+
+export async function DELETE(request: Request) {
+  try {
+    const body = await request.json()
+    const { ids } = body
+
+    if (!Array.isArray(ids) || ids.length === 0) {
+      return NextResponse.json({ error: 'No postIds provided' }, { status: 400 })
+    }
+
+    await connectDB()
+
+    const result = await Post.deleteMany({
+      _id: { $in: ids },
+    })
+
+    return NextResponse.json({
+      message: 'Posts deleted successfully',
+      deletedCount: result.deletedCount,
+    })
+  } catch (error) {
+    console.error('Delete Error:', error)
+    return NextResponse.json({ error: 'Something went wrong' }, { status: 500 })
+  }
+}

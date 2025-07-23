@@ -82,7 +82,7 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-premium">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/hiace.png?height=500&width=600"
                 alt="Modern ambulance vehicle"
                 fill
                 className="object-cover"

@@ -67,3 +67,31 @@ export async function GET(req: NextRequest) {
        );
   }
 }
+
+
+
+
+export async function DELETE(request: Request) {
+  try {
+    const body = await request.json()
+    const { ids } = body
+
+    if (!Array.isArray(ids) || ids.length === 0) {
+      return NextResponse.json({ error: 'No receipt ids provided' }, { status: 400 })
+    }
+
+    await connectDB()
+
+    const result = await MoneyReceipt.deleteMany({
+      _id: { $in: ids },
+    })
+
+    return NextResponse.json({
+      message: 'Receipt deleted successfully',
+      deletedCount: result.deletedCount,
+    })
+  } catch (error) {
+    console.error('Delete Error:', error)
+    return NextResponse.json({ error: 'Something went wrong' }, { status: 500 })
+  }
+}
