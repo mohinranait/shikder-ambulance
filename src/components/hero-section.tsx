@@ -12,15 +12,14 @@ export function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge className="bg-red-500 hover:bg-red-600 text-white px-4 py-2">
-                24/7 Emergency Service
+                Emergency Service 24/7
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                24/7 Emergency
-                <span className="text-primary block">Ambulance Service</span>
+                Shikder Ambulance Service
+                <span className="text-primary block"> Best Reliable 24/7 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Professional medical emergency response with trained paramedics,
-                advanced life support equipment, and GPS-enabled rapid dispatch.
+                Welcome to <b>Shikder Ambulance Service</b> in Dhaka, Bangladesh. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination.
               </p>
             </div>
 
@@ -31,7 +30,7 @@ export function HeroSection() {
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now: 911
+                Call Now: 017100-60020
               </Button>
               <Button
                 variant="outline"
@@ -49,7 +48,7 @@ export function HeroSection() {
                   <Clock className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold">5 Min Response</p>
+                  <p className="font-semibold">10 Min Response</p>
                   <p className="text-sm text-muted-foreground">
                     Average arrival time
                   </p>
@@ -62,7 +61,7 @@ export function HeroSection() {
                 <div>
                   <p className="font-semibold">GPS Tracking</p>
                   <p className="text-sm text-muted-foreground">
-                    Real-time location
+                    Real-time Location
                   </p>
                 </div>
               </div>
@@ -97,7 +96,7 @@ export function HeroSection() {
                 </div>
                 <div>
                   <p className="font-semibold">Emergency Hotline</p>
-                  <p className="text-2xl font-bold text-red-600">911</p>
+                  <p className="text-2xl font-bold text-red-600">01710060020</p>
                 </div>
               </div>
             </div>

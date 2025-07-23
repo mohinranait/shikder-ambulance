@@ -30,13 +30,12 @@ const FooterComponent = () => {
                 <Ambulance className="h-7 w-7 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">MediCare Ambulance</h3>
-                <p className="text-gray-400 text-sm">24/7 Emergency Service</p>
+                <h3 className="text-xl font-bold">Shikder Ambulance</h3>
+                <p className="text-gray-400 text-sm">Anytime, Anywhere</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Professional emergency medical services with advanced life support
-              equipment and trained paramedics, serving our community 24/7.
+              Shikder Ambulance company is the largest and trusted company in Bangladesh. We offering you to provide the all types types of Ambulances. Quality Ambulance is available at cheap price.
             </p>
             <div className="flex space-x-4">
               <Button
@@ -100,14 +99,6 @@ const FooterComponent = () => {
               </li>
               <li>
                 <Link
-                  href="/blogs"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Medical Blog
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/contact"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
@@ -138,12 +129,8 @@ const FooterComponent = () => {
                 Medical Transport
               </li>
               <li className="flex items-center text-gray-300">
-                <Award className="h-4 w-4 mr-2 text-green-400" />
-                Event Coverage
-              </li>
-              <li className="flex items-center text-gray-300">
                 <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
-                Critical Care Transport
+                Critical Patient Transport
               </li>
               <li>
                 <Link
@@ -163,24 +150,23 @@ const FooterComponent = () => {
               <div className="flex items-center text-gray-300">
                 <Phone className="h-5 w-5 mr-3 text-red-400" />
                 <div>
-                  <p className="font-medium text-red-400">Emergency: 999</p>
-                  <p className="text-sm">Non-Emergency: (555) 123-4567</p>
-                </div>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <Mail className="h-5 w-5 mr-3 text-blue-400" />
-                <p>info@medicareambulance.com</p>
-              </div>
-              <div className="flex items-start text-gray-300">
-                <MapPin className="h-5 w-5 mr-3 mt-1 text-green-400" />
-                <div>
-                  <p>123 Medical Center Drive</p>
-                  <p>Healthcare District, City 12345</p>
+                  <p className="font-medium text-white -400">017100-60020</p>
+                  <p className="text-sm">WhatsApp: Call & SMS</p>
                 </div>
               </div>
               <div className="flex items-center text-gray-300">
                 <Clock className="h-5 w-5 mr-3 text-purple-400" />
                 <p>24/7 Emergency Services</p>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="h-5 w-5 mr-3 text-blue-400" />
+                <p>shikderambulance@gmail.com</p>
+              </div>
+              <div className="flex items-start text-gray-300">
+                <MapPin className="h-5 w-5 mr-3 mt-1 text-green-400" />
+                <div>
+                  <p>Eskaton Rd, Mogbazar, Dhaka-1217</p>
+                </div>
               </div>
             </div>
 

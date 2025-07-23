@@ -6,7 +6,7 @@ export function WhyChooseUs() {
     {
       icon: Clock,
       title: "Fast Response Time",
-      description: "Average 5-minute response time with our strategically located fleet across the city.",
+      description: "Average 10-minutes response time with our strategically located fleet across the Dhaka City.",
       color: "text-primary",
       bgColor: "bg-blue-50",
     },
@@ -51,10 +51,10 @@ export function WhyChooseUs() {
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Why Choose Our Ambulance Service?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Why Choose Shikder Ambulance Service?</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We provide reliable, professional emergency medical services with a commitment to saving lives and ensuring
-            the best possible patient care.
+            We provide reliable, professional emergency Ambulance services with a commitment to saving lives and ensuring
+            the best possible patient care. Anytime, Anywhere is Available.
           </p>
         </div>
 
