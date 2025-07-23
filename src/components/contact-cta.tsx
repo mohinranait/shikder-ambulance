@@ -16,7 +16,7 @@ export function ContactCTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" variant="secondary" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg">
               <Phone className="mr-2 h-5 w-5" />
-              Emergency: 911
+              Emergency: 01627-669222
             </Button>
             <Button
               size="lg"
@@ -24,7 +24,7 @@ export function ContactCTA() {
               className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg bg-transparent"
             >
               <Phone className="mr-2 h-5 w-5" />
-              Non-Emergency: (555) 123-4567
+              Non-Emergency: 017100-60020
             </Button>
           </div>
         </div>

@@ -6,32 +6,32 @@ import Image from "next/image"
 export function ServiceOverview() {
   const services = [
     {
-      title: "Emergency Ambulance",
+      title: "Ac Ambulance Services",
       description:
         "Critical care transport with advanced life support equipment and trained paramedics for life-threatening emergencies.",
       image: "/placeholder.svg?height=300&width=400",
-      features: ["Advanced Life Support", "Cardiac Monitoring", "IV Therapy", "Emergency Medications"],
+      features: ["Quality Ambulance", "Controled tempreture of Ambulance", "Oxygen is free in Dhaka City", " Anytime, Anywhere is Available"],
     },
     {
-      title: "Non-Emergency Transport",
+      title: "Non Ac Ambulance Service",
       description:
         "Comfortable medical transport for scheduled appointments, hospital transfers, and routine medical care.",
       image: "/placeholder.svg?height=300&width=400",
       features: ["Wheelchair Accessible", "Stretcher Transport", "Medical Supervision", "Insurance Accepted"],
     },
     {
-      title: "Critical Care Transport",
+      title: "Life Support Ambulance Service",
       description:
         "Specialized transport for critically ill patients requiring intensive care during transfer between facilities.",
       image: "/placeholder.svg?height=300&width=400",
       features: ["ICU-Level Care", "Ventilator Support", "Specialized Nurses", "Hospital-to-Hospital"],
     },
     {
-      title: "Event Medical Services",
+      title: "Dead Body Carrier Freezing Ambulance Service",
       description:
         "On-site medical coverage for events, sports, and gatherings with standby ambulance and medical personnel.",
       image: "/placeholder.svg?height=300&width=400",
-      features: ["Event Standby", "First Aid Stations", "Crowd Medical Support", "Emergency Response"],
+      features: ["It has a frozen box", "High Quality steel stretchers", "Tempresure: -5 to -22 are available", "Emergency Response"],
     },
   ]
 
@@ -39,10 +39,9 @@ export function ServiceOverview() {
     <section className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Our Ambulance Services</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Our Ambulance Services 24/7</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive emergency medical services tailored to meet various healthcare transportation needs with
-            professional care and advanced equipment.
+            Comprehensive the best emergency Ambulance services in Bangladesh. We provide different types of Ambulances. The best Quality Ambulance is available in the all districts of Bangladesh.
           </p>
         </div>
 

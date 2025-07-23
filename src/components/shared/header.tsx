@@ -50,7 +50,7 @@ export function Header() {
               <Heart className="h-5 w-5 text-white" />
             </div>
             <span className="text-xl font-bold text-foreground">
-              MediCare Ambulance
+              Shikder Ambulance
             </span>
           </Link>
 
@@ -71,7 +71,7 @@ export function Header() {
           <div className="flex items-center space-x-4">
             <div className="hidden sm:flex items-center space-x-2 text-sm">
               <Phone className="h-4 w-4 text-primary" />
-              <span className="font-semibold text-primary">911</span>
+              <span className="font-semibold text-primary">01710060020</span>
             </div>
 
             <div className="hidden md:flex items-center space-x-2">
