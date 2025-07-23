@@ -27,6 +27,6 @@ export type TPostFormData = {
     seoTitle?: string;
     seoDescription?: string;
     seoKeyword?: string[];
-    createdAt: string; 
-    updatedAt: Date; 
+    createdAt?: string; 
+    updatedAt?: Date; 
 }
