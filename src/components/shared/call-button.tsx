@@ -8,7 +8,7 @@ export default function CallButton() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleCall = () => {
-    window.location.href = "tel:+8801710060020";
+    window.location.href = "tel:01710060020";
   };
 
   return (

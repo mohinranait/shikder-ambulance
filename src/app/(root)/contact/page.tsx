@@ -48,28 +48,28 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Emergency Hotline",
-      details: ["911", "Available 24/7"],
+      details: ["017100-60020", "Available 24/7"],
       color: "text-red-600",
       bgColor: "bg-red-100",
     },
     {
       icon: Phone,
       title: "Non-Emergency",
-      details: ["(555) 123-4567", "7 AM - 10 PM Daily"],
+      details: ["017100-60020", "7 AM - 10 PM Daily"],
       color: "text-blue-600",
       bgColor: "bg-blue-100",
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@medicareambulance.com", "Response within 24 hours"],
+      details: ["shikderambulance@gmail.com", "Response: 24/7"],
       color: "text-green-600",
       bgColor: "bg-green-100",
     },
     {
       icon: MapPin,
       title: "Main Office",
-      details: ["123 Medical Center Drive", "Healthcare City, HC 12345"],
+      details: ["Eskaton Road, Mogbazar", "Dhaka City, 1217"],
       color: "text-purple-600",
       bgColor: "bg-purple-100",
     },
@@ -78,21 +78,21 @@ export default function ContactPage() {
   const locations = [
     {
       name: "Main Station",
-      address: "123 Medical Center Drive, Healthcare City, HC 12345",
-      phone: "(555) 123-4567",
+      phone: "01710060020",
       hours: "24/7 Emergency Services",
+      address: "Holy Family Hospital, New Eskaton Road, Dhaka-1217",
     },
     {
-      name: "North Station",
-      address: "456 North Avenue, Healthcare City, HC 12346",
-      phone: "(555) 123-4568",
-      hours: "24/7 Emergency Services",
+      name: "Mohakhali",
+      phone: "01627-669222",
+      hours: "Available: 24/7",
+      address: "Warless Road, Mohakhali, Dhaka-1230",
     },
     {
-      name: "South Station",
-      address: "789 South Boulevard, Healthcare City, HC 12347",
-      phone: "(555) 123-4569",
+      name: "Jatrabari",
+      phone: "017100-60020",
       hours: "24/7 Emergency Services",
+      address: "Jatrabari Chowrasta, Dhaka-1204",
     },
   ];
 
@@ -107,7 +107,7 @@ export default function ContactPage() {
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
               Get in Touch with
-              <span className="text-blue-600 block">MediCare Ambulance</span>
+              <span className="text-blue-600 block">Shikder Ambulance</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
               We're here to help 24/7. Whether it's an emergency or you need
@@ -124,7 +124,7 @@ export default function ContactPage() {
           <div className="flex items-center justify-center space-x-4 text-center">
             <Heart className="h-6 w-6" />
             <p className="text-lg font-semibold">
-              MEDICAL EMERGENCY? CALL 911 IMMEDIATELY
+              NEED EMERGENCY? IMMEDIATELY, CALL: 01710060020
             </p>
             <Heart className="h-6 w-6" />
           </div>
@@ -162,15 +162,13 @@ export default function ContactPage() {
                   {info.details.map((detail, detailIndex) => (
                     <p
                       key={detailIndex}
-                      className={`${
-                        detailIndex === 0
-                          ? "text-lg font-bold text-slate-800"
-                          : "text-slate-600"
-                      } ${
-                        detailIndex === 0 && info.title === "Emergency Hotline"
+                      className={`${detailIndex === 0
+                        ? "text-lg font-bold text-slate-800"
+                        : "text-slate-600"
+                        } ${detailIndex === 0 && info.title === "Emergency Hotline"
                           ? "text-red-600"
                           : ""
-                      }`}
+                        }`}
                     >
                       {detail}
                     </p>
@@ -193,7 +191,7 @@ export default function ContactPage() {
                   Send Us a Message
                 </CardTitle>
                 <p className="text-slate-600">
-                  For non-emergency inquiries, service information, or feedback,
+                  For non-emergency inquiries, service information,
                   please fill out the form below.
                 </p>
               </CardHeader>
@@ -265,7 +263,7 @@ export default function ContactPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Quick answers to common questions about our emergency medical
+              Quick answers to common questions about our emergency patient transport
               services.
             </p>
           </div>
@@ -274,12 +272,10 @@ export default function ContactPage() {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">
-                  When should I call 911?
+                  How can I book an ambulance service?
                 </h3>
                 <p className="text-slate-600">
-                  Call 911 for any life-threatening emergency, severe injuries,
-                  chest pain, difficulty breathing, unconsciousness, or when
-                  immediate medical attention is needed.
+                  You can typically book an ambulance by calling our 24/7 emergency hotline, or visiting our website.
                 </p>
               </CardContent>
             </Card>
@@ -287,11 +283,10 @@ export default function ContactPage() {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">
-                  Do you accept insurance?
+                  What types of ambulance does provide?
                 </h3>
                 <p className="text-slate-600">
-                  Yes, we accept most major insurance plans including Medicare
-                  and Medicaid. Contact us to verify your specific coverage.
+                  Shikder Ambulance usually offers various services, including Basic Life Support ICU Ambulances, AC/non-AC ambulances, and  freezing Ambulance for deceased transport.
                 </p>
               </CardContent>
             </Card>
@@ -299,12 +294,10 @@ export default function ContactPage() {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">
-                  What areas do you serve?
+                  Does provide Ambulance outside of Dhaka?
                 </h3>
                 <p className="text-slate-600">
-                  We provide emergency and non-emergency services throughout
-                  Healthcare City and surrounding metropolitan areas with
-                  multiple station locations.
+                  Yes, Shikder Ambulance often offers long-distance patient transfers both within and outside their usual service areas. Specific arrangements can be made by contacting their customer service.
                 </p>
               </CardContent>
             </Card>
@@ -312,12 +305,10 @@ export default function ContactPage() {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-slate-800 mb-3">
-                  How fast is your response time?
+                  What are your operating hours?
                 </h3>
                 <p className="text-slate-600">
-                  Our average emergency response time is 5 minutes, with
-                  GPS-enabled dispatch and strategically located ambulances
-                  throughout our service area.
+                  Shikder Ambulance services are typically available 24 hours a day, 7 days a week, ensuring accessibility for emergencies at any time.
                 </p>
               </CardContent>
             </Card>

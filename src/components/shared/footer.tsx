@@ -35,7 +35,7 @@ const FooterComponent = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Shikder Ambulance company is the largest and trusted company in Bangladesh. We offering you to provide the all types types of Ambulances. Quality Ambulance is available at cheap price.
+              Shikder Ambulance company is the largest and trusted company in Bangladesh. We offering you to provide the all types of Ambulances. Quality Ambulance is available in Comfortable Price.
             </p>
             <div className="flex space-x-4">
               <Button
@@ -105,14 +105,6 @@ const FooterComponent = () => {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/auth/login"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Patient Portal
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -154,10 +146,7 @@ const FooterComponent = () => {
                   <p className="text-sm">WhatsApp: Call & SMS</p>
                 </div>
               </div>
-              <div className="flex items-center text-gray-300">
-                <Clock className="h-5 w-5 mr-3 text-purple-400" />
-                <p>24/7 Emergency Services</p>
-              </div>
+
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3 text-blue-400" />
                 <p>shikderambulance@gmail.com</p>
@@ -184,7 +173,7 @@ const FooterComponent = () => {
                 </Button>
               </div>
               <p className="text-xs text-gray-400 mt-2">
-                Get medical tips and emergency updates
+                Get tips and emergency updates
               </p>
             </div>
           </div>
@@ -197,7 +186,7 @@ const FooterComponent = () => {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-gray-400 text-sm">
-            <p>&copy; 2024 MediCare Ambulance Service. All rights reserved.</p>
+            <p> Copyright-2025 &copy; Shikder Ambulance, All Rights Reserved.</p>
           </div>
           <div className="flex space-x-6 text-sm">
             <Link
@@ -210,7 +199,7 @@ const FooterComponent = () => {
               href="/terms"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              Terms of Service
+              Terms and Condition
             </Link>
             <Link
               href="/sitemap"
@@ -228,7 +217,7 @@ const FooterComponent = () => {
           <div className="flex items-center justify-center space-x-4 text-center">
             <Phone className="h-5 w-5" />
             <p className="font-medium">
-              Medical Emergency? Call 999 immediately - Don't wait!
+              Need Emergency Transport? Don't wait, Call Now.
             </p>
           </div>
         </div>

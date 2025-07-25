@@ -17,35 +17,35 @@ import Image from "next/image";
 export default function ServicesPage() {
   const services = [
     {
-      title: "Emergency Ambulance Service",
+      title: "Emergency Ambulance Service in Dhaka",
       description:
-        "Critical care transport with advanced life support equipment and trained paramedics for life-threatening emergencies.",
+        "Emergency Ambulance Service provides life-saving medical transport and patient care for critical health incidents, and safe transit to hospitals. Your safety, comfort, and peace of mind mean everything to us.",
       image: "/placeholder.svg?height=300&width=400",
       features: [
-        "Advanced Life Support (ALS)",
-        "Cardiac Monitoring & Defibrillation",
-        "IV Therapy & Emergency Medications",
-        "Airway Management",
+        "24/7 Emergency Ambulance Support",
+        "ICU & Life Support Ambulance",
+        "Safe Patient Transfer Services",
+        "Long-Distance Patient Transfer",
         "Real-time Hospital Communication",
-        "GPS-Enabled Rapid Response",
+        "Life-saving medical transport",
       ],
-      responseTime: "5 minutes average",
+      responseTime: "10 minutes average",
       availability: "24/7",
       icon: Heart,
       color: "bg-red-100 text-red-600",
     },
     {
-      title: "Non-Emergency Medical Transport",
+      title: "Non-Emergency Patient Transport",
       description:
-        "Comfortable and safe medical transport for scheduled appointments, hospital transfers, and routine medical care.",
+        "Comfortable and safe Patient transport for scheduled appointments, hospital transfers, and routine Patient care. Your safety and comfort are our top priorities.",
       image: "/placeholder.svg?height=300&width=400",
       features: [
-        "Wheelchair Accessible Vehicles",
-        "Stretcher Transport Available",
-        "Medical Supervision During Transport",
-        "Insurance Coverage Accepted",
+        "Comfortable AC & Non-AC Vehicles",
+        "Wheelchair & Stretcher Support",
+        "Trained Attendants & Drivers",
         "Scheduled Appointments",
         "Comfortable & Clean Vehicles",
+        "Affordable Pricing",
       ],
       responseTime: "30 minutes",
       availability: "7 AM - 10 PM",
@@ -55,10 +55,10 @@ export default function ServicesPage() {
     {
       title: "Critical Care Transport",
       description:
-        "Specialized transport for critically ill patients requiring intensive care during transfer between medical facilities.",
+        "Specialized transport for critically ill patients requiring intensive care during transfer between Patient facilities. The basic life support, Advanced Life Support ICU Ambulance is Available with Doctors and Brothers.",
       image: "/placeholder.svg?height=300&width=400",
       features: [
-        "ICU-Level Medical Equipment",
+        "ICU-Level Patient Equipment",
         "Ventilator Support",
         "Specialized Critical Care Nurses",
         "Hospital-to-Hospital Transfers",
@@ -71,17 +71,17 @@ export default function ServicesPage() {
       color: "bg-purple-100 text-purple-600",
     },
     {
-      title: "Event Medical Services",
+      title: "Freezing Ambulance Service",
       description:
-        "Professional on-site medical coverage for events, sports competitions, and large gatherings with standby medical personnel.",
+        "A freezer ambulance service is a specialized transportation service equipped with refrigeration systems to maintain a consistently low temperature.",
       image: "/placeholder.svg?height=300&width=400",
       features: [
-        "Event Standby Services",
-        "First Aid Stations Setup",
-        "Crowd Medical Support",
+        "It has a forzen box in it",
+        "Use freezer Ambulance, save the dead body",
+        "Temperature-Controlled Environment",
         "Emergency Response Planning",
-        "Medical Personnel On-Site",
-        "Coordination with Local Hospitals",
+        "Clean & Well-Maintained Vehicles",
+        "Affordable Pricing",
       ],
       responseTime: "Immediate",
       availability: "Event Duration",
@@ -128,19 +128,17 @@ export default function ServicesPage() {
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
               Comprehensive Emergency
-              <span className="text-blue-600 block">Medical Services</span>
+              <span className="text-blue-600 block">Ambulances Services</span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed mb-8">
-              From life-threatening emergencies to routine medical transport, we
-              provide professional, compassionate care with advanced medical
-              equipment and highly trained personnel.
+              Shikder Ambulance is a leading provider of emergency ambulance services, dedicated to serving the critical needs of Dhaka city and extending our reach to all districts of Bangladesh. We understand that in times of emergency Ambulance, every second counts. That's why we are committed to providing Ambulance, professional, and compassionate transport solutions, ensuring patients receive the urgent Ambulance care they need, wherever they are in the country.
             </p>
             <Button
               size="lg"
               className="bg-red-600 hover:bg-red-700 text-white"
             >
               <Phone className="mr-2 h-5 w-5" />
-              Emergency: 911
+              017100-60020
             </Button>
           </div>
         </div>
@@ -153,15 +151,13 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                  }`}
               >
                 {/* Image */}
                 <div
-                  className={`relative ${
-                    index % 2 === 1 ? "lg:col-start-2" : ""
-                  }`}
+                  className={`relative ${index % 2 === 1 ? "lg:col-start-2" : ""
+                    }`}
                 >
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
@@ -193,9 +189,8 @@ export default function ServicesPage() {
 
                 {/* Content */}
                 <div
-                  className={`space-y-6 ${
-                    index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
-                  }`}
+                  className={`space-y-6 ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
+                    }`}
                 >
                   <div>
                     <div
@@ -261,11 +256,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
-              Why Choose Our Services?
+              Why Choose Shikder Ambulance Service?
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We combine advanced medical technology with compassionate care to
-              deliver exceptional emergency medical services.
+              We provide reliable, professional emergency Ambulance services with a commitment to saving lives and ensuring the best patient care. Anytime, Anywhere is Available.
             </p>
           </div>
 
@@ -297,11 +291,11 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Need Emergency Medical Services?
+              Need Emergency Ambulance Services?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Don't wait in a medical emergency. Our professional team is ready
-              to respond 24/7 with advanced life support and rapid transport.
+              Don't wait in an emergency times. Our professional team is ready
+              to respond 24/7 with advanced life support Ambulance transport. Your safety transport is our top priorities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -310,7 +304,7 @@ export default function ServicesPage() {
                 className="bg-red-600 hover:bg-red-700 text-white"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Emergency: 911
+                Emergency: 017100-60020
               </Button>
               <Button
                 size="lg"
@@ -318,7 +312,7 @@ export default function ServicesPage() {
                 className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Non-Emergency: (555) 123-4567
+                WhatsApp: 01710060020
               </Button>
             </div>
           </div>

@@ -19,7 +19,7 @@ export function HeroSection() {
                 <span className="text-primary block"> Best Reliable 24/7 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Welcome to <b>Shikder Ambulance Service</b> in Dhaka, Bangladesh. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination.
+                Welcome to <b>Shikder Ambulance Service</b> in Dhaka, Bangladesh. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination. <b>Online Booking and Money Receipt</b> is Available.
               </p>
             </div>
 
@@ -37,7 +37,7 @@ export function HeroSection() {
                 size="lg"
                 className="px-8 py-4 text-lg bg-transparent"
               >
-                Book Non-Emergency
+                Online Booking Now
               </Button>
             </div>
 

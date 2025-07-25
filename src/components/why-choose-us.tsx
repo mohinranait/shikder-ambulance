@@ -27,20 +27,20 @@ export function WhyChooseUs() {
     {
       icon: DollarSign,
       title: "Affordable Pricing",
-      description: "Transparent pricing with insurance coverage and flexible payment options.",
+      description: "The Patient Transport Service in Bangladesh. We offering to transport at Affordable Pricing with Online Booking facilitices.",
       color: "text-accent-foreground",
       bgColor: "bg-accent",
     },
     {
       icon: Shield,
       title: "Advanced Equipment",
-      description: "State-of-the-art medical equipment and life support systems in every ambulance.",
+      description: "State-of-the-art medical equipment and the basic life support systems is available in every ambulance.",
       color: "text-red-600",
       bgColor: "bg-red-50",
     },
     {
       icon: Stethoscope,
-      title: "24/7 Medical Support",
+      title: " Patient Transport Ambulances",
       description: "Round-the-clock availability with direct hospital coordination and communication.",
       color: "text-teal-600",
       bgColor: "bg-teal-50",

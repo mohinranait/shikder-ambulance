@@ -45,9 +45,9 @@ export function ContactCTA() {
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 mx-auto mb-4">
                 <MapPin className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">City-Wide Coverage</h3>
+              <h3 className="text-lg font-semibold mb-2">Dhaka City Coverage</h3>
               <p className="text-blue-100">
-                Comprehensive coverage across the metropolitan area with multiple stations.
+                Comprehensive Ambulance coverage across the metropolitan area with multiple stations.
               </p>
             </CardContent>
           </Card>

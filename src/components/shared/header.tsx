@@ -83,7 +83,7 @@ export function Header() {
                   <div className="flex items-center space-x-2 pt-4 border-t">
                     <Phone className="h-4 w-4 text-primary" />
                     <span className="font-semibold text-primary">
-                      Emergency: 911
+                      Call Now: 01710060020
                     </span>
                   </div>
                   <div className="flex flex-col space-y-2 pt-4">
