@@ -16,6 +16,24 @@ import {
   Award,
 } from "lucide-react";
 import Link from "next/link";
+const quickLinks = [
+  {
+    label: "Ac Ambulance",
+    link: "/ac-ambulance-service",
+  },
+  {
+    label: "Non Ac Ambulance",
+    link: "/non-ac-ambulance",
+  },
+  {
+    label: "Freezing Ambulance",
+    link: "/freezing-ambulance-service",
+  },
+  {
+    label: "ICU Ambulance",
+    link: "/icu-ambulance-service",
+  },
+];
 
 const FooterComponent = () => {
   return (
@@ -35,7 +53,9 @@ const FooterComponent = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Shikder Ambulance company is the largest and trusted company in Bangladesh. We offering you to provide the all types of Ambulances. Quality Ambulance is available in Comfortable Price.
+              Shikder Ambulance company is the largest and trusted company in
+              Bangladesh. We offering you to provide the all types of
+              Ambulances. Quality Ambulance is available in Comfortable Price.
             </p>
             <div className="flex space-x-4">
               <Button
@@ -73,38 +93,16 @@ const FooterComponent = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Our Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
+              {quickLinks?.map((link) => (
+                <li key={link?.label}>
+                  <Link
+                    href={link?.link}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link?.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -186,7 +184,10 @@ const FooterComponent = () => {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-gray-400 text-sm">
-            <p> Copyright-2025 &copy; Shikder Ambulance, All Rights Reserved.</p>
+            <p>
+              {" "}
+              Copyright-2025 &copy; Shikder Ambulance, All Rights Reserved.
+            </p>
           </div>
           <div className="flex space-x-6 text-sm">
             <Link

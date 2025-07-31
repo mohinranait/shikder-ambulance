@@ -3,6 +3,7 @@ import BlogView from "@/components/pages/blogs/view-blogs";
 import { BASE_URL } from "@/config/accessEnv";
 import { TPostFormData } from "@/types/post.types";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import React from "react";
 
 export async function generateMetadata({
@@ -34,6 +35,10 @@ const BlogDetailsPage = async ({
   const { slug } = await params;
   const data = await getSinglePostBySlug(slug);
   const post = data?.payload?.post;
+
+  if (!post) {
+    notFound();
+  }
 
   return <BlogView blog={post} />;
 };

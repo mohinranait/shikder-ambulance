@@ -7,12 +7,25 @@ import { Toaster } from "react-hot-toast";
 import MediaModal from "@/components/shared/MediaModal";
 
 export const metadata: Metadata = {
-  title: "Shikder Ambulance Service | Best Reliable 24/7",
+  title:
+    "Shikder Ambulance - Professional Emergency Medical Services in Bangladesh",
   description:
-    "Shikder Ambulance Service in Dhaka, Bangladesh. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination.",
+    "Professional ambulance services in Dhaka, Bangladesh. 24/7 emergency medical services including AC ambulance, freezing ambulance, and ICU ambulance across all districts.",
   keywords:
-    "Shikder Ambulance, emergency Ambulance services, Patient Care Ambulance Services, medical transport Service, Near Ambulance, Emergency Ambulance Number, Best Ambulance Number, Ambulance Transport Support, Online Ambulance, Dhaka Ambulance, healthcare",
-  generator: "v0.dev",
+    "ambulance service, emergency medical service, Dhaka ambulance, Bangladesh ambulance, AC ambulance, freezing ambulance, ICU ambulance",
+  authors: [{ name: "Shikder Ambulance" }],
+  openGraph: {
+    title: "Shikder Ambulance - Professional Emergency Medical Services",
+    description: "24/7 professional ambulance services across Bangladesh",
+    url: "https://shikderambulance.com",
+    siteName: "Shikder Ambulance",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

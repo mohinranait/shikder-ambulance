@@ -12,7 +12,15 @@ export function Header() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
+    {
+      name: "Services",
+      href: "/services",
+      items: [
+        { name: "Ac Ambulance", href: "/ac-ambulance-service" },
+        { name: "Non AC Ambulance", href: "/non-ac-ambulance" },
+        { name: "Freezing Ambulance", href: "/freezing-ambulance-service" },
+      ],
+    },
     { name: "Blogs", href: "/blogs" },
     { name: "Contact", href: "/contact" },
   ];
@@ -22,14 +30,19 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-premium-gradient">
-              <Heart className="h-5 w-5 text-white" />
+          <div className="flex items-center space-x-2">
+            <div className="bg-blue-600 text-white p-2 rounded-lg">
+              <Heart className="h-6 w-6" />
             </div>
-            <span className="text-xl font-bold text-foreground">
-              Shikder Ambulance
-            </span>
-          </Link>
+            <div>
+              <h1 className="text-xl font-bold text-gray-900">
+                Shikder Ambulance
+              </h1>
+              <p className="text-xs text-gray-600">
+                Emergency Medical Services
+              </p>
+            </div>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -46,15 +59,10 @@ export function Header() {
 
           {/* Right side */}
           <div className="flex items-center space-x-4">
-            <div className="hidden sm:flex items-center space-x-2 text-sm">
-              <Phone className="h-4 w-4 text-primary" />
-              <span className="font-semibold text-primary">01710060020</span>
-            </div>
-
             <div className="hidden md:flex items-center space-x-2">
-              <Link href="/login">
-                <Button variant="ghost" size="sm" className="flex items-center">
-                  <LogIn className="h-4 w-4 mr-1" />
+              <Link href="tel:01710060020">
+                <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                  <Phone className="h-4 w-4 mr-2" />
                   Call Now
                 </Button>
               </Link>
@@ -80,27 +88,13 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
-                  <div className="flex items-center space-x-2 pt-4 border-t">
-                    <Phone className="h-4 w-4 text-primary" />
-                    <span className="font-semibold text-primary">
-                      Call Now: 01710060020
-                    </span>
-                  </div>
+
                   <div className="flex flex-col space-y-2 pt-4">
                     <>
-                      <Link href="/login" onClick={() => setIsOpen(false)}>
-                        <Button
-                          variant="outline"
-                          className="w-full justify-start bg-transparent"
-                        >
-                          <LogIn className="h-4 w-4 mr-2" />
-                          Login
-                        </Button>
-                      </Link>
-                      <Link href="/register" onClick={() => setIsOpen(false)}>
-                        <Button className="w-full justify-start bg-premium-gradient">
-                          <UserPlus className="h-4 w-4 mr-2" />
-                          Register
+                      <Link href="tel:01710060020">
+                        <Button className="w-full justify-center bg-premium-gradient">
+                          <Phone className="h-4 w-4 mr-2" />
+                          Call Now
                         </Button>
                       </Link>
                     </>
