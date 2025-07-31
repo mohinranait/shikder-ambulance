@@ -215,12 +215,12 @@ export default function BlogsPage() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search medical topics, emergency tips, health advice..."
-                  className="pl-10 pr-4 py-3 text-lg border-2 border-gray-200 focus:border-blue-500 rounded-xl"
+                  className="pl-10 pr-4 py-3 text-lg "
                 />
                 <Button
                   type="submit"
                   disabled={searchLoading}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700"
+                  className="absolute rounded-l-none -right-[2px] top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700"
                 >
                   {searchLoading ? (
                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -289,11 +289,15 @@ export default function BlogsPage() {
                         </Link>
                       </h3>
 
-                      <p className="text-gray-600 leading-relaxed">
-                        {post.shortDescription ||
-                          post.content?.substring(0, 150) + "..." ||
-                          "Read this insightful article about medical emergency and healthcare."}
-                      </p>
+                      <div
+                        className="text-gray-600 leading-relaxed"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            post.shortDescription ||
+                            post.content?.substring(0, 150) + "..." ||
+                            "",
+                        }}
+                      />
 
                       <div className="flex items-center justify-between pt-4 border-t">
                         <div className="flex items-center space-x-3">
@@ -407,11 +411,15 @@ export default function BlogsPage() {
                                 </Link>
                               </h3>
 
-                              <p className="text-gray-600 leading-relaxed">
-                                {post.shortDescription ||
-                                  post.content?.substring(0, 120) + "..." ||
-                                  "Read this insightful article about medical emergency and healthcare."}
-                              </p>
+                              <div
+                                className="text-gray-600 leading-relaxed"
+                                dangerouslySetInnerHTML={{
+                                  __html:
+                                    post.shortDescription ||
+                                    post.content?.substring(0, 150) + "..." ||
+                                    "",
+                                }}
+                              />
                             </div>
                           </div>
                         </div>
