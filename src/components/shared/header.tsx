@@ -22,7 +22,7 @@ export function Header() {
       ],
     },
     { name: "Blogs", href: "/blogs" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact-us" },
   ];
 
   return (
@@ -35,11 +35,11 @@ export function Header() {
               <Heart className="h-6 w-6" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">
+              <h1 className="text-2xl font-bold text-gray-900">
                 Shikder Ambulance
               </h1>
               <p className="text-xs text-gray-600">
-                Emergency Medical Services
+                Patient Transport Services
               </p>
             </div>
           </div>
