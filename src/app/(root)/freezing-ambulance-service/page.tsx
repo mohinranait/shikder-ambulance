@@ -17,16 +17,16 @@ import Image from "next/image";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Freezing Ambulance Service in Dhaka | Shikder Ambulance - 24/7 Dead Body Carrier",
+    "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
   description:
-    "Professional freezing ambulance service in Dhaka, Bangladesh. 24/7 dead body carrier with advanced freezing technology. Single & double cabin freezer ambulance available across all districts.",
+    "Freezing Ambulance Service in Dhaka. It is a dead body carrier freezing ambulance in Bangladesh. 24/7 dead body carrier with advanced freezing technology. Single & double cabin freezer ambulance is available in the all districts of Bangladesh.",
   keywords:
-    "freezing ambulance, dead body carrier, ambulance service Dhaka, freezer ambulance Bangladesh, mortuary ambulance, body transportation service",
+    "Freezing Ambulance Services. freezing ambulance, dead body carrier, ambulance service Dhaka, freezer ambulance Bangladesh, mortuary ambulance, body transportation service",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
     title: "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
     description:
-      "Professional 24/7 freezing ambulance service across Bangladesh. Advanced freezer technology for dignified body transportation.",
+      "Freezing Ambulance Service in Dhaka. It is a dead body carrier freezing ambulance in Bangladesh. 24/7 dead body carrier with advanced freezing technology. Single & double cabin freezer ambulance is available in the all districts of Bangladesh.",
     url: "https://shikderambulance.com/freezing-ambulance",
     siteName: "Shikder Ambulance",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: "/images/ambulance-hero.png",
         width: 1200,
         height: 630,
-        alt: "Shikder Ambulance - Freezing Ambulance Service",
+        alt: "Freezing Ambulance Service - Shikder Ambulance",
       },
     ],
     locale: "en_US",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
     description:
-      "Professional 24/7 freezing ambulance service across Bangladesh.",
+      "Freezing Ambulance Service in Dhaka. Professional 24/7 freezing ambulance service across Bangladesh.",
     images: ["/images/ambulance-hero.png"],
   },
   robots: {
@@ -74,7 +74,7 @@ const FreezingAmbulance = () => {
               <div className="space-y-4">
                 <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
                   <Thermometer className="h-3 w-3 mr-1" />
-                  Freezing Ambulance Service
+                  Dead Body Carrer Ambulance
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Freezing Ambulance Service in{" "}
@@ -404,14 +404,14 @@ const FreezingAmbulance = () => {
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call: +8801XXXXXXXXX
+                Call: 01627-669222
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
               >
-                WhatsApp: +8801XXXXXXXXX
+                WhatsApp: 017100-60020
               </Button>
             </div>
           </div>

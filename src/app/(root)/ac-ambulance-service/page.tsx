@@ -15,16 +15,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "AC Ambulance Service in Dhaka | The Best Reliable 24/7 - Shikder Ambulance",
+    "Best AC Ambulance Service in Dhaka by Shikder Ambulance 24/7",
   description:
-    "Professional AC ambulance service in Dhaka, Bangladesh. Temperature-controlled ambulance with air conditioning for patient comfort. 24/7 emergency medical services across all districts.",
+    "Best AC Ambulance Service in Dhaka by Shikder Ambulance. Temperature-controlled ambulance with air conditioning for patient comfort. 24/7 emergency Ambulance services across all districts.",
   keywords:
-    "AC ambulance, air conditioned ambulance, ambulance service Dhaka, emergency medical service, temperature controlled ambulance, patient transport Bangladesh",
+    "AC ambulance, air conditioned ambulance, best Ambulance, top ambulance company, Dhaka city Ambulance, Near Ambulance, free Ambulance in Dhaka city. ambulance service Dhaka, emergency medical service, temperature controlled ambulance, patient transport Bangladesh",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
-    title: "AC Ambulance Service in Dhaka | Shikder Ambulance",
+    title: "Best AC Ambulance Service in Dhaka by Shikder Ambulance 24/7",
     description:
-      "Professional AC ambulance service with temperature control for patient comfort. Available 24/7 across Bangladesh.",
+      "Best AC Ambulance Service in Dhaka by Shikder Ambulance. Professional AC ambulance service with temperature control for patient comfort. Available 24/7 across Bangladesh.",
     url: "https://shikderambulance.com/ac-ambulance-service",
     siteName: "Shikder Ambulance",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: "/images/ac-ambulance-hero.png",
         width: 1200,
         height: 630,
-        alt: "AC Ambulance Service in Dhaka - Shikder Ambulance",
+        alt: "Best AC Ambulance Service in Dhaka by Shikder Ambulance",
       },
     ],
     locale: "en_US",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AC Ambulance Service in Dhaka | Shikder Ambulance",
+    title: "Best AC Ambulance Service in Dhaka by Shikder Ambulance",
     description:
-      "Professional AC ambulance service with temperature control. Available 24/7.",
+      "Best AC Ambulance Service in Dhaka. Professional AC ambulance service with temperature control. Available 24/7.",
     images: ["/images/ac-ambulance-hero.png"],
   },
   robots: {
@@ -68,19 +68,18 @@ export default function AcAmbulancePage() {
             <div className="space-y-4">
               <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
                 <Wind className="h-3 w-3 mr-1" />
-                Air Conditioned Ambulance
+                The Best Quality Ambulance Service
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Ac Ambulance service in{" "}
-                <span className="text-blue-600">Dhaka</span>
+                Best Ac Ambulance Service in Dhaka{" "}
               </h1>
               <h2 className="text-3xl md:text-4xl font-bold">
-                <span className="text-pink-500">The Best Reliable</span>{" "}
+                <span className="text-pink-500">Fast and Reliable</span>{" "}
                 <span className="text-orange-500">24/7</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                Ac Ambulance service in Dhaka, Bangladesh. We provide different
-                types of Ambulance service in all districts of Bangladesh. We
+                Best Ac Ambulance Service in Dhaka. We provide different
+                types of Ambulance in the all districts of Bangladesh. We
                 Are Just A Call Away. Contact Us Now
               </p>
             </div>
@@ -102,7 +101,7 @@ export default function AcAmbulancePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Best Ac Ambulance Service in Bangladesh
+              Ac Ambulance Service in Bangladesh
             </h2>
           </div>
 
@@ -112,7 +111,7 @@ export default function AcAmbulancePage() {
                 Ac Ambulance Service
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                The Ac Ambulance is one of the best ambulance services in Dhaka
+                The Ac Ambulance is one of the <a href="https://shikderambulance.com/" target="_blank" rel="noopener noreferrer">best ambulance</a> services in Dhaka
                 as well as in the whole Bangladesh. An Ac ambulance is mainly
                 used to transfer a patient to the hospital or a recently
                 recovered person to his/her resident. Ac Ambulances have air
@@ -132,7 +131,7 @@ export default function AcAmbulancePage() {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">24/7, Available</span>
+                    <span className="text-gray-700">24/7 Customer Support</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
@@ -158,12 +157,12 @@ export default function AcAmbulancePage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">Quality Ac Ambulance</span>
+                    <span className="text-gray-700">Quality Ac Ambulance Service</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                      Ac, and Oxygen is free in Dhaka City
+                      Ac and Oxygen is free in Dhaka City
                     </span>
                   </div>
                 </div>
@@ -173,7 +172,7 @@ export default function AcAmbulancePage() {
             <div className="flex justify-center">
               <Image
                 src="/placeholder.svg?height=400&width=600&text=AC+Ambulance+Service"
-                alt="AC Ambulance Service - Professional medical transport with air conditioning"
+                alt="Best AC Ambulance Service"
                 width={600}
                 height={400}
                 className="rounded-xl shadow-lg w-full max-w-md"
@@ -188,7 +187,7 @@ export default function AcAmbulancePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              24 Hours Ambulance Service in Bangladesh
+              24 Hours Shikder Ambulance Service in Bangladesh
             </h2>
             <p className="text-lg text-gray-600">
               Emergency Ac Ambulance service is available in the all districts
@@ -287,7 +286,7 @@ export default function AcAmbulancePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Overview of Ac Ambulance
+              Overview of Ac Ambulance Services
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -334,7 +333,34 @@ export default function AcAmbulancePage() {
               <h4 className="font-semibold text-gray-900 mb-2">
                 Available 24/7:
               </h4>
-              <p className="text-gray-600">Anytime, Anywhere is Available</p>
+              <p className="text-gray-600">No matter the hour, you can count on us for immediate response. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Service Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              FAQs: Shikder Ambulance Service
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  FAQs
+                </h3>
+                <h4> What Is an AC Ambulance?</h4>
+                <p>An AC ambulance is fitted with a fully functional air-conditioning system to control temperature, ensuring the patient is comfortable throughout the journey, especially during the scorching heat of Bangladesh.</p>
+              </div>
+              <div>
+                <h4> What Is an AC Ambulance?</h4>
+                <p>An AC ambulance is fitted with a fully functional air-conditioning system to control temperature, ensuring the patient is comfortable throughout the journey, especially during the scorching heat of Bangladesh.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -357,14 +383,14 @@ export default function AcAmbulancePage() {
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call: 01627 609222
+                Call: 01627-669222
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
               >
-                WhatsApp: 017100 60020
+                WhatsApp: 017100-60020
               </Button>
             </div>
           </div>

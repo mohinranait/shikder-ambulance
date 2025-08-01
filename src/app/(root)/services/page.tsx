@@ -128,7 +128,7 @@ export default function ServicesPage() {
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
               Comprehensive Emergency
-              <span className="text-blue-600 block">Ambulances Services</span>
+              <span className="text-blue-600 block">Ambulances Services </span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed mb-8">
               Shikder Ambulance is a leading provider of emergency ambulance services, dedicated to serving the critical needs of Dhaka city and extending our reach to all districts of Bangladesh. We understand that in times of emergency Ambulance, every second counts. That's why we are committed to providing Ambulance, professional, and compassionate transport solutions, ensuring patients receive the urgent Ambulance care they need, wherever they are in the country.

@@ -8,15 +8,15 @@ import MediaModal from "@/components/shared/MediaModal";
 
 export const metadata: Metadata = {
   title:
-    "Shikder Ambulance - Professional Emergency Medical Services in Bangladesh",
+    "Shikder Ambulance Service in Dhaka | Best Reliable 24/7",
   description:
-    "Professional ambulance services in Dhaka, Bangladesh. 24/7 emergency medical services including AC ambulance, freezing ambulance, and ICU ambulance across all districts.",
+    "Shikder Ambulance Services in Dhaka. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination.",
   keywords:
-    "ambulance service, emergency medical service, Dhaka ambulance, Bangladesh ambulance, AC ambulance, freezing ambulance, ICU ambulance",
+    "ambulance service, best ambulance, near ambulance service, online ambulance, best ambulance near me, top ambulance, freezing ambulance near me, fast ambulance, 24 Hours Ambulance, Dhaka Ambulance service, dead body carrier ambulance, emergency ambulances, emergency medical service, Dhaka ambulance, Bangladesh ambulance, AC ambulance, non-ac ambulance, life support ambulance, freezing ambulance, ICU ambulance",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
-    title: "Shikder Ambulance - Professional Emergency Medical Services",
-    description: "24/7 professional ambulance services across Bangladesh",
+    title: "Shikder Ambulance Service | Best Reliable 24/7",
+    description: "Shikder Ambulance Services in Dhaka. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination",
     url: "https://shikderambulance.com",
     siteName: "Shikder Ambulance",
     locale: "en_US",
