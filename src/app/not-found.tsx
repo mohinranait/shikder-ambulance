@@ -32,7 +32,7 @@ export default function NotFound() {
                   Need Emergency Ambulance?
                 </h3>
                 <p className="text-gray-600">
-                  Our services are available 24/7 across Bangladesh
+                  Our services are available 24/7 all over Bangladesh
                 </p>
               </div>
 
@@ -42,9 +42,9 @@ export default function NotFound() {
                     <Phone className="h-6 w-6 text-red-600" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-1">
-                    Emergency Call
+                    Emergency Call Now
                   </h4>
-                  <p className="text-red-600 font-bold text-lg">01627 609222</p>
+                  <p className="text-red-600 font-bold text-lg">01627-669222</p>
                 </div>
                 <div className="text-center">
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -52,7 +52,7 @@ export default function NotFound() {
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-1">WhatsApp</h4>
                   <p className="text-green-600 font-bold text-lg">
-                    017100 60020
+                    017100-60020
                   </p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function NotFound() {
                 <Link href="tel:01710060020">
                   <Button className="bg-red-600 hover:bg-red-700 text-white">
                     <Phone className="h-4 w-4 mr-2" />
-                    Call Emergency Now
+                    Emergency Call Now
                   </Button>
                 </Link>
               </div>
@@ -76,7 +76,7 @@ export default function NotFound() {
                 className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 <Home className="h-5 w-5 mr-2" />
-                Go to Homepage
+                Go Homepage
               </Button>
             </Link>
             <Button
@@ -91,14 +91,14 @@ export default function NotFound() {
           </div>
 
           {/* Service Areas */}
-          <div className="text-center">
-            <p className="text-gray-600 mb-2">
+          <div className="text-center ">
+            <p className="text-gray-600 mb-2 font-bold">
               <Clock className="h-4 w-4 inline mr-1" />
-              Available 24/7 across all districts of Bangladesh
+              Available 24/7, All districts of Bangladesh
             </p>
             <p className="text-sm text-gray-500">
-              Dhaka • Chittagong • Sylhet • Rajshahi • Khulna • Barisal •
-              Rangpur • Mymensingh
+              Dhaka • Barisal • Khulna • Rajshahi • Chittagong • Rangpur •
+              Sylhet • Mymensingh
             </p>
           </div>
         </div>

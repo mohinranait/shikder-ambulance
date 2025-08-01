@@ -12,9 +12,9 @@ export function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge className="bg-red-500 hover:bg-red-600 text-white px-4 py-2">
-                Emergency Service 24/7
+                We’re Always Ready to Serve
               </Badge>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-bold text-foreground leading-normal">
                 Shikder Ambulance Service
                 <span className="text-primary block"> Best Reliable 24/7 </span>
               </h1>
