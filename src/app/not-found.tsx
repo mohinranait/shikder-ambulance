@@ -28,12 +28,21 @@ export default function NotFound() {
           <Card className="bg-white/80 backdrop-blur-sm border-2 border-blue-200 p-8 max-w-2xl mx-auto">
             <div className="space-y-6">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">
                   Need Emergency Ambulance?
                 </h3>
                 <p className="text-gray-600">
                   Our services are available 24/7 all over Bangladesh
                 </p>
+              </div>
+
+              <div className="flex justify-center">
+                <Link href="tel:01710060020">
+                  <Button className="bg-red-600 hover:bg-red-700 text-white">
+                    <Phone className="h-4 w-4 mr-2" />
+                    Emergency Helpline
+                  </Button>
+                </Link>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -55,15 +64,6 @@ export default function NotFound() {
                     017100-60020
                   </p>
                 </div>
-              </div>
-
-              <div className="flex justify-center">
-                <Link href="tel:01710060020">
-                  <Button className="bg-red-600 hover:bg-red-700 text-white">
-                    <Phone className="h-4 w-4 mr-2" />
-                    Emergency Call Now
-                  </Button>
-                </Link>
               </div>
             </div>
           </Card>
