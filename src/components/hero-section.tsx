@@ -14,7 +14,7 @@ export function HeroSection() {
               <Badge className="bg-red-500 hover:bg-red-600 text-white px-4 py-2">
                 We’re Always Ready to Serve
               </Badge>
-              <h1 className="text-3xl sm:text-6xl lg:text-5xl font-bold text-foreground leading-normal">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal">
                 Shikder Ambulance Service
                 <span className="text-primary block"> Best Reliable 24/7 </span>
               </h1>
