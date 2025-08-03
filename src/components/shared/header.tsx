@@ -22,7 +22,7 @@ export function Header() {
       ],
     },
     { name: "Blogs", href: "/blogs" },
-    { name: "Contact", href: "/contact-us" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (

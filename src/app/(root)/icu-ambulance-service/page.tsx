@@ -623,14 +623,14 @@ export default function IcuAmbulancePage() {
                 className="bg-white text-red-600 hover:bg-gray-100"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Emergency: 01627 609222
+                Emergency: 01627-669222
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-red-600 bg-transparent"
               >
-                WhatsApp: 017100 60020
+                WhatsApp: 017100-60020
               </Button>
             </div>
           </div>

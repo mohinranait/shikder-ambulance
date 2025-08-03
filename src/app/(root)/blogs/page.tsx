@@ -193,16 +193,14 @@ export default function BlogsPage() {
             <div className="space-y-4">
               <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
                 <Heart className="h-3 w-3 mr-1" />
-                Medical Knowledge Hub
+                Your trusted Health Care Partner
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Medical Emergency &{" "}
+                Patient Transport Ambulance Service &{" "}
                 <span className="text-blue-600">Health Care</span> Blog
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                Expert medical advice, emergency preparedness tips, and health
-                care insights from Bangladesh's leading ambulance service
-                professionals. Stay informed, stay prepared, save lives.
+                Welcome to our Patient Transport Ambulance Service and Health Care Blog, your trusted source for expert insights, safety tips, and updates on modern ambulance services. Your trusted blog for safe, reliable emergency medical transport.
               </p>
             </div>
 
@@ -243,7 +241,7 @@ export default function BlogsPage() {
                 Featured Articles
               </h2>
               <p className="text-lg text-gray-600">
-                Essential medical knowledge and emergency care insights
+                Essential Patient transport knowledge and emergency care insights
               </p>
             </div>
 
@@ -501,7 +499,7 @@ export default function BlogsPage() {
                       <AlertTriangle className="h-8 w-8 text-red-600" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">
-                      Medical Emergency?
+                      Need Emergency Ambulance?
                     </h3>
                     <p className="text-gray-600">
                       Don't wait - call for immediate assistance
@@ -509,13 +507,13 @@ export default function BlogsPage() {
                     <div className="space-y-2">
                       <Button className="w-full bg-red-600 hover:bg-red-700">
                         <Heart className="h-4 w-4 mr-2" />
-                        Call: 01627 609222
+                        Call: 01627-669222
                       </Button>
                       <Button
                         variant="outline"
                         className="w-full border-red-600 text-red-600 hover:bg-red-50 bg-transparent"
                       >
-                        WhatsApp: 017100 60020
+                        WhatsApp: 017100-60020
                       </Button>
                     </div>
                   </div>
@@ -531,7 +529,7 @@ export default function BlogsPage() {
                       Stay Updated
                     </h3>
                     <p className="text-gray-600">
-                      Get the latest medical tips and emergency care advice
+                      Get the latest patient transport tips and health care advice
                     </p>
                     <div className="space-y-2">
                       <Input

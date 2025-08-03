@@ -103,12 +103,13 @@ export default function AcAmbulancePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ac Ambulance Service in Bangladesh
             </h2>
+            <p className="text-center font-semibold">24/7 availability – just a phone call away.</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">
-                Ac Ambulance Service
+                Ac Ambulance Services
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 The Ac Ambulance is one of the <a href="https://shikderambulance.com/" target="_blank" rel="noopener noreferrer">best ambulance</a> services in Dhaka
@@ -135,7 +136,7 @@ export default function AcAmbulancePage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">The Best reliable</span>
+                    <span className="text-gray-700">Affortable, fast and reliable service is available</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
@@ -152,7 +153,7 @@ export default function AcAmbulancePage() {
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                      All Types of Ambulances
+                      All Types of Ambulances Services
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -281,6 +282,53 @@ export default function AcAmbulancePage() {
         </div>
       </section>
 
+      {/* Content Adding Part Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              24/7 AC Ambulance Service in Dhaka by Shikder Ambulance
+            </h2>
+            <p className="text-center font-semibold">The Quality Ambulance is Granted</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Reliable AC Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                When emergencies happen under Dhaka’s blazing heat, patient comfort becomes vital. Shikder Ambulance offers trusted 24/7 AC Ambulance Service in Dhaka, designed to keep patients cool, safe, and stress-free during every transfer.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                Why Choose an Shikder Ac Ambulance?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                An air-conditioned ambulance isn’t just about luxury; it helps protect patients from heatstroke, anxiety, and complications caused by extreme temperatures. Elderly patients, cardiac patients, and children often require a controlled environment — something our AC ambulances deliver seamlessly.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                Comfort and Care You Can Trust
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                At Shikder Ambulance, we combine comfort with safety. Our vehicles are clean, modern, and equipped with advanced cooling systems. Plus, trained staff ensure patients get professional care on the way to hospitals, clinics, or home.
+              </p>
+            </div>
+
+            <div className="flex justify-center">
+              <Image
+                src="/placeholder.svg?height=400&width=600&text=AC+Ambulance+Service"
+                alt="Best AC Ambulance Service"
+                width={600}
+                height={400}
+                className="rounded-xl shadow-lg w-full max-w-md"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Overview Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -339,7 +387,7 @@ export default function AcAmbulancePage() {
         </div>
       </section>
 
-      {/* Main Service Section */}
+      {/* FAQs Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">

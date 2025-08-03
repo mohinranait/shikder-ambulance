@@ -8,28 +8,28 @@ export function ServiceOverview() {
     {
       title: "Ac Ambulance Services",
       description:
-        "Critical care transport with advanced life support equipment and trained paramedics for life-threatening emergencies.",
+        "AC Ambulance Service ensures safe, comfortable, and temperature-controlled patient transport, ideal for critical cases and long-distance transfers.",
       image: "/placeholder.svg?height=300&width=400",
       features: ["Quality Ambulance", "Controled tempreture of Ambulance", "Oxygen is free in Dhaka City", " Anytime, Anywhere is Available"],
     },
     {
       title: "Non Ac Ambulance Service",
       description:
-        "Comfortable medical transport for scheduled appointments, hospital transfers, and routine medical care.",
+        "Non-AC Ambulance Service offers affordable, reliable patient transport within the city, ideal for stable patients and short-distance transfers.",
       image: "/placeholder.svg?height=300&width=400",
       features: ["Wheelchair Accessible", "Stretcher Transport", "Medical Supervision", "Insurance Accepted"],
     },
     {
       title: "Life Support Ambulance Service",
       description:
-        "Specialized transport for critically ill patients requiring intensive care during transfer between facilities.",
+        "Life Support Ambulance Service provides critical patients with advanced medical equipment and trained staff for safe, emergency transfers anytime, anywhere.",
       image: "/placeholder.svg?height=300&width=400",
       features: ["ICU-Level Care", "Ventilator Support", "Specialized Nurses", "Hospital-to-Hospital"],
     },
     {
       title: "Dead Body Carrier Freezing Ambulance Service",
       description:
-        "On-site medical coverage for events, sports, and gatherings with standby ambulance and medical personnel.",
+        "Freezing Ambulance Service safely transports deceased bodies long distances, preserving them in temperature-controlled freezing units with dignity.",
       image: "/placeholder.svg?height=300&width=400",
       features: ["It has a frozen box", "High Quality steel stretchers", "Tempresure: -5 to -22 are available", "Emergency Response"],
     },

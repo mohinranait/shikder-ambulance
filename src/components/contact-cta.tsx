@@ -9,8 +9,7 @@ export function ContactCTA() {
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Need Emergency Help?</h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-            Don't wait in a medical emergency. Our trained professionals are ready to respond 24/7 with advanced life
-            support and rapid transport.
+            Don't wait in a medical emergency. Our trained professionals are ready to respond 24/7 with all types of emergency Ambulance service. If you need emergency Ambulance Support then call Us.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

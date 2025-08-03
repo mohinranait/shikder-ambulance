@@ -17,16 +17,16 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Non-AC Ambulance Service in Bangladesh | Affordable Emergency Medical Transport - Shikder Ambulance",
+    "Affordable Non-AC Ambulance Service in Bangladesh | Shikder Ambulance",
   description:
-    "Affordable Non-AC ambulance service in Dhaka and all districts of Bangladesh. 24/7 emergency medical transport with basic life support equipment. Cost-effective ambulance service for patient transport.",
+    "Affordable Non-AC ambulance Service in Bangladesh. We provide different types of Ambulance service in all districts of Bangladesh. We Are Just A Call Away",
   keywords:
-    "non-AC ambulance, basic ambulance service, affordable ambulance Bangladesh, emergency medical transport, patient transport Dhaka, cheap ambulance service, basic life support ambulance",
+    "non-AC ambulance, basic ambulance service, affordable ambulance Bangladesh, emergency medical transport, patient transport Dhaka, cheap ambulance service, basic life support ambulance, near ambulance, top ambulance, fast ambulance",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
-    title: "Non-AC Ambulance Service in Bangladesh | Shikder Ambulance",
+    title: "Affordable Non-AC Ambulance Service in Bangladesh | Shikder Ambulance",
     description:
-      "Affordable 24/7 Non-AC ambulance service across Bangladesh. Cost-effective emergency medical transport with basic life support.",
+      "Affordable Non-AC ambulance Service in Bangladesh. We provide different types of Ambulance service in all districts of Bangladesh. We Are Just A Call Away",
     url: "https://shikderambulance.com/non-ac-ambulance",
     siteName: "Shikder Ambulance",
     images: [
@@ -162,7 +162,7 @@ export default function NonAcAmbulancePage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">Basic Life Support</span>
+                    <span className="text-gray-700">Quick Online Booking</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
@@ -433,7 +433,7 @@ export default function NonAcAmbulancePage() {
               Service Coverage Areas
             </h2>
             <p className="text-xl opacity-90">
-              Non-AC ambulance service available across Bangladesh
+              Non-AC ambulance Service is Available all Over Bangladesh
             </p>
           </div>
 
@@ -470,7 +470,7 @@ export default function NonAcAmbulancePage() {
               Affordable Pricing
             </h2>
             <p className="text-lg text-gray-600">
-              Cost-effective emergency medical transport for everyone
+              Cost-effective emergency Patient transport for everyone
             </p>
           </div>
 
@@ -523,8 +523,8 @@ export default function NonAcAmbulancePage() {
               Need Affordable Ambulance Service?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Contact us now for cost-effective emergency medical transport.
-              Available 24/7 across Bangladesh.
+              Contact us now for cost-effective emergency patient transport service.
+              Available 24/7 in the all districts of Bangladesh.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -532,14 +532,14 @@ export default function NonAcAmbulancePage() {
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call: 01627 609222
+                Call: 01627-669222
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
               >
-                WhatsApp: 017100 60020
+                WhatsApp: 017100-60020
               </Button>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "Md. Shahadat Shikder",
+      name: "Shahadat Shikder",
       role: "Director",
       experience: "10 years",
       image: "/placeholder.svg?height=300&width=300",
