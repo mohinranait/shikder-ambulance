@@ -59,12 +59,12 @@ export function CreateBlogForm() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <Label htmlFor="title">Post Title *</Label>
+                <Label htmlFor="title">Post Name *</Label>
                 <Input
                   id="title"
                   value={formData.title}
                   onChange={(e) => handleTitleChange(e.target.value)}
-                  placeholder="Enter post title"
+                  placeholder="Write Post Title"
                   required
                 />
               </div>
@@ -115,7 +115,7 @@ export function CreateBlogForm() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <Label htmlFor="metaTitle">Meta Title</Label>
+                <Label htmlFor="metaTitle">SEO Title</Label>
                 <Input
                   id="metaTitle"
                   value={formData.metaTitle}

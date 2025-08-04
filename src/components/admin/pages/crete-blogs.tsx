@@ -263,12 +263,12 @@ const CreateBlogsPost = () => {
                     <CardContent className="space-y-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Post Title *
+                          Post Name *
                         </label>
                         <Input
                           name="postTitle"
                           type="text"
-                          placeholder="Enter your post title..."
+                          placeholder="Write Your Post Name..."
                           className="text-lg font-medium border-gray-200 focus:border-blue-500 focus:ring-blue-500"
                           value={form?.postTitle}
                           onChange={(e) => {
@@ -380,11 +380,11 @@ const CreateBlogsPost = () => {
                     <CardContent className="space-y-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          SEO Title
+                          Title & SEO Title
                         </label>
                         <Input
                           type="text"
-                          placeholder="Enter SEO title..."
+                          placeholder="Write SEO title..."
                           className="border-gray-200 focus:border-blue-500"
                           value={form?.seoTitle || ""}
                           onChange={(e) =>
@@ -416,13 +416,13 @@ const CreateBlogsPost = () => {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Tags
+                          Tags: Keywords
                         </label>
                         <TagsInput
                           value={tags}
                           onChange={setTags}
                           name="tags"
-                          placeHolder="Add tags..."
+                          placeHolder="Input Keywords here..."
                         />
                       </div>
                     </CardContent>
@@ -502,11 +502,10 @@ const CreateBlogsPost = () => {
                               }
                             />
                             <div
-                              className={`w-4 h-4 rounded-full border-2 transition-colors ${
-                                form?.layouts?.isSidebar === option.value
-                                  ? "border-blue-500 bg-blue-500"
-                                  : "border-gray-300"
-                              }`}
+                              className={`w-4 h-4 rounded-full border-2 transition-colors ${form?.layouts?.isSidebar === option.value
+                                ? "border-blue-500 bg-blue-500"
+                                : "border-gray-300"
+                                }`}
                             >
                               {form?.layouts?.isSidebar === option.value && (
                                 <div className="w-2 h-2 bg-white rounded-full m-0.5" />
@@ -561,11 +560,10 @@ const CreateBlogsPost = () => {
                                 }
                               />
                               <div
-                                className={`w-4 h-4 rounded-full border-2 transition-colors ${
-                                  form?.layouts?.banner === option.value
-                                    ? "border-blue-500 bg-blue-500"
-                                    : "border-gray-300"
-                                }`}
+                                className={`w-4 h-4 rounded-full border-2 transition-colors ${form?.layouts?.banner === option.value
+                                  ? "border-blue-500 bg-blue-500"
+                                  : "border-gray-300"
+                                  }`}
                               >
                                 {form?.layouts?.banner === option.value && (
                                   <div className="w-2 h-2 bg-white rounded-full m-0.5" />
