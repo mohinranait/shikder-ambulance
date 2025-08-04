@@ -35,11 +35,11 @@ export function Header() {
               <Heart className="h-6 w-6" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">
+              <h2 className="text-2xl font-bold text-gray-900">
                 Shikder Ambulance
-              </h1>
+              </h2>
               <p className="text-xs text-gray-600">
-                Patient Transport Services
+                Patient Transport Service
               </p>
             </div>
           </div>

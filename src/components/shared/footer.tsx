@@ -112,15 +112,19 @@ const FooterComponent = () => {
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
                 <Heart className="h-4 w-4 mr-2 text-red-400" />
-                Emergency Response
+                Always, Fast, and Reliable
               </li>
               <li className="flex items-center text-gray-300">
                 <Shield className="h-4 w-4 mr-2 text-blue-400" />
-                Medical Transport
+                Emergency Ambulance Services
               </li>
               <li className="flex items-center text-gray-300">
                 <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
-                Critical Patient Transport
+                Dhaka to all districts Ambulance
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
+                Any districts to Dhaka Ambulance Service
               </li>
               <li>
                 <Link
@@ -135,7 +139,7 @@ const FooterComponent = () => {
 
           {/* Contact & Newsletter */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
             <div className="space-y-4 mb-6">
               <div className="flex items-center text-gray-300">
                 <Phone className="h-5 w-5 mr-3 text-red-400" />
@@ -159,20 +163,22 @@ const FooterComponent = () => {
 
             {/* Newsletter */}
             <div>
-              <h5 className="font-medium mb-3">Stay Updated</h5>
+              <h6 className="font-medium mb-3">Request A Call Back For Ambulance</h6>
               <div className="flex gap-2">
                 <Input
                   type="email"
-                  placeholder="Your email"
+                  placeholder="Give Your Phone Number"
                   className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
                 />
                 <Button size="sm" className="bg-red-600 hover:bg-red-700">
-                  Subscribe
+                  Submit
                 </Button>
               </div>
+              {/*
               <p className="text-xs text-gray-400 mt-2">
                 Get tips and emergency updates
               </p>
+                  */}
             </div>
           </div>
         </div>
@@ -218,7 +224,7 @@ const FooterComponent = () => {
           <div className="flex items-center justify-center space-x-4 text-center">
             <Phone className="h-5 w-5" />
             <p className="font-medium">
-              Need Emergency Transport? Don't wait, Call Now.
+              Need Emergency Ambulance? Don't wait, Call Now.
             </p>
           </div>
         </div>
