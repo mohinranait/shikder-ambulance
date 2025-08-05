@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  ChevronDown,
-  HelpCircle,
-  Truck,
-  RotateCcw,
-  Package,
-} from "lucide-react";
+
 import FaqComponent from "./faq-component";
 
 export default function PremiumFaqSection() {
