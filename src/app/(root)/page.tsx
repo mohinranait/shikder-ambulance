@@ -4,6 +4,8 @@ import { WhyChooseUs } from "@/components/why-choose-us";
 import { ServiceOverview } from "@/components/service-overview";
 import { BlogTeasers } from "@/components/blog-teasers";
 import { ContactCTA } from "@/components/contact-cta";
+import PremiumFaqSection from "@/components/pages/home/faq";
+import PremiumReviewSection from "@/components/pages/home/reviews";
 
 export default function HomePage() {
   return (
@@ -12,6 +14,8 @@ export default function HomePage() {
       <WhyChooseUs />
       <ServiceOverview />
       <BlogTeasers />
+      <PremiumFaqSection />
+      <PremiumReviewSection />
       <ContactCTA />
     </>
   );

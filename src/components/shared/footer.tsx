@@ -163,14 +163,19 @@ const FooterComponent = () => {
 
             {/* Newsletter */}
             <div>
-              <h6 className="font-medium mb-3">Request A Call Back For Ambulance</h6>
-              <div className="flex gap-2">
+              <h6 className="font-medium mb-3">
+                Get A Call Back For Ambulance
+              </h6>
+              <div className="relative">
                 <Input
-                  type="email"
+                  type="number"
                   placeholder="Give Your Phone Number"
                   className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
                 />
-                <Button size="sm" className="bg-red-600 hover:bg-red-700">
+                <Button
+                  size="sm"
+                  className="bg-red-600 absolute top-2/4 right-0 -translate-y-2/4 py-5 rounded-l-none hover:bg-red-700"
+                >
                   Submit
                 </Button>
               </div>
@@ -197,13 +202,13 @@ const FooterComponent = () => {
           </div>
           <div className="flex space-x-6 text-sm">
             <Link
-              href="/privacy"
+              href="/privacy-and-policy"
               className="text-gray-400 hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms"
+              href="/terms-and-condition"
               className="text-gray-400 hover:text-white transition-colors"
             >
               Terms and Condition

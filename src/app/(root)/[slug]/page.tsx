@@ -5,6 +5,7 @@ import { TPostFormData } from "@/types/post.types";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
+import "./blog.css";
 
 export async function generateMetadata({
   params,

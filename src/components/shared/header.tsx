@@ -30,7 +30,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link href={"/"} className="flex items-center space-x-2">
             <div className="bg-blue-600 text-white p-2 rounded-lg">
               <Heart className="h-6 w-6" />
             </div>
@@ -38,11 +38,9 @@ export function Header() {
               <h2 className="text-2xl font-bold text-gray-900">
                 Shikder Ambulance
               </h2>
-              <p className="text-xs text-gray-600">
-                Patient Transport Service
-              </p>
+              <p className="text-xs text-gray-600">Patient Transport Service</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

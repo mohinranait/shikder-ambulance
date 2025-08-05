@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -19,26 +20,34 @@ export function HeroSection() {
                 <span className="text-primary block"> Best Reliable 24/7 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Welcome to <b>Shikder Ambulance Service</b> in Dhaka, Bangladesh. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination. <b>Online Booking and Money Receipt</b> is Available.
+                Welcome to <b>Shikder Ambulance Service</b> in Dhaka,
+                Bangladesh. Looking for a reliable Ambulance? You have come to
+                the right place. We guarantee your safe and comfortable arrival
+                at your destination. <b>Online Booking and Money Receipt</b> is
+                Available.
               </p>
             </div>
 
             {/* Emergency Contact */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now: 017100-60020
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-4 text-lg bg-transparent"
-              >
-                Online Booking Now
-              </Button>
+              <Link href={"tel:+8801710060020"}>
+                <Button
+                  size="lg"
+                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Now: 017100-60020
+                </Button>
+              </Link>
+              <Link href={"/contact"}>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-4 text-lg bg-transparent"
+                >
+                  Online Booking Now
+                </Button>
+              </Link>
             </div>
 
             {/* Key Features */}

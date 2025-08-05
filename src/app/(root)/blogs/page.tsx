@@ -200,7 +200,10 @@ export default function BlogsPage() {
                 <span className="text-blue-600">Health Care</span> Blog
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                Welcome to our Patient Transport Ambulance Service and Health Care Blog, your trusted source for expert insights, safety tips, and updates on modern ambulance services. Your trusted blog for safe, reliable emergency medical transport.
+                Welcome to our Patient Transport Ambulance Service and Health
+                Care Blog, your trusted source for expert insights, safety tips,
+                and updates on modern ambulance services. Your trusted blog for
+                safe, reliable emergency medical transport.
               </p>
             </div>
 
@@ -241,7 +244,8 @@ export default function BlogsPage() {
                 Featured Articles
               </h2>
               <p className="text-lg text-gray-600">
-                Essential Patient transport knowledge and emergency care insights
+                Essential Patient transport knowledge and emergency care
+                insights
               </p>
             </div>
 
@@ -282,7 +286,7 @@ export default function BlogsPage() {
                       </div>
 
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                        <Link href={`/blogs/${post.slug || post._id}`}>
+                        <Link href={`/${post.slug || post._id}`}>
                           {post.postTitle}
                         </Link>
                       </h3>
@@ -356,9 +360,9 @@ export default function BlogsPage() {
       {posts.length > 0 && (
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-3 gap-12">
+            <div className="grid lg:grid-cols-3 gap-6">
               {/* Blog Posts */}
-              <div className="lg:col-span-2 space-y-8">
+              <div className="lg:col-span-2 space-y-6">
                 <div className="flex items-center justify-between">
                   <h2 className="text-2xl font-bold text-gray-900">
                     {searchQuery
@@ -404,7 +408,7 @@ export default function BlogsPage() {
                               </div>
 
                               <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                                <Link href={`/blogs/${post.slug || post._id}`}>
+                                <Link href={`/${post.slug || post._id}`}>
                                   {post.postTitle}
                                 </Link>
                               </h3>
@@ -453,7 +457,7 @@ export default function BlogsPage() {
               </div>
 
               {/* Sidebar */}
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {/* Recent Posts */}
                 {recentPosts.length > 0 && (
                   <Card className="p-6">
@@ -464,7 +468,7 @@ export default function BlogsPage() {
                       {recentPosts.map((post) => (
                         <Link
                           key={post._id}
-                          href={`/blogs/${post.slug || post._id}`}
+                          href={`/${post.slug || post._id}`}
                           className="flex items-center space-x-3 group cursor-pointer"
                         >
                           <Image
@@ -529,7 +533,8 @@ export default function BlogsPage() {
                       Stay Updated
                     </h3>
                     <p className="text-gray-600">
-                      Get the latest patient transport tips and health care advice
+                      Get the latest patient transport tips and health care
+                      advice
                     </p>
                     <div className="space-y-2">
                       <Input
