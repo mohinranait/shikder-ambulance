@@ -1,0 +1,64 @@
+import { Star } from "lucide-react";
+import moment from "moment";
+import Image from "next/image";
+import React, { FC } from "react";
+type TCommentType = {
+  _id: string;
+  autor?: string;
+  content: string;
+  name: string;
+  star: number;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+};
+type Props = {
+  comments: TCommentType[];
+};
+const ShowAllComments: FC<Props> = ({ comments }) => {
+  return (
+    <ul className="flex flex-col p-5 bg-white divide-slate-200 divide-y-1 ">
+      {comments?.map((item, idx) => (
+        <li key={idx} className=" py-4   flex gap-2">
+          <div>
+            <div className="w-[50px]">
+              <Image
+                src={"/placeholder-user.jpg"}
+                width={50}
+                height={50}
+                alt="avater"
+                className="w-10 h-10 rounded-full ring-1 ring-primary ring-offset-2"
+              />
+            </div>
+          </div>
+          <div className="w-full">
+            <div>
+              {item?.name && (
+                <p className="font-semibold text-slate-700">{item?.name}</p>
+              )}
+
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5]?.map((star) => (
+                  <Star
+                    key={star}
+                    className={`${
+                      item?.star >= star ? "text-yellow-500" : "text-slate-300"
+                    }`}
+                    size={16}
+                  />
+                ))}
+              </div>
+
+              <p className="text-slate-600">{item?.content}</p>
+              <p className="text-sm text-slate-500">
+                {moment(item?.createdAt).format("MMM DD, YYYY")}
+              </p>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default ShowAllComments;

@@ -5,6 +5,9 @@ import MainBody from "./main-body";
 import { Phone } from "lucide-react";
 import RightSidebar from "./right-sidebar";
 import LeftSidebar from "./left-sidebar";
+import CommentSection from "./CommentSection";
+import FaqComponent from "../home/faq-component";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   blog: TPostFormData;
@@ -17,29 +20,33 @@ const BlogView: FC<Props> = ({ blog }) => {
   }
   return (
     <main className="mb-20">
-      <section
-        className={`bg-primary`}
-        // style={{
-        //   backgroundImage: `url(${bgImage})`,
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        // }}
-      >
+      <section className={`relative bg-premium-light-gradient `}>
         <div className={`${bgImage && "bg-slate-900 bg-opacity-75"} `}>
-          <div className="container justify-center flex items-center  md:min-h-[calc(100vh-200px)] py-20 lg:px-32 xl:px-48 ">
+          <div className="sm:container justify-center flex items-center  md:min-h-[calc(100vh-200px)] py-5 lg:py-20 lg:px-32 xl:px-48 ">
             <div className="flex flex-col gap-3">
               <h1
-                className={`text-center font-bold text-3xl md:text-4xl lg:text-5xl  mb-3 
-                 text-white
+                className={`text-3xl text-center sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal
                  `}
               >
                 {blog?.seoTitle || blog?.postTitle}
               </h1>
-              <p className={`lg:px-20 text-center  text-slate-200 `}>
+              <p
+                className={`text-xl text-center text-muted-foreground mx-auto max-w-2xl`}
+              >
                 {blog?.seoDescription}
               </p>
-              {blog?.contactNumber && (
+              <div className="flex justify-center ">
+                <Link href={"tel:+8801710060020"}>
+                  <Button
+                    size="lg"
+                    className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call Now: 017100-60020
+                  </Button>
+                </Link>
+              </div>
+              {/* {blog?.contactNumber && (
                 <div className="flex justify-center">
                   <Link
                     href={`tel:${blog?.contactNumber}`}
@@ -49,28 +56,41 @@ const BlogView: FC<Props> = ({ blog }) => {
                     {blog?.contactNumber || "Call Ambulance"}
                   </Link>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>
       </section>
       <section className="pt-3">
-        <div className="container grid lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div
+          className={`sm:container grid gap-5 ${
+            blog?.layouts?.isSidebar === "both"
+              ? "lg:grid-cols-4"
+              : blog?.layouts?.isSidebar === "none"
+              ? "lg:grid-cols-1"
+              : "lg:grid-cols-3"
+          }`}
+        >
+          {/* Left Sidebar */}
           {(blog?.layouts?.isSidebar === "left" ||
             blog?.layouts?.isSidebar === "both") && <LeftSidebar />}
+
+          {/* Main Content */}
           <div
-            className={` ${
-              blog?.layouts?.isSidebar === "left" ||
-              blog?.layouts?.isSidebar === "right"
-                ? "lg:col-span-2 xl:col-span-3"
+            className={`flex flex-col gap-3 ${
+              blog?.layouts?.isSidebar === "both"
+                ? "lg:col-span-2"
                 : blog?.layouts?.isSidebar === "none"
-                ? "lg:col-span-2 xl:col-span-4"
-                : "lg:col-span-2 xl:col-span-2"
-            } flex flex-col gap-3 `}
+                ? "lg:col-span-1"
+                : "lg:col-span-2"
+            }`}
           >
             <MainBody blog={blog} />
-            {/* {blog?.layouts?.comments && <CommentSection blog={blog} />} */}
+            {blog?.layouts?.comments && <CommentSection blog={blog} />}
+            <FaqComponent />
           </div>
+
+          {/* Right Sidebar */}
           {(blog?.layouts?.isSidebar === "right" ||
             blog?.layouts?.isSidebar === "both") && <RightSidebar />}
         </div>

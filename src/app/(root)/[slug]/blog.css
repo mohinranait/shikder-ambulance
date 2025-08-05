@@ -7,6 +7,13 @@
   line-height: 1.6;
 }
 
+@media screen and (max-width:768px) {
+  .blog-post-preview{
+
+    padding: 10px 8px;
+  }
+}
+
 /* Paragraph */
 .blog-post-preview p {
   margin: 1rem 0;
