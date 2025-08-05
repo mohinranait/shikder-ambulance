@@ -12,28 +12,49 @@ export default function PremiumFaqSection() {
     {
       id: "item-1",
       icon: Package,
-      title: "Product Information",
+      title: "What services does Shikder Ambulance provide?",
       content: [
-        "Our flagship product combines cutting-edge technology with sleek design. Built with premium materials, it offers unparalleled performance and reliability.",
-        "Key features include advanced processing capabilities, and an intuitive user interface designed for both beginners and experts.",
+        "Shikder Ambulance provides a wide range of emergency and non-emergency ambulance services across Dhaka and all districts in Bangladesh. Our services include AC and Non-AC ambulances, ICU/CCU life support ambulances, and freezing vans for deceased body transport. We ensure timely, safe, and professional transportation of patients and deceased individuals to hospitals, homes, or desired destinations with complete care and respect.",
       ],
     },
     {
       id: "item-2",
       icon: Truck,
-      title: "Shipping Details",
+      title: "How quickly can you send an ambulance?",
       content: [
-        "We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days.",
-        "All orders are carefully packaged and fully insured. Track your shipment in real-time through our dedicated tracking portal.",
+        "In Dhaka city, we typically reach your location within 10 to 20 minutes, depending on traffic and distance. For inter-district services, arrival time depends on the location and road conditions. We always try our best to minimize waiting time in emergency situations",
       ],
     },
     {
       id: "item-3",
-      icon: RotateCcw,
-      title: "Return Policy",
+      icon: Truck,
+      title: "Do you operate only in Dhaka?",
       content: [
-        "We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition.",
-        "Our hassle-free return process includes free return shipping and full refunds processed within 48 hours of receiving the returned item.",
+        " No. While our head office is based in Dhaka, we offer ambulance services in all 64 districts of Bangladesh. Whether you’re in a remote village or a busy city, we can reach you with our well-coordinated network. Our long-distance transport options ensure that patients or deceased bodies can be transferred from one district to another safely.",
+      ],
+    },
+    {
+      id: "item-4",
+      icon: Truck,
+      title: "How can I contact Shikder Ambulance?",
+      content: [
+        "You can contact us by calling our 24/7 emergency hotline. We also accept inquiries and advance bookings by phone, website contact form, or social media. Our friendly support team is always ready to assist you with your needs. If you need Ambulance then Contact Us. ",
+      ],
+    },
+    {
+      id: "item-5",
+      icon: Truck,
+      title: "How can I book an ambulance?",
+      content: [
+        "Booking with Shikder Ambulance is fast and simple. Just call our dedicated hotline, and our support team will guide you through the process. You’ll need to provide the pickup location, destination, type of ambulance required, and patient condition (if applicable). We aim to dispatch the ambulance as quickly as possible after booking confirmation.",
+      ],
+    },
+    {
+      id: "item-6",
+      icon: RotateCcw,
+      title: "Can I book an ambulance in advance?",
+      content: [
+        "Yes, advance booking is available for planned hospital admissions, medical checkups, patient transfers, or events. This helps us arrange the right type of ambulance for your specific needs at the scheduled time without delay.",
       ],
     },
   ];
@@ -55,11 +76,10 @@ export default function PremiumFaqSection() {
               <HelpCircle className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
-              Frequently Asked Questions
+              Frequently Asked Questions - FAQs
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Quick answers to common questions about our emergency patient
-              transport services.
+              Shikder Ambulance answers common questions about booking, ambulance types, emergency support, service areas, and pricing—helping customers get quick, clear info in urgent times.
             </p>
           </div>
 
