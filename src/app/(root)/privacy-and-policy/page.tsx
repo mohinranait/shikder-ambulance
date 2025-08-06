@@ -14,9 +14,10 @@ export default function PrivacyPage() {
               <Shield className="h-10 w-10 text-blue-600" />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Privacy Policy
+              Privacy Policy – Shikder Ambulance
+
             </h1>
-            <p className="text-lg text-gray-600">Last updated: 22-07-2025</p>
+            <p className="text-lg text-gray-600 mb-5">Last updated: 22-07-2025 </p>
 
             <p>At Shikder Ambulance, we are committed to protecting the privacy and personal information of our clients and website visitors. This Privacy Policy outlines how we collect, and protect your information when you engage with our services in Dhaka and all districts of Bangladesh.</p>
           </div>

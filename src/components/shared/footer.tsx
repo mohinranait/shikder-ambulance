@@ -18,19 +18,19 @@ import {
 import Link from "next/link";
 const quickLinks = [
   {
-    label: "Ac Ambulance",
+    label: "Ac Ambulance Service",
     link: "/ac-ambulance-service",
   },
   {
-    label: "Non Ac Ambulance",
+    label: "Non Ac Ambulance Service",
     link: "/non-ac-ambulance",
   },
   {
-    label: "Freezing Ambulance",
+    label: "Freezing Ambulance Service",
     link: "/freezing-ambulance-service",
   },
   {
-    label: "ICU Ambulance",
+    label: "ICU Ambulance Service",
     link: "/icu-ambulance-service",
   },
 ];
