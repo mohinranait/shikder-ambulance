@@ -16,7 +16,9 @@ export default function PrivacyPage() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Privacy Policy
             </h1>
-            <p className="text-lg text-gray-600">Last updated: January 2024</p>
+            <p className="text-lg text-gray-600">Last updated: 22-07-2025</p>
+
+            <p>At Shikder Ambulance, we are committed to protecting the privacy and personal information of our clients and website visitors. This Privacy Policy outlines how we collect, and protect your information when you engage with our services in Dhaka and all districts of Bangladesh.</p>
           </div>
 
           {/* Privacy Content */}
@@ -145,16 +147,27 @@ export default function PrivacyPage() {
                 </p>
                 <div className="space-y-2 text-gray-700">
                   <p>
-                    <strong>Email:</strong> privacy@aktaambulance.com
+                    <strong>Email:</strong> shikderambulance@gmail.com
                   </p>
                   <p>
-                    <strong>Phone:</strong> +880-1234-567890
+                    <strong>Phone:</strong> 017100-60020
                   </p>
                   <p>
-                    <strong>Address:</strong> 123 Medical Center Road, Dhaka
-                    1000, Bangladesh
+                    <strong>Address:</strong> Mogbazar Road, Dhaka
+                    1217, Bangladesh
                   </p>
                 </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Contact Information</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 mb-4">
+                  Your trust is important to us. At Shikder Ambulance, we are committed to protecting your privacy and delivering safe, dependable emergency medical services.
+                </p>
               </CardContent>
             </Card>
           </div>

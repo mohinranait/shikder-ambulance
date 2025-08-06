@@ -15,63 +15,63 @@ export default function PremiumReviewSection() {
   const reviews = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Md. Asraful Islam",
       role: "Emergency Coordinator",
       company: "City General Hospital",
       avatar:
         "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       content:
-        "Outstanding service! The response time was incredible and the medical team was extremely professional. They saved precious minutes that made all the difference.",
-      location: "New York, NY",
+        " We booked them during Eid holidays from Dhaka to Mymensingh, and they responded instantly. It’s comforting to know a service like this is available 24/7.",
+      location: "Dhaka, Bangladesh",
     },
     {
       id: 2,
-      name: "Dr. Michael Chen",
-      role: "Chief Medical Officer",
-      company: "Metropolitan Healthcare",
+      name: "Dr. Mehedi Hassan",
+      role: "Madical Manager",
+      company: "Popular Hospital",
       avatar:
         "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       content:
-        "Their advanced life support equipment and highly trained paramedics provide unmatched quality care. We trust them with our most critical patients.",
-      location: "Los Angeles, CA",
+        "I needed an emergency ambulance at midnight in Dhaka, and Shikder Ambulance arrived within 25 minutes. The driver was polite, and the ambulance was clean and well-equipped. Highly recommend!",
+      location: "Uttara, Bangladesh",
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      role: "Nursing Director",
+      name: "Dr. Rasida Akter Tuly",
+      role: "Manager",
       company: "Regional Medical Center",
       avatar:
         "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       content:
-        "Compassionate care combined with cutting-edge technology. The communication throughout the transport process was excellent and kept families informed.",
-      location: "Chicago, IL",
+        "Unlike other services, Shikder gave us a clear quote over the phone and didn’t add any hidden charges. Great value for such professional service.",
+      location: "Barisal Sadar, Bangladesh",
     },
     {
       id: 4,
-      name: "James Wilson",
-      role: "Hospital Administrator",
-      company: "St. Mary's Medical",
+      name: "Sakib Al Hassan",
+      role: "General Manager",
+      company: "Bilash Bozon",
       avatar:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       content:
         "Reliable, efficient, and always available when we need them most. Their 24/7 service has been invaluable for our emergency department operations.",
-      location: "Houston, TX",
+      location: "Faridpur, Bangladesh",
     },
     {
       id: 5,
-      name: "Dr. Lisa Thompson",
+      name: "Dr. Siddikur Rahaman",
       role: "Emergency Physician",
-      company: "University Hospital",
+      company: "Desh Bangla Medical",
       avatar:
         "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=150&h=150&fit=crop&crop=face",
       rating: 5,
       content:
-        "The level of professionalism and medical expertise is exceptional. Every transport is handled with the utmost care and precision.",
-      location: "Miami, FL",
+        "I was very impressed with how quickly they picked up the call and dispatched an ambulance. The communication from their team was clear and helpful throughout.",
+      location: "Barguna, Bangladesh",
     },
   ];
 
@@ -102,9 +102,8 @@ export default function PremiumReviewSection() {
     return Array.from({ length: 5 }).map((_, index) => (
       <Star
         key={index}
-        className={`w-5 h-5 ${
-          index < rating ? "text-yellow-400 fill-current" : "text-gray-300"
-        }`}
+        className={`w-5 h-5 ${index < rating ? "text-yellow-400 fill-current" : "text-gray-300"
+          }`}
       />
     ));
   };
@@ -127,8 +126,7 @@ export default function PremiumReviewSection() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Trusted by healthcare professionals across the nation for critical
-            patient transport services
+            Shikder Ambulance is the Trusted Partner to the people by serve. We are always ready to provode emergency ambulance service in the all districts of Bangladesh.
           </p>
         </div>
 
@@ -227,11 +225,10 @@ export default function PremiumReviewSection() {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? "bg-gradient-to-r from-blue-500 to-purple-600 w-8"
-                  : "bg-gray-300 hover:bg-gray-400"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                ? "bg-gradient-to-r from-blue-500 to-purple-600 w-8"
+                : "bg-gray-300 hover:bg-gray-400"
+                }`}
             />
           ))}
         </div>
