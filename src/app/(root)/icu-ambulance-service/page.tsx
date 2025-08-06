@@ -192,14 +192,14 @@ export default function IcuAmbulancePage() {
             <div className="space-y-6 ">
               <div className="bg-white relative rounded-2xl shadow-2xl p-6">
                 <Image
-                  src="/placeholder.svg?height=300&width=500&text=ICU+Ambulance+Exterior"
+                  src="/default.png?height=300&width=500&text=ICU+Ambulance+Exterior"
                   alt="ICU Ambulance Service - Professional emergency medical transport vehicle"
                   width={500}
                   height={300}
                   className="rounded-xl scale-75 w-full h-auto"
                 />
                 <Image
-                  src="/placeholder.svg?height=200&width=200&text=ICU+Ambulance+Interior"
+                  src="/default.png?height=200&width=200&text=ICU+Ambulance+Interior"
                   alt="ICU Ambulance Interior - Advanced life support equipment and medical facilities"
                   width={200}
                   height={200}

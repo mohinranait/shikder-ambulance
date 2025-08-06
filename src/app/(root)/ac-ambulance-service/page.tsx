@@ -14,8 +14,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Best AC Ambulance Service in Dhaka by Shikder Ambulance 24/7",
+  title: "Best AC Ambulance Service in Dhaka by Shikder Ambulance 24/7",
   description:
     "Best AC Ambulance Service in Dhaka by Shikder Ambulance. Temperature-controlled ambulance with air conditioning for patient comfort. 24/7 emergency Ambulance services across all districts.",
   keywords:
@@ -78,9 +77,9 @@ export default function AcAmbulancePage() {
                 <span className="text-orange-500">24/7</span>
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                Best Ac Ambulance Service in Dhaka. We provide different
-                types of Ambulance in the all districts of Bangladesh. We
-                Are Just A Call Away. Contact Us Now
+                Best Ac Ambulance Service in Dhaka. We provide different types
+                of Ambulance in the all districts of Bangladesh. We Are Just A
+                Call Away. Contact Us Now
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -103,7 +102,9 @@ export default function AcAmbulancePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ac Ambulance Service in Bangladesh
             </h2>
-            <p className="text-center font-semibold">24/7 availability – just a phone call away.</p>
+            <p className="text-center font-semibold">
+              24/7 availability – just a phone call away.
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -112,11 +113,18 @@ export default function AcAmbulancePage() {
                 Ac Ambulance Services
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                The Ac Ambulance is one of the <a href="https://shikderambulance.com/" target="_blank" rel="noopener noreferrer">best ambulance</a> services in Dhaka
-                as well as in the whole Bangladesh. An Ac ambulance is mainly
-                used to transfer a patient to the hospital or a recently
-                recovered person to his/her resident. Ac Ambulances have air
-                conditioning systems.
+                The Ac Ambulance is one of the{" "}
+                <a
+                  href="https://shikderambulance.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  best ambulance
+                </a>{" "}
+                services in Dhaka as well as in the whole Bangladesh. An Ac
+                ambulance is mainly used to transfer a patient to the hospital
+                or a recently recovered person to his/her resident. Ac
+                Ambulances have air conditioning systems.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 As the temperature is very high in Bangladesh and we have to
@@ -136,7 +144,9 @@ export default function AcAmbulancePage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">Affortable, fast and reliable service is available</span>
+                    <span className="text-gray-700">
+                      Affortable, fast and reliable service is available
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
@@ -158,7 +168,9 @@ export default function AcAmbulancePage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">Quality Ac Ambulance Service</span>
+                    <span className="text-gray-700">
+                      Quality Ac Ambulance Service
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
@@ -172,7 +184,7 @@ export default function AcAmbulancePage() {
 
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=AC+Ambulance+Service"
+                src="/default.png?height=400&width=600&text=AC+Ambulance+Service"
                 alt="Best AC Ambulance Service"
                 width={600}
                 height={400}
@@ -289,7 +301,9 @@ export default function AcAmbulancePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               24/7 AC Ambulance Service in Dhaka by Shikder Ambulance
             </h2>
-            <p className="text-center font-semibold">The Quality Ambulance is Granted</p>
+            <p className="text-center font-semibold">
+              The Quality Ambulance is Granted
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -298,27 +312,37 @@ export default function AcAmbulancePage() {
                 Reliable AC Ambulance Service in Dhaka
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                When emergencies happen under Dhaka’s blazing heat, patient comfort becomes vital. Shikder Ambulance offers trusted 24/7 AC Ambulance Service in Dhaka, designed to keep patients cool, safe, and stress-free during every transfer.
+                When emergencies happen under Dhaka’s blazing heat, patient
+                comfort becomes vital. Shikder Ambulance offers trusted 24/7 AC
+                Ambulance Service in Dhaka, designed to keep patients cool,
+                safe, and stress-free during every transfer.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900">
                 Why Choose an Shikder Ac Ambulance?
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                An air-conditioned ambulance isn’t just about luxury; it helps protect patients from heatstroke, anxiety, and complications caused by extreme temperatures. Elderly patients, cardiac patients, and children often require a controlled environment — something our AC ambulances deliver seamlessly.
+                An air-conditioned ambulance isn’t just about luxury; it helps
+                protect patients from heatstroke, anxiety, and complications
+                caused by extreme temperatures. Elderly patients, cardiac
+                patients, and children often require a controlled environment —
+                something our AC ambulances deliver seamlessly.
               </p>
 
               <h3 className="text-2xl font-bold text-gray-900">
                 Comfort and Care You Can Trust
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                At Shikder Ambulance, we combine comfort with safety. Our vehicles are clean, modern, and equipped with advanced cooling systems. Plus, trained staff ensure patients get professional care on the way to hospitals, clinics, or home.
+                At Shikder Ambulance, we combine comfort with safety. Our
+                vehicles are clean, modern, and equipped with advanced cooling
+                systems. Plus, trained staff ensure patients get professional
+                care on the way to hospitals, clinics, or home.
               </p>
             </div>
 
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=AC+Ambulance+Service"
+                src="/default.png?height=400&width=600&text=AC+Ambulance+Service"
                 alt="Best AC Ambulance Service"
                 width={600}
                 height={400}
@@ -381,7 +405,9 @@ export default function AcAmbulancePage() {
               <h4 className="font-semibold text-gray-900 mb-2">
                 Available 24/7:
               </h4>
-              <p className="text-gray-600">No matter the hour, you can count on us for immediate response. </p>
+              <p className="text-gray-600">
+                No matter the hour, you can count on us for immediate response.{" "}
+              </p>
             </div>
           </div>
         </div>
@@ -399,15 +425,23 @@ export default function AcAmbulancePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  FAQs
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-900">FAQs</h3>
                 <h4> What Is an AC Ambulance?</h4>
-                <p>An AC ambulance is fitted with a fully functional air-conditioning system to control temperature, ensuring the patient is comfortable throughout the journey, especially during the scorching heat of Bangladesh.</p>
+                <p>
+                  An AC ambulance is fitted with a fully functional
+                  air-conditioning system to control temperature, ensuring the
+                  patient is comfortable throughout the journey, especially
+                  during the scorching heat of Bangladesh.
+                </p>
               </div>
               <div>
                 <h4> What Is an AC Ambulance?</h4>
-                <p>An AC ambulance is fitted with a fully functional air-conditioning system to control temperature, ensuring the patient is comfortable throughout the journey, especially during the scorching heat of Bangladesh.</p>
+                <p>
+                  An AC ambulance is fitted with a fully functional
+                  air-conditioning system to control temperature, ensuring the
+                  patient is comfortable throughout the journey, especially
+                  during the scorching heat of Bangladesh.
+                </p>
               </div>
             </div>
           </div>

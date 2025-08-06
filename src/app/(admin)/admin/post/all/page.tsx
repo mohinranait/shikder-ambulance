@@ -214,7 +214,7 @@ const AllPostPage = () => {
                             <Image
                               src={
                                 post?.image?.featuresImage ||
-                                "/placeholder.svg?height=64&width=64"
+                                "/default.png?height=64&width=64"
                               }
                               width={64}
                               height={64}

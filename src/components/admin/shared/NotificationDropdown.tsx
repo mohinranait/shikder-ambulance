@@ -44,7 +44,7 @@ const mockNotifications: Notification[] = [
     description: "Order #12345 from John Doe - $89.99",
     timestamp: "2 minutes ago",
     isRead: false,
-    avatar: "/placeholder.svg?height=32&width=32",
+    avatar: "/default.png?height=32&width=32",
   },
   {
     id: "2",
@@ -53,7 +53,7 @@ const mockNotifications: Notification[] = [
     description: "Sarah asked about product availability",
     timestamp: "15 minutes ago",
     isRead: false,
-    avatar: "/placeholder.svg?height=32&width=32",
+    avatar: "/default.png?height=32&width=32",
   },
   {
     id: "3",
@@ -86,7 +86,7 @@ const mockNotifications: Notification[] = [
     description: "Order #12340 has been shipped to customer",
     timestamp: "5 hours ago",
     isRead: true,
-    avatar: "/placeholder.svg?height=32&width=32",
+    avatar: "/default.png?height=32&width=32",
   },
   {
     id: "7",
@@ -95,7 +95,7 @@ const mockNotifications: Notification[] = [
     description: "New 5-star review on Smart Watch",
     timestamp: "1 day ago",
     isRead: true,
-    avatar: "/placeholder.svg?height=32&width=32",
+    avatar: "/default.png?height=32&width=32",
   },
 ];
 
@@ -235,7 +235,7 @@ export default function NotificationDropdown() {
                       {notification.avatar ? (
                         <Avatar className="h-8 w-8">
                           <AvatarImage
-                            src={notification.avatar || "/placeholder.svg"}
+                            src={notification.avatar || "/default.png"}
                           />
                           <AvatarFallback>
                             <User className="h-4 w-4" />

@@ -16,8 +16,7 @@ import {
 import Image from "next/image";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title:
-    "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
+  title: "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
   description:
     "Freezing Ambulance Service in Dhaka. It is a dead body carrier freezing ambulance in Bangladesh. 24/7 dead body carrier with advanced freezing technology. Single & double cabin freezer ambulance is available in the all districts of Bangladesh.",
   keywords:
@@ -109,7 +108,7 @@ const FreezingAmbulance = () => {
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-6">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/default.png?height=400&width=600"
                   alt="Freezing Ambulance Service"
                   width={600}
                   height={400}
@@ -182,14 +181,14 @@ const FreezingAmbulance = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Image
-                src="/placeholder.svg?height=250&width=300"
+                src="/default.png?height=250&width=300"
                 alt="Ambulance Interior"
                 width={300}
                 height={250}
                 className="rounded-xl shadow-lg"
               />
               <Image
-                src="/placeholder.svg?height=250&width=300"
+                src="/default.png?height=250&width=300"
                 alt="Ambulance Exterior"
                 width={300}
                 height={250}

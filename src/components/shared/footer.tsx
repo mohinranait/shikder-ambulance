@@ -49,7 +49,9 @@ const FooterComponent = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">Shikder Ambulance</h3>
-                <p className="text-gray-400 text-sm">Anytime, Anywhere</p>
+                <p className="text-gray-400 text-sm">
+                  Patient Transport Service
+                </p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">

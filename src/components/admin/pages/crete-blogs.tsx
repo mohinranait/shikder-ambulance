@@ -37,7 +37,7 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { type FormEvent, useEffect, useState } from "react";
-import { toast } from "sonner";
+
 import {
   createPost,
   getSinglePostBySlug,
@@ -45,6 +45,7 @@ import {
 } from "@/actions/postApi";
 import dynamic from "next/dynamic";
 import ImageUploadCom from "@/components/shared/ImageUploadCom";
+import toast from "react-hot-toast";
 
 const QuillEditor = dynamic(() => import("@/components/shared/QuillEditor"), {
   ssr: false,
@@ -502,10 +503,11 @@ const CreateBlogsPost = () => {
                               }
                             />
                             <div
-                              className={`w-4 h-4 rounded-full border-2 transition-colors ${form?.layouts?.isSidebar === option.value
-                                ? "border-blue-500 bg-blue-500"
-                                : "border-gray-300"
-                                }`}
+                              className={`w-4 h-4 rounded-full border-2 transition-colors ${
+                                form?.layouts?.isSidebar === option.value
+                                  ? "border-blue-500 bg-blue-500"
+                                  : "border-gray-300"
+                              }`}
                             >
                               {form?.layouts?.isSidebar === option.value && (
                                 <div className="w-2 h-2 bg-white rounded-full m-0.5" />
@@ -560,10 +562,11 @@ const CreateBlogsPost = () => {
                                 }
                               />
                               <div
-                                className={`w-4 h-4 rounded-full border-2 transition-colors ${form?.layouts?.banner === option.value
-                                  ? "border-blue-500 bg-blue-500"
-                                  : "border-gray-300"
-                                  }`}
+                                className={`w-4 h-4 rounded-full border-2 transition-colors ${
+                                  form?.layouts?.banner === option.value
+                                    ? "border-blue-500 bg-blue-500"
+                                    : "border-gray-300"
+                                }`}
                               >
                                 {form?.layouts?.banner === option.value && (
                                   <div className="w-2 h-2 bg-white rounded-full m-0.5" />

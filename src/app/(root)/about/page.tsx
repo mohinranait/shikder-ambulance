@@ -16,28 +16,28 @@ export default function AboutPage() {
       name: "Shahadat Shikder",
       role: "Director",
       experience: "10 years",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/default.png?height=300&width=300",
       specialization: "Customer Support: 24/7",
     },
     {
       name: "Musa Shikder Mahir",
       role: "Director",
       experience: "10 years",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/default.png?height=300&width=300",
       specialization: "Software Engineer",
     },
     {
       name: "Mohin Rana",
       role: "Developer",
       experience: "10 years",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/default.png?height=300&width=300",
       specialization: "Software Developer",
     },
     {
       name: "Kamrul Islam",
       role: "Manager",
       experience: "8 years",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/default.png?height=300&width=300",
       specialization: "Digital Marketing Manager",
     },
   ];
@@ -85,7 +85,11 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              At Shikder Ambulance, we stand by your side with fast, professional, and compassionate ambulance care—because saving lives is more than our duty, it is our promise. Whether it is an emergency or planned patient transfer, we’re ready 24/7 to help across Dhaka.
+              At Shikder Ambulance, we stand by your side with fast,
+              professional, and compassionate ambulance care—because saving
+              lives is more than our duty, it is our promise. Whether it is an
+              emergency or planned patient transfer, we’re ready 24/7 to help
+              across Dhaka.
             </p>
           </div>
         </div>
@@ -117,20 +121,33 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-slate-600 leading-relaxed">
                 <p>
-                  At Shikder Ambulance, we started our journey back in 2015 with one simple but powerful mission: to bring fast, reliable, and truly caring emergency ambulance services to the people of Dhaka. What began as a small team determined to make a difference has grown into one of the most trusted ambulance services in Dhaka city.
+                  At Shikder Ambulance, we started our journey back in 2015 with
+                  one simple but powerful mission: to bring fast, reliable, and
+                  truly caring emergency ambulance services to the people of
+                  Dhaka. What began as a small team determined to make a
+                  difference has grown into one of the most trusted ambulance
+                  services in Dhaka city.
                 </p>
                 <p>
-                  From day one, our goal was clear—when every second matters, we must be ready. That’s why we’ve invested in modern AC, non-AC, and life support ICU ambulances, along with GPS-enabled dispatch systems to make sure help gets to you faster, anytime, anywhere.
+                  From day one, our goal was clear—when every second matters, we
+                  must be ready. That’s why we’ve invested in modern AC, non-AC,
+                  and life support ICU ambulances, along with GPS-enabled
+                  dispatch systems to make sure help gets to you faster,
+                  anytime, anywhere.
                 </p>
                 <p>
-                  Today, Shikder Ambulance runs 24/7 with a caring team of trained drivers, paramedics, and staff who see this not just as a job—but as a responsibility to our community. Because in times of emergency, you need more than an ambulance; you need people who genuinely care.
+                  Today, Shikder Ambulance runs 24/7 with a caring team of
+                  trained drivers, paramedics, and staff who see this not just
+                  as a job—but as a responsibility to our community. Because in
+                  times of emergency, you need more than an ambulance; you need
+                  people who genuinely care.
                 </p>
               </div>
             </div>
             <div className="relative">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/default.png?height=400&width=600"
                   alt="MediCare Ambulance team"
                   fill
                   className="object-cover"
@@ -149,7 +166,9 @@ export default function AboutPage() {
               Our Core Values
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Your safety, comfort, and peace of mind mean everything to us. We are here 24/7 with fast, reliable, and caring ambulance service, because: Your safety and comfort are our top priorities.
+              Your safety, comfort, and peace of mind mean everything to us. We
+              are here 24/7 with fast, reliable, and caring ambulance service,
+              because: Your safety and comfort are our top priorities.
             </p>
           </div>
 
@@ -184,7 +203,10 @@ export default function AboutPage() {
               Meet Our Expert Team
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Behind every quick response and safe journey is our dedicated team of trained drivers. At <b>Shikder Ambulance</b>, our experts work 24/7 to ensure patients get fast, safe, and professional care in Bangladesh.
+              Behind every quick response and safe journey is our dedicated team
+              of trained drivers. At <b>Shikder Ambulance</b>, our experts work
+              24/7 to ensure patients get fast, safe, and professional care in
+              Bangladesh.
             </p>
           </div>
 
@@ -196,7 +218,7 @@ export default function AboutPage() {
               >
                 <div className="relative h-64">
                   <Image
-                    src={member.image || "/placeholder.svg"}
+                    src={member.image || "/default.png"}
                     alt={member.name}
                     fill
                     className="object-cover"
@@ -226,9 +248,16 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-8">Our Mission and Vission</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-8">
+              Our Mission and Vission
+            </h2>
             <p className="text-xl leading-relaxed mb-8">
-              " Shikder Ambulance's mission is to deliver swift, compassionate, and life-saving emergency medical transport, prioritizing patient well-being and community safety. Our vision is to be Bangladesh's most trusted and advanced ambulance service, setting the standard for rapid response and exceptional pre-hospital care. Every second counts; every patient matters."
+              " Shikder Ambulance's mission is to deliver swift, compassionate,
+              and life-saving emergency medical transport, prioritizing patient
+              well-being and community safety. Our vision is to be Bangladesh's
+              most trusted and advanced ambulance service, setting the standard
+              for rapid response and exceptional pre-hospital care. Every second
+              counts; every patient matters."
             </p>
             <div className="flex justify-center">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20">

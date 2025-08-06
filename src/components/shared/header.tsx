@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Heart, LogIn, UserPlus } from "lucide-react";
+import { Menu, Phone, Heart, LogIn, UserPlus, Ambulance } from "lucide-react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,10 +32,10 @@ export function Header() {
           {/* Logo */}
           <Link href={"/"} className="flex items-center space-x-2">
             <div className="bg-blue-600 text-white p-2 rounded-lg">
-              <Heart className="h-6 w-6" />
+              <Ambulance className="h-6 w-6 md:h-7 md:w-7" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
                 Shikder Ambulance
               </h2>
               <p className="text-xs text-gray-600">Patient Transport Service</p>

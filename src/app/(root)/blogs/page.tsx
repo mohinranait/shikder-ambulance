@@ -249,7 +249,7 @@ export default function BlogsPage() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-6">
               {featuredPosts.map((post) => (
                 <Card
                   key={post._id}
@@ -260,7 +260,7 @@ export default function BlogsPage() {
                       src={
                         post.image?.featuresImage ||
                         post.image?.thumbnail ||
-                        "/placeholder.svg"
+                        "/default.png"
                       }
                       alt={post.postTitle}
                       width={600}
@@ -372,7 +372,7 @@ export default function BlogsPage() {
                 </div>
 
                 {regularPosts.length > 0 && (
-                  <div className="space-y-8">
+                  <div className="space-y-6">
                     {regularPosts.map((post) => (
                       <Card
                         key={post._id}
@@ -384,7 +384,7 @@ export default function BlogsPage() {
                               src={
                                 post.image?.featuresImage ||
                                 post.image?.thumbnail ||
-                                "/placeholder.svg"
+                                "/default.png"
                               }
                               alt={post.postTitle}
                               width={300}
@@ -475,7 +475,7 @@ export default function BlogsPage() {
                             src={
                               post.image?.thumbnail ||
                               post.image?.featuresImage ||
-                              "/placeholder.svg"
+                              "/default.png"
                             }
                             alt={post.postTitle}
                             width={60}
@@ -509,16 +509,20 @@ export default function BlogsPage() {
                       Don't wait - call for immediate assistance
                     </p>
                     <div className="space-y-2">
-                      <Button className="w-full bg-red-600 hover:bg-red-700">
-                        <Heart className="h-4 w-4 mr-2" />
-                        Call: 01627-669222
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="w-full border-red-600 text-red-600 hover:bg-red-50 bg-transparent"
-                      >
-                        WhatsApp: 017100-60020
-                      </Button>
+                      <Link href={"tel:+8801627669222"} className="flex">
+                        <Button className="w-full bg-red-600 hover:bg-red-700">
+                          <Heart className="h-4 w-4 mr-2" />
+                          Call: 01627-669222
+                        </Button>
+                      </Link>
+                      <Link href={"tel:+8801710060020"} className="flex">
+                        <Button
+                          variant="outline"
+                          className="w-full border-red-600 text-red-600 hover:bg-red-50 bg-transparent"
+                        >
+                          WhatsApp: 017100-60020
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </Card>
@@ -566,21 +570,25 @@ export default function BlogsPage() {
               advice and emergency services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100"
-              >
-                <Heart className="h-5 w-5 mr-2" />
-                Contact Medical Team
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
-              >
-                View All Services
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
+              <Link href={"/contact"}>
+                <Button
+                  size="lg"
+                  className="bg-white text-blue-600 hover:bg-gray-100"
+                >
+                  <Heart className="h-5 w-5 mr-2" />
+                  Contact Medical Team
+                </Button>
+              </Link>
+              <Link href={"/services"}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+                >
+                  View All Services
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -13,6 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ServicesPage() {
   const services = [
@@ -20,7 +21,7 @@ export default function ServicesPage() {
       title: "Emergency Ambulance Service in Dhaka",
       description:
         "Emergency Ambulance Service provides life-saving medical transport and patient care for critical health incidents, and safe transit to hospitals. Your safety, comfort, and peace of mind mean everything to us.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/default.png?height=300&width=400",
       features: [
         "24/7 Emergency Ambulance Support",
         "ICU & Life Support Ambulance",
@@ -38,7 +39,7 @@ export default function ServicesPage() {
       title: "Non-Emergency Patient Transport",
       description:
         "Comfortable and safe Patient transport for scheduled appointments, hospital transfers, and routine Patient care. Your safety and comfort are our top priorities.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/default.png?height=300&width=400",
       features: [
         "Comfortable AC & Non-AC Vehicles",
         "Wheelchair & Stretcher Support",
@@ -56,7 +57,7 @@ export default function ServicesPage() {
       title: "Critical Care Transport",
       description:
         "Specialized transport for critically ill patients requiring intensive care during transfer between Patient facilities. The basic life support, Advanced Life Support ICU Ambulance is Available with Doctors and Brothers.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/default.png?height=300&width=400",
       features: [
         "ICU-Level Patient Equipment",
         "Ventilator Support",
@@ -74,7 +75,7 @@ export default function ServicesPage() {
       title: "Freezing Ambulance Service",
       description:
         "A freezer ambulance service is a specialized transportation service equipped with refrigeration systems to maintain a consistently low temperature.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/default.png?height=300&width=400",
       features: [
         "It has a forzen box in it",
         "Use freezer Ambulance, save the dead body",
@@ -131,7 +132,14 @@ export default function ServicesPage() {
               <span className="text-blue-600 block">Ambulances Services </span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed mb-8">
-              Shikder Ambulance is a leading provider of emergency ambulance services, dedicated to serving the critical needs of Dhaka city and extending our reach to all districts of Bangladesh. We understand that in times of emergency Ambulance, every second counts. That's why we are committed to providing Ambulance, professional, and compassionate transport solutions, ensuring patients receive the urgent Ambulance care they need, wherever they are in the country.
+              Shikder Ambulance is a leading provider of emergency ambulance
+              services, dedicated to serving the critical needs of Dhaka city
+              and extending our reach to all districts of Bangladesh. We
+              understand that in times of emergency Ambulance, every second
+              counts. That's why we are committed to providing Ambulance,
+              professional, and compassionate transport solutions, ensuring
+              patients receive the urgent Ambulance care they need, wherever
+              they are in the country.
             </p>
             <Button
               size="lg"
@@ -151,17 +159,19 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                  }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${
+                  index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                }`}
               >
                 {/* Image */}
                 <div
-                  className={`relative ${index % 2 === 1 ? "lg:col-start-2" : ""
-                    }`}
+                  className={`relative ${
+                    index % 2 === 1 ? "lg:col-start-2" : ""
+                  }`}
                 >
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src={service.image || "/placeholder.svg"}
+                      src={service.image || "/default.png"}
                       alt={service.title}
                       fill
                       className="object-cover"
@@ -189,8 +199,9 @@ export default function ServicesPage() {
 
                 {/* Content */}
                 <div
-                  className={`space-y-6 ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
-                    }`}
+                  className={`space-y-6 ${
+                    index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
+                  }`}
                 >
                   <div>
                     <div
@@ -259,7 +270,9 @@ export default function ServicesPage() {
               Why Choose Shikder Ambulance Service?
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We provide reliable, professional emergency Ambulance services with a commitment to saving lives and ensuring the best patient care. Anytime, Anywhere is Available.
+              We provide reliable, professional emergency Ambulance services
+              with a commitment to saving lives and ensuring the best patient
+              care. Anytime, Anywhere is Available.
             </p>
           </div>
 
@@ -295,25 +308,30 @@ export default function ServicesPage() {
             </h2>
             <p className="text-xl mb-8 text-blue-100">
               Don't wait in an emergency times. Our professional team is ready
-              to respond 24/7 with advanced life support Ambulance transport. Your safety transport is our top priorities.
+              to respond 24/7 with advanced life support Ambulance transport.
+              Your safety transport is our top priorities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="bg-red-600 hover:bg-red-700 text-white"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Emergency: 017100-60020
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                WhatsApp: 01710060020
-              </Button>
+              <Link href="'tel:+8801710060020">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="bg-red-600 hover:bg-red-700 text-white"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Emergency: 017100-60020
+                </Button>
+              </Link>
+              <Link href={"tel:+8801710060020"}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  WhatsApp: 01710060020
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

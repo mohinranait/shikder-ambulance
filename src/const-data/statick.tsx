@@ -7,6 +7,9 @@ import {
   LayoutDashboard,
   Package,
   LucideIcon,
+  Settings,
+  Image,
+  Notebook,
 } from "lucide-react";
 
 export interface SidebarNavItem {
@@ -120,7 +123,7 @@ export const sidebarData: SidebarData = {
         },
         {
           title: "Money Receipt",
-          icon: Package,
+          icon: Notebook,
           items: [
             {
               title: "New Receipt",
@@ -135,7 +138,12 @@ export const sidebarData: SidebarData = {
         {
           title: "Media",
           url: "/admin/media",
-          icon: LayoutDashboard,
+          icon: Image,
+        },
+        {
+          title: "Setting",
+          url: "/admin/setting",
+          icon: Settings,
         },
       ],
     },

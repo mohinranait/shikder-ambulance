@@ -24,7 +24,8 @@ export const metadata: Metadata = {
     "non-AC ambulance, basic ambulance service, affordable ambulance Bangladesh, emergency medical transport, patient transport Dhaka, cheap ambulance service, basic life support ambulance, near ambulance, top ambulance, fast ambulance",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
-    title: "Affordable Non-AC Ambulance Service in Bangladesh | Shikder Ambulance",
+    title:
+      "Affordable Non-AC Ambulance Service in Bangladesh | Shikder Ambulance",
     description:
       "Affordable Non-AC ambulance Service in Bangladesh. We provide different types of Ambulance service in all districts of Bangladesh. We Are Just A Call Away",
     url: "https://shikderambulance.com/non-ac-ambulance",
@@ -185,7 +186,7 @@ export default function NonAcAmbulancePage() {
             <div className="flex justify-center">
               <div className="bg-white rounded-2xl shadow-2xl p-6">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Non-AC+Ambulance+Service"
+                  src="/default.png?height=400&width=600&text=Non-AC+Ambulance+Service"
                   alt="Non-AC Ambulance Service - Affordable emergency medical transport"
                   width={600}
                   height={400}
@@ -523,8 +524,8 @@ export default function NonAcAmbulancePage() {
               Need Affordable Ambulance Service?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Contact us now for cost-effective emergency patient transport service.
-              Available 24/7 in the all districts of Bangladesh.
+              Contact us now for cost-effective emergency patient transport
+              service. Available 24/7 in the all districts of Bangladesh.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
