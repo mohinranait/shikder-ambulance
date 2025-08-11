@@ -21,7 +21,7 @@ const BlogView: FC<Props> = ({ blog }) => {
   return (
     <main className="mb-20">
       <section className={`relative bg-premium-light-gradient `}>
-        <div className={`${bgImage && "bg-slate-900 bg-opacity-75"} `}>
+        <div className={`${bgImage && "bg-premium-light-gradient"} `}>
           <div className="sm:container justify-center flex items-center  md:min-h-[calc(100vh-200px)] py-5 lg:py-20 lg:px-32 xl:px-48 ">
             <div className="flex flex-col gap-3">
               <h1
