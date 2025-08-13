@@ -11,7 +11,7 @@ const MainBody: FC<Props> = ({ blog }) => {
     <div className="bg-white blog-post-preview p-5 rounded">
       {!blog?.content && (
         <h2 className="text-2xl mb-2 font-bold text-slate-900">
-          Shikder ambulance service
+          Shikder Ambulance service
         </h2>
       )}
       {/* <div>

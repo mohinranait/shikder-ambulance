@@ -193,7 +193,7 @@ export default function BlogsPage() {
             <div className="space-y-4">
               <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
                 <Heart className="h-3 w-3 mr-1" />
-                Your trusted Health Care Partner
+                Your trusted Ambulance Service
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Patient Transport Ambulance Service &{" "}

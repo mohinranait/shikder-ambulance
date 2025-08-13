@@ -21,7 +21,7 @@ const BlogView: FC<Props> = ({ blog }) => {
   return (
     <main className="mb-20">
       <section className={`relative bg-premium-light-gradient `}>
-        <div className={`${bgImage && "bg-slate-900 bg-opacity-75"} `}>
+        <div className={`${bgImage && "bg-premium-light-gradient"} `}>
           <div className="sm:container justify-center flex items-center  md:min-h-[calc(100vh-200px)] py-5 lg:py-20 lg:px-32 xl:px-48 ">
             <div className="flex flex-col gap-3">
               <h1
@@ -35,8 +35,8 @@ const BlogView: FC<Props> = ({ blog }) => {
               >
                 {blog?.seoDescription}
               </p>
-              <div className="flex justify-center ">
-                <Link href={"tel:+8801710060020"}>
+              <div className="flex justify-center">
+                <Link href={"tel:01710060020"}>
                   <Button
                     size="lg"
                     className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
@@ -63,13 +63,12 @@ const BlogView: FC<Props> = ({ blog }) => {
       </section>
       <section className="pt-3">
         <div
-          className={`sm:container grid gap-5 ${
-            blog?.layouts?.isSidebar === "both"
-              ? "lg:grid-cols-4"
-              : blog?.layouts?.isSidebar === "none"
+          className={`sm:container grid gap-5 ${blog?.layouts?.isSidebar === "both"
+            ? "lg:grid-cols-4"
+            : blog?.layouts?.isSidebar === "none"
               ? "lg:grid-cols-1"
               : "lg:grid-cols-3"
-          }`}
+            }`}
         >
           {/* Left Sidebar */}
           {(blog?.layouts?.isSidebar === "left" ||
@@ -77,13 +76,12 @@ const BlogView: FC<Props> = ({ blog }) => {
 
           {/* Main Content */}
           <div
-            className={`flex flex-col gap-3 ${
-              blog?.layouts?.isSidebar === "both"
-                ? "lg:col-span-2"
-                : blog?.layouts?.isSidebar === "none"
+            className={`flex flex-col gap-3 ${blog?.layouts?.isSidebar === "both"
+              ? "lg:col-span-2"
+              : blog?.layouts?.isSidebar === "none"
                 ? "lg:col-span-1"
                 : "lg:col-span-2"
-            }`}
+              }`}
           >
             <MainBody blog={blog} />
             {blog?.layouts?.comments && <CommentSection blog={blog} />}

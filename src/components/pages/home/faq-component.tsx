@@ -12,8 +12,7 @@ const FaqComponent = () => {
     {
       id: "item-1",
       icon: Package,
-      title: "What services does Shikder Ambulance provide?",
-      content: [
+      title: "What Services Does Shikder Ambulance Provide?", content: [
         "Shikder Ambulance provides a wide range of emergency and non-emergency ambulance services across Dhaka and all districts in Bangladesh. Our services include AC and Non-AC ambulances, ICU/CCU life support ambulances, and freezing vans for deceased body transport. We ensure timely, safe, and professional transportation of patients and deceased individuals to hospitals, homes, or desired destinations with complete care and respect.",
       ],
     },
@@ -69,8 +68,7 @@ const FaqComponent = () => {
           Frequently Asked Questions
         </h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          Quick answers to common questions about our emergency patient
-          transport services.
+          Quick answers to common questions about our emergency patient transport services.
         </p>
       </div>
       <div className="">

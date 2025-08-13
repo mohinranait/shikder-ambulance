@@ -16,7 +16,7 @@ export function HeroSection() {
                 We’re Always Ready to Serve
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal">
-                Shikder Ambulance Service
+                Shikder Ambulance Service in Bangladesh
                 <span className="text-primary block"> Best Reliable 24/7 </span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">

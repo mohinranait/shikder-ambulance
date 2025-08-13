@@ -6,10 +6,11 @@ import Image from "next/image";
 export function ServiceOverview() {
   const services = [
     {
-      title: "Ac Ambulance Services",
+      title: "Ac Ambulance Service",
       description:
         "AC Ambulance Service ensures safe, comfortable, and temperature-controlled patient transport, ideal for critical cases and long-distance transfers.",
-      image: "/default.png?height=300&width=400",
+
+      image: "/Shikder-Ambulance-Service-Ac-Ambulance.jpg",
       features: [
         "Quality Ambulance",
         "Controled tempreture of Ambulance",
@@ -21,7 +22,8 @@ export function ServiceOverview() {
       title: "Non Ac Ambulance Service",
       description:
         "Non-AC Ambulance Service offers affordable, reliable patient transport within the city, ideal for stable patients and short-distance transfers.",
-      image: "/default.png?height=300&width=400",
+
+      image: "/Shikder-Ambulance-Service-Non-Ac-Ambulance.jpg",
       features: [
         "Wheelchair Accessible",
         "Stretcher Transport",
@@ -33,7 +35,8 @@ export function ServiceOverview() {
       title: "Life Support Ambulance Service",
       description:
         "Life Support Ambulance Service provides critical patients with advanced medical equipment and trained staff for safe, emergency transfers anytime, anywhere.",
-      image: "/default.png?height=300&width=400",
+
+      image: "/Shikder-Ambulance-Service-life-support-Ambulance.jpg",
       features: [
         "ICU-Level Care",
         "Ventilator Support",
@@ -45,7 +48,8 @@ export function ServiceOverview() {
       title: "Dead Body Carrier Freezing Ambulance Service",
       description:
         "Freezing Ambulance Service safely transports deceased bodies long distances, preserving them in temperature-controlled freezing units with dignity.",
-      image: "/default.png?height=300&width=400",
+
+      image: "/Freezing-Ambulance-service-Shikder-ambulance.jpg",
       features: [
         "It has a frozen box",
         "High Quality steel stretchers",
