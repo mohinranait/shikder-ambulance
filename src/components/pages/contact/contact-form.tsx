@@ -9,6 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Send, AlertCircle } from "lucide-react";
+import { BASE_URL } from "@/config/accessEnv";
+import toast from "react-hot-toast";
 
 // Zod validation schema
 const contactFormSchema = z.object({
@@ -62,17 +64,22 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormData) => {
     try {
       setIsSubmitting(true);
-
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      console.log("Form submitted:", data);
-
       setIsSubmitted(true);
-      reset(); // Reset form after successful submission
 
-      // Hide success message after 5 seconds
-      setTimeout(() => setIsSubmitted(false), 5000);
+      const res = await fetch(`/api/email`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const resDAta = await res.json();
+      if (resDAta.success) {
+        toast.success("Email send successfully");
+        reset();
+        setIsSubmitted(false);
+      }
     } catch (error) {
       console.error("Form submission error:", error);
     } finally {
@@ -97,26 +104,25 @@ const ContactForm = () => {
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <div>
+            <Label htmlFor="fullName">
+              Full Name <span className="text-red-500">*</span>
+            </Label>
+            <Input
+              id="fullName"
+              {...register("fullName")}
+              className={
+                errors.fullName ? "border-red-500 focus:border-red-500" : ""
+              }
+            />
+            {errors.fullName && (
+              <div className="flex items-center mt-2 text-sm text-red-600">
+                <AlertCircle className="h-4 w-4 mr-1" />
+                {errors.fullName.message}
+              </div>
+            )}
+          </div>
           <div className="grid sm:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="fullName">
-                Full Name <span className="text-red-500">*</span>
-              </Label>
-              <Input
-                id="fullName"
-                {...register("fullName")}
-                className={
-                  errors.fullName ? "border-red-500 focus:border-red-500" : ""
-                }
-              />
-              {errors.fullName && (
-                <div className="flex items-center mt-2 text-sm text-red-600">
-                  <AlertCircle className="h-4 w-4 mr-1" />
-                  {errors.fullName.message}
-                </div>
-              )}
-            </div>
-
             <div>
               <Label htmlFor="email">
                 Email Address <span className="text-red-500">*</span>
@@ -136,15 +142,12 @@ const ContactForm = () => {
                 </div>
               )}
             </div>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="phone">Phone Number</Label>
               <Input
                 id="phone"
                 type="tel"
-                placeholder="+1 (555) 123-4567"
+                placeholder=""
                 {...register("phone")}
                 className={
                   errors.phone ? "border-red-500 focus:border-red-500" : ""
@@ -157,31 +160,32 @@ const ContactForm = () => {
                 </div>
               )}
             </div>
+          </div>
 
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="from">
+                From <span className="text-red-500">*</span>
+              </Label>
+              <Input
+                id="from"
+                placeholder="Your location"
+                {...register("from")}
+                className={
+                  errors.from ? "border-red-500 focus:border-red-500" : ""
+                }
+              />
+              {errors.from && (
+                <div className="flex items-center mt-2 text-sm text-red-600">
+                  <AlertCircle className="h-4 w-4 mr-1" />
+                  {errors.from.message}
+                </div>
+              )}
+            </div>
             <div>
               <Label htmlFor="to">To (Optional)</Label>
               <Input id="to" placeholder="Destination" {...register("to")} />
             </div>
-          </div>
-
-          <div>
-            <Label htmlFor="from">
-              From <span className="text-red-500">*</span>
-            </Label>
-            <Input
-              id="from"
-              placeholder="Your location"
-              {...register("from")}
-              className={
-                errors.from ? "border-red-500 focus:border-red-500" : ""
-              }
-            />
-            {errors.from && (
-              <div className="flex items-center mt-2 text-sm text-red-600">
-                <AlertCircle className="h-4 w-4 mr-1" />
-                {errors.from.message}
-              </div>
-            )}
           </div>
 
           <div>
