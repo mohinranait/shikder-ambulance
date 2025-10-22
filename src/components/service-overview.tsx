@@ -87,12 +87,7 @@ export function ServiceOverview() {
               className="overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <div className="relative h-64">
-                <Image
-                  src={service.image || "/default.png"}
-                  alt={service.title}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={service.image || "/default.png"} alt={service.title} fill className="object-cover" />
               </div>
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -102,7 +97,7 @@ export function ServiceOverview() {
                   {service.description}
                 </p>
 
-                <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="grid sm:grid-cols-2 gap-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <div
                       key={featureIndex}

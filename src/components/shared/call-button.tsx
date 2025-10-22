@@ -3,7 +3,13 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-
+import WhatsAppIcon from "../svg/WhatsAppIcon";
+import Image from "next/image";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 export default function CallButton() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -45,7 +51,7 @@ export default function CallButton() {
       `}</style>
 
       <div
-        className="fixed right-6 bottom-10 "
+        className="hidden lg:block fixed right-6 bottom-10 "
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -56,18 +62,13 @@ export default function CallButton() {
         </div>
 
         {/* Main Call Button */}
-        <Button
+        <button
           onClick={handleCall}
-          className={`call-button-main relative w-14 h-14 rounded-full bg-gradient-to-br from-green-500 via-emerald-500 to-green-600  shadow-2xl transition-all duration-700 group border-4 border-white overflow-hidden`}
+          className={` relative w-14 h-14  rounded-full bg-gradient-to-br from-green-500 via-emerald-500 to-green-600  shadow-2xl transition-all duration-700 group`}
         >
-          {/* Background Gradient Animation */}
-          <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-emerald-400 to-green-500 opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+          <Image src={'/WhatsApp.webp'} width={60} height={60} alt="Image" className="w-full h-full" />
+        </button>
 
-          {/* Phone Icon */}
-          <Phone
-            className={`relative z-10 w-5 h-5 text-white transition-all duration-500 drop-shadow-2xl `}
-          />
-        </Button>
       </div>
     </>
   );

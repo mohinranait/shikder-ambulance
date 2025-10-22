@@ -253,20 +253,18 @@ export default function NotificationDropdown() {
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1">
                           <p
-                            className={`text-sm font-medium ${
-                              notification.isRead
+                            className={`text-sm font-medium ${notification.isRead
                                 ? "text-gray-700"
                                 : "text-gray-900"
-                            }`}
+                              }`}
                           >
                             {notification.title}
                           </p>
                           <p
-                            className={`text-sm mt-1 ${
-                              notification.isRead
+                            className={`text-sm mt-1 ${notification.isRead
                                 ? "text-gray-500"
                                 : "text-gray-600"
-                            }`}
+                              }`}
                           >
                             {notification.description}
                           </p>
