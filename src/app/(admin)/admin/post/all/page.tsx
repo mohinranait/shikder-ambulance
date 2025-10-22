@@ -251,8 +251,8 @@ const AllPostPage = () => {
                                         : "secondary"
                                     }
                                     className={`${post?.status === "Publish"
-                                        ? "bg-green-100 text-green-800 hover:bg-green-100"
-                                        : "bg-red-100 text-red-800 hover:bg-red-100"
+                                      ? "bg-green-100 text-green-800 hover:bg-green-100"
+                                      : "bg-red-100 text-red-800 hover:bg-red-100"
                                       }`}
                                   >
                                     {post?.status}
@@ -276,7 +276,7 @@ const AllPostPage = () => {
                           </Link>
                           <Link
                             href={`/admin/post/new?link=${post?.slug}`}
-                            target="_blank"
+                          // target="_blank"
                           >
                             <Button
                               variant="ghost"

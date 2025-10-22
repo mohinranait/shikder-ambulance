@@ -46,6 +46,7 @@ import {
 import dynamic from "next/dynamic";
 import ImageUploadCom from "@/components/shared/ImageUploadCom";
 import toast from "react-hot-toast";
+import PostFormSkeleton from "../shared/post-from-skeleton";
 
 const QuillEditor = dynamic(() => import("@/components/shared/QuillEditor"), {
   ssr: false,
@@ -57,6 +58,7 @@ const QuillEditor = dynamic(() => import("@/components/shared/QuillEditor"), {
 });
 
 const CreateBlogsPost = () => {
+  const [getLoading, setGetLoading] = useState(false)
   const path = usePathname();
   const router = useRouter();
   const params = useSearchParams();
@@ -71,7 +73,6 @@ const CreateBlogsPost = () => {
   const [date, setDate] = useState<Date>(new Date());
   const [time, setTime] = useState<string>("00:00");
 
-  console.log({ content });
 
   const combineDateTime = (date: Date, time: string): Date => {
     const dateObj = new Date(date);
@@ -159,8 +160,10 @@ const CreateBlogsPost = () => {
   useEffect(() => {
     if (urlSlug) {
       (async () => {
+        setGetLoading(true)
         try {
           const data = await getSinglePostBySlug(urlSlug);
+
           if (data?.success) {
             setUpdatePost(data?.payload?.post);
             setIsSlug(data?.payload?.post?.slug);
@@ -171,6 +174,7 @@ const CreateBlogsPost = () => {
         } catch (error) {
           console.log(error);
         }
+        setGetLoading(false)
       })();
     }
   }, [urlSlug]);
@@ -181,6 +185,11 @@ const CreateBlogsPost = () => {
     { value: "right", label: "Right Sidebar", icon: Sidebar },
     { value: "both", label: "Dual Sidebar", icon: Layout },
   ];
+
+
+  if (getLoading) {
+    return <PostFormSkeleton />
+  }
 
   return (
     <>
@@ -503,11 +512,10 @@ const CreateBlogsPost = () => {
                               }
                             />
                             <div
-                              className={`w-4 h-4 rounded-full border-2 transition-colors ${
-                                form?.layouts?.isSidebar === option.value
-                                  ? "border-blue-500 bg-blue-500"
-                                  : "border-gray-300"
-                              }`}
+                              className={`w-4 h-4 rounded-full border-2 transition-colors ${form?.layouts?.isSidebar === option.value
+                                ? "border-blue-500 bg-blue-500"
+                                : "border-gray-300"
+                                }`}
                             >
                               {form?.layouts?.isSidebar === option.value && (
                                 <div className="w-2 h-2 bg-white rounded-full m-0.5" />
@@ -562,11 +570,10 @@ const CreateBlogsPost = () => {
                                 }
                               />
                               <div
-                                className={`w-4 h-4 rounded-full border-2 transition-colors ${
-                                  form?.layouts?.banner === option.value
-                                    ? "border-blue-500 bg-blue-500"
-                                    : "border-gray-300"
-                                }`}
+                                className={`w-4 h-4 rounded-full border-2 transition-colors ${form?.layouts?.banner === option.value
+                                  ? "border-blue-500 bg-blue-500"
+                                  : "border-gray-300"
+                                  }`}
                               >
                                 {form?.layouts?.banner === option.value && (
                                   <div className="w-2 h-2 bg-white rounded-full m-0.5" />
