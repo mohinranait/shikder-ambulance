@@ -1,6 +1,4 @@
 import type React from "react";
-
-import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
@@ -10,9 +8,6 @@ import {
   Mail,
   MapPin,
   Clock,
-  Heart,
-  Send,
-  CheckCircle,
 } from "lucide-react";
 import ContactForm from "@/components/pages/contact/contact-form";
 
@@ -109,7 +104,7 @@ export default function ContactPage() {
               Get in Touch with
               <span className="text-blue-600 block">Shikder Ambulance</span>
             </h1>
-            <p className="text-xl text-slate-600 leading-relaxed">
+            <p className="sm:text-lg text-slate-600 leading-relaxed">
               We're here to help 24/7. Whether it's an emergency or you need
               information about our services, don't hesitate to reach out to our
               professional team.
@@ -118,28 +113,122 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Emergency Banner *
-      <section className="bg-red-600 text-white py-4">
+
+
+
+      {/* Contact Form & Map */}
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center space-x-4 text-center">
-            <Heart className="h-6 w-6" />
-            <p className="text-lg font-semibold">
-              NEED EMERGENCY? IMMEDIATELY, CALL: 01710060020
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-center  text-slate-800 mb-1">
+              Contact Us and Find Our Location on Google Maps
+            </h2>
+            <p className=" text-slate-600 max-w-3xl mx-auto">
+              Every second counts — we are on our way.
             </p>
-            <Heart className="h-6 w-6" />
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <Card className="border">
+              <CardHeader>
+                <CardTitle className="text-2xl text-slate-800">
+                  Send Us a Message
+                </CardTitle>
+                <p className="text-slate-600">
+                  For non-emergency inquiries, service information,
+                  please fill out the form below.
+                </p>
+              </CardHeader>
+              <CardContent>
+                <ContactForm />
+              </CardContent>
+            </Card>
+
+
+
+            {/* Map Placeholder */}
+            <Card className="border">
+              <CardHeader>
+                <CardTitle className="text-2xl text-slate-800">
+                  Google Maps Location
+                </CardTitle>
+                <p className="text-slate-600">
+                  Get directions to this location on Google Maps
+                </p>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="h-96 bg-slate-200 rounded-lg flex items-center justify-center">
+                  <iframe
+                    title="Shikder Ambulance, Mogbazar, Dhaka"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11260.62132106335!2d90.40976524429216!3d23.78996494947933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6cafeffc7145ade5%3A0x6f6919835e6914af!2sShikder%20Ambulance%20Services!5e0!3m2!1sen!2sbd!4v1761139933386!5m2!1sen!2sbd"
+                    width="100%"
+                    height="100%"
+                    allowFullScreen={true}
+                    loading="lazy"
+
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full border-0"
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+
           </div>
         </div>
-      </section> 
-      */}
+      </section>
+
+
+      {/* Office Section */}
+      <section className="py-10 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div>
+            <h2 className="text-2xl font-bold text-center  text-slate-800 mb-1">
+              Our Locations
+            </h2>
+            <p className="text-slate-600 text-center  mb-4">
+              We have multiple stations strategically located throughout the
+              city to ensure rapid response times.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3  gap-4">
+            {locations.map((location, index) => (
+              <Card key={index} className="border">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-slate-800 mb-4">
+                    {location.name}
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="h-5 w-5 text-blue-600 mt-0.5" />
+                      <p className="text-slate-600">{location.address}</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Phone className="h-5 w-5 text-blue-600" />
+                      <p className="text-slate-600">{location.phone}</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Clock className="h-5 w-5 text-blue-600" />
+                      <p className="text-slate-600">{location.hours}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
 
       {/* Contact Information */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-center  text-slate-800 mb-1">
               Contact Information
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className=" text-slate-600 max-w-3xl mx-auto">
               Multiple ways to reach us for emergencies, appointments, and
               general inquiries.
             </p>
@@ -149,7 +238,7 @@ export default function ContactPage() {
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
-                className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow"
+                className="text-center border shadow transition-shadow"
               >
                 <CardContent className="p-8">
                   <div
@@ -181,89 +270,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form & Map */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="border-0 shadow-xl">
-              <CardHeader>
-                <CardTitle className="text-2xl text-slate-800">
-                  Send Us a Message
-                </CardTitle>
-                <p className="text-slate-600">
-                  For non-emergency inquiries, service information,
-                  please fill out the form below.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <ContactForm />
-              </CardContent>
-            </Card>
-
-            {/* Office Locations */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-slate-800 mb-6">
-                  Our Locations
-                </h2>
-                <p className="text-slate-600 mb-8">
-                  We have multiple stations strategically located throughout the
-                  city to ensure rapid response times.
-                </p>
-              </div>
-
-              {locations.map((location, index) => (
-                <Card key={index} className="border-0 shadow-lg">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold text-slate-800 mb-4">
-                      {location.name}
-                    </h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start space-x-3">
-                        <MapPin className="h-5 w-5 text-blue-600 mt-0.5" />
-                        <p className="text-slate-600">{location.address}</p>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <Phone className="h-5 w-5 text-blue-600" />
-                        <p className="text-slate-600">{location.phone}</p>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <Clock className="h-5 w-5 text-blue-600" />
-                        <p className="text-slate-600">{location.hours}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-
-              {/* Map Placeholder */}
-              <Card className="border-0 shadow-lg">
-                <CardContent className="p-0">
-                  <div className="h-64 bg-slate-200 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-slate-400 mx-auto mb-2" />
-                      <p className="text-slate-500">Interactive Map</p>
-                      <p className="text-sm text-slate-400">
-                        Google Maps integration would go here
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+            <h2 className="text-2xl font-bold text-center  text-slate-800 mb-1">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className=" text-slate-600 max-w-3xl mx-auto">
               Quick answers to common questions about our emergency patient transport
               services.
             </p>

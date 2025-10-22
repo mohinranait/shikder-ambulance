@@ -6,6 +6,7 @@ type TQuery = {
   limit?: string;
   access?: string;
   search?: string;
+  page?: string;
 };
 
 
@@ -60,23 +61,26 @@ export const getAllMedia = async () => {
   }
 }
 
-// Get all posts with query
+// Get all posts with query for
 export const getPosts = async ({
   limit = "20",
   access = "user",
   search = "",
+  page = '1'
 }) => {
   const query: TQuery = {
     limit,
     access,
     search,
+    page,
   };
 
   const queryString = new URLSearchParams(
     Object.fromEntries(Object.entries(query).filter(([_, v]) => v != null))
   ).toString();
   try {
-    const res = await fetch(`/api/posts?${queryString}`);
+    const url = access === 'user' ? `/api/posts?${queryString}` : `/api/posts/admin?${queryString}`;
+    const res = await fetch(url);
     const data = await res.json()
     return data;
   } catch (error) {
@@ -88,13 +92,6 @@ export const getPosts = async ({
 /**
  * Get single post by slug
 */
-// export const getSinglePostBySlug = async (slug:string) => {
-//       const res = await fetch(`${BASE_URL}/api/posts/slug/${slug}`, {
-//         cache: "no-store",
-//       });
-//       return  await res.json();
-// }
-
 export const getSinglePostBySlug = async (slug: string) => {
   const origin =
     typeof window !== "undefined" ? window.location.origin : BASE_URL;

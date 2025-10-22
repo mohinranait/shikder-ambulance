@@ -1,5 +1,4 @@
-import { AdminSidebar } from "@/components/admin/admin-sidebar";
-import { AdminHeader } from "@/components/admin/admin-header";
+
 import { CreateBlogForm } from "@/components/admin/create-blog-form";
 
 export default function CreateBlogPage() {

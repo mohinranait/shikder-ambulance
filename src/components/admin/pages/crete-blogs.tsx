@@ -15,7 +15,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -28,7 +27,6 @@ import {
   Layout,
   Settings,
   ImageIcon,
-  Search,
   Globe,
   Phone,
   Sidebar,
@@ -264,13 +262,13 @@ const CreateBlogsPost = () => {
                 {/* Main Content */}
                 <div className="xl:col-span-2 space-y-6">
                   {/* Title and Slug */}
-                  <Card className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
-                    <CardHeader className="pb-4">
-                      <CardTitle className="text-lg font-semibold text-gray-900">
+                  <div className="shadow-sm border-0 p-0 bg-white/80 backdrop-blur-sm">
+                    <div className="pb-4 p-0">
+                      <p className="text-lg font-semibold text-gray-900">
                         Post Details
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
+                      </p>
+                    </div>
+                    <div className="space-y-4 p-0">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Post Name *
@@ -298,96 +296,70 @@ const CreateBlogsPost = () => {
                         />
                       </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          URL Slug
-                        </label>
-                        <div className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg border">
-                          <Globe className="w-4 h-4 text-gray-400" />
-                          {isEditSlug ? (
-                            <>
-                              <Input
-                                type="text"
-                                name="slug"
-                                placeholder="Enter slug"
-                                className="border-0 bg-transparent p-0 focus:ring-0"
-                                value={form?.slug || ""}
-                                onChange={(e) =>
-                                  setForm((prev) => ({
-                                    ...prev,
-                                    slug: e.target.value,
-                                  }))
-                                }
-                              />
-                              <Button
-                                type="button"
-                                size="sm"
-                                variant="outline"
-                                onClick={() => setIsEditSlug(false)}
-                              >
-                                Save
-                              </Button>
-                            </>
-                          ) : (
-                            <>
-                              <Link
-                                className="text-blue-600 hover:text-blue-800 font-medium flex-1"
-                                target={params?.get("link") ? "_blank" : ""}
-                                href={
-                                  params?.get("link") ? `/${form?.slug}` : "#"
-                                }
-                              >
-                                {form?.slug
-                                  ? form?.slug
-                                  : isSlug || "your-post-url"}
-                              </Link>
-                              <Button
-                                type="button"
-                                size="sm"
-                                variant="ghost"
-                                onClick={() => {
-                                  setIsEditSlug(true);
-                                  setForm((prev) => ({
-                                    ...prev,
-                                    slug: isSlug,
-                                  }));
-                                }}
-                              >
-                                <Pen className="w-3 h-3" />
-                              </Button>
-                            </>
-                          )}
-                        </div>
+                      <div className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg border">
+                        <Globe className="w-4 h-4 text-gray-400" />
+                        {isEditSlug ? (
+                          <>
+                            <Input
+                              type="text"
+                              name="slug"
+                              placeholder="Enter slug"
+                              className="border-0 bg-transparent p-0 focus:ring-0"
+                              value={form?.slug || ""}
+                              onChange={(e) =>
+                                setForm((prev) => ({
+                                  ...prev,
+                                  slug: e.target.value,
+                                }))
+                              }
+                            />
+                            <Button
+                              type="button"
+                              size="sm"
+                              variant="outline"
+                              onClick={() => setIsEditSlug(false)}
+                            >
+                              Save
+                            </Button>
+                          </>
+                        ) : (
+                          <>
+                            <Link
+                              className="text-blue-600 hover:text-blue-800 font-medium flex-1"
+                              target={params?.get("link") ? "_blank" : ""}
+                              href={
+                                params?.get("link") ? `/${form?.slug}` : "#"
+                              }
+                            >
+                              {form?.slug
+                                ? form?.slug
+                                : isSlug || "your-post-url"}
+                            </Link>
+                            <Button
+                              type="button"
+                              size="sm"
+                              variant="ghost"
+                              onClick={() => {
+                                setIsEditSlug(true);
+                                setForm((prev) => ({
+                                  ...prev,
+                                  slug: isSlug,
+                                }));
+                              }}
+                            >
+                              <Pen className="w-3 h-3" />
+                            </Button>
+                          </>
+                        )}
                       </div>
-                    </CardContent>
-                  </Card>
 
-                  {/* Content Editor */}
-                  <Card className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
-                    <CardHeader className="pb-4">
-                      <CardTitle className="text-lg font-semibold text-gray-900">
-                        Content
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="border border-gray-200 rounded-lg overflow-hidden">
-                        <QuillEditor
-                          editorValue={content || ""}
-                          setEditorValue={setContent}
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
 
                   {/* SEO Settings */}
-                  <Card className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
-                    <CardHeader className="pb-4">
-                      <CardTitle className="flex items-center gap-2 text-lg font-semibold text-gray-900">
-                        <Search className="w-5 h-5" />
-                        SEO Optimization
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
+                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+
+                    <div className="space-y-4 p-0">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Title & SEO Title
@@ -424,6 +396,27 @@ const CreateBlogsPost = () => {
                         />
                       </div>
 
+
+                    </div>
+                  </div>
+
+                  {/* Content Editor */}
+                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+
+                    <div className="p-0">
+                      <div className="border border-gray-200 rounded-lg overflow-hidden">
+                        <QuillEditor
+                          editorValue={content || ""}
+                          setEditorValue={setContent}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Content Editor */}
+                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+
+                    <div className="p-0">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Tags: Keywords
@@ -435,18 +428,20 @@ const CreateBlogsPost = () => {
                           placeHolder="Input Keywords here..."
                         />
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
+
+
 
                   {/* Publish Settings */}
-                  <Card className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
-                    <CardHeader className="pb-4">
-                      <CardTitle className="flex items-center gap-2 text-lg font-semibold text-gray-900">
+                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+                    <div className="pb-4 p-0">
+                      <div className="flex items-center gap-2 text-lg font-semibold text-gray-900">
                         <Calendar className="w-5 h-5" />
                         Publish Schedule
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
+                      </div>
+                    </div>
+                    <div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                           <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -471,8 +466,8 @@ const CreateBlogsPost = () => {
                           />
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Sidebar */}

@@ -43,6 +43,7 @@ type TQuery = {
   limit?: string;
   access?: string;
   search?: string;
+  page?: string;
 };
 
 const AllPostPage = () => {
@@ -52,17 +53,23 @@ const AllPostPage = () => {
   const [isSelected, setIsSelected] = useState<any | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [total, setTotal] = useState(0);
+  const [page, setPage] = useState(1);
+  const [limit, setLimit] = useState(5);
 
   const handleCallAPI = async ({
-    limit = "20",
+    limit = "10",
     access = "admin",
     search = "",
+    page = "1",
   }: TQuery) => {
-    const query: TQuery = { limit, access, search };
+    const query: TQuery = { limit, access, search, page };
     try {
+      setIsLoading(true);
       const data = await getPosts(query);
       if (data?.success) {
         setPosts(data?.payload?.posts);
+        setTotal(data?.payload?.total);
       }
     } catch (error) {
       console.error(error);
@@ -75,15 +82,19 @@ const AllPostPage = () => {
   // Debounced search
   useEffect(() => {
     const delaySearch = setTimeout(() => {
-      handleCallAPI({ search: searchTerm });
+      handleCallAPI({ search: searchTerm, page: '1', limit: String(limit) });
     }, 500);
     return () => clearTimeout(delaySearch);
   }, [searchTerm]);
 
+  // Fetch on mount + pagination changes
   useEffect(() => {
-    setIsLoading(true);
-    handleCallAPI({});
-  }, []);
+    handleCallAPI({
+      limit: String(limit),
+      page: String(page - 1),
+      search: searchTerm,
+    });
+  }, [page, limit]);
 
   // Handle delete post
   const handleDelete = async () => {
@@ -94,7 +105,6 @@ const AllPostPage = () => {
       setIsDeleteLoading(true);
       const data = await deletePostById(isSelected?._id);
       if (data?.success) {
-        setIsDeleteLoading(false);
         setPosts((prev) => prev?.filter((d) => d?._id !== isSelected?._id));
         setShowDeleteDialog(false);
         toast.success("Post deleted successfully");
@@ -114,6 +124,24 @@ const AllPostPage = () => {
       month: "short",
       day: "numeric",
     });
+  };
+
+  // Generate numbered pages
+  const totalPages = Math.ceil(total / limit);
+  const generatePageNumbers = () => {
+    const pages = [];
+    const maxVisible = 5;
+    let start = Math.max(1, page - Math.floor(maxVisible / 2));
+    let end = Math.min(totalPages, start + maxVisible - 1);
+
+    if (end - start < maxVisible - 1) {
+      start = Math.max(1, end - maxVisible + 1);
+    }
+
+    for (let i = start; i <= end; i++) {
+      pages.push(i);
+    }
+    return pages;
   };
 
   return (
@@ -276,7 +304,7 @@ const AllPostPage = () => {
                           </Link>
                           <Link
                             href={`/admin/post/new?link=${post?.slug}`}
-                          // target="_blank"
+                            target="_blank"
                           >
                             <Button
                               variant="ghost"
@@ -317,6 +345,64 @@ const AllPostPage = () => {
               </div>
             )}
           </div>
+
+          {/* Numbered Pagination */}
+          {totalPages > 1 && (
+            <div className="flex flex-col sm:flex-row items-center justify-between mt-8 gap-4">
+              {/* Page size selector */}
+              <div className="flex items-center gap-2">
+                <label className="text-sm text-gray-600">Show:</label>
+                <select
+                  value={limit}
+                  onChange={(e) => {
+                    setLimit(Number(e.target.value));
+                    setPage(1);
+                  }}
+                  className="border border-gray-300 rounded-lg px-2 py-1 text-sm"
+                >
+                  <option value={2}>2</option>
+                  <option value={5}>5</option>
+                  <option value={10}>10</option>
+                  <option value={20}>20</option>
+                </select>
+              </div>
+
+              {/* Pagination buttons */}
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  disabled={page === 1}
+                  onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+                >
+                  Previous
+                </Button>
+
+                {generatePageNumbers().map((num) => (
+                  <Button
+                    key={num}
+                    variant={num === page ? "default" : "outline"}
+                    className={`${num === page
+                      ? "bg-blue-600 text-white hover:bg-blue-700"
+                      : "hover:bg-gray-100"
+                      }`}
+                    onClick={() => setPage(num)}
+                  >
+                    {num}
+                  </Button>
+                ))}
+
+                <Button
+                  variant="outline"
+                  disabled={page === totalPages}
+                  onClick={() =>
+                    setPage((prev) => Math.min(prev + 1, totalPages))
+                  }
+                >
+                  Next
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Delete Confirmation Dialog */}

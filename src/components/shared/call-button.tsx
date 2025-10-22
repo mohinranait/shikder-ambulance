@@ -1,15 +1,9 @@
 "use client";
 
-import { Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import WhatsAppIcon from "../svg/WhatsAppIcon";
 import Image from "next/image";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
+import Link from "next/link";
+
 export default function CallButton() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -62,12 +56,14 @@ export default function CallButton() {
         </div>
 
         {/* Main Call Button */}
-        <button
-          onClick={handleCall}
-          className={` relative w-14 h-14  rounded-full bg-gradient-to-br from-green-500 via-emerald-500 to-green-600  shadow-2xl transition-all duration-700 group`}
-        >
-          <Image src={'/WhatsApp.webp'} width={60} height={60} alt="Image" className="w-full h-full" />
-        </button>
+        <Link href={'https://wa.me/+8801710060020'}>
+          <button
+            onClick={handleCall}
+            className={` relative w-14 h-14  rounded-full bg-gradient-to-br from-green-500 via-emerald-500 to-green-600  shadow-2xl transition-all duration-700 group`}
+          >
+            <Image src={'/WhatsApp.webp'} width={60} height={60} alt="Image" className="w-full h-full" />
+          </button>
+        </Link>
 
       </div>
     </>

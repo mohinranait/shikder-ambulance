@@ -1,20 +1,20 @@
 import connectDB from "@/config/mongodb";
 import Post from "@/models/Post";
-import "@/models/User"; 
+import "@/models/User";
 import "@/models/Media";
 import { NextRequest, NextResponse } from "next/server";
 import { getAuthUser } from "@/services/isAuth";
 /**
  * Create slug for URL
 */
-const createSlug = (text:string) => {
-    if(!text){
-        return;
-    }
-    return text
-    .toLowerCase() 
-    .trim() 
-    .replace(/[\s]+/g, "-") 
+const createSlug = (text: string) => {
+  if (!text) {
+    return;
+  }
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[\s]+/g, "-")
     .replace(/[^\w-]+/g, "")
 }
 
@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
 
     const search = searchParams.get("search") || "";
     const access = searchParams.get("access") || "user";
-    const limit = parseInt(searchParams.get("limit") || "10");
+    const limit = parseInt(searchParams.get("limit") || "20");
 
     const searchExp = new RegExp(".*" + search + ".*", "i");
 
@@ -61,12 +61,14 @@ export async function GET(request: NextRequest) {
       })
       .limit(limit);
 
+    const totalPosts = await Post.find(query).estimatedDocumentCount()
 
-      
+
+
 
     return NextResponse.json({
       success: true,
-      payload: { posts },
+      payload: { posts, total: totalPosts },
     });
   } catch (error) {
     console.error("GET /api/posts error:", error);
@@ -80,7 +82,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const decoded = await getAuthUser() as { id: string; email: string }
-    await connectDB();   
+    await connectDB();
 
     // Decode token
     const userId = decoded?.id;
@@ -94,7 +96,7 @@ export async function POST(request: NextRequest) {
 
     const body = await request.json();
 
-    
+
     const { postTitle, slug: customSlug, ...rest } = body;
 
     if (!postTitle) {
