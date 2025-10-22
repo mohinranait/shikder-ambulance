@@ -53,7 +53,7 @@ const AdditionalInfo = () => {
             <Separator />
             <CardContent className='pb-0 px-4'>
                 <p className='text-lg pb-3 font-semibold text-black flex items-center gap-2'> <Notebook size={18} /> Quick Booking</p>
-                <Link href={'/contact'}>
+                <Link href={'/contact-us'}>
                     <Button className='w-full flex items-center gap-2 '>
                         <Notebook size={14} />
                         Booking Now

@@ -76,12 +76,14 @@ export function BlogTeasers() {
                 className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={blog.image?.featuresImage || "/default.png"}
-                    alt={blog.postTitle}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                  <Link href={`/${blog.slug}`}>
+                    <Image
+                      src={blog.image?.featuresImage || "/default.png"}
+                      alt={blog.postTitle}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </Link>
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-3">
@@ -92,11 +94,13 @@ export function BlogTeasers() {
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3 line-clamp-2">
-                    {blog.postTitle}
-                  </h3>
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
-                    {blog.shortDescription ||
+                  <Link href={`/${blog.slug}`}>
+                    <h3 className="text-xl font-bold text-foreground mb-3 line-clamp-2">
+                      {blog.postTitle}
+                    </h3>
+                  </Link>
+                  <p className="text-muted-foreground mb-4 line-clamp-2">
+                    {blog.seoDescription ||
                       "No description available for this post."}
                   </p>
                   <Link href={`/${blog.slug}`}>

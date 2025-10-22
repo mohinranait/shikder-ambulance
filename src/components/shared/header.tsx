@@ -5,9 +5,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Heart, LogIn, UserPlus, Ambulance } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathName = usePathname()
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -24,6 +27,9 @@ export function Header() {
     { name: "Blogs", href: "/blogs" },
     { name: "Contact", href: "/contact-us" },
   ];
+
+  console.log({ pathName });
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -48,7 +54,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className={cn("text-sm font-medium text-muted-foreground transition-colors hover:text-foreground", pathName === item?.href && ' text-foreground')}
               >
                 {item.name}
               </Link>

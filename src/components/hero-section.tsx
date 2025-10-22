@@ -39,7 +39,7 @@ export function HeroSection() {
                   Call Now: 017100-60020
                 </Button>
               </Link>
-              <Link href={"/contact"}>
+              <Link href={"/contact-us"}>
                 <Button
                   variant="outline"
                   size="lg"
