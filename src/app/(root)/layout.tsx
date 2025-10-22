@@ -1,3 +1,4 @@
+import BottomSection from "@/components/shared/BottomSection";
 import CallButton from "@/components/shared/call-button";
 import FooterComponent from "@/components/shared/footer";
 import { Header } from "@/components/shared/header";
@@ -10,6 +11,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <main>{children}</main>
       <FooterComponent />
       <CallButton />
+      <BottomSection />
     </div>
   );
 };

@@ -328,7 +328,7 @@ export default function RegisterPage() {
                   <div className="mt-6 grid grid-cols-2 gap-4">
                     <Button variant="outline" className="bg-transparent">
                       <Image
-                        src="/placeholder.svg?height=24&width=24"
+                        src="/default.png?height=24&width=24"
                         alt="Google"
                         width={24}
                         height={24}
@@ -338,7 +338,7 @@ export default function RegisterPage() {
                     </Button>
                     <Button variant="outline" className="bg-transparent">
                       <Image
-                        src="/placeholder.svg?height=24&width=24"
+                        src="/default.png?height=24&width=24"
                         alt="Facebook"
                         width={24}
                         height={24}

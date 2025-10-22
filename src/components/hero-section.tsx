@@ -19,7 +19,7 @@ export function HeroSection() {
                 Shikder Ambulance Service in Bangladesh
                 <span className="text-primary block"> Best Reliable 24/7 </span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl">
+              <p className="text-lg text-muted-foreground max-w-2xl">
                 Welcome to <b>Shikder Ambulance Service</b> in Dhaka,
                 Bangladesh. Looking for a reliable Ambulance? You have come to
                 the right place. We guarantee your safe and comfortable arrival

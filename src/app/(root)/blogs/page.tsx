@@ -260,7 +260,7 @@ export default function BlogsPage() {
                       src={
                         post.image?.featuresImage ||
                         post.image?.thumbnail ||
-                        "/placeholder.svg"
+                        "/default.png"
                       }
                       alt={post.postTitle}
                       width={600}
@@ -384,7 +384,7 @@ export default function BlogsPage() {
                               src={
                                 post.image?.featuresImage ||
                                 post.image?.thumbnail ||
-                                "/placeholder.svg"
+                                "/default.png"
                               }
                               alt={post.postTitle}
                               width={300}
@@ -475,7 +475,7 @@ export default function BlogsPage() {
                             src={
                               post.image?.thumbnail ||
                               post.image?.featuresImage ||
-                              "/placeholder.svg"
+                              "/default.png"
                             }
                             alt={post.postTitle}
                             width={60}

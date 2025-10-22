@@ -16,28 +16,28 @@ export default function AboutPage() {
       name: "Shahadat Shikder",
       role: "Director",
       experience: "10 years",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/default.png?height=300&width=300",
       specialization: "Customer Support: 24/7",
     },
     {
       name: "Musa Shikder Mahir",
       role: "Director",
       experience: "10 years",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/default.png?height=300&width=300",
       specialization: "Software Engineer",
     },
     {
       name: "Mohin Rana",
       role: "Developer",
       experience: "10 years",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/default.png?height=300&width=300",
       specialization: "Software Developer",
     },
     {
       name: "Kamrul Islam",
       role: "Manager",
       experience: "8 years",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/default.png?height=300&width=300",
       specialization: "Digital Marketing Manager",
     },
   ];
@@ -130,7 +130,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/default.png?height=400&width=600"
                   alt="MediCare Ambulance team"
                   fill
                   className="object-cover"
@@ -196,7 +196,7 @@ export default function AboutPage() {
               >
                 <div className="relative h-64">
                   <Image
-                    src={member.image || "/placeholder.svg"}
+                    src={member.image || "/default.png"}
                     alt={member.name}
                     fill
                     className="object-cover"

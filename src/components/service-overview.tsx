@@ -40,7 +40,7 @@ export function ServiceOverview() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Shikder Ambulance Services 24/7</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className=" text-muted-foreground max-w-3xl mx-auto">
             Comprehensive the best emergency Ambulance services in Bangladesh. We provide different types of Ambulances. The best <a href="https://24ambulance.com/" target="_blank" rel="noopener noreferrer">Quality Ambulance Service</a> is available in the all districts of Bangladesh.
           </p>
         </div>
@@ -49,13 +49,13 @@ export function ServiceOverview() {
           {services.map((service, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-64">
-                <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
+                <Image src={service.image || "/default.png"} alt={service.title} fill className="object-cover" />
               </div>
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">{service.title}</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
 
-                <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="grid sm:grid-cols-2 gap-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-2">
                       <div className="h-2 w-2 rounded-full bg-blue-600"></div>

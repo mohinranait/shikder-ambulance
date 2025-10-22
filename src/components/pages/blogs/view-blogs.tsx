@@ -2,12 +2,13 @@ import React, { FC } from "react";
 import Link from "next/link";
 import { TPostFormData } from "@/types/post.types";
 import MainBody from "./main-body";
-import { Phone } from "lucide-react";
+import { Clock, MapPin, Phone } from "lucide-react";
 import RightSidebar from "./right-sidebar";
 import LeftSidebar from "./left-sidebar";
 import CommentSection from "./CommentSection";
 import FaqComponent from "../home/faq-component";
 import { Button } from "@/components/ui/button";
+import ServiceInfo from "@/components/ServiceInfo";
 
 type Props = {
   blog: TPostFormData;
@@ -22,7 +23,7 @@ const BlogView: FC<Props> = ({ blog }) => {
     <main className="mb-20">
       <section className={`relative bg-premium-light-gradient `}>
         <div className={`${bgImage && "bg-premium-light-gradient"} `}>
-          <div className="sm:container justify-center flex items-center  md:min-h-[calc(100vh-200px)] py-5 lg:py-20 lg:px-32 xl:px-48 ">
+          <div className="sm:container px-2 justify-center flex items-center   py-10 lg:py-16 lg:px-32 xl:px-48 ">
             <div className="flex flex-col gap-3">
               <h1
                 className={`text-3xl text-center sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal
@@ -31,7 +32,7 @@ const BlogView: FC<Props> = ({ blog }) => {
                 {blog?.seoTitle || blog?.postTitle}
               </h1>
               <p
-                className={`text-xl text-center text-muted-foreground mx-auto max-w-2xl`}
+                className={`md:text-xl text-center text-muted-foreground mx-auto max-w-2xl`}
               >
                 {blog?.seoDescription}
               </p>
@@ -46,6 +47,7 @@ const BlogView: FC<Props> = ({ blog }) => {
                   </Button>
                 </Link>
               </div>
+              <ServiceInfo />
               {/* {blog?.contactNumber && (
                 <div className="flex justify-center">
                   <Link
@@ -63,7 +65,7 @@ const BlogView: FC<Props> = ({ blog }) => {
       </section>
       <section className="pt-3">
         <div
-          className={`sm:container grid gap-5 ${blog?.layouts?.isSidebar === "both"
+          className={`sm:container px-2 grid gap-5 ${blog?.layouts?.isSidebar === "both"
             ? "lg:grid-cols-4"
             : blog?.layouts?.isSidebar === "none"
               ? "lg:grid-cols-1"

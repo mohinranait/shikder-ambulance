@@ -172,7 +172,7 @@ export default function AcAmbulancePage() {
 
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=AC+Ambulance+Service"
+                src="/default.png?height=400&width=600&text=AC+Ambulance+Service"
                 alt="Best AC Ambulance Service"
                 width={600}
                 height={400}
@@ -318,7 +318,7 @@ export default function AcAmbulancePage() {
 
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=AC+Ambulance+Service"
+                src="/default.png?height=400&width=600&text=AC+Ambulance+Service"
                 alt="Best AC Ambulance Service"
                 width={600}
                 height={400}

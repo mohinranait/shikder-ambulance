@@ -20,7 +20,7 @@ export default function ServicesPage() {
       title: "Emergency Ambulance Service in Dhaka",
       description:
         "Emergency Ambulance Service provides life-saving medical transport and patient care for critical health incidents, and safe transit to hospitals. Your safety, comfort, and peace of mind mean everything to us.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/default.png?height=300&width=400",
       features: [
         "24/7 Emergency Ambulance Support",
         "ICU & Life Support Ambulance",
@@ -38,7 +38,7 @@ export default function ServicesPage() {
       title: "Non-Emergency Patient Transport",
       description:
         "Comfortable and safe Patient transport for scheduled appointments, hospital transfers, and routine Patient care. Your safety and comfort are our top priorities.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/default.png?height=300&width=400",
       features: [
         "Comfortable AC & Non-AC Vehicles",
         "Wheelchair & Stretcher Support",
@@ -56,7 +56,7 @@ export default function ServicesPage() {
       title: "Critical Care Transport",
       description:
         "Specialized transport for critically ill patients requiring intensive care during transfer between Patient facilities. The basic life support, Advanced Life Support ICU Ambulance is Available with Doctors and Brothers.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/default.png?height=300&width=400",
       features: [
         "ICU-Level Patient Equipment",
         "Ventilator Support",
@@ -74,7 +74,7 @@ export default function ServicesPage() {
       title: "Freezing Ambulance Service",
       description:
         "A freezer ambulance service is a specialized transportation service equipped with refrigeration systems to maintain a consistently low temperature.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/default.png?height=300&width=400",
       features: [
         "It has a forzen box in it",
         "Use freezer Ambulance, save the dead body",
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                 >
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                      src={service.image || "/placeholder.svg"}
+                      src={service.image || "/default.png"}
                       alt={service.title}
                       fill
                       className="object-cover"

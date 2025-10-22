@@ -42,7 +42,7 @@ const AsidePosts = () => {
                     src={
                       post.image?.thumbnail ||
                       post.image?.featuresImage ||
-                      "/placeholder.svg"
+                      "/default.png"
                     }
                     alt={post.postTitle}
                     width={100}

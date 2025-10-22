@@ -18,7 +18,7 @@ export function BlogTeasers() {
     (async () => {
       try {
         setIsLoading(true);
-        const res = await getPosts({ limit: "5", access: "user" });
+        const res = await getPosts({ limit: "6", access: "user" });
         if (res?.success) {
           setBlogs(res?.payload?.posts);
         }
@@ -30,7 +30,6 @@ export function BlogTeasers() {
     })();
   }, []);
 
-  console.log({ blogs });
 
   return (
     <section className="py-20 bg-muted/30">
@@ -39,7 +38,7 @@ export function BlogTeasers() {
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Latest Health & Safety Insights
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className=" text-muted-foreground max-w-3xl mx-auto">
             Stay informed with expert advice, emergency preparedness tips, and
             important health information from our medical health care professionals. The best and quality ambulance is available in anytime, anywhere.
           </p>
@@ -75,12 +74,14 @@ export function BlogTeasers() {
                 className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={blog.image?.featuresImage || "/placeholder.svg"}
-                    alt={blog.postTitle}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                  <Link href={`/${blog.slug}`}>
+                    <Image
+                      src={blog.image?.featuresImage || "/default.png"}
+                      alt={blog.postTitle}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </Link>
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-3">
@@ -91,13 +92,16 @@ export function BlogTeasers() {
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3 line-clamp-2">
-                    {blog.postTitle}
-                  </h3>
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
-                    {blog.shortDescription ||
+                  <Link href={`/${blog.slug}`}>
+                    <h3 className="text-xl font-bold text-foreground mb-3 line-clamp-2">
+                      {blog.postTitle}
+                    </h3>
+                  </Link>
+                  <p className="text-base text-muted-foreground  mb-4 line-clamp-2">
+                    {blog.seoDescription ||
                       "No description available for this post."}
                   </p>
+
                   <Link href={`/${blog.slug}`}>
                     <Button
                       variant="ghost"

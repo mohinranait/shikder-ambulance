@@ -1,7 +1,7 @@
 "use client";
 import { createComment } from "@/actions/commentApi";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/providers/AuthProvider";
@@ -94,9 +94,12 @@ const CommentForm: FC<Props> = ({ blog }) => {
 
   return (
     <Card>
-      <CardContent className="py-6">
+      <CardHeader>
+        <CardTitle>Review & Reting</CardTitle>
+      </CardHeader>
+      <CardContent className="py-6 pt-0">
         <form onSubmit={handleSubmit(onSubmit)} className="rounded flex gap-2">
-          <div>
+          <div className="hidden md:block">
             <div className="w-[50px]">
               <Image
                 src={"/placeholder-user.jpg"}
@@ -112,14 +115,13 @@ const CommentForm: FC<Props> = ({ blog }) => {
             <div className="flex flex-col gap-4">
               {/* Name Field */}
               <div>
-                <Label htmlFor="name-field">Full Name</Label>
+                <Label htmlFor="name-field" className="mb-2">Full Name</Label>
                 <Input
                   type="text"
                   id="name-field"
                   {...register("name")}
-                  className={`focus-visible:border-primary ${
-                    errors.name ? "border-red-500" : ""
-                  }`}
+                  className={`focus-visible:border-primary ${errors.name ? "border-red-500" : ""
+                    }`}
                   placeholder="Full name"
                   disabled={isSubmitting}
                 />
@@ -133,11 +135,10 @@ const CommentForm: FC<Props> = ({ blog }) => {
               {/* Comment Field */}
               <div>
                 <div className="flex justify-between items-center">
-                  <Label htmlFor="content-field">Comment</Label>
+                  <Label htmlFor="content-field" className="mb-2">Comment</Label>
                   <span
-                    className={`text-xs ${
-                      contentLength > 500 ? "text-red-500" : "text-gray-500"
-                    }`}
+                    className={`text-xs ${contentLength > 500 ? "text-red-500" : "text-gray-500"
+                      }`}
                   >
                     {contentLength}/500 characters
                   </span>
@@ -148,9 +149,8 @@ const CommentForm: FC<Props> = ({ blog }) => {
                   rows={3}
                   placeholder="Write your message..."
                   disabled={isSubmitting}
-                  className={`${
-                    errors.content ? "border-red-500" : "border-slate-300"
-                  } border m-0 text-slate-800 placeholder:text-slate-400 p-0 focus-visible:outline-offset-0 rounded-md bg-transparent w-full focus-visible:outline-primary py-2 px-3 disabled:opacity-50 disabled:cursor-not-allowed`}
+                  className={`${errors.content ? "border-red-500" : "border-slate-300"
+                    } border m-0 text-slate-800 placeholder:text-slate-400 p-0 focus-visible:outline-offset-0 rounded-md bg-transparent w-full focus-visible:outline-primary py-2 px-3 disabled:opacity-50 disabled:cursor-not-allowed`}
                 />
                 {errors.content && (
                   <p className="text-red-500 text-xs">

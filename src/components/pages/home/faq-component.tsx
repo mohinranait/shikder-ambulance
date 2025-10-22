@@ -64,10 +64,10 @@ const FaqComponent = () => {
         <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg ">
           <HelpCircle className="w-8 h-8 text-white" />
         </div>
-        <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
+        <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
           Frequently Asked Questions
         </h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className=" text-gray-600 max-w-2xl mx-auto leading-relaxed">
           Quick answers to common questions about our emergency patient transport services.
         </p>
       </div>
@@ -87,26 +87,28 @@ const FaqComponent = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 via-transparent to-purple-50/50 pointer-events-none opacity-0 group-open:opacity-100 transition-opacity duration-500"></div>
 
                 {/* Summary/Trigger */}
-                <summary className="relative cursor-pointer list-none px-8 py-6 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all duration-300">
+                <summary className="relative cursor-pointer list-none px-4 sm:px-8 py-6 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all duration-300">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 group-hover:bg-gray-200 group-open:bg-gradient-to-br group-open:from-blue-500 group-open:to-purple-600 group-open:shadow-lg group-open:shadow-blue-500/25 transition-all duration-300">
+                      <div className="hidden sm:flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 group-hover:bg-gray-200 group-open:bg-gradient-to-br group-open:from-blue-500 group-open:to-purple-600 group-open:shadow-lg group-open:shadow-blue-500/25 transition-all duration-300">
                         <Icon className="w-6 h-6 text-gray-600 group-open:text-white transition-colors duration-300" />
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-800 group-open:text-gray-900 transition-colors duration-300">
+                      <h3 className="sm:text-xl font-semibold text-gray-800 group-open:text-gray-900 transition-colors duration-300">
                         {item.title}
                       </h3>
                     </div>
 
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-600 group-hover:bg-gray-200 group-open:bg-blue-100 group-open:text-blue-600 group-open:rotate-180 transition-all duration-300">
-                      <ChevronDown className="w-5 h-5" />
+                    <div>
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-gray-600 group-hover:bg-gray-200 group-open:bg-blue-100 group-open:text-blue-600 group-open:rotate-180 transition-all duration-300">
+                        <ChevronDown className="w-5 h-5" />
+                      </div>
                     </div>
                   </div>
                 </summary>
 
                 {/* Content */}
                 <div className="px-8 pb-8 pt-2 animate-in slide-in-from-top-2 duration-500">
-                  <div className="pl-16">
+                  <div className=" sm:pl-10 md:pl-16">
                     <div className="space-y-4">
                       {item.content.map((paragraph, pIndex) => (
                         <p

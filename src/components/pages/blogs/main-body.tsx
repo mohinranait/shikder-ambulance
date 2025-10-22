@@ -9,12 +9,10 @@ type Props = {
 const MainBody: FC<Props> = ({ blog }) => {
   return (
     <div className="bg-white blog-post-preview p-5 rounded">
-      {!blog?.content && (
-        <h2 className="text-2xl mb-2 font-bold text-slate-900">
-          Shikder Ambulance service
-        </h2>
-      )}
-      {/* <div>
+      <h2 className="text-2xl mb-2 font-bold text-slate-900">
+        {blog?.postTitle || 'Shikder Ambulance service'}
+      </h2>
+      <div>
         <Image
           src={blog?.image?.featuresImage || ""}
           width={600}
@@ -22,7 +20,7 @@ const MainBody: FC<Props> = ({ blog }) => {
           alt={blog?.postTitle}
           className="w-full h-full"
         />
-      </div> */}
+      </div>
       <div
         className="post-content"
         dangerouslySetInnerHTML={{ __html: blog?.content || "" }}

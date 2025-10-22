@@ -185,7 +185,7 @@ export default function NonAcAmbulancePage() {
             <div className="flex justify-center">
               <div className="bg-white rounded-2xl shadow-2xl p-6">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Non-AC+Ambulance+Service"
+                  src="/default.png?height=400&width=600&text=Non-AC+Ambulance+Service"
                   alt="Non-AC Ambulance Service - Affordable emergency medical transport"
                   width={600}
                   height={400}
