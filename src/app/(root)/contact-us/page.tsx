@@ -118,7 +118,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Emergency Banner */}
+      {/* Emergency Banner *
       <section className="bg-red-600 text-white py-4">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-4 text-center">
@@ -129,7 +129,8 @@ export default function ContactPage() {
             <Heart className="h-6 w-6" />
           </div>
         </div>
-      </section>
+      </section> 
+      */}
 
       {/* Contact Information */}
       <section className="py-20 bg-white">

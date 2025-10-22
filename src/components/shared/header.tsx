@@ -28,7 +28,6 @@ export function Header() {
     { name: "Contact", href: "/contact-us" },
   ];
 
-  console.log({ pathName });
 
 
   return (

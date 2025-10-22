@@ -14,6 +14,9 @@ import {
   Heart,
   Shield,
   Award,
+  BookmarkCheck,
+  ShieldCheck,
+  Banknote,
 } from "lucide-react";
 import Link from "next/link";
 const quickLinks = [
@@ -125,17 +128,10 @@ const FooterComponent = () => {
                 Dhaka to all districts Ambulance
               </li>
               <li className="flex items-center text-gray-300">
-                <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
+                <Ambulance className="h-4 w-4 mr-2 text-green-400" />
                 Any districts to Dhaka Ambulance Service
               </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  View All Services →
-                </Link>
-              </li>
+
             </ul>
           </div>
 
@@ -143,13 +139,14 @@ const FooterComponent = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
             <div className="space-y-4 mb-6">
-              <div className="flex items-center text-gray-300">
-                <Phone className="h-5 w-5 mr-3 text-red-400" />
-                <div>
-                  <p className="font-medium text-white -400">017100-60020</p>
-                  <p className="text-sm">WhatsApp: Call & SMS</p>
+              <Link href={'tel:01710060020'}>
+                <div className="flex items-center text-gray-300">
+                  <Phone className="h-5 w-5 mr-3 text-red-400" />
+                  <div>
+                    <p className="font-bold text-white -400">017100-60020</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
 
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3 text-blue-400" />
@@ -158,35 +155,31 @@ const FooterComponent = () => {
               <div className="flex items-start text-gray-300">
                 <MapPin className="h-5 w-5 mr-3 mt-1 text-green-400" />
                 <div>
-                  <p>Eskaton Rd, Mogbazar, Dhaka-1217</p>
+                  <p>Eskaton Road, Mogbazar, Dhaka-1217</p>
                 </div>
               </div>
+
+              <div className="flex items-start text-gray-300">
+                <BookmarkCheck className="h-5 w-5 mr-3 mt-1 text-purple-400" />
+                <div>
+                  <p>Trade No: TRAD/DSCC/017141/2024</p>
+                </div>
+              </div>
+              <div className="flex items-start text-gray-300">
+                <Banknote className="h-5 w-5 mr-3 mt-1 text-purple-400" />
+                <Link href="/services">
+                  <p>Payments by Online</p>
+                </Link>
+              </div>
+              {/* <div className="flex items-start text-gray-300">
+                <ShieldCheck className="h-5 w-5 mr-3 mt-1 text-yellow-400" />
+                <div>
+                  <p>TIN No: 869466950498 </p>
+                </div>
+              </div> */}
             </div>
 
-            {/* Newsletter */}
-            <div>
-              <h6 className="font-medium mb-3">
-                Get A Call Back For Ambulance
-              </h6>
-              <div className="relative">
-                <Input
-                  type="number"
-                  placeholder="Give Your Phone Number"
-                  className="bg-gray-800 border-gray-700 text-white placeholder-gray-400"
-                />
-                <Button
-                  size="sm"
-                  className="bg-red-600 absolute top-2/4 right-0 -translate-y-2/4 py-5 rounded-l-none hover:bg-red-700"
-                >
-                  Submit
-                </Button>
-              </div>
-              {/*
-              <p className="text-xs text-gray-400 mt-2">
-                Get tips and emergency updates
-              </p>
-                  */}
-            </div>
+
           </div>
         </div>
       </div>
@@ -226,12 +219,12 @@ const FooterComponent = () => {
       </div>
 
       {/* Emergency Banner */}
-      <div className="bg-red-600 py-3">
+      <div className="bg-red-600 lg:py-3 lg:pb-3  pb-14 pt-3">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center space-x-4 text-center">
             <Phone className="h-5 w-5" />
-            <p className="font-medium">
-              Need Emergency Ambulance? Don't wait, Call Now.
+            <p className="font-normal">
+              Need Emergency Ambulance? Call Now.
             </p>
           </div>
         </div>
