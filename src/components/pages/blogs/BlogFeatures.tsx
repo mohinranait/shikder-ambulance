@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
+import { calculateReadTime, formatDate } from '@/lib/helpers';
 import { TPostFormData } from '@/types/post.types';
 import { AlertTriangle, Calendar, Clock, Share2 } from 'lucide-react';
 import Image from 'next/image';
@@ -17,27 +18,7 @@ const BlogFeatures = () => {
 
     const featuredPosts = useMemo(() => posts.slice(0, 2), [posts]);
 
-    const formatDate = (date: Date | string): string => {
-        return new Date(date).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-        });
-    };
 
-    const calculateReadTime = (post: TPostFormData): string => {
-        const wordsPerMinute = 200;
-        const contentLength =
-            (post.content?.length || 0) +
-            (post.shortDescription?.length || 0) +
-            (post.contents?.reduce(
-                (acc, content) => acc + (content.content?.length || 0),
-                0
-            ) || 0);
-        const words = contentLength / 5;
-        const minutes = Math.ceil(words / wordsPerMinute);
-        return `${Math.max(1, minutes)} min read`;
-    };
 
     const fetchPosts = async () => {
         try {

@@ -1,18 +1,12 @@
 "use client";
 import { getPosts } from "@/actions/postApi";
 import { Card } from "@/components/ui/card";
-import { BASE_URL } from "@/config/accessEnv";
+import { formatShortDate } from "@/lib/helpers";
 import { TPostFormData } from "@/types/post.types";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-// Format short date
-const formatShortDate = (date: Date | string): string => {
-  return new Date(date).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-  });
-};
+
 
 const AsidePosts = () => {
   const [posts, setPosts] = useState([]);

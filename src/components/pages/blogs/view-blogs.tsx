@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Link from "next/link";
 import { TPostFormData } from "@/types/post.types";
 import MainBody from "./main-body";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import RightSidebar from "./right-sidebar";
 import LeftSidebar from "./left-sidebar";
 import CommentSection from "./CommentSection";
@@ -32,7 +32,7 @@ const BlogView: FC<Props> = ({ blog }) => {
                 {blog?.seoTitle || blog?.postTitle}
               </h1>
               <p
-                className={`md:text-xl text-center text-muted-foreground mx-auto max-w-2xl`}
+                className={`md:text-lg text-center text-muted-foreground mx-auto max-w-2xl`}
               >
                 {blog?.seoDescription}
               </p>
@@ -48,17 +48,6 @@ const BlogView: FC<Props> = ({ blog }) => {
                 </Link>
               </div>
               <ServiceInfo />
-              {/* {blog?.contactNumber && (
-                <div className="flex justify-center">
-                  <Link
-                    href={`tel:${blog?.contactNumber}`}
-                    className="py-[10px] text-xl items-center inline-flex px-4 rounded-[100px] bg-primary text-white gap-1"
-                  >
-                    <Phone />
-                    {blog?.contactNumber || "Call Ambulance"}
-                  </Link>
-                </div>
-              )} */}
             </div>
           </div>
         </div>

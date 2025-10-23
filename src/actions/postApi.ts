@@ -101,3 +101,12 @@ export const getSinglePostBySlug = async (slug: string) => {
   });
   return await res.json();
 };
+export const getSinglePostBySlugForDetailsPage = async (slug: string) => {
+  const origin =
+    typeof window !== "undefined" ? window.location.origin : BASE_URL;
+
+  const res = await fetch(`${origin}/api/posts/slug/${slug}`, {
+    next: { revalidate: 60 }
+  });
+  return await res.json();
+};

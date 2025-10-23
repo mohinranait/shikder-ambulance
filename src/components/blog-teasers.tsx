@@ -118,10 +118,12 @@ export function BlogTeasers() {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
-            View All Articles
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <Link href={'/blogs'}>
+            <Button variant="outline" size="lg">
+              View All Articles
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

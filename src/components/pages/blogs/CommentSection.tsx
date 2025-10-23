@@ -3,7 +3,7 @@ import CommentForm from "./CommentForm";
 import ShowAllComments from "./ShowAllComments";
 import { TPostFormData } from "@/types/post.types";
 import { getAllCommentByPostId } from "@/actions/commentApi";
-type TCommentType = {
+export type TCommentType = {
   _id: string;
   autor?: string;
   content: string;

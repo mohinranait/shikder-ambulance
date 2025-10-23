@@ -1,4 +1,4 @@
-import { BookmarkCheck, Clock, MapPin, Phone } from 'lucide-react'
+import { BookmarkCheck, Clock, Phone } from 'lucide-react'
 import React from 'react'
 
 const ServiceInfo = () => {

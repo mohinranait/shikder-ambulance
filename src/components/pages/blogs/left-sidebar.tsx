@@ -1,7 +1,4 @@
 import React from "react";
-import { posts } from "@/config/constData";
-import Image from "next/image";
-import Link from "next/link";
 import AsidePosts from "./aside-posts";
 import AdditionalInfo from "./additional-info";
 

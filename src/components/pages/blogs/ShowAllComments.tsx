@@ -2,16 +2,8 @@ import { Star } from "lucide-react";
 import moment from "moment";
 import Image from "next/image";
 import React, { FC } from "react";
-type TCommentType = {
-  _id: string;
-  autor?: string;
-  content: string;
-  name: string;
-  star: number;
-  createdAt: string;
-  updatedAt: string;
-  __v: number;
-};
+import { TCommentType } from "./CommentSection";
+
 type Props = {
   comments: TCommentType[];
 };
@@ -41,9 +33,8 @@ const ShowAllComments: FC<Props> = ({ comments }) => {
                 {[1, 2, 3, 4, 5]?.map((star) => (
                   <Star
                     key={star}
-                    className={`${
-                      item?.star >= star ? "text-yellow-500" : "text-slate-300"
-                    }`}
+                    className={`${item?.star >= star ? "text-yellow-500" : "text-slate-300"
+                      }`}
                     size={16}
                   />
                 ))}

@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import {
   Phone,
   Mail,
   MapPin,
-  Clock,
   Facebook,
   Twitter,
   Instagram,
@@ -13,9 +11,7 @@ import {
   Ambulance,
   Heart,
   Shield,
-  Award,
   BookmarkCheck,
-  ShieldCheck,
   Banknote,
 } from "lucide-react";
 import Link from "next/link";
@@ -167,16 +163,11 @@ const FooterComponent = () => {
               </div>
               <div className="flex items-start text-gray-300">
                 <Banknote className="h-5 w-5 mr-3 mt-1 text-purple-400" />
-                <Link href="/services">
+                <Link href="/payments">
                   <p>Payments by Online</p>
                 </Link>
               </div>
-              {/* <div className="flex items-start text-gray-300">
-                <ShieldCheck className="h-5 w-5 mr-3 mt-1 text-yellow-400" />
-                <div>
-                  <p>TIN No: 869466950498 </p>
-                </div>
-              </div> */}
+
             </div>
 
 

@@ -2,6 +2,7 @@
 import { getPosts } from '@/actions/postApi';
 import { Card } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
+import { formatShortDate } from '@/lib/helpers';
 import { TPostFormData } from '@/types/post.types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,13 +14,6 @@ const RecentPost = () => {
     // Get recent posts for sidebar
     const recentPosts = useMemo(() => posts.slice(0, 3), [posts]);
 
-    // Format short date
-    const formatShortDate = (date: Date | string): string => {
-        return new Date(date).toLocaleDateString("en-US", {
-            month: "short",
-            day: "numeric",
-        });
-    };
 
     const fetchPosts = async () => {
         try {

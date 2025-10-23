@@ -1,4 +1,4 @@
-import { getSinglePostBySlug } from "@/actions/postApi";
+import { getSinglePostBySlug, getSinglePostBySlugForDetailsPage } from "@/actions/postApi";
 import BlogView from "@/components/pages/blogs/view-blogs";
 import { BASE_URL } from "@/config/accessEnv";
 import { TPostFormData } from "@/types/post.types";
@@ -13,7 +13,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const data = await getSinglePostBySlug(slug);
+  const data = await getSinglePostBySlugForDetailsPage(slug);
   const post: TPostFormData = data?.payload?.post;
   const previousImages = post?.image?.featuresImage;
 
@@ -34,7 +34,7 @@ const BlogDetailsPage = async ({
   params: Promise<{ slug: string }>;
 }) => {
   const { slug } = await params;
-  const data = await getSinglePostBySlug(slug);
+  const data = await getSinglePostBySlugForDetailsPage(slug);
   const post = data?.payload?.post;
 
   if (!post) {
