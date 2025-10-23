@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Shikder Ambulance",
     locale: "bn_BD",
     type: "website",
-    images: ['https://www.shikderambulance.com/Shikder-Ambulance-Service-Ac-Ambulance.jpg'],
+    images: ['http://res.cloudinary.com/dm9s5d3xk/image/upload/v1760521638/shikder/xt56gg7xm0zxlr84w6ca.jpg'],
   },
   twitter: {
     card: "summary_large_image",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       "Fast, reliable 24/7 ambulance support in Dhaka including ICU, life support & freezing ambulance services.",
     images: [
-      "https://www.shikderambulance.com/Shikder-Ambulance-Service-Ac-Ambulance.jpg"
+      "http://res.cloudinary.com/dm9s5d3xk/image/upload/v1760521638/shikder/xt56gg7xm0zxlr84w6ca.jpg"
     ],
   },
   robots: {
