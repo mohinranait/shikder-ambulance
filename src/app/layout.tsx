@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: "Shikder Ambulance Services in Dhaka. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination",
     url: "https://shikderambulance.com",
     siteName: "Shikder Ambulance",
-    locale: "en_US",
+    locale: "bn_BD",
     type: "website",
   },
   robots: {
