@@ -21,6 +21,10 @@ const leadSchema = new Schema({
         type: String,
         required: true,
         trim: true,
+    },
+    favorite: {
+        type: Boolean,
+        default: false,
     }
 }, { timestamps: true });
 

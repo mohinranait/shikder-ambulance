@@ -1,10 +1,7 @@
 
-
 import connectDB from '@/config/mongodb';
 import Lead from '@/models/lead.model';
 import { NextRequest, NextResponse } from 'next/server';
-
-
 
 export async function GET(req: NextRequest) {
     try {
@@ -13,19 +10,30 @@ export async function GET(req: NextRequest) {
         const search = searchParams.get('search');
         const leadType = searchParams.get('leadType');
         const district = searchParams.get('district');
+        const page = parseInt(searchParams.get('page') || '1', 10);
+        const limit = parseInt(searchParams.get('limit') || '10', 10);
 
         let query: any = {};
         if (search) {
             query.$or = [
                 { fullName: { $regex: search, $options: 'i' } },
-                { phone: { $regex: search, $options: 'i' } }
+                { phone: { $regex: search, $options: 'i' } },
             ];
         }
         if (leadType) query.leadType = leadType;
         if (district) query.district = district;
 
-        const leads = await Lead.find(query).sort({ createdAt: -1 });
-        return NextResponse.json(leads);
+        const total = await Lead.countDocuments(query);
+        const leads = await Lead.find(query)
+            .sort({ createdAt: -1 })
+            .skip((page - 1) * limit)
+            .limit(limit);
+
+        return NextResponse.json({
+            leads,
+            totalPages: Math.ceil(total / limit),
+            currentPage: page,
+        });
     } catch (error) {
         console.error('Error fetching leads:', error);
         return NextResponse.json({ error: 'Failed to fetch leads' }, { status: 500 });

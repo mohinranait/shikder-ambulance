@@ -1,4 +1,3 @@
-// app/page.tsx (updated)
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -7,7 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { FileText, Pencil, Plus, Trash2 } from 'lucide-react';
+import { FileText, Pencil, Plus, Trash2, ChevronLeft, ChevronRight, Heart } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { Navbar } from '@/components/admin/shared/Navbar';
 import { Main } from '@/components/ui/main';
@@ -34,10 +33,13 @@ export default function Home() {
     const [debouncedSearch, setDebouncedSearch] = useState('');
     const [selectedLeadType, setSelectedLeadType] = useState<'Customer' | 'Provider' | undefined>(undefined);
     const [selectedDistrict, setSelectedDistrict] = useState<string | undefined>(undefined);
+    const [page, setPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const [pageSize, setPageSize] = useState(20);
 
     useEffect(() => {
         fetchLeads();
-    }, []);
+    }, [debouncedSearch, selectedLeadType, selectedDistrict, page, pageSize]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -46,12 +48,6 @@ export default function Home() {
         return () => clearTimeout(timer);
     }, [searchTerm]);
 
-    useEffect(() => {
-        fetchLeads();
-    }, [debouncedSearch, selectedLeadType, selectedDistrict]);
-
-
-
     const fetchLeads = async () => {
         setIsFetching(true);
         try {
@@ -59,11 +55,13 @@ export default function Home() {
             if (debouncedSearch) url.searchParams.append('search', debouncedSearch);
             if (selectedLeadType) url.searchParams.append('leadType', selectedLeadType);
             if (selectedDistrict) url.searchParams.append('district', selectedDistrict);
+            url.searchParams.append('page', page.toString());
+            url.searchParams.append('limit', pageSize.toString());
             const res = await fetch(url.toString());
             if (!res.ok) throw new Error('Failed to fetch');
             const data = await res.json();
-
-            setLeads(data);
+            setLeads(data.leads);
+            setTotalPages(data.totalPages);
         } catch (error) {
             toast({ title: 'Error', description: 'Failed to fetch leads', variant: 'destructive' });
         } finally {
@@ -82,7 +80,7 @@ export default function Home() {
             });
             if (!res.ok) throw new Error('Failed to save');
             await fetchLeads();
-            // setIsOpen(false);
+            setIsOpen(false);
             setEditingLead(null);
             toast({ title: 'Success', description: editingLead ? 'Lead updated' : 'Lead created' });
         } catch (error) {
@@ -112,6 +110,22 @@ export default function Home() {
         }
     };
 
+    const generatePageNumbers = () => {
+        const pages: number[] = [];
+        const maxPagesToShow = 5;
+        let startPage = Math.max(1, page - 2);
+        let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+
+        if (endPage - startPage < maxPagesToShow - 1) {
+            startPage = Math.max(1, endPage - maxPagesToShow + 1);
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            pages.push(i);
+        }
+        return pages;
+    };
+
     return (
         <>
             <Navbar fixed />
@@ -128,7 +142,10 @@ export default function Home() {
                         <Dialog open={isOpen} onOpenChange={setIsOpen}>
                             <DialogTrigger asChild>
                                 <Button
-                                    onClick={() => { setEditingLead(null); setIsOpen(true); }}
+                                    onClick={() => {
+                                        setEditingLead(null);
+                                        setIsOpen(true);
+                                    }}
                                     className="bg-indigo-600 hover:bg-indigo-700 flex items-center gap-2"
                                     disabled={isSubmitting}
                                 >
@@ -167,12 +184,14 @@ export default function Home() {
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                                 className="border-gray-300 focus:border-indigo-500"
+                                disabled={isFetching || isSubmitting}
                             />
                         </div>
                         <div className="min-w-[150px]">
                             <Select
                                 value={selectedLeadType || 'All'}
                                 onValueChange={(v) => setSelectedLeadType(v === 'All' ? undefined : v as 'Customer' | 'Provider')}
+                                disabled={isFetching || isSubmitting}
                             >
                                 <SelectTrigger className="border-gray-300 focus:border-indigo-500">
                                     <SelectValue placeholder="Lead Type" />
@@ -188,6 +207,7 @@ export default function Home() {
                             <Select
                                 value={selectedDistrict || 'All'}
                                 onValueChange={(v) => setSelectedDistrict(v === 'All' ? undefined : v)}
+                                disabled={isFetching || isSubmitting}
                             >
                                 <SelectTrigger className="border-gray-300 focus:border-indigo-500">
                                     <SelectValue placeholder="District" />
@@ -215,6 +235,7 @@ export default function Home() {
                                 <TableHeader>
                                     <TableRow className="bg-gray-50">
                                         <TableHead className="font-semibold text-gray-700">Full Name</TableHead>
+                                        <TableHead className="font-semibold text-gray-700">Favorite</TableHead>
                                         <TableHead className="font-semibold text-gray-700">Phone</TableHead>
                                         <TableHead className="font-semibold text-gray-700">Lead Type</TableHead>
                                         <TableHead className="font-semibold text-gray-700">District</TableHead>
@@ -225,7 +246,11 @@ export default function Home() {
                                 <TableBody>
                                     {leads.map((lead) => (
                                         <TableRow key={lead._id} className="hover:bg-gray-50 transition-colors">
-                                            <TableCell>{lead.fullName}</TableCell>
+                                            <TableCell className=''>{lead.fullName}   </TableCell>
+                                            <TableCell className=''>
+                                                <Button variant={'ghost'} className='size-8'>
+                                                    <Heart size={16} className='fill-red-600 stroke-red-600' />
+                                                </Button>  </TableCell>
                                             <TableCell>{lead.phone}</TableCell>
                                             <TableCell>{lead.leadType}</TableCell>
                                             <TableCell>{lead.district}</TableCell>
@@ -256,6 +281,65 @@ export default function Home() {
                                     ))}
                                 </TableBody>
                             </Table>
+                        </div>
+                        <div className="flex flex-col sm:flex-row items-center justify-between mt-8 gap-4">
+                            <div className="flex items-center gap-2">
+                                <label className="text-sm text-gray-600">Show:</label>
+                                <select
+                                    value={pageSize}
+                                    onChange={(e) => {
+                                        setPageSize(Number(e.target.value));
+                                        setPage(1);
+                                    }}
+                                    className="border border-gray-300 rounded-lg px-2 py-1 text-sm focus:ring-indigo-500 focus:border-indigo-500"
+                                    disabled={isFetching || isSubmitting}
+                                >
+
+                                    <option value={5}>5</option>
+                                    <option value={10}>10</option>
+                                    <option value={20}>20</option>
+                                    <option value={50}>50</option>
+                                    <option value={100}>100</option>
+                                </select>
+                                <label className="text-sm text-gray-600">Items</label>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    disabled={page === 1 || isFetching || isSubmitting}
+                                    onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+                                    className="border-gray-300 text-indigo-600 hover:bg-indigo-50"
+                                >
+                                    <ChevronLeft className="h-4 w-4 mr-1" />
+                                    Previous
+                                </Button>
+                                {generatePageNumbers().map((num) => (
+                                    <Button
+                                        key={num}
+                                        variant={num === page ? 'default' : 'outline'}
+                                        size="sm"
+                                        className={`${num === page
+                                            ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                                            : 'border-gray-300 text-indigo-600 hover:bg-indigo-50'
+                                            }`}
+                                        onClick={() => setPage(num)}
+                                        disabled={isFetching || isSubmitting}
+                                    >
+                                        {num}
+                                    </Button>
+                                ))}
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    disabled={page === totalPages || isFetching || isSubmitting}
+                                    onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+                                    className="border-gray-300 text-indigo-600 hover:bg-indigo-50"
+                                >
+                                    Next
+                                    <ChevronRight className="h-4 w-4 ml-1" />
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
