@@ -86,7 +86,7 @@ export default function Home() {
             });
             if (!res.ok) throw new Error('Failed to save');
             await fetchLeads();
-            // setIsOpen(false);
+            if (editingLead) setIsOpen(false);
             setEditingLead(null);
             toast({ title: 'Success', description: editingLead ? 'Lead updated' : 'Lead created' });
         } catch (error) {
