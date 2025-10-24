@@ -1,0 +1,265 @@
+// app/page.tsx (updated)
+'use client';
+
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { FileText, Pencil, Plus, Trash2 } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
+import { Navbar } from '@/components/admin/shared/Navbar';
+import { Main } from '@/components/ui/main';
+import LeadForm from '@/components/LeadForm';
+import { Loader2 } from 'lucide-react';
+import { districts } from '@/const-data/statick';
+
+interface Lead {
+    _id: string;
+    fullName: string;
+    phone: string;
+    leadType: 'Customer' | 'Provider';
+    district: string;
+    createdAt: string;
+}
+
+export default function Home() {
+    const [leads, setLeads] = useState<Lead[]>([]);
+    const [isOpen, setIsOpen] = useState(false);
+    const [editingLead, setEditingLead] = useState<Lead | null>(null);
+    const [isFetching, setIsFetching] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [debouncedSearch, setDebouncedSearch] = useState('');
+    const [selectedLeadType, setSelectedLeadType] = useState<'Customer' | 'Provider' | undefined>(undefined);
+    const [selectedDistrict, setSelectedDistrict] = useState<string | undefined>(undefined);
+
+    useEffect(() => {
+        fetchLeads();
+    }, []);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setDebouncedSearch(searchTerm);
+        }, 500);
+        return () => clearTimeout(timer);
+    }, [searchTerm]);
+
+    useEffect(() => {
+        fetchLeads();
+    }, [debouncedSearch, selectedLeadType, selectedDistrict]);
+
+
+
+    const fetchLeads = async () => {
+        setIsFetching(true);
+        try {
+            const url = new URL('/api/leads', window.location.origin);
+            if (debouncedSearch) url.searchParams.append('search', debouncedSearch);
+            if (selectedLeadType) url.searchParams.append('leadType', selectedLeadType);
+            if (selectedDistrict) url.searchParams.append('district', selectedDistrict);
+            const res = await fetch(url.toString());
+            if (!res.ok) throw new Error('Failed to fetch');
+            const data = await res.json();
+
+            setLeads(data);
+        } catch (error) {
+            toast({ title: 'Error', description: 'Failed to fetch leads', variant: 'destructive' });
+        } finally {
+            setIsFetching(false);
+        }
+    };
+
+    const handleSubmit = async (data: Partial<Lead>) => {
+        setIsSubmitting(true);
+        try {
+            const method = editingLead ? 'PUT' : 'POST';
+            const res = await fetch('/api/leads', {
+                method,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(editingLead ? { ...data, _id: editingLead._id } : data),
+            });
+            if (!res.ok) throw new Error('Failed to save');
+            await fetchLeads();
+            // setIsOpen(false);
+            setEditingLead(null);
+            toast({ title: 'Success', description: editingLead ? 'Lead updated' : 'Lead created' });
+        } catch (error) {
+            toast({ title: 'Error', description: 'Failed to save lead', variant: 'destructive' });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    const handleEdit = (lead: Lead) => {
+        setEditingLead(lead);
+        setIsOpen(true);
+    };
+
+    const handleDelete = async (id: string) => {
+        if (!confirm('Are you sure you want to delete this lead?')) return;
+        setIsFetching(true);
+        try {
+            const res = await fetch(`/api/leads?id=${id}`, { method: 'DELETE' });
+            if (!res.ok) throw new Error('Failed to delete');
+            await fetchLeads();
+            toast({ title: 'Success', description: 'Lead deleted' });
+        } catch (error) {
+            toast({ title: 'Error', description: 'Failed to delete lead', variant: 'destructive' });
+        } finally {
+            setIsFetching(false);
+        }
+    };
+
+    return (
+        <>
+            <Navbar fixed />
+            <Main>
+                <div className="space-y-8">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div className="space-y-1">
+                            <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
+                                <FileText className="h-8 w-8 text-blue-600" />
+                                Manage Leads
+                            </h1>
+                            <p className="text-gray-600">Manage and organize your content</p>
+                        </div>
+                        <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                            <DialogTrigger asChild>
+                                <Button
+                                    onClick={() => { setEditingLead(null); setIsOpen(true); }}
+                                    className="bg-indigo-600 hover:bg-indigo-700 flex items-center gap-2"
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? (
+                                        <>
+                                            <Loader2 className="h-4 w-4 animate-spin" />
+                                            Processing...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Plus className="h-4 w-4" />
+                                            Add Lead
+                                        </>
+                                    )}
+                                </Button>
+                            </DialogTrigger>
+                            <DialogContent className="sm:max-w-[425px] bg-white rounded-xl shadow-xl">
+                                <DialogHeader>
+                                    <DialogTitle className="text-lg font-semibold text-gray-900">
+                                        {editingLead ? 'Edit Lead' : 'Add New Lead'}
+                                    </DialogTitle>
+                                </DialogHeader>
+                                <LeadForm
+                                    initialData={editingLead || undefined}
+                                    onSubmit={handleSubmit}
+                                    isSubmitting={isSubmitting}
+                                />
+                            </DialogContent>
+                        </Dialog>
+                    </div>
+
+                    <div className="flex flex-wrap items-end gap-4">
+                        <div className="flex-1 min-w-[200px]">
+                            <Input
+                                placeholder="Search by name or phone"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="border-gray-300 focus:border-indigo-500"
+                            />
+                        </div>
+                        <div className="min-w-[150px]">
+                            <Select
+                                value={selectedLeadType || 'All'}
+                                onValueChange={(v) => setSelectedLeadType(v === 'All' ? undefined : v as 'Customer' | 'Provider')}
+                            >
+                                <SelectTrigger className="border-gray-300 focus:border-indigo-500">
+                                    <SelectValue placeholder="Lead Type" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="All">All</SelectItem>
+                                    <SelectItem value="Customer">Customer</SelectItem>
+                                    <SelectItem value="Provider">Provider</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
+                        <div className="min-w-[150px]">
+                            <Select
+                                value={selectedDistrict || 'All'}
+                                onValueChange={(v) => setSelectedDistrict(v === 'All' ? undefined : v)}
+                            >
+                                <SelectTrigger className="border-gray-300 focus:border-indigo-500">
+                                    <SelectValue placeholder="District" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="All">All</SelectItem>
+                                    {districts.map((dist) => (
+                                        <SelectItem key={dist?._id} value={dist?.name}>
+                                            {dist?.name}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        {isFetching && (
+                            <div className="absolute inset-0 flex items-center justify-center bg-white/50 z-10">
+                                <Loader2 className="h-8 w-8 animate-spin text-indigo-600" />
+                            </div>
+                        )}
+                        <div className="overflow-x-auto">
+                            <Table className="border">
+                                <TableHeader>
+                                    <TableRow className="bg-gray-50">
+                                        <TableHead className="font-semibold text-gray-700">Full Name</TableHead>
+                                        <TableHead className="font-semibold text-gray-700">Phone</TableHead>
+                                        <TableHead className="font-semibold text-gray-700">Lead Type</TableHead>
+                                        <TableHead className="font-semibold text-gray-700">District</TableHead>
+                                        <TableHead className="font-semibold text-gray-700">Created At</TableHead>
+                                        <TableHead className="font-semibold text-gray-700">Actions</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    {leads.map((lead) => (
+                                        <TableRow key={lead._id} className="hover:bg-gray-50 transition-colors">
+                                            <TableCell>{lead.fullName}</TableCell>
+                                            <TableCell>{lead.phone}</TableCell>
+                                            <TableCell>{lead.leadType}</TableCell>
+                                            <TableCell>{lead.district}</TableCell>
+                                            <TableCell>{new Date(lead.createdAt).toLocaleDateString()}</TableCell>
+                                            <TableCell>
+                                                <div className="flex space-x-2">
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="icon"
+                                                        onClick={() => handleEdit(lead)}
+                                                        className="text-indigo-600 hover:text-indigo-800"
+                                                        disabled={isFetching || isSubmitting}
+                                                    >
+                                                        <Pencil className="h-4 w-4" />
+                                                    </Button>
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="icon"
+                                                        onClick={() => handleDelete(lead._id)}
+                                                        className="text-red-600 hover:text-red-800"
+                                                        disabled={isFetching || isSubmitting}
+                                                    >
+                                                        <Trash2 className="h-4 w-4" />
+                                                    </Button>
+                                                </div>
+                                            </TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </div>
+                    </div>
+                </div>
+            </Main>
+        </>
+    );
+}
