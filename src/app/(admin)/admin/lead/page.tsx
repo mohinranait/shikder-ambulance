@@ -6,6 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, AlertDialogAction } from '@/components/ui/alert-dialog';
 import { FileText, Pencil, Plus, Trash2, ChevronLeft, ChevronRight, Heart } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { Navbar } from '@/components/admin/shared/Navbar';
@@ -30,6 +31,8 @@ export default function Home() {
     const [editingLead, setEditingLead] = useState<Lead | null>(null);
     const [isFetching, setIsFetching] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+    const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [debouncedSearch, setDebouncedSearch] = useState('');
     const [selectedLeadType, setSelectedLeadType] = useState<'Customer' | 'Provider' | undefined>(undefined);
@@ -83,8 +86,7 @@ export default function Home() {
             });
             if (!res.ok) throw new Error('Failed to save');
             await fetchLeads();
-            if (editingLead) setIsOpen(false)
-
+            setIsOpen(false);
             setEditingLead(null);
             toast({ title: 'Success', description: editingLead ? 'Lead updated' : 'Lead created' });
         } catch (error) {
@@ -99,18 +101,25 @@ export default function Home() {
         setIsOpen(true);
     };
 
-    const handleDelete = async (id: string) => {
-        if (!confirm('Are you sure you want to delete this lead?')) return;
-        setIsFetching(true);
+    const handleDelete = (lead: Lead) => {
+        setSelectedLead(lead);
+        setShowDeleteDialog(true);
+    };
+
+    const confirmDelete = async () => {
+        if (!selectedLead) return;
+        setIsSubmitting(true);
         try {
-            const res = await fetch(`/api/leads?id=${id}`, { method: 'DELETE' });
+            const res = await fetch(`/api/leads?id=${selectedLead._id}`, { method: 'DELETE' });
             if (!res.ok) throw new Error('Failed to delete');
             await fetchLeads();
             toast({ title: 'Success', description: 'Lead deleted' });
         } catch (error) {
             toast({ title: 'Error', description: 'Failed to delete lead', variant: 'destructive' });
         } finally {
-            setIsFetching(false);
+            setIsSubmitting(false);
+            setShowDeleteDialog(false);
+            setSelectedLead(null);
         }
     };
 
@@ -276,13 +285,13 @@ export default function Home() {
                             <Table className="border">
                                 <TableHeader>
                                     <TableRow className="bg-gray-50">
-                                        <TableHead className="font-semibold text-gray-700">Full Name</TableHead>
-                                        <TableHead className="font-semibold text-gray-700">Favorite</TableHead>
-                                        <TableHead className="font-semibold text-gray-700">Phone</TableHead>
-                                        <TableHead className="font-semibold text-gray-700">Lead Type</TableHead>
-                                        <TableHead className="font-semibold text-gray-700">District</TableHead>
-                                        <TableHead className="font-semibold text-gray-700">Created At</TableHead>
-                                        <TableHead className="font-semibold text-gray-700">Actions</TableHead>
+                                        <TableHead className="font-bold text-gray-700">Full Name</TableHead>
+                                        <TableHead className="font-bold text-gray-700">Favorite</TableHead>
+                                        <TableHead className="font-bold text-gray-700">Phone</TableHead>
+                                        <TableHead className="font-bold text-gray-700">Lead Type</TableHead>
+                                        <TableHead className="font-bold text-gray-700">District</TableHead>
+                                        <TableHead className="font-bold text-gray-700">Created At</TableHead>
+                                        <TableHead className="font-bold text-gray-700">Actions</TableHead>
                                     </TableRow>
                                 </TableHeader>
                                 <TableBody>
@@ -321,7 +330,7 @@ export default function Home() {
                                                     <Button
                                                         variant="ghost"
                                                         size="icon"
-                                                        onClick={() => handleDelete(lead._id)}
+                                                        onClick={() => handleDelete(lead)}
                                                         className="text-red-600 hover:text-red-800"
                                                         disabled={isFetching || isSubmitting}
                                                     >
@@ -393,6 +402,33 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                    <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+                        <AlertDialogContent>
+                            <AlertDialogHeader>
+                                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                                <AlertDialogDescription>
+                                    This action cannot be undone. This will permanently delete the lead "{selectedLead?.fullName}" and remove it from our servers.
+                                </AlertDialogDescription>
+                            </AlertDialogHeader>
+                            <AlertDialogFooter>
+                                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                <AlertDialogAction
+                                    onClick={confirmDelete}
+                                    disabled={isSubmitting}
+                                    className="bg-red-600 hover:bg-red-700"
+                                >
+                                    {isSubmitting ? (
+                                        <>
+                                            <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                                            Deleting...
+                                        </>
+                                    ) : (
+                                        'Delete'
+                                    )}
+                                </AlertDialogAction>
+                            </AlertDialogFooter>
+                        </AlertDialogContent>
+                    </AlertDialog>
                 </div>
             </Main>
         </>

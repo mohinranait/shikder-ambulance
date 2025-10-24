@@ -10,6 +10,7 @@ import {
   Settings,
   Image,
   Notebook,
+  NotebookPen,
 } from "lucide-react";
 
 export interface SidebarNavItem {
@@ -144,6 +145,11 @@ export const sidebarData: SidebarData = {
           title: "Setting",
           url: "/admin/setting",
           icon: Settings,
+        },
+        {
+          title: "Leads",
+          url: "/admin/lead",
+          icon: NotebookPen,
         },
       ],
     },
