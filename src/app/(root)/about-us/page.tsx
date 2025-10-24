@@ -147,8 +147,8 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/default.png?height=400&width=600"
-                  alt="MediCare Ambulance team"
+                  src="/about-us.jpg"
+                  alt="About Us: Shikder Ambulance Service"
                   fill
                   className="object-cover"
                 />

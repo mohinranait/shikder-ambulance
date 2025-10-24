@@ -21,7 +21,7 @@ export default function ServicesPage() {
       title: "Emergency Ambulance Service in Dhaka",
       description:
         "Emergency Ambulance Service provides life-saving medical transport and patient care for critical health incidents, and safe transit to hospitals. Your safety, comfort, and peace of mind mean everything to us.",
-      image: "/default.png?height=300&width=400",
+      image: "/Emergency-Ambulance-Service-01.jpg",
       features: [
         "24/7 Emergency Ambulance Support",
         "ICU & Life Support Ambulance",
@@ -39,7 +39,7 @@ export default function ServicesPage() {
       title: "Non-Emergency Patient Transport",
       description:
         "Comfortable and safe Patient transport for scheduled appointments, hospital transfers, and routine Patient care. Your safety and comfort are our top priorities.",
-      image: "/default.png?height=300&width=400",
+      image: "/Emergency-Ambulance-Service-01.jpg",
       features: [
         "Comfortable AC & Non-AC Vehicles",
         "Wheelchair & Stretcher Support",
@@ -49,7 +49,7 @@ export default function ServicesPage() {
         "Affordable Pricing",
       ],
       responseTime: "30 minutes",
-      availability: "7 AM - 10 PM",
+      availability: "7 AM - 11 PM",
       icon: Ambulance,
       color: "bg-blue-100 text-blue-600",
     },
@@ -57,7 +57,7 @@ export default function ServicesPage() {
       title: "Critical Care Transport",
       description:
         "Specialized transport for critically ill patients requiring intensive care during transfer between Patient facilities. The basic life support, Advanced Life Support ICU Ambulance is Available with Doctors and Brothers.",
-      image: "/default.png?height=300&width=400",
+      image: "/Life-support-ambulance.jpg",
       features: [
         "ICU-Level Patient Equipment",
         "Ventilator Support",
@@ -66,7 +66,7 @@ export default function ServicesPage() {
         "Continuous Patient Monitoring",
         "Advanced Medication Administration",
       ],
-      responseTime: "15 minutes",
+      responseTime: "30 minutes",
       availability: "24/7",
       icon: Stethoscope,
       color: "bg-purple-100 text-purple-600",
@@ -75,7 +75,7 @@ export default function ServicesPage() {
       title: "Freezing Ambulance Service",
       description:
         "A freezer ambulance service is a specialized transportation service equipped with refrigeration systems to maintain a consistently low temperature.",
-      image: "/default.png?height=300&width=400",
+      image: "/Freezing-Ambulance-Service-se-02.jpg",
       features: [
         "It has a forzen box in it",
         "Use freezer Ambulance, save the dead body",
@@ -159,15 +159,13 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                  }`}
               >
                 {/* Image */}
                 <div
-                  className={`relative ${
-                    index % 2 === 1 ? "lg:col-start-2" : ""
-                  }`}
+                  className={`relative ${index % 2 === 1 ? "lg:col-start-2" : ""
+                    }`}
                 >
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
@@ -199,9 +197,8 @@ export default function ServicesPage() {
 
                 {/* Content */}
                 <div
-                  className={`space-y-6 ${
-                    index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
-                  }`}
+                  className={`space-y-6 ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
+                    }`}
                 >
                   <div>
                     <div

@@ -163,7 +163,7 @@ const FooterComponent = () => {
               </div>
               <div className="flex items-start text-gray-300">
                 <Banknote className="h-5 w-5 mr-3 mt-1 text-purple-400" />
-                <Link href="/payments">
+                <Link href="/payments" target="_blank">
                   <p>Payments by Online</p>
                 </Link>
               </div>
