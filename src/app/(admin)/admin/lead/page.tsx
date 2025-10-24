@@ -21,6 +21,7 @@ interface Lead {
     leadType: 'Customer' | 'Provider';
     district: string;
     createdAt: string;
+    favorite: boolean;
 }
 
 export default function Home() {
@@ -33,13 +34,14 @@ export default function Home() {
     const [debouncedSearch, setDebouncedSearch] = useState('');
     const [selectedLeadType, setSelectedLeadType] = useState<'Customer' | 'Provider' | undefined>(undefined);
     const [selectedDistrict, setSelectedDistrict] = useState<string | undefined>(undefined);
+    const [selectedFavorite, setSelectedFavorite] = useState<boolean | undefined>(undefined);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [pageSize, setPageSize] = useState(20);
 
     useEffect(() => {
         fetchLeads();
-    }, [debouncedSearch, selectedLeadType, selectedDistrict, page, pageSize]);
+    }, [debouncedSearch, selectedLeadType, selectedDistrict, selectedFavorite, page, pageSize]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -55,6 +57,7 @@ export default function Home() {
             if (debouncedSearch) url.searchParams.append('search', debouncedSearch);
             if (selectedLeadType) url.searchParams.append('leadType', selectedLeadType);
             if (selectedDistrict) url.searchParams.append('district', selectedDistrict);
+            if (selectedFavorite !== undefined) url.searchParams.append('favorite', selectedFavorite.toString());
             url.searchParams.append('page', page.toString());
             url.searchParams.append('limit', pageSize.toString());
             const res = await fetch(url.toString());
@@ -80,7 +83,8 @@ export default function Home() {
             });
             if (!res.ok) throw new Error('Failed to save');
             await fetchLeads();
-            setIsOpen(false);
+            if (editingLead) setIsOpen(false)
+
             setEditingLead(null);
             toast({ title: 'Success', description: editingLead ? 'Lead updated' : 'Lead created' });
         } catch (error) {
@@ -107,6 +111,24 @@ export default function Home() {
             toast({ title: 'Error', description: 'Failed to delete lead', variant: 'destructive' });
         } finally {
             setIsFetching(false);
+        }
+    };
+
+    const handleToggleFavorite = async (id: string, currentFavorite: boolean) => {
+        setIsSubmitting(true);
+        try {
+            const res = await fetch('/api/leads', {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id, favorite: !currentFavorite }),
+            });
+            if (!res.ok) throw new Error('Failed to toggle favorite');
+            await fetchLeads();
+            toast({ title: 'Success', description: `Lead marked as ${!currentFavorite ? 'favorite' : 'not favorite'}` });
+        } catch (error) {
+            toast({ title: 'Error', description: 'Failed to toggle favorite', variant: 'destructive' });
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -222,6 +244,26 @@ export default function Home() {
                                 </SelectContent>
                             </Select>
                         </div>
+                        <div className="min-w-[150px]">
+                            <Select
+                                value={selectedFavorite === undefined ? 'All' : selectedFavorite ? 'Favorite' : 'NotFavorite'}
+                                onValueChange={(v) => {
+                                    if (v === 'All') setSelectedFavorite(undefined);
+                                    else if (v === 'Favorite') setSelectedFavorite(true);
+                                    else setSelectedFavorite(false);
+                                }}
+                                disabled={isFetching || isSubmitting}
+                            >
+                                <SelectTrigger className="border-gray-300 focus:border-indigo-500">
+                                    <SelectValue placeholder="Favorite" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="All">All</SelectItem>
+                                    <SelectItem value="Favorite">Favorite</SelectItem>
+                                    <SelectItem value="NotFavorite">Not Favorite</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
                     </div>
 
                     <div className="relative">
@@ -246,11 +288,21 @@ export default function Home() {
                                 <TableBody>
                                     {leads.map((lead) => (
                                         <TableRow key={lead._id} className="hover:bg-gray-50 transition-colors">
-                                            <TableCell className=''>{lead.fullName}   </TableCell>
-                                            <TableCell className=''>
-                                                <Button variant={'ghost'} className='size-8'>
-                                                    <Heart size={16} className='fill-red-600 stroke-red-600' />
-                                                </Button>  </TableCell>
+                                            <TableCell>{lead.fullName}</TableCell>
+                                            <TableCell>
+                                                <Button
+                                                    variant="ghost"
+                                                    size="icon"
+                                                    onClick={() => handleToggleFavorite(lead._id, lead.favorite)}
+                                                    className="size-8"
+                                                    disabled={isFetching || isSubmitting}
+                                                >
+                                                    <Heart
+                                                        size={16}
+                                                        className={lead.favorite ? 'fill-red-600 stroke-red-600' : 'fill-none stroke-gray-600'}
+                                                    />
+                                                </Button>
+                                            </TableCell>
                                             <TableCell>{lead.phone}</TableCell>
                                             <TableCell>{lead.leadType}</TableCell>
                                             <TableCell>{lead.district}</TableCell>
@@ -294,7 +346,6 @@ export default function Home() {
                                     className="border border-gray-300 rounded-lg px-2 py-1 text-sm focus:ring-indigo-500 focus:border-indigo-500"
                                     disabled={isFetching || isSubmitting}
                                 >
-
                                     <option value={5}>5</option>
                                     <option value={10}>10</option>
                                     <option value={20}>20</option>

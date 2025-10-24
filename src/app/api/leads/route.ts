@@ -10,6 +10,7 @@ export async function GET(req: NextRequest) {
         const search = searchParams.get('search');
         const leadType = searchParams.get('leadType');
         const district = searchParams.get('district');
+        const favorite = searchParams.get('favorite');
         const page = parseInt(searchParams.get('page') || '1', 10);
         const limit = parseInt(searchParams.get('limit') || '10', 10);
 
@@ -22,6 +23,7 @@ export async function GET(req: NextRequest) {
         }
         if (leadType) query.leadType = leadType;
         if (district) query.district = district;
+        if (favorite !== null) query.favorite = favorite === 'true';
 
         const total = await Lead.countDocuments(query);
         const leads = await Lead.find(query)
@@ -39,7 +41,6 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({ error: 'Failed to fetch leads' }, { status: 500 });
     }
 }
-
 export async function POST(req: NextRequest) {
     try {
         await connectDB();
@@ -85,5 +86,29 @@ export async function DELETE(req: NextRequest) {
     } catch (error) {
         console.error('Error deleting lead:', error);
         return NextResponse.json({ error: 'Failed to delete lead' }, { status: 500 });
+    }
+}
+
+
+export async function PATCH(req: NextRequest) {
+    try {
+        await connectDB();
+        const body = await req.json();
+        const { id, favorite } = body;
+        if (!id || typeof favorite !== 'boolean') {
+            return NextResponse.json({ error: 'ID and favorite status are required' }, { status: 400 });
+        }
+        const updatedLead = await Lead.findByIdAndUpdate(
+            id,
+            { favorite },
+            { new: true }
+        );
+        if (!updatedLead) {
+            return NextResponse.json({ error: 'Lead not found' }, { status: 404 });
+        }
+        return NextResponse.json(updatedLead);
+    } catch (error) {
+        console.error('Error toggling favorite:', error);
+        return NextResponse.json({ error: 'Failed to toggle favorite' }, { status: 500 });
     }
 }

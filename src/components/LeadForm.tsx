@@ -62,7 +62,7 @@ export default function LeadForm({ initialData, onSubmit, isSubmitting }: LeadFo
                         <FormItem>
                             <FormLabel>Phone</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter phone number" {...field} className="border-gray-300 focus:border-indigo-500" />
+                                <Input type='number' placeholder="Enter phone number" {...field} className="border-gray-300 focus:border-indigo-500" />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
