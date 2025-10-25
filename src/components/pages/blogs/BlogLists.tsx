@@ -1,5 +1,4 @@
 'use client';
-import { getPosts } from '@/actions/postApi';
 import { Card } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { calculateReadTime, formatShortDate } from '@/lib/helpers';
@@ -11,18 +10,19 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 const BlogLists = () => {
     const [posts, setPosts] = useState<TPostFormData[]>([]);
-    const regularPosts = useMemo(() => posts.slice(2), [posts]);
     const [loading, setLoading] = useState(true);
 
 
     const fetchPosts = async () => {
         try {
             setLoading(true);
-            const response = await getPosts({ limit: '7', access: 'user' });
-            const publishedPosts = response?.payload?.posts?.filter(
-                (post: TPostFormData) => post.status === 'Publish'
-            );
-            setPosts(publishedPosts);
+
+
+            const res = await fetch(`/api/posts/random?count=5`);
+            const data = await res.json();
+            const posts = data?.payload?.posts;
+
+            setPosts(posts);
         } catch (error) {
             console.error('Error fetching posts:', error);
         } finally {
@@ -38,7 +38,7 @@ const BlogLists = () => {
         <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-gray-900">
-                    Latest Articles ({regularPosts.length})
+                    Latest Articles ({posts?.length})
                 </h2>
             </div>
 
@@ -62,27 +62,29 @@ const BlogLists = () => {
                         </Card>
                     ))}
                 </div>
-            ) : regularPosts.length > 0 ? (
+            ) : posts?.length > 0 ? (
                 <div className="space-y-6">
-                    {regularPosts.map((post) => (
+                    {posts?.map((post) => (
                         <Card
                             key={post._id}
                             className="overflow-hidden hover:shadow transition-shadow group"
                         >
                             <div className="grid md:grid-cols-3 ">
                                 <div className="relative">
-                                    <Image
-                                        src={
-                                            post.image?.featuresImage ||
-                                            post.image?.thumbnail ||
-                                            "/default.png"
-                                        }
-                                        alt={post.postTitle}
-                                        width={300}
-                                        height={200}
-                                        // fill
-                                        className="w-full h-48 md:h-full object-cover block group-hover:scale-105 transition-transform duration-300"
-                                    />
+                                    <Link href={`/${post.slug || post._id}`}>
+                                        <Image
+                                            src={
+                                                post.image?.featuresImage ||
+                                                post.image?.thumbnail ||
+                                                "/default.png"
+                                            }
+                                            alt={post.postTitle}
+                                            width={300}
+                                            height={200}
+                                            // fill
+                                            className="w-full h-48 md:h-full object-cover block group-hover:scale-105 transition-transform duration-300"
+                                        />
+                                    </Link>
                                 </div>
                                 <div className="md:col-span-2 p-6">
                                     <div className="space-y-4">

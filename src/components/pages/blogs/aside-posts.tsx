@@ -19,8 +19,6 @@ const AsidePosts = () => {
       const res = await fetch(`/api/posts/random?count=5`);
       const data = await res.json();
       const posts = data?.payload?.posts;
-      console.log({ posts });
-
       setPosts(posts);
     })();
   }, []);

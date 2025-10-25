@@ -82,17 +82,19 @@ const BlogFeatures = () => {
                                 className="overflow-hidden hover:shadow transition-shadow group"
                             >
                                 <div className="relative">
-                                    <Image
-                                        src={
-                                            post.image?.featuresImage ||
-                                            post.image?.thumbnail ||
-                                            '/default.png'
-                                        }
-                                        alt={post.postTitle}
-                                        width={600}
-                                        height={400}
-                                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                                    />
+                                    <Link href={`/${post.slug || post._id}`}>
+                                        <Image
+                                            src={
+                                                post.image?.featuresImage ||
+                                                post.image?.thumbnail ||
+                                                '/default.png'
+                                            }
+                                            alt={post.postTitle}
+                                            width={600}
+                                            height={400}
+                                            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                                        />
+                                    </Link>
                                     <Badge className="absolute top-4 left-4 bg-red-600 text-white">
                                         <AlertTriangle className="h-3 w-3 mr-1" />
                                         Featured
