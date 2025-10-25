@@ -1,4 +1,4 @@
-// app/layout.tsx or app/RootLayout.tsx
+
 
 import type React from "react";
 import type { Metadata } from "next";
@@ -8,7 +8,6 @@ import ImageProvider from "@/providers/ImageProvider";
 import { Toaster } from "react-hot-toast";
 import MediaModal from "@/components/shared/MediaModal";
 
-// ✅ Complete SEO Optimized Metadata for Google, Facebook, and Twitter
 export const metadata: Metadata = {
   title: "Shikder Ambulance Service in Dhaka | Fast Reliable 24/7 ",
   description:
@@ -55,7 +54,7 @@ export const metadata: Metadata = {
     nocache: false,
   },
   verification: {
-    google: "k9w6p571W9qlAmJr2Q9B-mCZ0Ab9xGP3mgZ9zuv5ssk", // Google Search Console verification
+    google: "k9w6p571W9qlAmJr2Q9B-mCZ0Ab9xGP3mgZ9zuv5ssk",
   },
   category: "Ambulance Service",
 };
@@ -82,6 +81,10 @@ export default function RootLayout({
           rel="icon"
           href="/favicon.ico"
           type="image/x-icon"
+        />
+        <meta
+          name="google-site-verification"
+          content="k9w6p571W9qlAmJr2Q9B-mCZ0Ab9xGP3mgZ9zuv5ssk"
         />
       </head>
 
