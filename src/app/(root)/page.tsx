@@ -42,16 +42,14 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div
-    // className="overflow-x-hidden"
-    >
+    <>
       <HeroSection />
       <WhyChooseUs />
       <ServiceOverview />
       <BlogTeasers />
       <PremiumFaqSection />
       <PremiumReviewSection />
-      {/* <ContactCTA /> */}
-    </div>
+      <ContactCTA />
+    </>
   );
 }

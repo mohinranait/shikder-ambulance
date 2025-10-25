@@ -22,9 +22,9 @@ export function ContactCTA() {
               <Button
                 size="lg"
                 variant="secondary"
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
+                className="bg-red-600 hover:bg-red-700 text-white px-3 gap-0 md:px-8 py-4 text-lg"
               >
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-1 md:mr-2 h-5 w-5" />
                 Emergency: 01627-669222
               </Button>
             </Link>
@@ -32,9 +32,9 @@ export function ContactCTA() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg bg-transparent"
+                className="border-white text-white hover:bg-white hover:text-blue-600 px-2 gap-0 md:px-8 py-4 text-lg bg-transparent"
               >
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-1 md:mr-2 h-5 w-5" />
                 Non-Emergency: 017100-60020
               </Button>
             </Link>
