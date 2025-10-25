@@ -55,7 +55,7 @@ const AllPostPage = () => {
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(5);
+  const [limit, setLimit] = useState(10);
 
   const handleCallAPI = async ({
     limit = "10",
@@ -285,6 +285,9 @@ const AllPostPage = () => {
                                   >
                                     {post?.status}
                                   </Badge>
+                                  <Link href={`/admin/post/comments/${post?._id}`}>
+                                    All Comments
+                                  </Link>
                                 </div>
                               </div>
                             </div>

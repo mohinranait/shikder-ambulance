@@ -4,16 +4,53 @@ import Post from "@/models/Post";
 import User from "@/models/User";
 import { getAuthUser } from "@/services/isAuth";
 
+
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const { id: postId } = await params;
+
+    await connectDB();
+
+    const post = await Post.findOne({ _id: postId }).select(['postTitle', 'image.featuresImage'])
+
+    if (!post) {
+      return NextResponse.json(
+        { success: false, error: "Post not found" },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Success",
+      statusCode: 200,
+      payload: { post },
+    });
+  } catch (error: unknown) {
+    console.error("GET /api/posts/[slug] error:", error);
+    const errorMessage =
+      error instanceof Error ? error.message : "Internal server error";
+    return NextResponse.json(
+      { success: false, error: errorMessage },
+      { status: 500 }
+    );
+  }
+}
+
+
 // Update post by ID
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }>  }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const decoded = await getAuthUser() as {email:string;id:string}
+    const decoded = await getAuthUser() as { email: string; id: string }
     await connectDB();
 
-    const {id: postId} = await params;
+    const { id: postId } = await params;
 
     const userId = decoded?.id;
 
@@ -87,16 +124,16 @@ export async function PATCH(
 // Delete single post by id
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }>  }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const decoded = await getAuthUser() as {email:string;id:string}
+    const decoded = await getAuthUser() as { email: string; id: string }
     await connectDB();
 
-    const {id:postId} = await params;
-  
+    const { id: postId } = await params;
 
-    if (!postId || !decoded?.id ) {
+
+    if (!postId || !decoded?.id) {
       return NextResponse.json(
         { success: false, message: "Post ID  missing" },
         { status: 400 }
