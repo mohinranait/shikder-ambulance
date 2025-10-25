@@ -5,7 +5,7 @@ import WhatsAppIcon from '../svg/WhatsAppIcon'
 
 const BottomSection = () => {
     return (
-        <div className=' fixed bottom-0 left-0 right-0 grid lg:hidden grid-cols-2'>
+        <div className='mobile-call-button fixed bottom-0 left-0 right-0 grid lg:hidden grid-cols-2'>
             <Link href={'https://wa.me/+8801710060020'} className='w-full py-3 flex items-center justify-center bg-[#075E54] text-white gap-2'>
                 <WhatsAppIcon size={24} />
                 WhatsApp
