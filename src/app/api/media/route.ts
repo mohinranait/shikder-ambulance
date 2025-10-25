@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import Media from "@/models/Media"; 
+import Media from "@/models/Media";
 import connectDB from "@/config/mongodb";
 import { getAuthUser } from "@/services/isAuth";
 import { writeFile } from "fs/promises";
@@ -37,21 +37,21 @@ export async function POST(request: NextRequest) {
     });
 
 
-    const { url, format, width, height, bytes:iBytes,secure_url,public_id } = result;
+    const { url, format, width, height, bytes: iBytes, secure_url, public_id } = result;
 
 
-      const newMedia = await Media.create({
-          fileUrl: url,
-          width,
-          height,
-          extension: format,
-          size: iBytes,
-          public_id,
-          secure_url,
-      })
+    const newMedia = await Media.create({
+      fileUrl: url,
+      width,
+      height,
+      extension: format,
+      size: iBytes,
+      public_id,
+      secure_url,
+    })
 
 
-    
+
 
     return NextResponse.json({
       success: true,
@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   try {
     await connectDB();
-    const decoded = await getAuthUser() as {id:string; email:string};
+    const decoded = await getAuthUser() as { id: string; email: string };
 
     const userId = decoded?.id;
     if (!userId) {
@@ -96,5 +96,26 @@ export async function GET(request: NextRequest) {
       { success: false, message: "Internal Server Error" },
       { status: 500 }
     );
+  }
+}
+
+
+
+export async function DELETE(req: NextRequest) {
+  try {
+    await connectDB();
+    const { searchParams } = new URL(req.url);
+    const id = searchParams.get('id');
+    if (!id) {
+      return NextResponse.json({ error: 'ID is required' }, { status: 400 });
+    }
+    const media = await Media.findByIdAndDelete(id);
+    if (!media) {
+      return NextResponse.json({ error: 'Media not found' }, { status: 404 });
+    }
+    return NextResponse.json({ message: 'Media deleted successfully', success: true, });
+  } catch (error) {
+    console.error('Error deleting media:', error);
+    return NextResponse.json({ error: 'Failed to delete media' }, { status: 500 });
   }
 }

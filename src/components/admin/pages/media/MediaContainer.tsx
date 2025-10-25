@@ -16,8 +16,7 @@ const MediaContainer = () => {
   const [parentTab, setParentTab] = useState<"photos" | "upload">("photos");
   const [selectedImg, setSelectedImg] = useState<TMediaType | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
-
+  const [isDeleting, setIsDeleting] = useState<boolean>(false);
 
   useEffect(() => {
     (async function () {
@@ -29,6 +28,23 @@ const MediaContainer = () => {
       setIsLoading(false);
     })();
   }, []);
+
+  // Delete media handler
+  const handleDelete = async () => {
+    if (!selectedImg?._id) return;
+
+    setIsDeleting(true);
+
+    const res = await fetch(`/api/media?id=${selectedImg._id}`, { method: 'DELETE' });
+    if (!res.ok) throw new Error('Failed to delete');
+    const resData = await res.json();
+
+    if (resData?.success) {
+      setAllImages((prev) => prev.filter((img) => img._id !== selectedImg._id));
+      setSelectedImg(null);
+    }
+    setIsDeleting(false);
+  };
 
   return (
     <div className="max-h-[calc(100vh-100px)]">
@@ -46,8 +62,7 @@ const MediaContainer = () => {
             <div className="flex w-full gap-5">
               <div className="p-4 max-h-[calc(100vh-200px)] overflow-y-auto flex-grow">
                 {isLoading ? (
-                  <div className="grid  rounded-md  gap-3 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 2xl:grid-cols-7">
-
+                  <div className="grid gap-3 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 2xl:grid-cols-7">
                     {Array.from({ length: 10 }).map((_, index) => (
                       <Skeleton
                         key={index}
@@ -122,14 +137,23 @@ const MediaContainer = () => {
                         )}
                       </li>
                     </ul>
-                    <div>
+                    <div className="flex flex-col justify-between gap-2">
                       <Button
                         onClick={() => setSelectedImage(selectedImg)}
                         type="button"
                         className="w-full bg-primary text-white"
-                        disabled={isLoading}
+                        disabled={isLoading || isDeleting}
                       >
                         Insert
+                      </Button>
+                      <Button
+                        onClick={handleDelete}
+                        type="button"
+                        variant={'destructive'}
+                        className="w-full mt-10 "
+                        disabled={isLoading || isDeleting}
+                      >
+                        {isDeleting ? "Deleting..." : "Delete"}
                       </Button>
                     </div>
                   </div>
