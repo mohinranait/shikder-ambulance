@@ -107,6 +107,6 @@
 }
 
 
-.mobile-call-button {
+body {
   touch-action: pan-x pan-y;
 }

@@ -111,7 +111,8 @@ const SidebarMenuCollapsible = ({
   return (
     <Collapsible
       asChild
-      defaultOpen={checkIsActive(pathname, item, true)}
+      defaultOpen={true}
+      // defaultOpen={checkIsActive(pathname, item, true)}
       className="group/collapsible"
     >
       <SidebarMenuItem>
@@ -130,9 +131,8 @@ const SidebarMenuCollapsible = ({
                 <SidebarMenuSubButton
                   asChild
                   isActive={checkIsActive(pathname, subItem)}
-                  className={`cursor-pointer ${
-                    pathname === subItem.url && "bg-primary text-white"
-                  }`}
+                  className={`cursor-pointer ${pathname === subItem.url && "bg-primary text-white"
+                    }`}
                 >
                   <Link
                     href={subItem.url || "#"}
@@ -187,9 +187,8 @@ const SidebarMenuCollapsedDropdown = ({
             >
               <Link
                 href={sub.url || "#"}
-                className={`${
-                  checkIsActive(pathname, sub) ? "bg-secondary" : ""
-                }`}
+                className={`${checkIsActive(pathname, sub) ? "bg-secondary" : ""
+                  }`}
               >
                 {sub.icon && <sub.icon />}
                 <span className="max-w-52 text-wrap">{sub.title}sss</span>

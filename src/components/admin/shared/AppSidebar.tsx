@@ -3,9 +3,6 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -31,7 +28,6 @@ import {
   LogOut,
   Sparkles,
 } from "lucide-react";
-import Image from "next/image";
 import { sidebarData } from "@/const-data/statick";
 import { NavGroup } from "./NavGroup";
 type PropTypes = {
