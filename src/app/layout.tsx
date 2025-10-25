@@ -1,3 +1,5 @@
+// app/layout.tsx or app/RootLayout.tsx
+
 import type React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -6,26 +8,56 @@ import ImageProvider from "@/providers/ImageProvider";
 import { Toaster } from "react-hot-toast";
 import MediaModal from "@/components/shared/MediaModal";
 
+// ✅ Complete SEO Optimized Metadata for Google, Facebook, and Twitter
 export const metadata: Metadata = {
-  title:
-    "Shikder Ambulance Service in Dhaka | Best Reliable 24/7",
+  title: "Shikder Ambulance Service in Dhaka | Fast Reliable 24/7 ",
   description:
-    "Shikder Ambulance Services in Dhaka. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination.",
+    "Shikder Ambulance Service in Dhaka provides 24/7 emergency medical transport, freezing ambulance, ICU ambulance, and dead body carrier service. Fast, safe, and reliable assistance across Bangladesh.",
   keywords:
-    "ambulance service, best ambulance, near ambulance service, online ambulance, best ambulance near me, top ambulance, freezing ambulance near me, fast ambulance, 24 Hours Ambulance, Dhaka Ambulance service, dead body carrier ambulance, emergency ambulances, emergency medical service, Dhaka ambulance, Bangladesh ambulance, AC ambulance, non-ac ambulance, life support ambulance, freezing ambulance, ICU ambulance",
+    "ambulance service, ambulance near me, Dhaka ambulance, 24/7 ambulance, freezing ambulance, ICU ambulance, life support ambulance, non-AC ambulance, AC ambulance, emergency medical service, dead body carrier, Shikder ambulance, Bangladesh ambulance, online ambulance service, fast ambulance in Dhaka",
   authors: [{ name: "Shikder Ambulance" }],
+  creator: "Shikder Ambulance",
+  publisher: "Shikder Ambulance",
+  metadataBase: new URL("https://shikderambulance.com"),
+  alternates: {
+    canonical: "https://shikderambulance.com",
+  },
   openGraph: {
-    title: "Shikder Ambulance Service | Best Reliable 24/7",
-    description: "Shikder Ambulance Services in Dhaka. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination",
+    title: "Shikder Ambulance Service in Dhaka | Best Reliable 24/7",
+    description:
+      "Reliable 24/7 ambulance service in Dhaka. Shikder Ambulance ensures safe, fast, and comfortable transport with AC, non-AC, ICU, and freezing ambulances.",
     url: "https://shikderambulance.com",
     siteName: "Shikder Ambulance",
     locale: "bn_BD",
     type: "website",
+    images: [
+      {
+        url: "https://raw.githubusercontent.com/mohinranait/shikder-ambulance/shahadat/public/Shikder-Ambulance-Service-Ac-Ambulance.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Shikder Ambulance Service in Dhaka",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shikder Ambulance Service in Dhaka | 24/7 Reliable & Fast",
+    description:
+      "Looking for a 24-hour ambulance in Dhaka? Shikder Ambulance offers ICU, AC, non-AC, and freezing ambulances for emergencies across Bangladesh.",
+    images: [
+      "https://raw.githubusercontent.com/mohinranait/shikder-ambulance/shahadat/public/Shikder-Ambulance-Service-Ac-Ambulance.jpg",
+    ],
+    creator: "@ShikderAmbulance",
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
   },
+  verification: {
+    google: "k9w6p571W9qlAmJr2Q9B-mCZ0Ab9xGP3mgZ9zuv5ssk", // Google Search Console verification
+  },
+  category: "Ambulance Service",
 };
 
 export default function RootLayout({
@@ -35,7 +67,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="font-sans antialiased">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5"
+        />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="author" content="Shikder Ambulance" />
+        <meta name="rating" content="general" />
+        <link rel="canonical" href="https://shikderambulance.com" />
+        <link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+        />
+      </head>
+
+      <body className="font-sans antialiased bg-white text-gray-900">
         <AuthProvider>
           <ImageProvider>
             {children}
