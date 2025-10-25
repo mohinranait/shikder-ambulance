@@ -2,26 +2,28 @@
 import mongoose from "mongoose"
 
 const commentSchema = new mongoose.Schema({
-    autor:{
-        type: mongoose.Types.ObjectId,
-        ref:"User",
-    },
+
     name: {
         type: String,
     },
-    postId:{
+    postId: {
         type: mongoose.Types.ObjectId,
-        ref:"Post",
+        ref: "Post",
     },
-    content:{
+    content: {
         type: String,
 
     },
-    star:{
+    star: {
         type: Number,
-        default:5,
+        default: 5,
     },
-},{timestamps:true})
+    status: {
+        type: String,
+        enum: ['pending', 'approved', 'rejected'],
+        default: 'approved'
+    },
+}, { timestamps: true })
 
 export default mongoose.models.Comment || mongoose.model('Comment', commentSchema)
 

@@ -16,15 +16,15 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(
         { message: "Missing postId query" },
         { status: 400 }
-        );
+      );
     }
 
-    const comments = await Comment.find({ postId });
+    const comments = await Comment.find({ postId, status: 'approved' });
 
- return NextResponse.json({
-        success: true,
-        message: "Comments gets",
-        payload: { comments },
+    return NextResponse.json({
+      success: true,
+      message: "Comments gets",
+      payload: { comments },
     });
 
   } catch (error) {

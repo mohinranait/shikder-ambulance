@@ -64,22 +64,7 @@ export default function LoginPage() {
       console.log(error);
     }
 
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
 
-      // For demo purposes, check if email contains "error" to simulate an error
-      if (formData.email.includes("error")) {
-        throw new Error("Invalid email or password");
-      }
-
-      // Success - redirect to dashboard or home
-      router.push("/");
-    } catch (err: any) {
-      setError(err.message || "An error occurred during login");
-    } finally {
-      setIsLoading(false);
-    }
   };
 
   return (

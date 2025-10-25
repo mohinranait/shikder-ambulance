@@ -120,6 +120,10 @@ export const sidebarData: SidebarData = {
               title: "All posts",
               url: "/admin/post/all",
             },
+            {
+              title: "Comments",
+              url: "/admin/post/comments",
+            },
           ],
         },
         {
