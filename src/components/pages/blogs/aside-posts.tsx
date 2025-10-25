@@ -11,13 +11,21 @@ import React, { useEffect, useState } from "react";
 const AsidePosts = () => {
   const [posts, setPosts] = useState([]);
 
+
+
+
   useEffect(() => {
     (async function () {
-      const data = await getPosts({ limit: "5", access: "user" });
+      const res = await fetch(`/api/posts/random?count=5`);
+      const data = await res.json();
       const posts = data?.payload?.posts;
+      console.log({ posts });
+
       setPosts(posts);
     })();
   }, []);
+
+
 
   return (
     <ul className="flex flex-col gap-3">
@@ -25,9 +33,9 @@ const AsidePosts = () => {
         <Card className="p-4 rounded-md">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Trends</h3>
           <div className="space-y-4">
-            {posts.map((post: TPostFormData) => (
+            {posts.map((post: TPostFormData, idx: number) => (
               <Link
-                key={post._id}
+                key={idx}
                 href={`/${post.slug || post._id}`}
                 className="flex items-center space-x-3 group cursor-pointer"
               >
