@@ -1,5 +1,4 @@
 "use client";
-import { getPosts } from "@/actions/postApi";
 import { Card } from "@/components/ui/card";
 import { formatShortDate } from "@/lib/helpers";
 import { TPostFormData } from "@/types/post.types";

@@ -9,7 +9,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Send, AlertCircle } from "lucide-react";
-import { BASE_URL } from "@/config/accessEnv";
 import toast from "react-hot-toast";
 
 // Zod validation schema
@@ -58,7 +57,7 @@ const ContactForm = () => {
     watch,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
-    mode: "onChange", // Validate on change for better UX
+    mode: "onChange", 
   });
 
   const onSubmit = async (data: ContactFormData) => {
