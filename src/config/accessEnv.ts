@@ -4,8 +4,8 @@ export const JWT_SECRET = process.env.NEXT_PUBLIC_JWT_SECRET;
 export const NODE_ENV = process.env.NEXT_PUBLIC_NODE_ENV ;
 
 // Email configuration
-export const SMTP_USER= process.env.NEXT_PUBLIC_SMTP_USER || 'ebrahim.official200@gmail.com';
-export const SMTP_PASSWORD= process.env.NEXT_PUBLIC_SMTP_PASSWORD || 'icbimwiovgiippsr';
+export const SMTP_USER= process.env.NEXT_PUBLIC_SMTP_USER ;
+export const SMTP_PASSWORD= process.env.NEXT_PUBLIC_SMTP_PASSWORD;
 
 
 // Cloudinary upload image
