@@ -7,6 +7,7 @@ import AuthProvider from "@/providers/AuthProvider";
 import ImageProvider from "@/providers/ImageProvider";
 import { Toaster } from "react-hot-toast";
 import MediaModal from "@/components/shared/MediaModal";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Shikder Ambulance Service in Dhaka | Fast Reliable 24/7 ",
@@ -86,6 +87,19 @@ export default function RootLayout({
           name="google-site-verification"
           content="k9w6p571W9qlAmJr2Q9B-mCZ0Ab9xGP3mgZ9zuv5ssk"
         />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-JB6HNSXYNH"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JB6HNSXYNH');
+          `}
+        </Script>
       </head>
 
       <body className="font-sans antialiased bg-white text-gray-900">
