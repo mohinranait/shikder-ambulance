@@ -10,7 +10,7 @@ import MediaModal from "@/components/shared/MediaModal";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Shikder Ambulance Service in Dhaka | Fast Reliable 24/7 ",
+  title: "Shikder Ambulance Service in Dhaka | Best, Fast & Reliable 24/7 ",
   description:
     "Shikder Ambulance Service in Dhaka provides 24/7 emergency medical transport, freezing ambulance, ICU ambulance, and dead body carrier service. Fast, safe, and reliable assistance across Bangladesh.",
   keywords:
