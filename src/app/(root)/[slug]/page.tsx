@@ -18,8 +18,8 @@ export async function generateMetadata({
   const previousImages = post?.image?.featuresImage;
 
   return {
-    title: post?.seoTitle || post?.postTitle,
-    description: post?.seoDescription,
+    title: `${post?.seoTitle || post?.postTitle} | Shikder Ambulance`,
+    description: post?.seoDescription || post?.shortDescription,
     keywords: post?.seoKeyword,
     openGraph: {
       url: `${BASE_URL}/${post?.slug}`,

@@ -29,12 +29,12 @@ const BlogView: FC<Props> = ({ blog }) => {
                 className={`text-3xl text-center sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal
                  `}
               >
-                {blog?.seoTitle || blog?.postTitle}
+                {blog?.postName || blog?.seoTitle || blog?.postTitle}
               </h1>
               <p
                 className={`md:text-lg text-center text-muted-foreground mx-auto max-w-2xl`}
               >
-                {blog?.seoDescription}
+                { blog?.shortDescription || blog?.seoDescription}
               </p>
               <div className="flex justify-center">
                 <Link href={"tel:01710060020"}>

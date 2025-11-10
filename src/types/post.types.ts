@@ -4,6 +4,7 @@ export type TPostFormData = {
     _id?: string; 
     author:  string; 
     postTitle: string;
+    postName: string;
     slug?: string;
     shortDescription?: string;
     image?: {

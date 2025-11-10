@@ -13,6 +13,10 @@ const postSchema = new mongoose.Schema({
         required:true,
         trim:true,
     },
+    postName: {
+        type: String,
+         trim: true,
+    },
     shortDescription: {
         type: String,
     },

@@ -31,6 +31,7 @@ import {
   Phone,
   Sidebar,
   Monitor,
+  CheckCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -81,9 +82,11 @@ const CreateBlogsPost = () => {
     dateObj.setMilliseconds(0);
     return dateObj;
   };
+  const [slugStatus, setSlugStatus] = useState<"checking" | "available" | "exists" | null>(null);
 
   const [form, setForm] = useState<TPostFormData>({
     postTitle: "",
+    postName:'',
     author: "",
     slug: "",
     shortDescription: "",
@@ -183,6 +186,44 @@ const CreateBlogsPost = () => {
     { value: "right", label: "Right Sidebar", icon: Sidebar },
     { value: "both", label: "Dual Sidebar", icon: Layout },
   ];
+
+
+  // Check existing URL for a single post
+  async function checkSlugAvailability(slug: string) {
+    if (!slug) return null;
+    try {
+      const res = await fetch(`/api/posts/check-slug?slug=${slug}`);
+      return res.json();
+    } catch (error) {
+      console.error("Error checking slug availability:", error);
+      return null;
+    }
+  }
+
+  useEffect(() => {
+    if (!isSlug) {
+      setSlugStatus(null);
+      return;
+    }
+
+    if (updatePost && updatePost.slug === isSlug) {
+      setSlugStatus(null);
+      return; 
+    }
+
+    const timeout = setTimeout(async () => {
+      setSlugStatus("checking");
+      const result = await checkSlugAvailability(isSlug);
+      if (result?.success) {
+        setSlugStatus(result.available ? "available" : "exists");
+      } else {
+        setSlugStatus(null);
+      }
+    }, 600);
+
+    return () => clearTimeout(timeout);
+  }, [isSlug, updatePost]);
+
 
 
   if (getLoading) {
@@ -289,7 +330,9 @@ const CreateBlogsPost = () => {
                                 ?.split(" ")
                                 .join("-")
                                 .toLowerCase();
-                              setIsSlug(sl);
+                                if(!form?.slug){
+                                  setIsSlug(sl);
+                                }
                               return update;
                             });
                           }}
@@ -304,13 +347,23 @@ const CreateBlogsPost = () => {
                               type="text"
                               name="slug"
                               placeholder="Enter slug"
-                              className="border-0 bg-transparent p-0 focus:ring-0"
-                              value={form?.slug || ""}
+                              className="border-0 h-8 bg-transparent  focus:ring-0"
+                              value={form?.slug?.split(" ")
+                                .join("-")
+                                .toLowerCase() || ""}
                               onChange={(e) =>
+                              {
                                 setForm((prev) => ({
                                   ...prev,
                                   slug: e.target.value,
                                 }))
+
+                                 const sl = e.target.value
+                                ?.split(" ")
+                                .join("-")
+                                .toLowerCase();
+                                setIsSlug(sl);
+                              }
                               }
                             />
                             <Button
@@ -352,17 +405,81 @@ const CreateBlogsPost = () => {
                           </>
                         )}
                       </div>
-
                     </div>
+                      {slugStatus === "checking" && (
+                        <span className="text-sm text-gray-500">Checking...</span>
+                      )}
+                      {slugStatus === "available" && (
+                        <span className="text-sm text-green-600 font-medium mt-1 flex items-center gap-2"><CheckCircle className="size-4" /> Slug available</span>
+                      )}
+                      {slugStatus === "exists" && (
+                        <span className="text-sm text-red-600 font-medium mt-1 flex items-center gap-2"><X className="size-4" /> Slug already exists</span>
+                      )}
                   </div>
 
                   {/* SEO Settings */}
                   <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
 
                     <div className="space-y-4 p-0">
+
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Title & SEO Title
+                          Post Title 
+                        </label>
+                        <Input
+                          type="text"
+                          placeholder="Post name..."
+                          className="border-gray-200 focus:border-blue-500"
+                          value={form?.postName || ""}
+                          onChange={(e) =>
+                            setForm((prev) => ({
+                              ...prev,
+                              postName: e.target.value,
+                            }))
+                          }
+                        />
+                      </div>
+
+                       <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Short Description
+                        </label>
+                        <textarea
+                          rows={3}
+                          placeholder="Write a short description..."
+                          className="w-full p-3 border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 resize-none"
+                          value={form?.shortDescription}
+                          onChange={(e) =>
+                            setForm((prev) => ({
+                              ...prev,
+                              shortDescription: e?.target?.value,
+                            }))
+                          }
+                        />
+                      </div>
+
+                     
+
+
+                    </div>
+                  </div>
+
+                  {/* Content Editor */}
+                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+
+                    <div className="p-0">
+                      <div className="border border-gray-200 rounded-lg overflow-hidden">
+                        <QuillEditor
+                          editorValue={content || ""}
+                          setEditorValue={setContent}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                   <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          SEO Title
                         </label>
                         <Input
                           type="text"
@@ -397,40 +514,17 @@ const CreateBlogsPost = () => {
                       </div>
 
 
+                   <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Tags: Keywords
+                      </label>
+                      <TagsInput
+                        value={tags}
+                        onChange={setTags}
+                        name="tags"
+                        placeHolder="Input Keywords here..."
+                      />
                     </div>
-                  </div>
-
-                  {/* Content Editor */}
-                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
-
-                    <div className="p-0">
-                      <div className="border border-gray-200 rounded-lg overflow-hidden">
-                        <QuillEditor
-                          editorValue={content || ""}
-                          setEditorValue={setContent}
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Content Editor */}
-                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
-
-                    <div className="p-0">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Tags: Keywords
-                        </label>
-                        <TagsInput
-                          value={tags}
-                          onChange={setTags}
-                          name="tags"
-                          placeHolder="Input Keywords here..."
-                        />
-                      </div>
-                    </div>
-                  </div>
-
 
 
                   {/* Publish Settings */}
