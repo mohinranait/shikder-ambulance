@@ -1,0 +1,13 @@
+robots.txt of Shikder Ambulance
+
+User-agent: *
+Allow: /
+
+# Disallow unwanted or duplicate paths (optional)
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /search
+
+# Sitemap link
+Sitemap: https://shikderambulance.com/sitemap.xml

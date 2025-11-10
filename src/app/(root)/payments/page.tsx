@@ -53,18 +53,18 @@ const paymentMethods: PaymentMethod[] = [
     },
     {
         id: "dutch-bangla",
-        name: "ডাচ-বাংলা ব্যাংক",
+        name: "ডাচ-বাংলা ব্যাংক অ্যাকাউন্ট",
         logo: 'Dutch-Bangla.png',
         description: "ব্যাংক অ্যাকাউন্ট ট্রান্সফার",
-        details: ["অ্যাকাউন্ট নম্বর: 3091 5702 86782", "অ্যাকাউন্ট হোল্ডার: Sahadat"],
-        color: "bg-blue-50 border-blue-200 hover:bg-blue-100",
+        details: ["3091 5702 86782", "Name: Sahadat"],
+        color: "bg-blue-50 border-blue-200 hover:bg-blue-100", 
     },
     {
         id: "islami-bank",
-        name: "ইসলামী ব্যাংক",
+        name: "ইসলামী ব্যাংক অ্যাকাউন্ট",
         logo: 'islami-bank.png',
         description: "ব্যাংক অ্যাকাউন্ট ট্রান্সফার",
-        details: ["অ্যাকাউন্ট নম্বর: 2050 2340 2026 78607", "অ্যাকাউন্ট হোল্ডার: Sahadat"],
+        details: ["2050 2340 2026 78607", "Name: Sahadat"],
         color: "bg-amber-50 border-amber-200 hover:bg-amber-100",
     },
 ]
@@ -80,12 +80,12 @@ export default function PaymentPage() {
 
                         <h1 className="text-4xl font-bold text-foreground">শিকদার অ্যাম্বুলেন্স সার্ভিস</h1>
                     </div>
-                    <p className="text-lg text-muted-foreground">নিরাপদ এবং সহজ পেমেন্ট পদ্ধতি</p>
+                    <p className="text-lg text-muted-foreground">নিরাপদ এবং সহজ পেমেন্ট পদ্ধতি </p>
                 </div>
 
                 {/* Payment Methods */}
                 <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-foreground mb-6">পেমেন্ট অপশনস</h2>
+                    <h2 className="text-2xl font-bold text-foreground mb-6">পেমেন্ট সিস্টেম</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {paymentMethods.map((method) => (
                             <button

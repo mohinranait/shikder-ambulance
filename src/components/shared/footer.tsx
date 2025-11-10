@@ -158,13 +158,13 @@ const FooterComponent = () => {
               <div className="flex items-start text-gray-300">
                 <BookmarkCheck className="h-5 w-5 mr-3 mt-1 text-purple-400" />
                 <div>
-                  <p>Trade No: TRAD/DSCC/017141/2024</p>
+                  <p><b>Trade No:</b> TRAD/DSCC/017141/2024</p>
                 </div>
               </div>
               <div className="flex items-start text-gray-300">
                 <Banknote className="h-5 w-5 mr-3 mt-1 text-purple-400" />
                 <Link href="/payments" target="_blank">
-                  <p>Payments by Online</p>
+                  <p>Payment System</p>
                 </Link>
               </div>
 
