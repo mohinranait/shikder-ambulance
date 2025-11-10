@@ -16,7 +16,7 @@ export function HeroSection() {
                 We’re Always Ready to Serve
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal">
-                Shikder Ambulance Service in Bangladesh
+                Shikder Ambulance Service in Dhaka
                 <span className="text-primary block"> Best Reliable 24/7 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
@@ -30,7 +30,7 @@ export function HeroSection() {
 
             {/* Emergency Contact */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href={"tel:+8801710060020"}>
+              <Link href={"tel:01710060020"}>
                 <Button
                   size="lg"
                   className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
