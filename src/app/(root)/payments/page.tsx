@@ -16,23 +16,7 @@ interface PaymentMethod {
 }
 
 const paymentMethods: PaymentMethod[] = [
-    {
-        id: "cash",
-        name: "হ্যান্ড ক্যাশ (নগদ)",
-        icon: <HandCoins className="w-8 h-8" />,
-        description: "সরাসরি নগদ অর্থ প্রদান",
-        details: ["চালক/কর্মীর কাছে সরাসরি পরিশোধ করুন", " পরিশোধের আগে অফিসে অবগত করুন"],
-        color: "bg-emerald-50 border-emerald-200 hover:bg-emerald-100",
-    },
-    {
-        id: "bkash",
-        name: "bKash",
-        logo: 'bkash.png',
-        description: "মোবাইল ব্যাংকিং সেবা",
-        details: [" 017100-60020", "সর্বোচ্চ নিরাপদ লেনদেন"],
-        color: "bg-pink-50 border-pink-200 hover:bg-pink-100",
-
-    },
+    
     {
         id: "nagad",
         name: "Nagad",
@@ -41,16 +25,16 @@ const paymentMethods: PaymentMethod[] = [
         details: [" 017100-60020", "সর্বোচ্চ নিরাপদ লেনদেন "],
         color: "bg-red-50 border-red-200 hover:bg-red-100",
 
-    },
+    }, 
     {
-        id: "rocket",
-        name: "Rocket",
-        logo: 'rocket.png',
-        description: "ডাচ-বাংলা ব্যাংক মোবাইল সেবা",
-        details: ["ফোন নম্বর: N/A", "দ্রুত এবং নির্ভরযোগ্য"],
-        color: "bg-purple-50 border-purple-200 hover:bg-purple-100",
+        id: "bkash",
+        name: "bKash",
+        logo: 'bkash.png',
+        description: "মোবাইল ব্যাংকিং সেবা",
+        details: [" 017100-60020", "সর্বোচ্চ নিরাপদ লেনদেন"],
+        color: "bg-pink-50 border-pink-200 hover:bg-pink-100",
 
-    },
+    }, 
     {
         id: "dutch-bangla",
         name: "ডাচ-বাংলা ব্যাংক অ্যাকাউন্ট",
@@ -66,6 +50,14 @@ const paymentMethods: PaymentMethod[] = [
         description: "ব্যাংক অ্যাকাউন্ট ট্রান্সফার",
         details: ["2050 2340 2026 78607", "Name: Sahadat"],
         color: "bg-amber-50 border-amber-200 hover:bg-amber-100",
+    },
+    {
+        id: "cash",
+        name: "হ্যান্ড ক্যাশ (নগদ)",
+        icon: <HandCoins className="w-8 h-8" />,
+        description: "সরাসরি নগদ অর্থ প্রদান",
+        details: ["চালক/কর্মীর কাছে সরাসরি পরিশোধ করুন", " পরিশোধের আগে অফিসে অবগত করুন"],
+        color: "bg-emerald-50 border-emerald-200 hover:bg-emerald-100",
     },
 ]
 

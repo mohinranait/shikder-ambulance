@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Freezing Ambulance Service in Dhaka. It is a dead body carrier freezing ambulance in Bangladesh. 24/7 dead body carrier with advanced freezing technology. Single & double cabin freezer ambulance is available in the all districts of Bangladesh.",
   keywords:
-    "Freezing Ambulance Services. freezing ambulance, dead body carrier, ambulance service Dhaka, freezer ambulance Bangladesh, mortuary ambulance, body transportation service",
+    "Freezing Ambulance Services. freezing ambulance, dead body carrier, ambulance service Dhaka, freezer ambulance Bangladesh, mortuary ambulance, body transportation service, dead body carrier frozen ambulance, Dhaka Airport freezing Ambulance, frozen ambulance, Shikder Freezing Ambulance, Dhaka freezing Ambulance, near Ac Ambulance, online Ambulance service, best Ambulance, Mirpur Ambulance Service, Shahabag Ambulance Service, Mirpur Ambulance Service, Badda Ambulance Service, Basaboo Ambulance Service, Madartek Ambulance Service, Mugdha Ambulance Service, Jatrabari Ambulance Service, Maniknagore Ambulance Service, Shenbag Ambulance Service, Freezing Ambulance Service Dhaka, Dead Body Freezing Ambulance Dhaka, Freezer Ambulance Dhaka, Body Freezer Ambulance Dhaka, Morgue Ambulance Dhaka, Dead Body Transport Dhaka, 24 Hour Freezing Ambulance Dhaka, Freezing Ambulance Near Me Dhaka, Emergency Freezing Ambulance Dhaka, Frozen Dead Body Ambulance Dhaka, AC Freezer Ambulance Dhaka, Long Distance Freezing Ambulance Dhaka, Dhaka Airport Freezing Ambulance, Hazrat Shahjalal Airport Freezer Ambulance, Bashundhara Freezing Ambulance, Gulshan Freezing Ambulance, Banani Freezing Ambulance, Baridhara Freezing Ambulance, Mohakhali Freezing Ambulance, Tejgaon Freezer Ambulance, Farmgate Freezing Ambulance, Karwan Bazar Freezing Ambulance, Shahbag Freezing Ambulance, Dhanmondi Freezing Ambulance, Mohammadpur Freezing Ambulance, Adabor Freezing Ambulance, Shyamoli Freezing Ambulance, Kallyanpur Freezer Ambulance, Mirpur Freezing Ambulance, Mirpur 1 Freezing Ambulance, Mirpur 10 Freezer Ambulance, Pallabi Freezing Ambulance, Rupnagar Freezing Ambulance, Uttara Freezing Ambulance, Uttara Sector Freezing Ambulance, Khilkhet Freezing Ambulance, Nikunja Freezing Ambulance, Kuril Freezing Ambulance, Badda Freezing Ambulance, Bashabo Freezing Ambulance, Khilgaon Freezing Ambulance, Malibagh Freezing Ambulance, Moghbazar Freezing Ambulance, Mouchak Freezer Ambulance, Rampura Freezing Ambulance, Banasree Freezing Ambulance, Nandipara Freezing Ambulance, Aftabnagar Freezing Ambulance, Merul Badda Freezer Ambulance, Motijheel Freezing Ambulance, Kamalapur Freezer Ambulance, Paltan Freezing Ambulance, Kakrail Freezing Ambulance, Nayapaltan Freezing Ambulance, Wari Freezing Ambulance, Sutrapur Freezing Ambulance, Gendaria Freezer Ambulance, Sadarghat Freezing Ambulance, Babubazar Freezer Ambulance, Kotwali Freezing Ambulance, Bangshal Freezing Ambulance, Jatrabari Freezing Ambulance, Donia Freezing Ambulance, Kadamtali Freezer Ambulance, Rayerbag Freezer Ambulance, Shyampur Freezing Ambulance, Demra Freezing Ambulance, Sarulia Freezing Ambulance, Matuail Freezing Ambulance, Narinda Freezing Ambulance, Lalbagh Freezing Ambulance, Azimpur Freezing Ambulance, Hazaribagh Freezing Ambulance, Kamrangirchar Freezer Ambulance, Islambagh Freezing Ambulance, Chawkbazar Freezing Ambulance, New Market Freezing Ambulance, Nilkhet Freezing Ambulance, Science Lab Freezing Ambulance, Katabon Freezing Ambulance, Elephant Road Freezer Ambulance, Panthapath Freezing Ambulance, Green Road Freezing Ambulance, Segunbagicha Freezing Ambulance, Shahbagh Freezer Ambulance, DMCH Freezing Ambulance, BSMMU Freezer Ambulance, Dhaka Medical College Freezing Ambulance, Square Hospital Freezer Ambulance, Labaid Freezing Ambulance, Popular Hospital Freezer Ambulance, Evercare Hospital Freezing Ambulance, United Hospital Freezing Ambulance, Holy Family Hospital Freezer Ambulance, Ibn Sina Freezing Ambulance, Asgar Ali Hospital Freezer Ambulance, Enam Medical Freezing Ambulance, Emergency Freezing Ambulance Dhaka City, Dhaka City Freezer Ambulance, Best Freezing Ambulance Dhaka, Affordable Freezer Ambulance Dhaka, Quick Freezing Ambulance Dhaka, Reliable Freezer Ambulance Service Dhaka, Professional Freezing Ambulance Dhaka, Patient Dead Body Freezing Ambulance Dhaka, Dhaka to Chittagong Freezing Ambulance, Dhaka to Sylhet Freezer Ambulance, Dhaka to Khulna Freezing Ambulance, Dhaka to Barisal Freezing Ambulance, Dhaka to Rajshahi Freezer Ambulance, Dhaka to Rangpur Freezing Ambulance, Long Route Freezing Ambulance Dhaka, Highway Freezer Ambulance Dhaka, Home to Morgue Freezer Ambulance, Hospital to Home Freezing Ambulance, Emergency Dead Body Transport Dhaka, Dhaka Freezing Body Transport, Citywide Freezing Ambulance Service, Frozen Body Transport Dhaka, Body Preservation Ambulance Dhaka, Refrigerated Ambulance Dhaka, Dhaka Refrigerated Dead Body Ambulance, Fast Freezing Ambulance Dhaka, 24/7 Freezer Ambulance Dhaka, Near Me Freezing Ambulance Service, Premium Freezing Ambulance Dhaka, Dedicated Freezer Ambulance Dhaka, Dhaka Burial Transport Ambulance, Janaza Transport Freezing Ambulance, Coffin Transport Freezing Ambulance Dhaka, Dhaka Mortuary Ambulance Service.",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
     title: "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Shikder Ambulance",
     images: [
       {
-        url: "/images/ambulance-hero.png",
+        url: "/images/Freezing Ambulance Service-shikder-ambulance.jpg",
         width: 1200,
         height: 630,
-        alt: "Freezing Ambulance Service - Shikder Ambulance",
+        alt: "Freezing Ambulance Service-Shikder Ambulance",
       },
     ],
     locale: "en_US",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
     description:
       "Freezing Ambulance Service in Dhaka. Professional 24/7 freezing ambulance service across Bangladesh.",
-    images: ["/images/ambulance-hero.png"],
+    images: ["/images/Freezing Ambulance Service-shikder-ambulance.jpg"],
   },
   robots: {
     index: true,
@@ -108,7 +108,7 @@ const FreezingAmbulance = () => {
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-6">
                 <Image
-                  src="/default.png?height=400&width=600"
+                  src="/Freezing Ambulance Service-shikder-ambulance.jpg"
                   alt="Freezing Ambulance Service"
                   width={600}
                   height={400}
@@ -125,18 +125,18 @@ const FreezingAmbulance = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Latest Freezing Ambulance Service in Dhaka
+              Latest Dyna Freezing Ambulance Service in Bangladesh
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Professional dead body transportation services with advanced
-              freezing technology
+              freezing technology.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">
-                Freezing Ambulance Service
+                Freezing Ambulance Service in Dhaka
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 We provide freezer Ambulance service in Dhaka and all districts
@@ -181,14 +181,14 @@ const FreezingAmbulance = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Image
-                src="/default.png?height=250&width=300"
+                src="/Freezing Ambulance Service in Dhaka-body.jpg"
                 alt="Ambulance Interior"
                 width={300}
                 height={250}
                 className="rounded-xl shadow-lg"
               />
               <Image
-                src="/default.png?height=250&width=300"
+                src="/Freezing Ambulance Service in Dhaka-inside.jpg"
                 alt="Ambulance Exterior"
                 width={300}
                 height={250}
@@ -301,12 +301,66 @@ const FreezingAmbulance = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+            {/* Service Overview */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Best Freezing Ambulance Service in Dhaka, 24/7 Dead Body Transport
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Fast & Reliable Body Freezer Ambulance.
+            </p>
+          </div>
+
+          <div className="">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Dhaka Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                The best Freezing Ambulance Service in Dhaka provides fast, professional, and reliable support for dead body transport anywhere in the city and across Bangladesh. Our service operates 24/7, ensuring immediate response during emergencies, hospital referrals, or long-distance transfers. We use modern freezer-equipped ambulances that maintain proper temperature to preserve the body safely for extended hours. Whether you need transportation from home, hospital, airport, or any district route, our trained team ensures respectful handling and complete support for the family. We offer affordable pricing, quick arrival, and smooth coordination for urgent situations like post-mortem transport, intercity transfers, and burial preparations. As one of Dhaka’s most trusted services, we focus on safety, dignity, and timely delivery. When you need a dependable freezing ambulance, our dedicated team is always ready to assist with professionalism and care.
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">Quick arrival, safe transport — anytime, anywhere in Dhaka.</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">
+                    Emergency freezing ambulance service just a call away.
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">Fast and safe body freezer ambulance anywhere in Dhaka.</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">
+                    Freezer ambulance available for airport and intercity transport.
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">
+                    Trusted dead body transport service across Dhaka city.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Our Ambulance Service */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Freezing Ambulance Service?
+              Why Shikder Freezing Ambulance Service?
             </h2>
           </div>
 

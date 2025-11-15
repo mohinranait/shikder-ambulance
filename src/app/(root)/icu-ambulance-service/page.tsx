@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Shikder Ambulance",
     images: [
       {
-        url: "/images/icu-ambulance-hero.png",
+        url: "/images/Life-support-ambulance.jpg",
         width: 1200,
         height: 630,
         alt: "ICU Ambulance Service in Dhaka - Advanced Life Support - Shikder Ambulance",
@@ -192,14 +192,14 @@ export default function IcuAmbulancePage() {
             <div className="space-y-6 ">
               <div className="bg-white relative rounded-2xl shadow-2xl p-6">
                 <Image
-                  src="/default.png?height=300&width=500&text=ICU+Ambulance+Exterior"
-                  alt="ICU Ambulance Service - Professional emergency medical transport vehicle"
+                  src="/Icu-ambulance-service-01.jpg"
+                  alt="ICU Ambulance Service - Professional emergency medical transport Service"
                   width={500}
                   height={300}
                   className="rounded-xl scale-75 w-full h-auto"
                 />
                 <Image
-                  src="/default.png?height=200&width=200&text=ICU+Ambulance+Interior"
+                  src="/Shikder-Ambulance-Service-life-support-Ambulance.jpg"
                   alt="ICU Ambulance Interior - Advanced life support equipment and medical facilities"
                   width={200}
                   height={200}

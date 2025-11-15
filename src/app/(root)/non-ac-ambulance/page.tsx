@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     siteName: "Shikder Ambulance",
     images: [
       {
-        url: "/images/non-ac-ambulance-hero.png",
+        url: "/images/Non-Ac-Ambulance Service.jpg",
         width: 1200,
         height: 630,
-        alt: "Non-AC Ambulance Service in Bangladesh - Shikder Ambulance",
+        alt: "Non-AC Ambulance Service in Bangladesh-Shikder Ambulance",
       },
     ],
     locale: "en_US",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Non-AC Ambulance Service in Bangladesh | Shikder Ambulance",
     description:
       "Affordable 24/7 Non-AC ambulance service with basic life support across Bangladesh.",
-    images: ["/images/non-ac-ambulance-hero.png"],
+    images: ["/images/Non-Ac-Ambulance Service.jpg"],
   },
   robots: {
     index: true,
@@ -186,8 +186,8 @@ export default function NonAcAmbulancePage() {
             <div className="flex justify-center">
               <div className="bg-white rounded-2xl shadow-2xl p-6">
                 <Image
-                  src="/default.png?height=400&width=600&text=Non-AC+Ambulance+Service"
-                  alt="Non-AC Ambulance Service - Affordable emergency medical transport"
+                  src="/Non-Ac-Ambulance Service.jpg"
+                  alt="Non-AC Ambulance Service-Shikder Ambulance"
                   width={600}
                   height={400}
                   className="rounded-xl w-full h-auto"

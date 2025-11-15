@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function ServiceOverview() {
   const services = [
@@ -17,6 +18,7 @@ export function ServiceOverview() {
         "Oxygen is free in Dhaka City",
         " Anytime, Anywhere is Available",
       ],
+      link:"/ac-ambulance-service"
     },
     {
       title: "Non Ac Ambulance Service",
@@ -30,6 +32,7 @@ export function ServiceOverview() {
         "Medical Supervision",
         "Insurance Accepted",
       ],
+      link:"/non-ac-ambulance"
     },
     {
       title: "Life Support Ambulance Service",
@@ -43,6 +46,7 @@ export function ServiceOverview() {
         "Specialized Nurses",
         "Hospital-to-Hospital",
       ],
+      link:"/icu-ambulance-service"
     },
     {
       title: "Dead Body Carrier Freezing Ambulance Service",
@@ -56,6 +60,7 @@ export function ServiceOverview() {
         "Tempresure: -5 to -22 are available",
         "Emergency Response",
       ],
+        link:"/freezing-ambulance-service"
     },
   ];
 
@@ -112,10 +117,10 @@ export function ServiceOverview() {
                   ))}
                 </div>
 
-                <Button variant="outline" className="group bg-transparent">
+               <Link href={`${service.link}`}>  <Button variant="outline" className="group bg-transparent">
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+                </Button></Link>
               </CardContent>
             </Card>
           ))}

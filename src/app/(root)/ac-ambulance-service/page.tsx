@@ -14,9 +14,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Best AC Ambulance Service in Dhaka by Shikder Ambulance 24/7",
+  title: "Best AC Ambulance Service in Dhaka | Shikder Ambulance 24/7",
   description:
-    "Best AC Ambulance Service in Dhaka by Shikder Ambulance. Temperature-controlled ambulance with air conditioning for patient comfort. 24/7 emergency Ambulance services across all districts.",
+    "Best AC Ambulance Service in Dhaka by Shikder Ambulance. Temperature-controlled ambulance with air conditioning for patient comfort. 24/7 Emergency Ambulance services across all districts.",
   keywords:
     "AC ambulance, air conditioned ambulance, best Ambulance, top ambulance company, Dhaka city Ambulance, Near Ambulance, free Ambulance in Dhaka city. ambulance service Dhaka, emergency medical service, temperature controlled ambulance, patient transport Bangladesh",
   authors: [{ name: "Shikder Ambulance" }],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Shikder Ambulance",
     images: [
       {
-        url: "/images/ac-ambulance-hero.png",
+        url: "/images/Ac Ambulance Service -Shikder  Ambulance.jpg",
         width: 1200,
         height: 630,
         alt: "Best AC Ambulance Service in Dhaka by Shikder Ambulance",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Best AC Ambulance Service in Dhaka by Shikder Ambulance",
     description:
       "Best AC Ambulance Service in Dhaka. Professional AC ambulance service with temperature control. Available 24/7.",
-    images: ["/images/ac-ambulance-hero.png"],
+    images: ["/images/Ac Ambulance Service -Shikder  Ambulance.jpg"],
   },
   robots: {
     index: true,
@@ -184,7 +184,7 @@ export default function AcAmbulancePage() {
 
             <div className="flex justify-center">
               <Image
-                src="/default.png?height=400&width=600&text=AC+Ambulance+Service"
+                src="/best-Ac-Ambulance-Service-Shikder-Ambulance.jpg"
                 alt="Best AC Ambulance Service"
                 width={600}
                 height={400}
@@ -342,7 +342,7 @@ export default function AcAmbulancePage() {
 
             <div className="flex justify-center">
               <Image
-                src="/default.png?height=400&width=600&text=AC+Ambulance+Service"
+                src="/best-Ac-Ambulance-Service-Shikder-Ambulance-02.jpg"
                 alt="Best AC Ambulance Service"
                 width={600}
                 height={400}
