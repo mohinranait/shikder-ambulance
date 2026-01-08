@@ -4,13 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Ambulance } from "lucide-react";
+import { Menu, Phone, Ambulance, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathName = usePathname()
+  const pathName = usePathname();
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -22,13 +22,12 @@ export function Header() {
         { name: "Ac Ambulance", href: "/ac-ambulance-service" },
         { name: "Non AC Ambulance", href: "/non-ac-ambulance" },
         { name: "Freezing Ambulance", href: "/freezing-ambulance-service" },
+        { name: "ICU Ambulance", href: "/icu-ambulance-service" },
       ],
     },
     { name: "Blogs", href: "/blogs" },
     { name: "Contact", href: "/contact-us" },
   ];
-
-
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
@@ -49,15 +48,37 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={cn("text-sm font-medium text-muted-foreground transition-colors hover:text-foreground", pathName === item?.href && ' text-foreground')}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "group text-sm font-medium inline-flex gap-1 items-center text-muted-foreground relative transition-colors hover:text-foreground",
+                    pathName === item?.href && " text-foreground"
+                  )}
+                >
+                  {item.name}
+                  {item?.items && item?.items?.length > 0 && (
+                    <ChevronDown className="size-4" />
+                  )}
+                  {item?.items && item?.items?.length > 0 && (
+                    <ul className="absolute p-2 shadow group-hover:block hidden  left-0 top-full w-[180px] bg-white ">
+                      {item?.items?.map((sub, i) => (
+                        <li>
+                          <Link
+                            href={sub?.href}
+                            className="py-1 px-2 inline-block text-muted-foreground hover:bg-gray-50 hover:text-foreground w-full rounded"
+                          >
+                            {sub?.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Right side */}
