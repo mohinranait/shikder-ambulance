@@ -37,11 +37,10 @@ export async function POST(request: NextRequest) {
     });
 
 
-    const { url, format, width, height, bytes: iBytes, secure_url, public_id } = result;
-
+    const { format, width, height, bytes: iBytes, secure_url, public_id } = result;
 
     const newMedia = await Media.create({
-      fileUrl: url,
+      fileUrl: secure_url,
       width,
       height,
       extension: format,
@@ -49,8 +48,6 @@ export async function POST(request: NextRequest) {
       public_id,
       secure_url,
     })
-
-
 
 
     return NextResponse.json({
@@ -109,10 +106,18 @@ export async function DELETE(req: NextRequest) {
     if (!id) {
       return NextResponse.json({ error: 'ID is required' }, { status: 400 });
     }
+    // create media entry in database
     const media = await Media.findByIdAndDelete(id);
     if (!media) {
       return NextResponse.json({ error: 'Media not found' }, { status: 404 });
     }
+
+    // Delete existing media from Cloudinary
+    if (media?.public_id) {
+      await cloudinary.uploader.destroy(media.public_id);
+    }
+    
+    
     return NextResponse.json({ message: 'Media deleted successfully', success: true, });
   } catch (error) {
     console.error('Error deleting media:', error);
