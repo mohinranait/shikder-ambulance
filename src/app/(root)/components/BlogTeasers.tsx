@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Suspense} from "react";
 import Blogs from "./Blogs";
 import Post from "@/models/Post";
-import "@/models/User";
 import BlogSkeleton from "./BlogSkeleton";
 
 export async function BlogTeasers() {
@@ -30,7 +29,6 @@ export async function BlogTeasers() {
             anytime, anywhere.
           </p>
         </div>
-
         <Suspense fallback={<BlogSkeleton />}>
           <Blogs blogs={blogs} />
         </Suspense>

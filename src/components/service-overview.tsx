@@ -25,7 +25,7 @@ export function ServiceOverview() {
       description:
         "Non-AC Ambulance Service offers affordable, reliable patient transport within the city, ideal for stable patients and short-distance transfers.",
 
-      image: "/Shikder-Ambulance-Service-Non-Ac-Ambulance.jpg",
+      image: "/Non-Ac-Ambulance Service.jpg",
       features: [
         "Wheelchair Accessible",
         "Stretcher Transport",
