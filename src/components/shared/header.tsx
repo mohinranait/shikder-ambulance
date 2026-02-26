@@ -47,39 +47,43 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => {
-              return (
+         <nav className="hidden md:flex items-center space-x-8">
+  {navigation.map((item) => {
+    const hasChildren = item?.items && item.items.length > 0;
+
+    return (
+      <div key={item.name} className="relative group">
+        {/* Parent Link */}
+        <Link
+          href={item.href}
+          className={cn(
+            "text-sm font-medium inline-flex gap-1 items-center text-muted-foreground relative transition-colors hover:text-foreground",
+            pathName === item?.href && "text-foreground"
+          )}
+        >
+          {item.name}
+          {hasChildren && <ChevronDown className="size-4" />}
+        </Link>
+
+        {/* Dropdown */}
+        {hasChildren && (
+          <ul className="absolute p-2 shadow-md rounded-md border bg-white hidden group-hover:block left-0 top-full w-[200px]">
+            {item.items.map((sub, i) => (
+              <li key={i}>
                 <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "group text-sm font-medium inline-flex gap-1 items-center text-muted-foreground relative transition-colors hover:text-foreground",
-                    pathName === item?.href && " text-foreground"
-                  )}
+                  href={sub.href}
+                  className="py-2 px-3 block text-sm text-muted-foreground hover:bg-gray-50 hover:text-foreground rounded"
                 >
-                  {item.name}
-                  {item?.items && item?.items?.length > 0 && (
-                    <ChevronDown className="size-4" />
-                  )}
-                  {item?.items && item?.items?.length > 0 && (
-                    <ul className="absolute p-2 shadow group-hover:block hidden  left-0 top-full w-[180px] bg-white ">
-                      {item?.items?.map((sub, i) => (
-                        <li>
-                          <Link
-                            href={sub?.href}
-                            className="py-1 px-2 inline-block text-muted-foreground hover:bg-gray-50 hover:text-foreground w-full rounded"
-                          >
-                            {sub?.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  {sub.name}
                 </Link>
-              );
-            })}
-          </nav>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    );
+  })}
+</nav>
 
           {/* Right side */}
           <div className="flex items-center space-x-4">
