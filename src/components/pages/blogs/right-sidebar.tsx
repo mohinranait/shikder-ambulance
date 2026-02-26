@@ -1,11 +1,11 @@
 import React from "react";
-import AsidePosts from "./aside-posts";
 import AdditionalInfo from "./additional-info";
+import AsidePosts from "@/app/(root)/blogs/components/AsidePosts";
 
 const RightSidebar = () => {
   return (
     <aside className="col-span-1 bg-white space-y-4 rounded p-2">
-      <AsidePosts />
+      <AsidePosts cardTitle={"Trending Posts"} />
       <AdditionalInfo />
     </aside>
   );

@@ -92,10 +92,19 @@ export async function PATCH(
       }
     }
 
+    const readTime =
+      (body.content?.length || 0) +
+      (body.shortDescription?.length || 0) +
+      (body.contents?.reduce(
+        (acc: number, c: { content?: string }) =>
+          acc + (c.content?.length || 0),
+        0,
+      ) || 0);
+
     // Update post
     const updatedPost = await Post.findByIdAndUpdate(
       postId,
-      { ...body },
+      { ...body, readTime },
       { runValidators: true, new: true }
     );
 

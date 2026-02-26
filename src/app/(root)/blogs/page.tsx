@@ -10,9 +10,9 @@ import {
   NotebookPen,
 } from "lucide-react";
 import Link from "next/link";
-import BlogFeatures from "@/components/pages/blogs/BlogFeatures";
-import BlogLists from "@/components/pages/blogs/BlogLists";
-import RecentPost from "@/components/pages/blogs/RecentPost";
+import BlogLists from "./components/BlogLists";
+import BlogFeatures from "./components/BlogFeatures";
+import SideBarLists from "./components/AsidePosts";
 
 
 export default function BlogsPage() {
@@ -57,7 +57,7 @@ export default function BlogsPage() {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Recent Posts */}
-              <RecentPost />
+              <SideBarLists />
 
               {/* Emergency Contact */}
               <Card className="p-6 bg-red-50 border-red-200">

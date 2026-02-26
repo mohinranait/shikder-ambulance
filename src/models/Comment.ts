@@ -1,29 +1,35 @@
+import mongoose, { Schema, Model, Document } from "mongoose";
 
-import mongoose from "mongoose"
+// =======================
+// TypeScript interface (optional)
+// =======================
+export interface IComment extends Document {
+  name?: string;
+  postId: mongoose.Types.ObjectId;
+  content?: string;
+  star?: number;
+  status?: 'pending' | 'approved' | 'rejected';
+}
 
-const commentSchema = new mongoose.Schema({
+// =======================
+// Schema
+// =======================
+const commentSchema = new Schema<IComment>(
+  {
+    name: { type: String, trim: true },
+    postId: { type: Schema.Types.ObjectId, ref: "Post", required: true },
+    content: { type: String, trim: true },
+    star: { type: Number, default: 5 },
+    status: { type: String, enum: ['pending', 'approved', 'rejected'], default: 'approved' },
+  },
+  { timestamps: true }
+);
 
-    name: {
-        type: String,
-    },
-    postId: {
-        type: mongoose.Types.ObjectId,
-        ref: "Post",
-    },
-    content: {
-        type: String,
+// =======================
+// Hot reload safe for Next.js
+// =======================
+const Comment: Model<IComment> = (mongoose.models && mongoose.models.Comment)
+  ? mongoose.models.Comment
+  : mongoose.model<IComment>("Comment", commentSchema);
 
-    },
-    star: {
-        type: Number,
-        default: 5,
-    },
-    status: {
-        type: String,
-        enum: ['pending', 'approved', 'rejected'],
-        default: 'approved'
-    },
-}, { timestamps: true })
-
-export default mongoose.models.Comment || mongoose.model('Comment', commentSchema)
-
+export default Comment;

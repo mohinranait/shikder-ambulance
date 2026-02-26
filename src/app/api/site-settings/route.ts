@@ -46,10 +46,10 @@ export async function PATCH(request: NextRequest) {
   try {
     await connectDB()
     const body = await request.json()
-    console.log({body});
+
 
     let existsSetting = await SiteSettings.findOne()
-    console.log({existsSetting});
+
     
    const settings = await SiteSettings.findByIdAndUpdate(
         existsSetting._id, 
@@ -59,9 +59,6 @@ export async function PATCH(request: NextRequest) {
           runValidators: true,       
         }
       )
-
-      console.log({settings});
-      
 
     if (!settings) {
       throw new Error("Failed to update settings")

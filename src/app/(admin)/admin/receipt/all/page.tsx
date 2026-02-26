@@ -148,7 +148,7 @@ const MoneyReceiptManage = () => {
       // Delete all selected receipts
       const deletePromises = selectedIds.map((id) => deleteReceiptById(id));
 
-      console.log({ deletePromises });
+
 
       const results = await Promise.all(deletePromises);
 

@@ -66,7 +66,6 @@ export default function SettingsPage() {
     e.preventDefault();
     setIsLoading(true);
 
-    console.log({ settings });
 
     try {
       const res = await fetch(`/api/site-settings`, {

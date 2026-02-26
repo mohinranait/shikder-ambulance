@@ -55,7 +55,6 @@ export default function PostComment() {
         try {
             const res = await fetch(`/api/posts/${postId}`);
             const data = await res.json();
-            console.log({ data });
             const post = data?.payload?.post;
             setPost(post)
         } catch (error) {

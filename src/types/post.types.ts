@@ -26,6 +26,7 @@ export type TPostFormData = {
         comments?: boolean;
     };
     seoTitle?: string;
+    readTime?: number;
     seoDescription?: string;
     seoKeyword?: string[];
     createdAt?: string; 
