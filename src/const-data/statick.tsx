@@ -12,6 +12,7 @@ import {
   Notebook,
   NotebookPen,
   Bolt,
+  GitPullRequest,
 } from "lucide-react";
 
 export interface SidebarNavItem {
@@ -155,6 +156,11 @@ export const sidebarData: SidebarData = {
           title: "Leads",
           url: "/admin/lead",
           icon: NotebookPen,
+        },
+         {
+          title: "FAQ",
+          url: "/admin/faq",
+          icon: GitPullRequest,
         },
          {
           title: "Configurations",

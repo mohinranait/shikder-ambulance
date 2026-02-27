@@ -1,6 +1,7 @@
 import React from "react";
 
 import FaqComponent from "./faq-component";
+import { HelpCircle } from "lucide-react";
 
 export default function PremiumFaqSection() {
   return (
@@ -14,6 +15,18 @@ export default function PremiumFaqSection() {
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg ">
+              <HelpCircle className="w-8 h-8 text-white" />
+            </div>
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className=" text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Quick answers to common questions about our emergency patient
+              transport services.
+            </p>
+          </div>
           <FaqComponent />
         </div>
       </div>

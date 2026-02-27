@@ -43,10 +43,10 @@ const commentSchema = z.object({
 type CommentFormData = z.infer<typeof commentSchema>;
 
 type Props = {
-  blog: TPostFormData;
+  blogId: string;
 };
 
-const CommentForm: FC<Props> = ({ blog }) => {
+const CommentForm: FC<Props> = ({ blogId }) => {
   const { user } = useAuth();
 
   const {
@@ -61,7 +61,7 @@ const CommentForm: FC<Props> = ({ blog }) => {
       name: user?.name?.firstName || "",
       content: "",
       star: 5,
-      postId: blog?._id,
+      postId: blogId,
     },
     mode: "onChange", // Real-time validation
   });
@@ -80,7 +80,7 @@ const CommentForm: FC<Props> = ({ blog }) => {
           name: user?.name?.firstName || "",
           content: "",
           star: 5,
-          postId: blog?._id,
+          postId: blogId,
         });
         toast.success("Comment submitted successfully!");
       } else {

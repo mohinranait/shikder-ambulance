@@ -1,80 +1,28 @@
+import connectDB from "@/config/mongodb";
+import Faq from "@/models/fak.model";
 import {
   ChevronDown,
-  HelpCircle,
   Package,
-  RotateCcw,
-  Truck,
 } from "lucide-react";
 import React from "react";
 
-const FaqComponent = () => {
-  const faqData = [
-    {
-      id: "item-1",
-      icon: Package,
-      title: "What Services Does Shikder Ambulance Provide?", content: [
-        "Shikder Ambulance provides a wide range of emergency and non-emergency ambulance services across Dhaka and all districts in Bangladesh. Our services include AC and Non-AC ambulances, ICU/CCU life support ambulances, and freezing vans for deceased body transport. We ensure timely, safe, and professional transportation of patients and deceased individuals to hospitals, homes, or desired destinations with complete care and respect.",
-      ],
-    },
-    {
-      id: "item-2",
-      icon: Truck,
-      title: "How quickly can you send an ambulance?",
-      content: [
-        "In Dhaka city, we typically reach your location within 10 to 20 minutes, depending on traffic and distance. For inter-district services, arrival time depends on the location and road conditions. We always try our best to minimize waiting time in emergency situations",
-      ],
-    },
-    {
-      id: "item-3",
-      icon: Truck,
-      title: "Do you operate only in Dhaka?",
-      content: [
-        " No. While our head office is based in Dhaka, we offer ambulance services in all 64 districts of Bangladesh. Whether you’re in a remote village or a busy city, we can reach you with our well-coordinated network. Our long-distance transport options ensure that patients or deceased bodies can be transferred from one district to another safely.",
-      ],
-    },
-    {
-      id: "item-4",
-      icon: Truck,
-      title: "How can I contact Shikder Ambulance?",
-      content: [
-        "You can contact us by calling our 24/7 emergency hotline. We also accept inquiries and advance bookings by phone, website contact form, or social media. Our friendly support team is always ready to assist you with your needs. If you need Ambulance then Contact Us. ",
-      ],
-    },
-    {
-      id: "item-5",
-      icon: Truck,
-      title: "How can I book an ambulance?",
-      content: [
-        "Booking with Shikder Ambulance is fast and simple. Just call our dedicated hotline, and our support team will guide you through the process. You’ll need to provide the pickup location, destination, type of ambulance required, and patient condition (if applicable). We aim to dispatch the ambulance as quickly as possible after booking confirmation.",
-      ],
-    },
-    {
-      id: "item-6",
-      icon: RotateCcw,
-      title: "Can I book an ambulance in advance?",
-      content: [
-        "Yes, advance booking is available for planned hospital admissions, medical checkups, patient transfers, or events. This helps us arrange the right type of ambulance for your specific needs at the scheduled time without delay.",
-      ],
-    },
-  ];
+export const dynamic = "force-dynamic";
+
+const FaqComponent = async () => {
+  await connectDB();
+  const faqs = await Faq.find({ status: true })
+    .sort({ priority: 1, createdAt: -1 })
+    .limit(6)
+    .lean();
+
 
   return (
     <>
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg ">
-          <HelpCircle className="w-8 h-8 text-white" />
-        </div>
-        <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
-          Frequently Asked Questions
-        </h2>
-        <p className=" text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          Quick answers to common questions about our emergency patient transport services.
-        </p>
-      </div>
+      
       <div className="">
         <div className="space-y-4">
-          {faqData.map((item, index) => {
-            const Icon = item.icon;
+          {faqs.map((item, index) => {
+            const Icon = Package;
             const isFirstItem = index === 0;
 
             return (
@@ -107,10 +55,10 @@ const FaqComponent = () => {
                 </summary>
 
                 {/* Content */}
-                <div className="px-8 pb-8 pt-2 animate-in slide-in-from-top-2 duration-500">
+                <div className="px-8 pb-8 pt-6 animate-in slide-in-from-top-2 duration-500">
                   <div className=" sm:pl-10 md:pl-16">
                     <div className="space-y-4">
-                      {item.content.map((paragraph, pIndex) => (
+                      {item?.contents?.map((paragraph, pIndex) => (
                         <p
                           key={pIndex}
                           className="text-gray-600 leading-relaxed text-balance opacity-0 group-open:opacity-100 transition-opacity duration-700"

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { IPost } from "@/models/Post";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,10 +29,14 @@ const Blogs = ({ blogs }: Props) => {
             </Link>
           </div>
           <CardContent className="p-6">
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-3">
+            <div className="flex items-center justify-between space-x-4 text-sm text-muted-foreground mb-3">
               <div className="flex items-center space-x-1">
                 <Calendar className="h-4 w-4" />
                 <span>{moment(blog?.createdAt).format("MMM DD, YYYY")}</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Clock className="h-4 w-4" />
+                <span>{Math.max(1, Math.ceil((blog.readTime || 0) / 5 / 200))}{" "}min read</span>
               </div>
             </div>
             <Link href={`/${blog.slug}`}>

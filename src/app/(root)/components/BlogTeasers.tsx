@@ -6,8 +6,11 @@ import { Suspense} from "react";
 import Blogs from "./Blogs";
 import Post from "@/models/Post";
 import BlogSkeleton from "./BlogSkeleton";
+import connectDB from "@/config/mongodb";
+export const dynamic = "force-dynamic"
 
 export async function BlogTeasers() {
+  await connectDB();
   const blogs = await Post.find({ status: "Publish" })
     .select(
       "-content -contents -seoTitle -author -contactNumber -seoKeyword -reviews -layouts -updatedAt -__v",

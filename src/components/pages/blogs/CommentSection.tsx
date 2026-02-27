@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import CommentForm from "./CommentForm";
 import ShowAllComments from "./ShowAllComments";
-import { TPostFormData } from "@/types/post.types";
 import { getAllCommentByPostId } from "@/actions/commentApi";
 export type TCommentType = {
   _id: string;
@@ -15,17 +14,17 @@ export type TCommentType = {
 };
 
 type Props = {
-  blog: TPostFormData;
+  blogId?: string;
 };
 
-const CommentSection: FC<Props> = async ({ blog }) => {
-  if (!blog?._id) return;
-  const data = await getAllCommentByPostId(blog?._id);
+const CommentSection: FC<Props> = async ({ blogId }) => {
+  if (!blogId) return null;
+  const data = await getAllCommentByPostId(blogId);
 
   const comments: TCommentType[] = data?.payload?.comments;
   return (
     <div>
-      <CommentForm blog={blog} />
+      <CommentForm blogId={blogId} />
       {comments?.length > 0 && <ShowAllComments comments={comments} />}
     </div>
   );

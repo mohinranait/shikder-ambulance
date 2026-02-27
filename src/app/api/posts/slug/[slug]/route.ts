@@ -14,14 +14,7 @@ export async function GET(
 
     await connectDB();
 
-    const post = await Post.findOne({ slug }).populate({
-      path: "author",
-      select: "-password",
-      populate: {
-        path: "profile",
-        select: "_id fileType fileUrl extension",
-      },
-    });
+    const post = await Post.findOne({ slug }).select("-__v -author");
 
     if (!post) {
       return NextResponse.json(
@@ -37,7 +30,7 @@ export async function GET(
       payload: { post },
     });
   } catch (error: unknown) {
-    console.error("GET /api/posts/[slug] error:", error);
+    console.error("GET /api/posts/slut/[slug] error:", error);
     const errorMessage =
       error instanceof Error ? error.message : "Internal server error";
     return NextResponse.json(

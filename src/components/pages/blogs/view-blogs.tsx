@@ -74,8 +74,12 @@ const BlogView: FC<Props> = ({ blog }) => {
                 : "lg:col-span-2"
               }`}
           >
-            <MainBody blog={blog} />
-            {blog?.layouts?.comments && <CommentSection blog={blog} />}
+            <MainBody 
+              postTitle={blog?.postTitle || ""}
+              image={blog?.image?.featuresImage || ""}
+              content={blog?.content || ""} 
+            />
+            {blog?.layouts?.comments && <CommentSection blogId={blog?._id} />}
             <FaqComponent />
           </div>
 

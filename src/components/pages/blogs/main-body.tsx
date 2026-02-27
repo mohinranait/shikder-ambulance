@@ -3,29 +3,31 @@ import Image from "next/image";
 import React, { FC } from "react";
 
 type Props = {
-  blog: TPostFormData;
+  postTitle: string;
+  image: string;
+  content: string;
 };
-const MainBody: FC<Props> = ({ blog }) => {
+const MainBody: FC<Props> = ({ postTitle, image, content }) => {
   return (
     <div className="bg-white blog-post-preview p-5 rounded">
       <h2 className="text-2xl mb-2 font-bold text-slate-900">
-        {blog?.postTitle || 'Shikder Ambulance service'}
+        {postTitle || 'Shikder Ambulance service'}
       </h2>
       {
-        blog?.image?.featuresImage &&
+        image &&
         <div>
           <Image
-            src={blog?.image?.featuresImage || "/default.png"}
+            src={image|| "/default.png"}
             width={600}
             height={400}
-            alt={blog?.postTitle}
+            alt={postTitle}
             className="w-full h-full"
           />
         </div>
       }
       <div
         className="post-content"
-        dangerouslySetInnerHTML={{ __html: blog?.content || "" }}
+        dangerouslySetInnerHTML={{ __html: content || "" }}
       />
     </div>
   );
