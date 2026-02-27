@@ -17,51 +17,48 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { email, password } = body || {};
 
-    
     // Validate input
     const { error } = loginSchema.validate({ email, password });
     if (error) {
       return NextResponse.json(
         { success: false, error: error.details[0].message },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     // Check user existence
-    let user = await User.findOne({ email });
-    if (!user) {
+    const userDoc = await User.findOne({ email });
+    if (!userDoc) {
       return NextResponse.json(
         { success: false, error: "User not found" },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
     // Check password
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, userDoc.password);
     if (!isMatch) {
       return NextResponse.json(
         { success: false, error: "Invalid credentials" },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
     // Convert to plain object and remove password
-    user = user.toObject();
+    const user = userDoc.toObject() as any;
     delete user.password;
 
     // Generate JWT token
-    const token = jwt.sign(
-      { id: user._id, email: user.email },
-      jwtSecret,
-      { expiresIn: "1d" }
-    );
+    const token = jwt.sign({ id: user._id, email: user.email }, jwtSecret, {
+      expiresIn: "1d",
+    });
 
     // Set cookie
     const cookie = serialize("access_token", token, {
       httpOnly: true,
       secure: productionMode === "production",
       sameSite: productionMode === "production" ? "none" : "strict",
-      maxAge: 60 * 60 * 24, 
+      maxAge: 60 * 60 * 24,
       path: "/",
     });
 
@@ -78,13 +75,16 @@ export async function POST(request: NextRequest) {
           "Set-Cookie": cookie,
           "Content-Type": "application/json",
         },
-      }
+      },
     );
   } catch (error: unknown) {
     console.error("POST /api/auth/login error:", error);
     return NextResponse.json(
-      { success: false, error: error instanceof Error ? error.message : "Internal server error" },
-      { status: 500 }
+      {
+        success: false,
+        error: error instanceof Error ? error.message : "Internal server error",
+      },
+      { status: 500 },
     );
   }
 }

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { TPostFormData } from "@/types/post.types";
+import { IPost } from "@/models/Post";
 import { ArrowRight, Calendar } from "lucide-react";
 import moment from "moment";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import Link from "next/link";
 import React from "react";
 
 type Props = {
-  blogs: TPostFormData[];
+  blogs: IPost[];
 };
 const Blogs = ({ blogs }: Props) => {
   return (

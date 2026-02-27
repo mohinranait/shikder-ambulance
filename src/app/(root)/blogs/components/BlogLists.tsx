@@ -5,9 +5,11 @@ import React, { Suspense } from "react";
 import BlogsMiddleLists from "./BlogsMiddleLists";
 import BlogListsSkeleton from "./BlogListsSkeleton";
 import { posts } from "@/config/constData";
+import connectDB from "@/config/mongodb";
+export const dynamic = "force-dynamic";
 
 const BlogLists = async () => {
-  
+  await connectDB();
 
   const blogs = await Post.aggregate([
     {

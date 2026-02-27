@@ -41,14 +41,13 @@ export async function POST(request: NextRequest) {
     const hashedPassword = bcrypt.hashSync(password, salt);
 
     // Create user
-    let user = await User.create({
+    let userDoc = await User.create({
       ...body,
       password: hashedPassword,
     });
 
-    user = user.toObject();
-    delete user.password;
-
+   const { password: _, ...user } = userDoc.toObject(); 
+  
     return NextResponse.json(
       {
         success: true,

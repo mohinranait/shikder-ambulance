@@ -3,8 +3,11 @@ import Post from "@/models/Post";
 import React, { Suspense } from "react";
 import FeaturesBlogs from "./FeaturesBlogs";
 import BlogFeaturesSkeleton from "./BlogFeaturesSkeleton";
+import connectDB from "@/config/mongodb";
+export const dynamic = "force-dynamic";
 
 const BlogFeatures = async () => {
+  await connectDB();
   const blogs = await Post.aggregate([
     {
       $match: { status: "Publish" },

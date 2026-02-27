@@ -32,6 +32,8 @@ export interface IPost extends Document {
   publishDate?: Date;
   seoKeyword?: string[];
   reviews?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 // =======================

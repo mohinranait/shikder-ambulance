@@ -3,9 +3,11 @@ import Post from "@/models/Post";
 import React, { Suspense } from "react";
 import SidebarPosts from "./SidebarPosts";
 import SidebarSkeleton from "./SidebarSkeleton";
+import connectDB from "@/config/mongodb";
+export const dynamic = "force-dynamic";
 
 const AsidePosts = async ({cardTitle="Recent Posts"}:{cardTitle?: string}) => {
-
+await connectDB();
   const blogs = await Post.aggregate([
     {
       $match: { status: "Publish" },
