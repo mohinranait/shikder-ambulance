@@ -8,13 +8,8 @@ import os from "os";
 
 import { v2 as cloudinary } from "cloudinary";
 import { nanoid } from "nanoid";
-import { CLOUDINARY_KEY, CLOUDINARY_NAME, CLOUDINARY_SECRET } from "@/config/accessEnv";
+import { applyCloudinaryConfig } from "@/config/loudinary";
 
-cloudinary.config({
-  cloud_name: CLOUDINARY_NAME,
-  api_key: CLOUDINARY_KEY,
-  api_secret: CLOUDINARY_SECRET,
-});
 
 
 export async function POST(request: NextRequest) {
@@ -32,6 +27,9 @@ export async function POST(request: NextRequest) {
     const tempFilePath = path.join(os.tmpdir(), `${nanoid()}_${file.name}`);
     await writeFile(tempFilePath, buffer);
 
+    
+    await applyCloudinaryConfig()
+
     const result = await cloudinary.uploader.upload(tempFilePath, {
       folder: "shikder",
     });
@@ -39,6 +37,7 @@ export async function POST(request: NextRequest) {
 
     const { format, width, height, bytes: iBytes, secure_url, public_id } = result;
 
+    await connectDB();
     const newMedia = await Media.create({
       fileUrl: secure_url,
       width,
@@ -67,6 +66,7 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   try {
     await connectDB();
+    await applyCloudinaryConfig()
     const decoded = await getAuthUser() as { id: string; email: string };
 
     const userId = decoded?.id;
@@ -101,6 +101,7 @@ export async function GET(request: NextRequest) {
 export async function DELETE(req: NextRequest) {
   try {
     await connectDB();
+    await applyCloudinaryConfig()
     const { searchParams } = new URL(req.url);
     const id = searchParams.get('id');
     if (!id) {
