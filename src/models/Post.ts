@@ -4,6 +4,7 @@ import mongoose, { Schema, Model, Document } from "mongoose";
 // TypeScript interface
 // =======================
 export interface IPost extends Document {
+   _id: mongoose.Types.ObjectId;
   author: mongoose.Types.ObjectId;
   postTitle: string;
   postName?: string;

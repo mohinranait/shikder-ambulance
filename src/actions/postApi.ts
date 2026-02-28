@@ -1,7 +1,10 @@
 
 
 import { BASE_URL } from "@/config/accessEnv";
+import connectDB from "@/config/mongodb";
+import Post from "@/models/Post";
 import { TPostFormData } from "@/types/post.types";
+import { cache } from "react";
 type TQuery = {
   limit?: string;
   access?: string;
@@ -110,3 +113,5 @@ export const getSinglePostBySlugForDetailsPage = async (slug: string) => {
   });
   return await res.json();
 };
+
+
