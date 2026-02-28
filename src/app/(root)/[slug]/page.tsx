@@ -58,8 +58,7 @@ const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }
   if (!post) notFound();
 
   const blog = mapPostToFormData(post);
-  console.log({blog});
-  
+
   return <BlogView blog={blog} />;
 };
 
