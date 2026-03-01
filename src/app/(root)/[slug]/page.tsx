@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BASE_URL } from "@/config/accessEnv";
 import { getPostBySlugFromDB } from "@/actions/get-post";
+import { getAllCommentByPostId } from "@/actions/commentApi";
 
 
 
@@ -30,10 +31,13 @@ const BlogDetailsPage = async (
   { params }: { params: Promise<{ slug: string }> }
 ) => {
   const { slug } = await params; 
-  const post = await getPostBySlugFromDB(slug);
-  if (!post) notFound();
+   const postPromise = getPostBySlugFromDB(slug);
+  const post = await postPromise;
+  if (!post) return notFound();
 
-  return <BlogView blog={post} />;
+  const commentsPromise = getAllCommentByPostId(post?._id!.toString() );
+
+  return <BlogView blog={post} commentsPromise={commentsPromise} />;
 };
 
 export default BlogDetailsPage;

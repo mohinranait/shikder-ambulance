@@ -12,13 +12,11 @@ import ServiceInfo from "@/components/ServiceInfo";
 
 type Props = {
   blog: TPostFormData;
+  commentsPromise?: Promise<any>;
 };
 
-const BlogView: FC<Props> = ({ blog }) => {
-  let bgImage: string = "";
-  if (blog?.layouts?.banner) {
-    bgImage = blog?.image?.featuresImage || "";
-  }
+const BlogView: FC<Props> = ({ blog,commentsPromise }) => {
+  const bgImage = blog?.layouts?.banner ? blog?.image?.featuresImage ?? "" : "";
   return (
     <main className="mb-20">
       <section className={`relative bg-premium-light-gradient `}>
@@ -79,7 +77,7 @@ const BlogView: FC<Props> = ({ blog }) => {
               image={blog?.image?.featuresImage || ""}
               content={blog?.content || ""} 
             />
-            {blog?.layouts?.comments && <CommentSection blogId={blog?._id?.toString()} />}
+            {blog?.layouts?.comments && <CommentSection commentsPromise={commentsPromise} blogId={blog?._id?.toString()} />}
             <FaqComponent />
           </div>
 
