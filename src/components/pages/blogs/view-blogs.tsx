@@ -79,7 +79,7 @@ const BlogView: FC<Props> = ({ blog }) => {
               image={blog?.image?.featuresImage || ""}
               content={blog?.content || ""} 
             />
-            {blog?.layouts?.comments && <CommentSection blogId={blog?._id} />}
+            {blog?.layouts?.comments && <CommentSection blogId={blog?._id?.toString()} />}
             <FaqComponent />
           </div>
 

@@ -18,7 +18,7 @@ export const serverFetch = async <T = any>({
       .map(([k, v]) => [k, String(v)])
   ).toString();
 
-  // 🔥 FIX: await headers()
+  // FIX: await headers()
   const headersList = await headers();
   const host = headersList.get("host");
   const protocol = process.env.NODE_ENV === "development" ? "http" : "https";

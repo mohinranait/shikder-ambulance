@@ -2,17 +2,15 @@ import BlogView from "@/components/pages/blogs/view-blogs";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BASE_URL } from "@/config/accessEnv";
-import Post from "@/models/Post";
-import connectDB from "@/config/mongodb";
-import { getPostBySlug } from "@/actions/postApi";
+import { getPostBySlugFromDB } from "@/actions/get-post";
 
 
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  await connectDB();
-  const post = await Post.findOne({ slug }).select("postTitle seoTitle shortDescription seoDescription seoKeyword image").lean();
-
+export async function generateMetadata(
+  { params }: { params:  Promise<{ slug: string }>  }
+): Promise<Metadata> {
+  const { slug } = await params;;
+  const post = await getPostBySlugFromDB(slug);
   if (!post) return {};
 
   const img = post.image?.featuresImage;
@@ -28,13 +26,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-const BlogDetailsPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
-
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+const BlogDetailsPage = async (
+  { params }: { params: Promise<{ slug: string }> }
+) => {
+  const { slug } = await params; 
+  const post = await getPostBySlugFromDB(slug);
   if (!post) notFound();
 
-  return <BlogView blog={{...post?.payload?.post}} />;
+  return <BlogView blog={post} />;
 };
 
 export default BlogDetailsPage;
