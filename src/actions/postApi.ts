@@ -114,4 +114,12 @@ export const getSinglePostBySlugForDetailsPage = async (slug: string) => {
   return await res.json();
 };
 
+export const getPostBySlug = async (slug: string) => {
+ 
+  const res = await fetch(`${BASE_URL}/api/posts/slug/${slug}`, {
+    next: { revalidate: 60 }
+  });
+  return await res.json();
+};
+
 

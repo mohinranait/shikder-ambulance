@@ -1,7 +1,7 @@
 
 
 export type TPostFormData = {
-    _id: string; 
+    _id?: string; 
     author?:  string; 
     postTitle: string;
     postName: string;

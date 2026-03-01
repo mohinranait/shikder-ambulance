@@ -12,6 +12,11 @@ export async function GET(
   try {
     const {slug} = await params;
 
+    if (slug === "favicon.ico") {
+      return NextResponse.json({ success: false }, { status: 404 });
+    }
+    
+
     await connectDB();
 
     const post = await Post.findOne({ slug }).select("-__v -author");
