@@ -4,16 +4,16 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(
   req: NextRequest, 
-  { params }: { params: Promise<{ userId: string }> }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     await connectDB();
 
-    const { userId } = await params; 
+    const { id } = await params; 
     const body = await req.json();
 
-    if (userId !== 'not-auth') {
-      body.autor = userId;
+    if (id !== 'not-auth') {
+      body.autor = id;
     }
 
     const comment = await Comment.create(body);
