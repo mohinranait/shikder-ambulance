@@ -16,28 +16,28 @@ export default function AboutPage() {
       name: "Shahadat Shikder",
       role: "Director",
       experience: "10 years",
-      image: "/default.png?height=300&width=300",
+      image: "/default.png",
       specialization: "Customer Support: 24/7",
     },
     {
       name: "Musa Shikder Mahir",
       role: "Director",
       experience: "10 years",
-      image: "/default.png?height=300&width=300",
+      image: "/default.png",
       specialization: "Software Engineer",
     },
     {
       name: "Mohin Rana",
       role: "Developer",
       experience: "10 years",
-      image: "/default.png?height=300&width=300",
+      image: "/default.png",
       specialization: "Software Developer",
     },
     {
       name: "Kamrul Islam",
       role: "Manager",
       experience: "8 years",
-      image: "/default.png?height=300&width=300",
+      image: "/default.png",
       specialization: "Digital Marketing Manager",
     },
   ];
@@ -145,12 +145,13 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative h-[400px] rounded-2xl overflow-hidden">
                 <Image
                   src="/about-us.jpg"
                   alt="About Us: Shikder Ambulance Service"
-                  fill
-                  className="object-cover"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>
@@ -176,7 +177,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow"
+                className="text-center border-0 shadow-md  transition-shadow"
               >
                 <CardContent className="p-8">
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mx-auto mb-6">
@@ -214,14 +215,15 @@ export default function AboutPage() {
             {team.map((member, index) => (
               <Card
                 key={index}
-                className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow"
+                className="overflow-hidden border-0 shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="relative h-64">
                   <Image
-                    src={member.image || "/default.png"}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
+                    src={member?.image || "/default.png"}
+                    alt={member?.name}
+                      width={300}
+                      height={300}
+                    className="object-cover w-full"
                   />
                 </div>
                 <CardContent className="p-6">

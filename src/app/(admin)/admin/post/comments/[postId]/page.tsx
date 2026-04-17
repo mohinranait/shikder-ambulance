@@ -164,7 +164,7 @@ export default function PostComment() {
         return pages;
     };
 
-    console.log({ post });
+    // console.log({ post });
 
 
     return (

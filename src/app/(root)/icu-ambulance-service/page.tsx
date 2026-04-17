@@ -190,7 +190,7 @@ export default function IcuAmbulancePage() {
             </div>
 
             <div className="space-y-6 ">
-              <div className="bg-white relative rounded-2xl shadow-2xl p-6">
+              <div className="bg-white relative rounded-2xl sha p-6">
                 <Image
                   src="/Icu-ambulance-service-01.jpg"
                   alt="ICU Ambulance Service - Professional emergency medical transport Service"

@@ -1,7 +1,5 @@
 "use client";
 
-import { Navbar } from "@/components/admin/shared/Navbar";
-import BlogView from "@/components/pages/blogs/view-blogs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Main } from "@/components/ui/main";
@@ -57,12 +55,12 @@ const QuillEditor = dynamic(() => import("@/components/shared/QuillEditor"), {
 });
 
 const CreateBlogsPost = () => {
-  const [getLoading, setGetLoading] = useState(false)
+  const [getLoading, setGetLoading] = useState(false);
   const path = usePathname();
   const router = useRouter();
   const params = useSearchParams();
   const urlSlug = params?.get("link");
-  const [isView, setIsView] = useState<boolean>(false);
+  // const [isView, setIsView] = useState<boolean>(false);
   const [updatePost, setUpdatePost] = useState<TPostFormData | null>();
   const [isEditSlug, setIsEditSlug] = useState<boolean>(false);
   const [content, setContent] = useState<string>("");
@@ -71,7 +69,6 @@ const CreateBlogsPost = () => {
   const [formLoading, setFormLoading] = useState<boolean>(false);
   const [date, setDate] = useState<Date>(new Date());
   const [time, setTime] = useState<string>("00:00");
-
 
   const combineDateTime = (date: Date, time: string): Date => {
     const dateObj = new Date(date);
@@ -82,11 +79,13 @@ const CreateBlogsPost = () => {
     dateObj.setMilliseconds(0);
     return dateObj;
   };
-  const [slugStatus, setSlugStatus] = useState<"checking" | "available" | "exists" | null>(null);
+  const [slugStatus, setSlugStatus] = useState<
+    "checking" | "available" | "exists" | null
+  >(null);
 
   const [form, setForm] = useState<TPostFormData>({
     postTitle: "",
-    postName:'',
+    postName: "",
     author: "",
     slug: "",
     shortDescription: "",
@@ -120,6 +119,7 @@ const CreateBlogsPost = () => {
       toast.error("Add title is required");
       return;
     }
+     const formetContent = content.replace(/&nbsp;/g, " ").replace(/\s+/g, " ");
     try {
       setFormLoading(true);
       if (params?.get("link")) {
@@ -127,7 +127,7 @@ const CreateBlogsPost = () => {
         const data = await updatePostById({
           data: {
             ...form,
-            content,
+            content:formetContent,
             seoKeyword: tags,
           },
           id: updatePost?._id,
@@ -141,7 +141,7 @@ const CreateBlogsPost = () => {
       } else {
         const data = await createPost({
           ...form,
-          content,
+          content:formetContent,
           seoKeyword: tags,
         });
         if (data?.success) {
@@ -161,7 +161,7 @@ const CreateBlogsPost = () => {
   useEffect(() => {
     if (urlSlug) {
       (async () => {
-        setGetLoading(true)
+        setGetLoading(true);
         try {
           const data = await getSinglePostBySlug(urlSlug);
 
@@ -175,7 +175,7 @@ const CreateBlogsPost = () => {
         } catch (error) {
           console.log(error);
         }
-        setGetLoading(false)
+        setGetLoading(false);
       })();
     }
   }, [urlSlug]);
@@ -186,7 +186,6 @@ const CreateBlogsPost = () => {
     { value: "right", label: "Right Sidebar", icon: Sidebar },
     { value: "both", label: "Dual Sidebar", icon: Layout },
   ];
-
 
   // Check existing URL for a single post
   async function checkSlugAvailability(slug: string) {
@@ -208,7 +207,7 @@ const CreateBlogsPost = () => {
 
     if (updatePost && updatePost.slug === isSlug) {
       setSlugStatus(null);
-      return; 
+      return;
     }
 
     const timeout = setTimeout(async () => {
@@ -224,15 +223,12 @@ const CreateBlogsPost = () => {
     return () => clearTimeout(timeout);
   }, [isSlug, updatePost]);
 
-
-
   if (getLoading) {
-    return <PostFormSkeleton />
+    return <PostFormSkeleton />;
   }
 
   return (
     <>
-      <Navbar fixed />
       <Main>
         <div className="min-h-screen ">
           <div className="max-w-7xl mx-auto">
@@ -250,7 +246,7 @@ const CreateBlogsPost = () => {
                   </p>
                 </div>
                 <div className="flex gap-3">
-                  <Button
+                  {/* <Button
                     type="button"
                     variant="outline"
                     className="bg-white hover:bg-gray-50 border-gray-200"
@@ -258,7 +254,7 @@ const CreateBlogsPost = () => {
                   >
                     <Eye className="w-4 h-4 mr-2" />
                     Preview
-                  </Button>
+                  </Button> */}
                   <Button
                     type="submit"
                     form="blog-form"
@@ -303,7 +299,7 @@ const CreateBlogsPost = () => {
                 {/* Main Content */}
                 <div className="xl:col-span-2 space-y-6">
                   {/* Title and Slug */}
-                  <div className="shadow-sm border-0 p-0 bg-white/80 backdrop-blur-sm">
+                  <div className="">
                     <div className="pb-4 p-0">
                       <p className="text-lg font-semibold text-gray-900">
                         Post Details
@@ -330,9 +326,9 @@ const CreateBlogsPost = () => {
                                 ?.split(" ")
                                 .join("-")
                                 .toLowerCase();
-                                if(!form?.slug){
-                                  setIsSlug(sl);
-                                }
+                              if (!form?.slug) {
+                                setIsSlug(sl);
+                              }
                               return update;
                             });
                           }}
@@ -348,23 +344,24 @@ const CreateBlogsPost = () => {
                               name="slug"
                               placeholder="Enter slug"
                               className="border-0 h-8 bg-transparent  focus:ring-0"
-                              value={form?.slug?.split(" ")
-                                .join("-")
-                                .toLowerCase() || ""}
-                              onChange={(e) =>
-                              {
+                              value={
+                                form?.slug
+                                  ?.split(" ")
+                                  .join("-")
+                                  .toLowerCase() || ""
+                              }
+                              onChange={(e) => {
                                 setForm((prev) => ({
                                   ...prev,
                                   slug: e.target.value,
-                                }))
+                                }));
 
-                                 const sl = e.target.value
-                                ?.split(" ")
-                                .join("-")
-                                .toLowerCase();
+                                const sl = e.target.value
+                                  ?.split(" ")
+                                  .join("-")
+                                  .toLowerCase();
                                 setIsSlug(sl);
-                              }
-                              }
+                              }}
                             />
                             <Button
                               type="button"
@@ -406,25 +403,27 @@ const CreateBlogsPost = () => {
                         )}
                       </div>
                     </div>
-                      {slugStatus === "checking" && (
-                        <span className="text-sm text-gray-500">Checking...</span>
-                      )}
-                      {slugStatus === "available" && (
-                        <span className="text-sm text-green-600 font-medium mt-1 flex items-center gap-2"><CheckCircle className="size-4" /> Slug available</span>
-                      )}
-                      {slugStatus === "exists" && (
-                        <span className="text-sm text-red-600 font-medium mt-1 flex items-center gap-2"><X className="size-4" /> Slug already exists</span>
-                      )}
+                    {slugStatus === "checking" && (
+                      <span className="text-sm text-gray-500">Checking...</span>
+                    )}
+                    {slugStatus === "available" && (
+                      <span className="text-sm text-green-600 font-medium mt-1 flex items-center gap-2">
+                        <CheckCircle className="size-4" /> Slug available
+                      </span>
+                    )}
+                    {slugStatus === "exists" && (
+                      <span className="text-sm text-red-600 font-medium mt-1 flex items-center gap-2">
+                        <X className="size-4" /> Slug already exists
+                      </span>
+                    )}
                   </div>
 
                   {/* SEO Settings */}
-                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
-
+                  <div className=" backdrop-blur-sm">
                     <div className="space-y-4 p-0">
-
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Post Title 
+                          Post Title
                         </label>
                         <Input
                           type="text"
@@ -440,7 +439,7 @@ const CreateBlogsPost = () => {
                         />
                       </div>
 
-                       <div>
+                      <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Short Description
                         </label>
@@ -457,18 +456,13 @@ const CreateBlogsPost = () => {
                           }
                         />
                       </div>
-
-                     
-
-
                     </div>
                   </div>
 
                   {/* Content Editor */}
-                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
-
+                  <div className=" backdrop-blur-sm">
                     <div className="p-0">
-                      <div className="border border-gray-200 rounded-lg overflow-hidden">
+                      <div className="border border-gray-200 rounded-lg ">
                         <QuillEditor
                           editorValue={content || ""}
                           setEditorValue={setContent}
@@ -477,58 +471,56 @@ const CreateBlogsPost = () => {
                     </div>
                   </div>
 
-                   <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          SEO Title
-                        </label>
-                        <Input
-                          type="text"
-                          placeholder="Write SEO title..."
-                          className="border-gray-200 focus:border-blue-500"
-                          value={form?.seoTitle || ""}
-                          onChange={(e) =>
-                            setForm((prev) => ({
-                              ...prev,
-                              seoTitle: e.target.value,
-                            }))
-                          }
-                        />
-                      </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      SEO Title
+                    </label>
+                    <Input
+                      type="text"
+                      placeholder="Write SEO title..."
+                      className="border-gray-200 focus:border-blue-500"
+                      value={form?.seoTitle || ""}
+                      onChange={(e) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          seoTitle: e.target.value,
+                        }))
+                      }
+                    />
+                  </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Meta Description
-                        </label>
-                        <textarea
-                          rows={3}
-                          placeholder="Write a compelling meta description..."
-                          className="w-full p-3 border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 resize-none"
-                          value={form?.seoDescription}
-                          onChange={(e) =>
-                            setForm((prev) => ({
-                              ...prev,
-                              seoDescription: e?.target?.value,
-                            }))
-                          }
-                        />
-                      </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Meta Description
+                    </label>
+                    <textarea
+                      rows={3}
+                      placeholder="Write a compelling meta description..."
+                      className="w-full p-3 border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 resize-none"
+                      value={form?.seoDescription}
+                      onChange={(e) =>
+                        setForm((prev) => ({
+                          ...prev,
+                          seoDescription: e?.target?.value,
+                        }))
+                      }
+                    />
+                  </div>
 
-
-                   <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Tags: Keywords
-                      </label>
-                      <TagsInput
-                        value={tags}
-                        onChange={setTags}
-                        name="tags"
-                        placeHolder="Input Keywords here..."
-                      />
-                    </div>
-
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Tags: Keywords
+                    </label>
+                    <TagsInput
+                      value={tags}
+                      onChange={setTags}
+                      name="tags"
+                      placeHolder="Input Keywords here..."
+                    />
+                  </div>
 
                   {/* Publish Settings */}
-                  <div className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+                  <div className="backdrop-blur-sm">
                     <div className="pb-4 p-0">
                       <div className="flex items-center gap-2 text-lg font-semibold text-gray-900">
                         <Calendar className="w-5 h-5" />
@@ -567,7 +559,7 @@ const CreateBlogsPost = () => {
                 {/* Sidebar */}
                 <div className="space-y-6">
                   {/* Layout Settings */}
-                  <Card className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+                  <Card className=" backdrop-blur-sm">
                     <CardHeader className="pb-4">
                       <CardTitle className="flex items-center gap-2 text-lg font-semibold text-gray-900">
                         <Layout className="w-5 h-5" />
@@ -601,10 +593,11 @@ const CreateBlogsPost = () => {
                               }
                             />
                             <div
-                              className={`w-4 h-4 rounded-full border-2 transition-colors ${form?.layouts?.isSidebar === option.value
-                                ? "border-blue-500 bg-blue-500"
-                                : "border-gray-300"
-                                }`}
+                              className={`w-4 h-4 rounded-full border-2 transition-colors ${
+                                form?.layouts?.isSidebar === option.value
+                                  ? "border-blue-500 bg-blue-500"
+                                  : "border-gray-300"
+                              }`}
                             >
                               {form?.layouts?.isSidebar === option.value && (
                                 <div className="w-2 h-2 bg-white rounded-full m-0.5" />
@@ -621,7 +614,7 @@ const CreateBlogsPost = () => {
                   </Card>
 
                   {/* Post Settings */}
-                  <Card className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+                  <Card className=" backdrop-blur-sm">
                     <CardHeader className="pb-4">
                       <CardTitle className="flex items-center gap-2 text-lg font-semibold text-gray-900">
                         <Settings className="w-5 h-5" />
@@ -659,10 +652,11 @@ const CreateBlogsPost = () => {
                                 }
                               />
                               <div
-                                className={`w-4 h-4 rounded-full border-2 transition-colors ${form?.layouts?.banner === option.value
-                                  ? "border-blue-500 bg-blue-500"
-                                  : "border-gray-300"
-                                  }`}
+                                className={`w-4 h-4 rounded-full border-2 transition-colors ${
+                                  form?.layouts?.banner === option.value
+                                    ? "border-blue-500 bg-blue-500"
+                                    : "border-gray-300"
+                                }`}
                               >
                                 {form?.layouts?.banner === option.value && (
                                   <div className="w-2 h-2 bg-white rounded-full m-0.5" />
@@ -763,7 +757,7 @@ const CreateBlogsPost = () => {
                   </Card>
 
                   {/* Featured Image */}
-                  <Card className="shadow-sm border-0 bg-white/80 backdrop-blur-sm">
+                  <Card className=" backdrop-blur-sm">
                     <CardHeader className="pb-4">
                       <CardTitle className="flex items-center gap-2 text-lg font-semibold text-gray-900">
                         <ImageIcon className="w-5 h-5" />
@@ -789,7 +783,7 @@ const CreateBlogsPost = () => {
               </div>
             </form>
 
-            {isView && (
+            {/* {isView && (
               <div className="fixed w-screen bg-white bottom-0 top-0 left-0 overflow-y-auto right-0 min-h-screen  z-[9999]">
                 <span
                   onClick={() => setIsView(false)}
@@ -801,7 +795,7 @@ const CreateBlogsPost = () => {
                   <BlogView blog={{ ...form, content }} />
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </Main>

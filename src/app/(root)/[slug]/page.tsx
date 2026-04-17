@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { BASE_URL } from "@/config/accessEnv";
 import { getPostBySlugFromDB } from "@/actions/get-post";
 import { getAllCommentByPostId } from "@/actions/commentApi";
+import './blog.css'
 
 
 

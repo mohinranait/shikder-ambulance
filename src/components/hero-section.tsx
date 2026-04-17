@@ -90,11 +90,11 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-premium">
               <Image
-                src="/hiace.png?height=500&width=600"
+                src="/hiace.png"
                 alt="Modern ambulance vehicle"
-                fill
+                width={600}
+                height={500}
                 className="object-cover"
-                priority
               />
             </div>
             {/* Floating card */}

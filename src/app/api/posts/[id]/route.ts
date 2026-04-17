@@ -52,7 +52,7 @@ export async function PATCH(
 
     const { id: postId } = await params;
 
-    const userId = decoded?.id;
+    const userId = decoded?.id;  
 
     // Check if user exists
     const authUser = await User.findById(userId).select("email");
@@ -104,7 +104,7 @@ export async function PATCH(
     // Update post
     const updatedPost = await Post.findByIdAndUpdate(
       postId,
-      { ...body, readTime },
+      { ...body, author: userId , readTime },
       { runValidators: true, new: true }
     );
 

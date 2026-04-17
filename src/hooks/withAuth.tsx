@@ -14,11 +14,11 @@ const withAuth = <P extends object>(
 
     useEffect(() => {
       if (!isLoading && !user) {
-        console.log("User acy");
+        // console.log("User acy");
 
         router.replace(`/login?redirect=${encodeURIComponent(pathname)}`);
       } else {
-        console.log("User ni");
+        // console.log("User ni");
       }
     }, [isLoading, user, pathname, router]);
 
