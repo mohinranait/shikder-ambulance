@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useAuth } from "@/providers/AuthProvider";
-import { TPostFormData } from "@/types/post.types";
 
 import Image from "next/image";
 import React, { FC } from "react";
@@ -47,7 +45,6 @@ type Props = {
 };
 
 const CommentForm: FC<Props> = ({ blogId }) => {
-  const { user } = useAuth();
 
   const {
     register,
@@ -58,7 +55,7 @@ const CommentForm: FC<Props> = ({ blogId }) => {
   } = useForm<CommentFormData>({
     resolver: zodResolver(commentSchema),
     defaultValues: {
-      name: user?.name?.firstName || "",
+      name:  "",
       content: "",
       star: 5,
       postId: blogId,
@@ -72,12 +69,12 @@ const CommentForm: FC<Props> = ({ blogId }) => {
   // Handle form submission
   const onSubmit = async (data: CommentFormData) => {
     try {
-      const commentId = user?._id ? user?._id : "not-auth";
+      const commentId =  "not-auth";
       const response = await createComment({ data, userId: commentId });
 
       if (response?.success) {
         reset({
-          name: user?.name?.firstName || "",
+          name: "",
           content: "",
           star: 5,
           postId: blogId,

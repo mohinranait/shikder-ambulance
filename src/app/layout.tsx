@@ -19,9 +19,7 @@ export const metadata: Metadata = {
   creator: "Shikder Ambulance",
   publisher: "Shikder Ambulance",
   metadataBase: new URL("https://shikderambulance.com"),
-  alternates: {
-    canonical: "https://shikderambulance.com",
-  },
+
   openGraph: {
     title: "Shikder Ambulance Service in Dhaka | Best Reliable 24/7",
     description:
@@ -77,7 +75,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="author" content="Shikder Ambulance" />
         <meta name="rating" content="general" />
-        <link rel="canonical" href="https://shikderambulance.com" />
         <link
           rel="icon"
           href="/favicon.ico"
@@ -103,13 +100,13 @@ export default function RootLayout({
       </head>
 
       <body className="font-sans antialiased bg-white text-gray-900">
-        <AuthProvider>
-          <ImageProvider>
-            {children}
-            <MediaModal />
-            <Toaster />
-          </ImageProvider>
-        </AuthProvider>
+        {/* <AuthProvider> */}
+        <ImageProvider>
+          {children}
+          <MediaModal />
+          <Toaster />
+        </ImageProvider>
+        {/* </AuthProvider> */}
       </body>
     </html>
   );

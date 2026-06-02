@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   keywords:
     "AC ambulance, air conditioned ambulance, best Ambulance, top ambulance company, Dhaka city Ambulance, Near Ambulance, free Ambulance in Dhaka city. ambulance service Dhaka, emergency medical service, temperature controlled ambulance, patient transport Bangladesh",
   authors: [{ name: "Shikder Ambulance" }],
+  alternates: {
+    canonical: "https://shikderambulance.com/ac-ambulance-service",
+  },
   openGraph: {
     title: "Best AC Ambulance Service in Dhaka by Shikder Ambulance 24/7",
     description:

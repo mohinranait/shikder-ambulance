@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Link from "next/link";
 import { TPostFormData } from "@/types/post.types";
 import MainBody from "./main-body";
-import { Phone } from "lucide-react";
+import { HelpCircle, Phone } from "lucide-react";
 import RightSidebar from "./right-sidebar";
 import LeftSidebar from "./left-sidebar";
 import CommentSection from "./CommentSection";
@@ -15,7 +15,7 @@ type Props = {
   commentsPromise?: Promise<any>;
 };
 
-const BlogView: FC<Props> = ({ blog,commentsPromise }) => {
+const BlogView: FC<Props> = ({ blog, commentsPromise }) => {
   const bgImage = blog?.layouts?.banner ? blog?.image?.featuresImage ?? "" : "";
   return (
     <main className="mb-20">
@@ -32,7 +32,7 @@ const BlogView: FC<Props> = ({ blog,commentsPromise }) => {
               <p
                 className={`md:text-lg text-center text-muted-foreground mx-auto max-w-2xl`}
               >
-                { blog?.shortDescription || blog?.seoDescription}
+                {blog?.shortDescription || blog?.seoDescription}
               </p>
               <div className="flex justify-center">
                 <Link href={"tel:01710060020"}>
@@ -72,13 +72,27 @@ const BlogView: FC<Props> = ({ blog,commentsPromise }) => {
                 : "lg:col-span-2"
               }`}
           >
-            <MainBody 
+            <MainBody
               postTitle={blog?.postTitle || ""}
               image={blog?.image?.featuresImage || ""}
-              content={blog?.content || ""} 
+              content={blog?.content || ""}
             />
             {blog?.layouts?.comments && <CommentSection commentsPromise={commentsPromise} blogId={blog?._id?.toString()} />}
-            <FaqComponent />
+            <div className="my-16">
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg ">
+                  <HelpCircle className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-6 leading-tight">
+                  Frequently Asked Questions
+                </h2>
+                <p className=" text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                  Quick answers to common questions about our emergency patient
+                  transport services.
+                </p>
+              </div>
+              <FaqComponent />
+            </div>
           </div>
 
           {/* Right Sidebar */}

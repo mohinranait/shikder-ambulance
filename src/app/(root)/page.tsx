@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     "Shikder Ambulance Services in Dhaka. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination.",
   keywords:
     "ambulance service, best ambulance, near ambulance service, online ambulance, best ambulance near me, top ambulance, freezing ambulance near me, fast ambulance, 24 Hours Ambulance, Dhaka Ambulance service, dead body carrier ambulance, emergency ambulances, emergency medical service, Dhaka ambulance, Bangladesh ambulance, AC ambulance, non-ac ambulance, life support ambulance, freezing ambulance, ICU ambulance",
+  alternates: {
+    canonical: "https://shikderambulance.com",
+  },
   openGraph: {
     title: "Shikder Ambulance Service | Best Reliable 24/7",
     description: "Shikder Ambulance Services in Dhaka. Looking for a reliable Ambulance? You have come to the right place. We guarantee your safe and comfortable arrival at your destination",
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
 };
 
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <>
       <HeroSection />

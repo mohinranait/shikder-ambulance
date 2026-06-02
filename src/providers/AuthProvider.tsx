@@ -71,6 +71,7 @@ const AuthProvider: FC<Props> = ({ children }) => {
       value={{ user, setUser, isLoading, setIsLoading, signOut }}
     >
       {children}
+      {/* {isLoading && <FrontendPageLoader />} */}
     </AuthContext.Provider>
   );
 };

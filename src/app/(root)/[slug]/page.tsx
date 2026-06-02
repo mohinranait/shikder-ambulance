@@ -9,7 +9,7 @@ import './blog.css'
 
 
 export async function generateMetadata(
-  { params }: { params:  Promise<{ slug: string }>  }
+  { params }: { params: Promise<{ slug: string }> }
 ): Promise<Metadata> {
   const { slug } = await params;;
   const post = await getPostBySlugFromDB(slug);
@@ -18,9 +18,12 @@ export async function generateMetadata(
   const img = post.image?.featuresImage;
 
   return {
-    title: `${post.seoTitle || post.postTitle} | Shikder Ambulance`,
+    title: `${post.seoTitle || post.postTitle}`,
     description: post.seoDescription || post.shortDescription,
     keywords: post.seoKeyword,
+    alternates: {
+      canonical: `https://shikderambulance.com/${post.slug}`,
+    },
     openGraph: {
       url: `${BASE_URL}/${post.slug}`,
       images: img ? [img] : [],
@@ -31,12 +34,12 @@ export async function generateMetadata(
 const BlogDetailsPage = async (
   { params }: { params: Promise<{ slug: string }> }
 ) => {
-  const { slug } = await params; 
-   const postPromise = getPostBySlugFromDB(slug);
+  const { slug } = await params;
+  const postPromise = getPostBySlugFromDB(slug);
   const post = await postPromise;
   if (!post) return notFound();
 
-  const commentsPromise = getAllCommentByPostId(post?._id!.toString() );
+  const commentsPromise = getAllCommentByPostId(post?._id!.toString());
 
   return <BlogView blog={post} commentsPromise={commentsPromise} />;
 };
