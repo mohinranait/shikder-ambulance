@@ -1,7 +1,6 @@
 'use client'
 import { loginUser } from '@/actions/userApi';
-import { useSearchParams } from 'next/navigation';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,7 +24,7 @@ const LoginForm = ({
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   // const redirectPath = searchParams.get("redirect") || "/";
 
   // If user is already login
