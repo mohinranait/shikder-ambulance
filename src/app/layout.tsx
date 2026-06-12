@@ -67,10 +67,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="UTF-8" />
-        <meta
+        {/* <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5"
-        />
+        /> */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="author" content="Shikder Ambulance" />

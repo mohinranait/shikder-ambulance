@@ -10,8 +10,9 @@ import {
   Clock,
 } from "lucide-react";
 import ContactForm from "@/components/pages/contact/contact-form";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata:Metadata = {
   title: "Contact Us: Shikder Ambulance Service",
   description:
     "Shikder Ambulance Service in Bangladesh. We provide different types of Ambulances. The Largest and Trusted Ambulacne Company in Bangladesh. When you need Ambulance the Contact Us.",

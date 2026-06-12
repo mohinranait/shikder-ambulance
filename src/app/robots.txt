@@ -1,4 +1,4 @@
-robots.txt of Shikder Ambulance
+# robots.txt of Shikder Ambulance
 
 User-agent: *
 Allow: /
