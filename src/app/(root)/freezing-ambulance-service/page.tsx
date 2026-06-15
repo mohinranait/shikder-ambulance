@@ -16,7 +16,7 @@ import {
 import Image from "next/image";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
+  title: "Freezing Ambulance Service in Dhaka | 24/7 Dead Body Transport",
   description:
     "Freezing Ambulance Service in Dhaka. It is a dead body carrier freezing ambulance in Bangladesh. 24/7 dead body carrier with advanced freezing technology. Single & double cabin freezer ambulance is available in the all districts of Bangladesh.",
   keywords:
@@ -128,7 +128,7 @@ const FreezingAmbulance = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Latest Dyna Freezing Ambulance Service in Bangladesh
+              Best Freezing Ambulance Service for Dead Body Transport
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Professional dead body transportation services with advanced
@@ -139,7 +139,7 @@ const FreezingAmbulance = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">
-                Freezing Ambulance Service in Dhaka
+                Freezing Ambulance Service
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 We provide freezer Ambulance service in Dhaka and all districts
@@ -309,10 +309,10 @@ const FreezingAmbulance = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Best Freezing Ambulance Service in Dhaka, 24/7 Dead Body Transport
+              Freezing Ambulance Service in Dhaka - Dead Body Transport
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Fast & Reliable Body Freezer Ambulance.
+              Fast & Reliable Dead Body Freezer Van
             </p>
           </div>
 
@@ -358,7 +358,370 @@ const FreezingAmbulance = () => {
         </div>
       </section>
 
-      {/* Why Our Ambulance Service */}
+      {/* freezing Content Adding Section Part-01 */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Reliable Freezing Ambulance Service for Long Distance Transport
+            </h2>
+            <p className="text-center font-semibold">
+              <b>Safe & Respectful Transport</b>
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Best Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Get the Best Freezing Ambulance Service from Shikder Ambulance with clean vehicles, trained drivers, respectful handling, quick response, and safe dead body transport anytime.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance provides Freezing Ambulance Service in Dhaka for respectful dead body transport, hospital pickup, home transfer, morgue support, and temperature-controlled carrying across Dhaka.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance Service Near Me
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for Freezing Ambulance Service Near Me? Shikder Ambulance offers fast booking, nearby pickup, temperature-controlled transport, and respectful dead body carrying support 24/7.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                24/7 Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our 24/7 Freezing Ambulance Service is ready day and night for hospital pickup, home transfer, morgue transport, village carrying, and emergency dead body movement.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Emergency Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+               Emergency Freezing Ambulance Service from Shikder Ambulance helps families during urgent moments with quick response, respectful support, proper temperature control, and safe deceased transport.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezer Ambulance Service for dead body Transfer
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance provides reliable Freezer Ambulance Service for preserving deceased bodies during transport from hospitals, homes, morgues, airports, or long-distance destinations with dignity.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance for Long Distance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Freezing Ambulance for Long Distance transport helps preserve deceased bodies during inter-district travel with temperature control, respectful handling, experienced drivers, and 24/7 booking.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance for Airport Pickup
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Freezing Ambulance for Airport Pickup supports dead body receiving, airport transfer, temperature-controlled carrying, respectful handling, and safe transport to home or village.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance for Village Transfer 
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Freezing Ambulance for Village Transfer helps families move deceased persons from Dhaka to villages safely with proper freezing support, careful handling, and timely service.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Private Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Private Freezing Ambulance Service provides dedicated deceased transport with clean vehicles, respectful team support, temperature control, hospital pickup, and long-distance carrying service.
+              </p>                                          
+              <h3 className="text-2xl font-bold text-gray-900">
+                Private Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Private Freezing Ambulance Service provides dedicated deceased transport with clean vehicles, respectful team support, temperature control, hospital pickup, and long-distance carrying service.
+              </p>                                          
+              <h3 className="text-2xl font-bold text-gray-900">
+                Reliable Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Reliable Freezing Ambulance Service from Shikder Ambulance ensures timely arrival, respectful handling, temperature-controlled transport, clean vehicles, experienced drivers, and 24/7 support.
+              </p>                                          
+              <h3 className="text-2xl font-bold text-gray-900">
+                Fast Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Fast Freezing Ambulance Service is available for urgent deceased transport, hospital pickup, home transfer, morgue carrying, airport support, and long-distance movement anytime.
+              </p>                         
+              <h3 className="text-2xl font-bold text-gray-900">
+                24 Hours Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                24 Hours Freezing Ambulance Service supports families anytime with emergency booking, temperature-controlled deceased transport, respectful handling, hospital pickup, and long-distance carrying service.
+              </p>
+              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Dead Body Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Dead Body Freezing Ambulance Service helps preserve the deceased body with temperature-controlled support while moving from hospital, home, morgue, airport, or distant locations safely.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Dead Body Transport freezing Ambulance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance offers Dead Body Transport Ambulance service with respectful handling, careful carrying, local transfer, long-distance support, and 24/7 emergency booking assistance.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Affordable Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Affordable Freezing Ambulance Service helps families receive respectful dead body transport, temperature-controlled support, hospital pickup, and dependable service at reasonable cost anytime.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Dead Body Carrying Ambulance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Dead Body Carrying Ambulance service is available for safe and respectful deceased transport from hospitals, homes, morgues, villages, airports, and nearby areas anytime.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Dead Body Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Dead Body Ambulance Service from Shikder Ambulance provides dignified transport, freezing support, hospital pickup, home transfer, morgue transport, and long-distance carrying assistance.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Mortuary Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Mortuary Ambulance Service supports families with respectful deceased body transport, morgue pickup, hospital transfer, freezing ambulance support, and careful handling during difficult times.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Corpse Transport Ambulance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Corpse Transport Ambulance service provides safe, respectful, and temperature-controlled deceased transport from hospital, home, morgue, airport, village, or long-distance destination anytime.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Temperature Controlled Ambulance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Temperature Controlled Ambulance service keeps the deceased body preserved during transport with proper freezing support, clean vehicle, respectful handling, and 24/7 booking availability.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Temperature Controlled Dead Body Transport
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Temperature Controlled Dead Body Transport helps families move deceased persons safely with freezing ambulance support, hospital pickup, morgue transfer, home carrying, and long-distance service.
+              </p>
+                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance for Dead Body
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Freezing Ambulance for Dead Body transport provides temperature-controlled preservation, respectful handling, hospital pickup, home transfer, morgue carrying, and safe long-distance movement support.
+              </p>
+                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance for Hospital Pickup
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Freezing Ambulance for Hospital Pickup helps families collect deceased persons from hospitals with respectful handling, quick response, temperature control, and safe transport support anytime.
+              </p>
+                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance for Home Pickup 
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Freezing Ambulance for Home Pickup is available for respectful deceased body carrying from residences to village, mosque, morgue, graveyard, or long-distance destination safely.
+              </p>
+                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                24 Hours Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                24 Hours Freezing Ambulance Service supports families anytime with emergency booking, temperature-controlled deceased transport, respectful handling, hospital pickup, and long-distance carrying service.
+              </p>
+               <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance Service for Dead Body Transport
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Freezing Ambulance Service for Dead Body Transport provides respectful, temperature-controlled carrying from hospitals, homes, morgues, airports, and villages with 24/7 support.
+              </p>
+              
+               <h3 className="text-2xl font-bold text-gray-900">
+                Freezing Ambulance Service Number
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Call <b>Freezing Ambulance Service Number 01713-260042</b> for urgent dead body transport, hospital pickup, home transfer, morgue carrying, and temperature-controlled ambulance support.
+              </p>              
+              <p><b>AC Ambulance Service Number: 01713260042</b></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            {/* Covered Area Section Part-01 */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Covered Area of Dhaka Freezing Ambulance
+            </h2>
+            <p className="text-center font-semibold">
+              <b> Fast Freezing Ambulance Support with Safe & Respectful</b>
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl text-gray-900">
+                Mogbazar Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Mogbazar Freezing Ambulance Service offers 24/7 dead body transport, hospital pickup, home transfer, and temperature-controlled carrying support.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                Malibagh Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Malibagh Freezing Ambulance Service provides respectful deceased body transport with proper freezing support, clean vehicles, and quick response.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                Dhanmondi Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance provides Dhanmondi Freezing Ambulance Service for hospital pickup, home transfer, morgue transport, and respectful dead body carrying.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                Mirpur Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Get Mirpur Freezing Ambulance Service with temperature-controlled support, fast booking, careful handling, and 24/7 dead body transport service.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                Mohammadpur Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+               Mohammadpur Freezing Ambulance Service is available for hospital pickup, home transfer, morgue transport, and long-distance deceased body carrying.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                Uttara Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance provides Uttara Freezing Ambulance Service for airport pickup, hospital transfer, home pickup, and respectful dead body transport.
+              </p>                            
+              <h3 className="text-2xl text-gray-900">
+                Gulshan Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Gulshan Freezing Ambulance Service offers fast response, clean ambulance, temperature-controlled support, and respectful deceased body transport anytime.
+              </p>                            
+              <h3 className="text-2xl text-gray-900">
+                Banani Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Banani Freezing Ambulance Service is available for dead body transport from hospitals, homes, morgues, and nearby Dhaka areas.
+              </p>                            
+              <h3 className="text-2xl text-gray-900">
+                Badda Freezing Ambulance Service 
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Badda Freezing Ambulance Service provides safe and respectful dead body carrying with 24/7 booking, hospital pickup, and home transfer support.
+              </p>                            
+              <h3 className="text-2xl text-gray-900">
+                Rampura Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Rampura Freezing Ambulance Service supports families with temperature-controlled ambulance, quick response, hospital pickup, and long-distance dead body transport.
+              </p>                                          
+              <h3 className="text-2xl text-gray-900">
+                Banasree Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Banasree Freezing Ambulance Service is available for home pickup, hospital transfer, morgue transport, and village transfer with respectful handling.
+              </p>                                          
+              <h3 className="text-2xl text-gray-900">
+                Khilgaon Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Khilgaon Freezing Ambulance Service provides fast booking, careful transport, temperature-controlled ambulance, and 24/7 dead body carrying support.
+              </p>                                          
+              <h3 className="text-2xl text-gray-900">
+                Basabo Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Basabo Freezing Ambulance Service helps families move deceased persons safely from hospitals, homes, morgues, and nearby areas.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <h3 className="text-2xl text-gray-900">
+                Jatrabari Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Jatrabari Freezing Ambulance Service provides quick response, temperature-controlled ambulance, respectful handling, and dead body transport support.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                Sayedabad Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Sayedabad Freezing Ambulance Service is available for deceased body transport, hospital pickup, home transfer, and long-distance carrying service.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                Old Dhaka Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Old Dhaka Freezing Ambulance Service covers Wari, Lalbagh, Chawkbazar, Sadarghat, and nearby areas with respectful dead body transport.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                Keraniganj Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Keraniganj Freezing Ambulance Service provides temperature-controlled dead body transport, hospital pickup, home transfer, and village carrying support.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                Savar Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Savar Freezing Ambulance Service is available for long-distance dead body transport, hospital pickup, home transfer, and 24/7 booking support.
+              </p>                            
+              <h3 className="text-2xl text-gray-900">
+                Narayanganj Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Narayanganj Freezing Ambulance Service provides respectful dead body transport from hospitals, homes, morgues, and nearby Dhaka routes.
+              </p>
+                                       
+              <h3 className="text-2xl text-gray-900">
+                Mugda Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Mugda Freezing Ambulance Service is available for hospital pickup, morgue transport, home transfer, and long-distance dead body carrying.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                Tejgaon Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Tejgaon Freezing Ambulance Service is available for hospital pickup, morgue transport, home transfer, and emergency deceased body transport.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                Mohakhali Freezing Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Mohakhali Freezing Ambulance Service supports hospital pickup, home transfer, morgue transport, and long-distance dead body carrying anytime.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Call Now for Freezing Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Need urgent Freezing Ambulance Service in Dhaka? Contact Shikder Ambulance for fast, respectful, and temperature-controlled dead body transport.              
+              </p>
+              <p><b>Emergency Call Now: 01713-260042</b></p> 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Shikder Ambulance Service */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -448,11 +811,10 @@ const FreezingAmbulance = () => {
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Need Emergency Ambulance Service?
+              Need Emergency Freezing Ambulance Service in Dhaka?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Contact us now for immediate assistance. Available 24/7 across
-              Bangladesh.
+              Need urgent Freezing Ambulance Service in Dhaka? Contact Shikder Ambulance now for hospital pickup, home transfer, airport pickup, or long-distance dead body carrying service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -460,14 +822,14 @@ const FreezingAmbulance = () => {
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call: 01627-669222
+                Call Now: 01713-260042
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
               >
-                WhatsApp: 017100-60020
+                WhatsApp Now: 01710060020
               </Button>
             </div>
           </div>

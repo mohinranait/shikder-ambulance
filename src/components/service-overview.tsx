@@ -69,13 +69,12 @@ export function ServiceOverview() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Shikder Ambulance Services 24/7
+            Types of Emergency Ambulance Service
           </h2>
           <p className=" text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive the best emergency Ambulance services in Bangladesh.
-            We provide different types of Ambulances. The best{" "}
+            Shikder Ambulance provides different types of emergency ambulance service for patients and families based on medical needs, distance, and urgency. Comprehensive the best Ambulance services in Bangladesh. The best{" "}
             <a
-              href="https://24ambulance.com/"
+              href="https://shikderambulance.com.bd/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 "

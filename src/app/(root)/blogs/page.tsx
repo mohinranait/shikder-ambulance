@@ -13,7 +13,56 @@ import Link from "next/link";
 import BlogLists from "./components/BlogLists";
 import BlogFeatures from "./components/BlogFeatures";
 import SideBarLists from "./components/AsidePosts";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Shikder Ambulance Blogs | Ambulance Tips & Updates",
+  description:
+    "Read Shikder Ambulance blogs for emergency ambulance tips, patient transport guidance, ICU ambulance information, freezing ambulance updates, and service news in Dhaka.",
+  keywords:
+    "Shikder Ambulance blogs, ambulance service blog, emergency ambulance tips, ambulance service in Dhaka, ICU ambulance service, freezing ambulance service, AC ambulance service, Non-AC ambulance service, patient transport guide, hospital transfer ambulance, dead body transport service, ambulance booking tips, 24/7 ambulance service, Dhaka ambulance service, emergency patient transport",
+  authors: [{ name: "Shikder Ambulance" }],
+  alternates: {
+    canonical: "https://shikderambulance.com/blogs",
+  },
+  openGraph: {
+    title: "Shikder Ambulance Blogs | Ambulance Service Tips & Updates",
+    description:
+      "Read Shikder Ambulance blogs for emergency ambulance tips, patient transport guidance, ICU ambulance information, freezing ambulance updates, and service news in Dhaka.",
+    url: "https://shikderambulance.com/blogs",
+    siteName: "Shikder Ambulance",
+    images: [
+      {
+        url: "/images/Freezing Ambulance Service-shikder-ambulance.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Shikder Ambulance Blogs",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: " Shikder Ambulance Blogs - Ambulance Tips & Updates",
+    description:
+      "Shikder Ambulance Blogs. Emergency Ambulance Service Tips & Updates",
+    images: ["/images/Freezing Ambulance Service-shikder-ambulance.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+};
 
 export default function BlogsPage() {
 
@@ -27,17 +76,14 @@ export default function BlogsPage() {
             <div className="space-y-4">
               <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
                 <Heart className="h-3 w-3 mr-1" />
-                Your trusted Ambulance Service
+                Your trusted partner
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Patient Transport Ambulance Service &{" "}
-                <span className="text-blue-600">Health Care</span> Blog
+                Blogs - {" "}
+                <span className="text-blue-600"> Shikder Ambulance </span> Tips & Updates
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                Welcome to our Patient Transport Ambulance Service and Health
-                Care Blog, your trusted source for expert insights, safety tips,
-                and updates on modern ambulance services. Your trusted blog for
-                safe, reliable emergency medical transport.
+                Read Shikder Ambulance blogs for helpful ambulance tips, emergency service updates, patient transport guidance, ICU ambulance information, and freezing ambulance support. Your trusted blog for safe, reliable transport.
               </p>
             </div>
           </div>
@@ -45,9 +91,7 @@ export default function BlogsPage() {
       </section>
 
       {/* Featured Posts */}
-      <BlogFeatures />
-
-
+      <BlogFeatures />      
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-6">
@@ -83,7 +127,7 @@ export default function BlogsPage() {
                         variant="outline"
                         className="w-full bg-green-600 border-green-600 text-white hover:bg-green-500 hover:text-white "
                       >
-                        WhatsApp: 017100-60020
+                        WhatsApp Now: 01710060020
                       </Button>
                     </Link>
                   </div>
@@ -107,19 +151,15 @@ export default function BlogsPage() {
                     <Link href={'/contact-us'}>
                       <Button className="w-full bg-blue-600 hover:bg-blue-700">
                         Booking Now
-                      </Button>
-                    </Link>
-
+                      </Button>                                
+                    </Link>                    
                   </div>
                 </div>
               </Card>
             </div>
           </div>
         </div>
-      </section>
-
-
-
+      </section>      
     </div>
   );
 }

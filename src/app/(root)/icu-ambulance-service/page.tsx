@@ -18,17 +18,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "ICU Ambulance Service in Dhaka | Best Reliable 24/7 Life Support - Shikder Ambulance",
+    "ICU Ambulance Service in Dhaka | 24/7 Life Support Ambulance",
   description:
-    "Professional ICU ambulance service in Dhaka, Bangladesh. Advanced life support with ICU, CCU, NICU equipment. 24/7 emergency critical care transport with trained medical staff across all districts.",
+    "Get ICU Ambulance Service in Dhaka. We provides ICU Ambulance with life support, oxygen support, critical patient transport, and 24/7 emergency support",
   keywords:
-    "ICU ambulance, CCU ambulance, NICU ambulance, life support ambulance, critical care transport, emergency medical services Dhaka, intensive care ambulance Bangladesh, cardiac ambulance, pediatric ambulance",
+    "ICU ambulance, CCU ambulance, ICU Ambulance Service in Dhaka, NICU ambulance, life support ambulance, critical care transport, emergency medical services Dhaka, intensive care ambulance Bangladesh, cardiac ambulance, pediatric ambulance, Ventilator Ambulance, Ambulance with Doctors",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
     title:
-      "ICU Ambulance Service in Dhaka | Best Reliable 24/7 - Shikder Ambulance",
+      "ICU Ambulance Service in Dhaka | Shikder Ambulance",
     description:
-      "Advanced life support ICU ambulance service with critical care equipment. Professional medical transport for emergency patients across Bangladesh.",
+      "Advanced life support ICU ambulance service with critical care equipment. Professional medical transport for emergency patients in Bangladesh.",
     url: "https://shikderambulance.com/icu-ambulance-service",
     siteName: "Shikder Ambulance",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         url: "/images/Life-support-ambulance.jpg",
         width: 1200,
         height: 630,
-        alt: "ICU Ambulance Service in Dhaka - Advanced Life Support - Shikder Ambulance",
+        alt: "ICU Ambulance Service in Dhaka-Shikder Ambulance",
       },
     ],
     locale: "en_US",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ICU Ambulance Service in Dhaka | Best Reliable 24/7",
+    title: "ICU Ambulance Service in Dhaka",
     description:
       "Advanced life support ICU ambulance service with critical care equipment across Bangladesh.",
     images: ["/images/icu-ambulance-hero.png"],
@@ -68,6 +68,7 @@ export const metadata: Metadata = {
 export default function IcuAmbulancePage() {
   return (
     <div className="min-h-screen bg-white">
+      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,10 +80,7 @@ export default function IcuAmbulancePage() {
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 ICU Ambulance Service in Dhaka,{" "}
-                <span className="text-pink-500">Best</span>
-                <br />
-                <span className="text-pink-500">Reliable</span>{" "}
-                <span className="text-orange-500">24/7</span>
+                <span className="text-pink-500">Fast Response, Always Available</span>{" "}
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
                 Life Support ICU Ambulance Service in Dhaka, Bangladesh. We
@@ -118,7 +116,7 @@ export default function IcuAmbulancePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">
-                ICU Ambulance Services
+                ICU Ambulance Service
               </h3>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
@@ -346,76 +344,123 @@ export default function IcuAmbulancePage() {
         </div>
       </section>
 
-      {/* Basic Life Support ICU Ambulance */}
+      {/* ICU Content Adding Section Part-01 */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Basic Life Support ICU Ambulance
-              </h2>
-              <p className="text-lg text-gray-600">
-                Essential emergency medical care during transport
-              </p>
-            </div>
-
-            <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
-              <p>
-                Life Support ICU Ambulance Service or ICU Ambulance is most
-                important for emergency patients. We provide doctors with Life
-                support ambulance. We provide service in all over Bangladesh.
-                Service is a prominent name for maintaining quality. We provide
-                different types of ambulance service in all districts of
-                Bangladesh. This company provide any kind of EMERGENCY/URGENT
-                ambulance service to the people with several illness or
-                pregnancy.
-              </p>
-
-              <p>
-                Shikder Ambulance Service will securely transport the patients
-                to any hospital, anywhere in Bangladesh with your budget. We
-                also provide Freezer Van ambulances to safely carry the dead
-                bodies in unchanged condition. Have a look at different types of
-                ambulance service we provide.
-              </p>
-            </div>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              24/7 Life Support Ambulance ICU Ambulance Service
+            </h2>
+            <p className="text-center font-semibold">
+              <b>Critical Patient Transport</b>
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* Emergency Services */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Best ICU Ambulance Service for Critical Patient Transfer
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Get the Best ICU Ambulance Service for critical patient transport with safe handling, experienced drivers, oxygen support, fast response, and reliable emergency medical movement.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                ICU Ambulance Service Near Me - Fast Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for ICU Ambulance Service Near Me? Shikder Ambulance offers fast emergency support, critical patient transfer, oxygen support, and safe hospital transport anytime.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                24/7 ICU Ambulance Service for Hospital Transfer
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our 24/7 ICU Ambulance Service supports hospital transfer, ICU shifting, patient pickup, oxygen assistance, and critical patient movement with safe and reliable support.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Life Support Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Life Support Ambulance Service in Dhaka by Shikder Ambulance helps critical patients with oxygen support, safe transfer, emergency pickup, and hospital-to-hospital transport.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Critical Patient Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+               Critical Patient Ambulance Service provides safe ICU transport for serious patients, accident cases, cardiac patients, oxygen support, hospital transfer, and emergency medical movement.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Oxygen Support Ambulance Service for Critical Patients
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Oxygen Support Ambulance Service helps critical patients travel safely with breathing support, careful handling, emergency pickup, ICU transfer, and hospital transport assistance.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                ICU Patient Transport Service - Fast & Reliable Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                ICU Patient Transport Service offers fast and reliable support for critical patient shifting, hospital transfer, oxygen assistance, emergency pickup, and safe medical transport.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                Hospital to Hospital ICU Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Hospital to Hospital ICU Ambulance Service in Dhaka helps transfer critical patients safely between hospitals with oxygen support, careful handling, and 24/7 availability.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                ICU Ambulance for Patient Transfer - 24 Hour Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                ICU Ambulance for Patient Transfer provides 24 hour support for critical patient movement, hospital shifting, oxygen support, emergency pickup, and safe medical transport.
+              </p>                            
+              <h3 className="text-2xl font-bold text-gray-900">
+                ICU Ambulance for Long Distance Patient Transfer
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                ICU Ambulance for Long Distance Patient Transfer helps move critical patients safely between districts with oxygen support, careful handling, experienced drivers, and 24/7 booking.
+              </p>
+            </div>
+            <div className="space-y-6">
+                                                        
+              <h3 className="text-2xl font-bold text-gray-900">
+                Reliable ICU Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Reliable ICU Ambulance Service in Dhaka ensures safe patient transport, oxygen support, quick response, experienced drivers, hospital transfer, and dependable emergency ambulance service.
+              </p>                                          
+              <h3 className="text-2xl font-bold text-gray-900">
+                Fast ICU Ambulance Service Near Me
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Fast ICU Ambulance Service Near Me provides urgent response, critical patient transport, oxygen support, hospital shifting, emergency pickup, and safe ambulance booking anytime.
+              </p>                                          
+              <h3 className="text-2xl font-bold text-gray-900">
+                Affordable ICU Ambulance Service for Patient Transfer
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Affordable ICU Ambulance Service supports patient transfer with safe movement, oxygen assistance, experienced drivers, hospital transfer, emergency pickup, and budget-friendly ambulance booking.
+              </p>                                                        
+              <h3 className="text-2xl font-bold text-gray-900">
+                Cardiac Support Ambulance (CCU)
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                When the patient is a cardiac patient and has a serious moment                   that he/she needs urgently to take to a hospital, you must need an ambulance service that can support the patient until they have been taken into the hospital to receive their pain and they will be taken to the hospital. 
+              </p>                                                                       
+              <h3 className="text-2xl font-bold text-gray-900">
                 Emergency ICU Ambulance in Dhaka
               </h3>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  Life support ICU Ambulance service in Dhaka. We provide
+              <p className="text-gray-600 leading-relaxed">
+                Life support ICU Ambulance service in Dhaka. We provide
                   different types of life support ambulances with doctors or
                   brothers. We are always ready to provide ICU Ambulance service
                   in Dhaka. Dharmondol ICU Ambulance service, Gulshan ICU
                   Ambulance service is available. 24/7 life support Ambulance is
                   available.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Cardiac Support Ambulance (CCU)
+              </p>                         
+              <h3 className="text-2xl font-bold text-gray-900">
+                ICU Ambulance Service Number - Call Now
               </h3>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  When the patient is a cardiac patient and has a serious moment
-                  that he/she needs urgently to take to a hospital, you must
-                  need an ambulance service that can support the patient until
-                  they have been taken into the hospital to receive their pain
-                  and they will be taken to the hospital.
-                </p>
-              </div>
+              <p className="text-gray-600 leading-relaxed">
+                Need ICU Ambulance Service Number? Call Shikder Ambulance for emergency ICU transport, critical patient shifting, oxygen support, and hospital transfer anytime. <b>ICU Ambulance Service Number: 01713-260042</b> 
+              </p>
             </div>
           </div>
         </div>

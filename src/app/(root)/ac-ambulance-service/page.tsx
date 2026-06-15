@@ -14,9 +14,9 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Best AC Ambulance Service in Dhaka | Shikder Ambulance 24/7",
+  title: "Best AC Ambulance Service in Dhaka | Shikder Ambulance",
   description:
-    "Best AC Ambulance Service in Dhaka by Shikder Ambulance. Temperature-controlled ambulance with air conditioning for patient comfort. 24/7 Emergency Ambulance services across all districts.",
+    "Best AC Ambulance Service. Shikder Ambulance offers the best ac ambulance in Dhaka city and nearby areas. Need Ac Ambulance? Call Now: 01713260042",
   keywords:
     "AC ambulance, air conditioned ambulance, best Ambulance, top ambulance company, Dhaka city Ambulance, Near Ambulance, free Ambulance in Dhaka city. ambulance service Dhaka, emergency medical service, temperature controlled ambulance, patient transport Bangladesh",
   authors: [{ name: "Shikder Ambulance" }],
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     canonical: "https://shikderambulance.com/ac-ambulance-service",
   },
   openGraph: {
-    title: "Best AC Ambulance Service in Dhaka by Shikder Ambulance 24/7",
+    title: "Best AC Ambulance Service in Dhaka and nearby area",
     description:
-      "Best AC Ambulance Service in Dhaka by Shikder Ambulance. Professional AC ambulance service with temperature control for patient comfort. Available 24/7 across Bangladesh.",
+      "Best AC Ambulance Service in Dhaka. Shikder Ambulance provides reliable AC Ambulance Service in Dhaka for safe, comfortable, and 24/7 emergency patient transport, hospital transfer, and long-distance ambulance support.",
     url: "https://shikderambulance.com/ac-ambulance-service",
     siteName: "Shikder Ambulance",
     images: [
@@ -76,13 +76,10 @@ export default function AcAmbulancePage() {
                 Best Ac Ambulance Service in Dhaka{" "}
               </h1>
               <h2 className="text-3xl md:text-4xl font-bold">
-                <span className="text-pink-500">Fast and Reliable</span>{" "}
-                <span className="text-orange-500">24/7</span>
+                <span className="text-pink-500">Fast Response, Always Reliable</span>{" "}
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
-                Best Ac Ambulance Service in Dhaka. We provide different types
-                of Ambulance in the all districts of Bangladesh. We Are Just A
-                Call Away. Contact Us Now
+                Best Ac Ambulance Service in Dhaka. Shikder Ambulance provides reliable AC Ambulance Service in Dhaka for safe, comfortable, and 24/7 emergency patient transport, hospital transfer, and long-distance ambulance support. Need Ambulance support? Contact Now.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -103,17 +100,17 @@ export default function AcAmbulancePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ac Ambulance Service in Bangladesh
+              Reliable Ac Ambulance Service in Bangladesh
             </h2>
             <p className="text-center font-semibold">
-              24/7 availability – just a phone call away.
+              Patient Safety, Our Priority.
             </p>
           </div>
-
+          
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">
-                Ac Ambulance Services
+                Ac Ambulance Service
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 The Ac Ambulance is one of the{" "}
@@ -143,12 +140,13 @@ export default function AcAmbulancePage() {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">24/7 Customer Support</span>
+                    <span className="text-gray-700">
+                      24/7 ambulance service support</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                      Affortable, fast and reliable service is available
+                     fast and reliable service is available
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -156,19 +154,7 @@ export default function AcAmbulancePage() {
                     <span className="text-gray-700">
                       Controlled temperature of Ambulance
                     </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">
-                      Dhaka to All Districts Ambulance is Available
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">
-                      All Types of Ambulances Services
-                    </span>
-                  </div>
+                  </div>                  
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
@@ -198,27 +184,126 @@ export default function AcAmbulancePage() {
         </div>
       </section>
 
-      {/* 24 Hours Service */}
-      <section className="py-16">
+      {/* Why Choose Shikder Ambulance section*/}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              24 Hours Shikder Ambulance Service in Bangladesh
+              Why Choose Shikder Ambulance Service? 
             </h2>
-            <p className="text-lg text-gray-600">
-              Emergency Ac Ambulance service is available in the all districts
-              of Bangladesh. Anytime, Anywhere.
+            <p className="text-center font-semibold">
+              The Quality Ambulance is Granted
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="grid gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Shikder Ambulance is the best
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance is a trusted ambulance service provider in Dhaka and nearby areas, offering fast, safe, and reliable ambulance support for emergency patients, hospital transfers, ICU patients, and dead body carrying needs. Our team helps families arrange the right ambulance quickly based on patient condition, destination, and emergency situation.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                We provide 24/7 ambulance booking support with Ac ambulance, Non-Ac ambulance, ICU ambulance, freezing ambulance, and dead body carrying ambulance service. Whether you need urgent patient transport, hospital admission, hospital discharge, long-distance ambulance, or freezer ambulance support, Shikder Ambulance is ready to serve with care and professionalism.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">24/7 Customer Support</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      Affortable, fast and reliable service is available
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      emergency ambulance service in Dhaka and nearby areas
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      Fast response for urgent patient transport and hospital transfer
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      All Types of Ambulance Service
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      Best Quality Ambulance Service
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      Ac and Oxygen is free in Dhaka City
+                    </span>
+                  </div>                                    
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      Long-distance ambulance service available
+                    </span>
+                  </div>                                                      
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      Reliable ambulance booking by phone and WhatsApp
+                    </span>
+                  </div>
+                                                                        
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      Professional, careful, and respectful service
+                    </span>
+                  </div>
+                                                                        
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                      Emergency Helpline: 01713-260042
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            {/* 24 Hours Service section*/}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              24 Hours Ac Ambulance Service in Bangladesh
+            </h2>
+            <p className="text-center font-semibold">
+              The Quality Ambulance is Granted
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
                 Emergency Ac Ambulance in Dhaka City
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Emergency Ac Ambulance service is available in Dhaka City. This
-                ambulance company provide Emergency ambulance service 24 hours
+              <p className="text-gray-600 leading-relaxed">
+                Emergency Ac Ambulance service is available in Dhaka City. Shikder
+                Ambulance company provide Emergency ambulance service 24 hours
                 in a day, 7 Days a week, and 365 days a year. The Emergency
                 ambulance in cheap rent of ambulance services. We provide always
                 a Standard ambulance with the proper requirements. Contact us to
@@ -226,19 +311,14 @@ export default function AcAmbulancePage() {
                 ambulance service provider Company in Dhaka City. If you need an
                 emergency ambulance then contact us.
               </p>
-            </div>
-
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <p className="text-gray-700 leading-relaxed">
-                <strong>Ac Ambulance service</strong> does cost you a bit extra
-                compared to the Non-AC ambulance. If you want to have a smooth
-                and relaxing journey, then a bit of extra cost will not matter
-                to you. For a long journey, Ac Ambulance service is highly
-                recommended. In our Ac Ambulance service, we provide neat and
-                clean bed sheets, stretchers, oxygen cylinder and a first aid
-                box. There is ample room for the patient and his near
-                companions. If you need <strong>Ambulance service</strong> from
-                anywhere in Dhaka city than contact us.
+              <h3 className="text-2xl font-bold text-gray-900">
+                Reliable AC Ambulance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                When emergencies happen under Dhaka’s blazing heat, patient
+                comfort becomes vital. Shikder Ambulance offers trusted 24/7 AC
+                Ambulance Service in Dhaka, designed to keep patients cool,
+                safe, and stress-free during every transfer.
               </p>
             </div>
           </div>
@@ -302,7 +382,7 @@ export default function AcAmbulancePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              24/7 AC Ambulance Service in Dhaka by Shikder Ambulance
+              Best Ambulance Service in Dhaka
             </h2>
             <p className="text-center font-semibold">
               The Quality Ambulance is Granted
@@ -312,6 +392,12 @@ export default function AcAmbulancePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">
+                Best Ambulance Service Near me
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for the Best Ambulance Service Near Me? Shikder Ambulance provides 24/7 emergency ambulance support with AC, Non-AC, ICU, and freezing ambulance service for safe patient transport.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
                 Reliable AC Ambulance Service in Dhaka
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -319,19 +405,7 @@ export default function AcAmbulancePage() {
                 comfort becomes vital. Shikder Ambulance offers trusted 24/7 AC
                 Ambulance Service in Dhaka, designed to keep patients cool,
                 safe, and stress-free during every transfer.
-              </p>
-
-              <h3 className="text-2xl font-bold text-gray-900">
-                Why Choose an Shikder Ac Ambulance?
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                An air-conditioned ambulance isn’t just about luxury; it helps
-                protect patients from heatstroke, anxiety, and complications
-                caused by extreme temperatures. Elderly patients, cardiac
-                patients, and children often require a controlled environment —
-                something our AC ambulances deliver seamlessly.
-              </p>
-
+              </p>              
               <h3 className="text-2xl font-bold text-gray-900">
                 Comfort and Care You Can Trust
               </h3>
@@ -356,60 +430,97 @@ export default function AcAmbulancePage() {
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="py-16">
+            {/* Content Adding Section Part-02 */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Overview of Ac Ambulance Services
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Emergency Ac Ambulance Service in Dhaka City and Nearby Areas
             </h2>
+            <p className="text-center font-semibold">
+              The Quality Ambulance is Granted
+            </p>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900">
-                    Patient Comfort:
-                  </h4>
-                  <p className="text-gray-600">
-                    Enhances comfort during transport, especially long distances
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">
-                    Temperature Control:
-                  </h4>
-                  <p className="text-gray-600">
-                    Maintains a cool, stable environment for patient comfort
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900">
-                    Increased Cost:
-                  </h4>
-                  <p className="text-gray-600">
-                    Typically more expensive than non-AC ambulances
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">
-                    Medical Stability:
-                  </h4>
-                  <p className="text-gray-600">
-                    Helps regulate body temperature for certain medical
-                    conditions
-                  </p>
-                </div>
-              </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Best AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance provides the best AC ambulance service with comfortable transport, fast response, experienced drivers, clean vehicles, and 24/7 support for patients across Dhaka city.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                AC Ambulance Service Near Me
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for AC ambulance service near me? Shikder Ambulance offers quick booking, comfortable vehicles, safe patient transport, and emergency support anytime in Dhaka nearby areas.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Emergency AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance provides emergency AC ambulance service for sudden illness, hospital admission, patient shifting, discharge support, and urgent medical transport day and night in Dhaka.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Comfortable AC Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Comfortable AC ambulance service provides air-conditioned patient transport for hospital transfer, elderly movement, long-distance travel, discharge support, and emergency medical needs.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                AC Ambulance Service in Dhaka City
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                AC ambulance service in Dhaka city is available 24/7 for patient transport, hospital transfer, emergency pickup, and comfortable medical journey support.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                AC Ambulance Service for Safe Patient Transport
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                AC ambulance service for safe patient transport ensures comfort, careful handling, clean vehicles, quick response, and dependable hospital transfer support anytime.
+              </p>
             </div>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                AC Ambulance Service Number
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Need an AC ambulance service number? Call Shikder Ambulance for fast booking, emergency support, comfortable transport, and safe hospital transfer in Dhaka anytime.
+              </p>
+              <p><b>AC Ambulance Service Number: 01713260042</b></p>
 
-            <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-              <h4 className="font-semibold text-gray-900 mb-2">
-                Available 24/7:
-              </h4>
-              <p className="text-gray-600">
-                No matter the hour, you can count on us for immediate response.{" "}
+              <h3 className="text-2xl font-bold text-gray-900">
+                AC Ambulance for Patient Transfer
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                AC ambulance for patient transfer helps move patients safely from home, hospital, clinic, or diagnostic center with comfort, care, and reliable transport support.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                AC Ambulance Service for Long Distance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance offers AC ambulance service for long distance travel, ensuring comfortable patient movement, safe driving, clean vehicles, and dependable support anytime.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Fast AC Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Fast AC ambulance service helps patients reach hospitals quickly with comfortable transport, careful handling, easy booking, and emergency support from Shikder Ambulance.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Private AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Private AC ambulance service is available for emergency patient transport, hospital transfer, home pickup, discharge support, and comfortable medical travel in Dhaka.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Reliable AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Reliable AC ambulance service from Shikder Ambulance ensures safe patient transport, quick response, comfortable vehicles, experienced drivers, and 24/7 emergency support.
               </p>
             </div>
           </div>
@@ -421,29 +532,33 @@ export default function AcAmbulancePage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              FAQs: Shikder Ambulance Service
+              Frequently Asked Questions: Shikder Ambulance
             </h2>
-          </div>
-
+          </div>      
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900">FAQs</h3>
-                <h4> What Is an AC Ambulance?</h4>
+                <h3>What is Ac Ambulance Service?</h3>
                 <p>
-                  An AC ambulance is fitted with a fully functional
-                  air-conditioning system to control temperature, ensuring the
-                  patient is comfortable throughout the journey, especially
-                  during the scorching heat of Bangladesh.
+                  AC Ambulance Service is an air-conditioned ambulance service used for safe, clean, and comfortable patient transport, hospital transfer, discharge support, and long-distance medical travel.
                 </p>
               </div>
               <div>
-                <h4> What Is an AC Ambulance?</h4>
+                <h3>Why should I choose an AC Ambulance?</h3>
                 <p>
-                  An AC ambulance is fitted with a fully functional
-                  air-conditioning system to control temperature, ensuring the
-                  patient is comfortable throughout the journey, especially
-                  during the scorching heat of Bangladesh.
+                  You should choose an AC ambulance for comfortable patient movement, especially for elderly patients, sick patients, long-distance travel, and hospital-to-home transfer during hot weather.
+                </p>
+              </div>
+              <div>
+                <h3>Can I book an AC Ambulance for long-distance travel?</h3>
+                <p>
+                  Yes, AC Ambulance Service is suitable for long-distance patient transport because it provides a comfortable and air-conditioned environment during the journey.
+                </p>
+              </div>
+                <div>
+                <h4>How can I book an AC Ambulance?</h4>
+                <p>
+                  You can book an AC Ambulance by calling Shikder Ambulance anytime. Emergency Call: 01713-260042
                 </p>
               </div>
             </div>
@@ -459,7 +574,7 @@ export default function AcAmbulancePage() {
               Need AC Ambulance Service?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Contact us now for immediate assistance. Available 24/7 across
+              Contact us now for emergency Ambulance Support. Fast, Reliable Ambulance Service in
               Bangladesh.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -468,14 +583,14 @@ export default function AcAmbulancePage() {
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call: 01627-669222
+                Call Now: 01627-669222
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
               >
-                WhatsApp: 017100-60020
+                WhatsApp Now: 01710060020
               </Button>
             </div>
           </div>

@@ -14,6 +14,56 @@ import {
   Building,
   Ambulance,
 } from "lucide-react";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: " Sitemap | Shikder Ambulance",
+  description:
+    "Explore the Shikder Ambulance sitemap to quickly find ambulance services, service areas, blog posts, contact information, and emergency support pages.",
+  keywords:
+    " Shikder Ambulance sitemap, ambulance service sitemap, emergency ambulance service pages, ambulance service areas, Shikder Ambulance pages, ambulance blog posts, ambulance contact page, ICU ambulance service, freezing ambulance service, AC ambulance service, Non-AC ambulance service, Dhaka ambulance service.",
+  authors: [{ name: "Shikder Ambulance" }],
+  alternates: {
+    canonical: "https://shikderambulance.com/sitemap",
+  },
+  openGraph: {
+    title: "পেমেন্ট সিস্টেম - শিকদার অ্যাম্বুলেন্স সার্ভিস",
+    description:
+      "শিকদার অ্যাম্বুলেন্স সার্ভিসে রয়েছে সহজ ও নিরাপদ পেমেন্ট সিস্টেম। অ্যাম্বুলেন্স বুকিং, রোগী পরিবহন, হাসপাতাল ট্রান্সফার, ও ফ্রিজিং অ্যাম্বুলেন্স সার্ভিসের পেমেন্ট দ্রুত ও নিশ্চিন্তে সম্পন্ন করুন। জরুরি সেবার জন্য কল করুন",
+    url: "https://shikderambulance.com/sitemap",
+    siteName: "Shikder Ambulance",
+    images: [
+      {
+        url: "/images/Freezing Ambulance Service-shikder-ambulance.jpg",
+        width: 1200,
+        height: 630,
+        alt: "পেমেন্ট সিস্টেম শিকদার অ্যাম্বুলেন্স সার্ভিস",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: " পেমেন্ট সিস্টেম - শিকদার অ্যাম্বুলেন্স সার্ভিস",
+    description:
+      "শিকদার অ্যাম্বুলেন্স সার্ভিসে রয়েছে সহজ ও নিরাপদ পেমেন্ট সিস্টেম। অ্যাম্বুলেন্স বুকিং, রোগী পরিবহন, হাসপাতাল ট্রান্সফার, ও ফ্রিজিং অ্যাম্বুলেন্স সার্ভিসের পেমেন্ট দ্রুত ও নিশ্চিন্তে সম্পন্ন করুন।",
+    images: ["/images/Freezing Ambulance Service-shikder-ambulance.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+};
 
 export default function SitemapPage() {
   const siteStructure = [
@@ -47,7 +97,7 @@ export default function SitemapPage() {
         {
           name: "Emergency Services",
           url: "/services/emergency",
-          description: "24/7 emergency ambulance services",
+          description: "24/7 emergency ambulance service",
         },
         {
           name: "Non-Emergency Transport",
@@ -267,12 +317,10 @@ export default function SitemapPage() {
             <MapPin className="h-10 w-10 text-blue-600" />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Website Sitemap
+            Sitemap - Shikder Ambulance Service
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Navigate through all sections of our website to find the information
-            and services you need. Our comprehensive medical services are
-            organized for easy access.
+            Explore the Shikder Ambulance sitemap to easily find ambulance service pages, blog posts, emergency support information, contact details, and service area pages.
           </p>
         </div>
 
@@ -358,11 +406,11 @@ export default function SitemapPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="bg-white bg-opacity-20 px-6 py-3 rounded-lg">
               <div className="text-sm text-red-100">Emergency Hotline</div>
-              <div className="text-2xl font-bold">999</div>
+              <div className="text-2xl font-bold">01713-260042</div>
             </div>
             <div className="bg-white bg-opacity-20 px-6 py-3 rounded-lg">
               <div className="text-sm text-red-100">Non-Emergency</div>
-              <div className="text-xl font-bold">+880-1234-567890</div>
+              <div className="text-xl font-bold">01710060020</div>
             </div>
           </div>
         </div>

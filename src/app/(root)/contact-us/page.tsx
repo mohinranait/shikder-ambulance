@@ -13,19 +13,19 @@ import ContactForm from "@/components/pages/contact/contact-form";
 import { Metadata } from "next";
 
 export const metadata:Metadata = {
-  title: "Contact Us: Shikder Ambulance Service",
+  title: "Contact Us - Shikder Ambulance Service",
   description:
-    "Shikder Ambulance Service in Bangladesh. We provide different types of Ambulances. The Largest and Trusted Ambulacne Company in Bangladesh. When you need Ambulance the Contact Us.",
+    "Contact Us of Shikder Ambulance Service. We provide different types of Ambulances. The Largest and Trusted Ambulacne Company in Bangladesh. When you need Ambulance the Contact Us.",
   keywords: [
     "Shikder Ambulance service",
     "emergency ambulance",
-    "Dhaka ambulance",
+    "Dhaka Ambulance",
   ],
   openGraph: {
-    title: "Contact Us: Shikder Ambulance Service",
+    title: "Contact Us - Shikder Ambulance Service",
     description:
-      "Shikder Ambulance Service in Bangladesh. We provide different types of Ambulances. The Largest and Trusted Ambulacne Company in Bangladesh. When you need Ambulance the Contact Us.",
-    url: "https://shikderambulance.com",
+      "Contact Us of Shikder Ambulance Service. Shikder Ambulance Company provide the different types of Ambulance. The Largest and Trusted Ambulacne Company in Bangladesh. When you need Ambulance then Contact Us.",
+    url: "https://shikderambulance.com/about-us",
     siteName: "Shikder Ambulance",
     images: [
       {
@@ -86,7 +86,7 @@ export default function ContactPage() {
     },
     {
       name: "Jatrabari",
-      phone: "017100-60020",
+      phone: "01713-260042",
       hours: "24/7 Emergency Services",
       address: "Jatrabari Chowrasta, Dhaka-1204",
     },
@@ -99,11 +99,11 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-100">
-              Contact Us
+              Get in Touch 
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
-              Get in Touch with
-              <span className="text-blue-600 block">Shikder Ambulance</span>
+              Contact Us
+              <span className="text-blue-600 block"> Shikder Ambulance Service</span>
             </h1>
             <p className="sm:text-lg text-slate-600 leading-relaxed">
               We're here to help 24/7. Whether it's an emergency or you need

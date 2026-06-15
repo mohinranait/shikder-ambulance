@@ -13,11 +13,11 @@ export function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge className="bg-red-500 hover:bg-red-600 text-white px-4 py-2">
-                We’re Always Ready to Serve
+                We’re Always Ready to Service
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal">
-                Shikder Ambulance Service in Dhaka
-                <span className="text-primary block"> Best Reliable 24/7 </span>
+                Shikder Ambulance Service in Dhaka, 
+                <span className="text-primary"> Always Available</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 Welcome to <b>Shikder Ambulance Service</b> in Dhaka,
@@ -36,7 +36,7 @@ export function HeroSection() {
                   className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Now: 017100-60020
+                  Call Now: 01710060020
                 </Button>
               </Link>
               <Link href={"/contact-us"}>
@@ -68,7 +68,7 @@ export function HeroSection() {
                   <MapPin className="h-5 w-5 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-semibold">GPS Tracking</p>
+                  <p className="font-semibold">Live Tracking</p>
                   <p className="text-sm text-muted-foreground">
                     Real-time Location
                   </p>
@@ -104,7 +104,7 @@ export function HeroSection() {
                   <Phone className="h-6 w-6 text-red-600" />
                 </div>
                 <div>
-                  <p className="font-semibold">Emergency Hotline</p>
+                  <p className="font-semibold">Emergency Helpline</p>
                   <p className="text-2xl font-bold text-red-600">01710060020</p>
                 </div>
               </div>

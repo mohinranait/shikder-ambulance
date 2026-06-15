@@ -34,6 +34,30 @@ const quickLinks = [
   },
 ];
 
+const socialLinks = [
+  {
+    name: "Facebook",
+    icon: Facebook,
+    link: "https://www.facebook.com/shikderambulanceservice",
+  },
+  {
+    name: "LinkedIn ",
+    icon: Twitter,
+    link: "https://bd.linkedin.com/in/shikder-ambulance",
+  },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    link: "https://www.instagram.com/shikderambulanceservicedhaka/",
+  },
+  {
+    name: "YouTube",
+    icon: Youtube,
+    link: "https://www.youtube.com/@shikderambulance",
+  },
+
+];
+
 const FooterComponent = () => {
   return (
     <footer className="bg-gray-900 text-white">
@@ -55,38 +79,31 @@ const FooterComponent = () => {
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Shikder Ambulance company is the largest and trusted company in
-              Bangladesh. We offering you to provide the all types of
-              Ambulances. Quality Ambulance is available in Comfortable Price.
+              Bangladesh. We offer you the all types of
+              Ambulances in comfortable price.
             </p>
+            
             <div className="flex space-x-4">
-              <Button
-                size="sm"
-                variant="outline"
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
-              >
-                <Facebook className="h-4 w-4" />
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
-              >
-                <Twitter className="h-4 w-4" />
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
-              >
-                <Instagram className="h-4 w-4" />
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
-              >
-                <Youtube className="h-4 w-4" />
-              </Button>
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+
+                return (
+                  <Link
+                    key={social.name}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
+                    >
+                      <Icon className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
@@ -113,19 +130,23 @@ const FooterComponent = () => {
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
                 <Heart className="h-4 w-4 mr-2 text-red-400" />
-                Always, Fast, and Reliable
+                Dhaka and Nearby Area
               </li>
               <li className="flex items-center text-gray-300">
                 <Shield className="h-4 w-4 mr-2 text-blue-400" />
-                Emergency Ambulance Services
+                Dhaka to All Districts Ambulance
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Shield className="h-4 w-4 mr-2 text-blue-400" />
+                Quick response & reliable service
               </li>
               <li className="flex items-center text-gray-300">
                 <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
-                Dhaka to all districts Ambulance
+                Patient safety is our first priority
               </li>
               <li className="flex items-center text-gray-300">
                 <Ambulance className="h-4 w-4 mr-2 text-green-400" />
-                Any districts to Dhaka Ambulance Service
+                <b>Manager: Shahadat Shikder</b>
               </li>
 
             </ul>
@@ -139,7 +160,7 @@ const FooterComponent = () => {
                 <div className="flex items-center text-gray-300">
                   <Phone className="h-5 w-5 mr-3 text-red-400" />
                   <div>
-                    <p className="font-bold text-white -400">017100-60020</p>
+                    <p className="font-bold text-white -400">01710060020</p>
                   </div>
                 </div>
               </Link>
@@ -215,7 +236,7 @@ const FooterComponent = () => {
           <div className="flex items-center justify-center space-x-4 text-center">
             <Phone className="h-5 w-5" />
             <p className="font-normal">
-              Need Emergency Ambulance? Call Now.
+              Need Emergency Ambulance? Call Now
             </p>
           </div>
         </div>

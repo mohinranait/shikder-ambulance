@@ -25,17 +25,17 @@ export function ContactCTA() {
                 className="bg-red-600 hover:bg-red-700 text-white px-3 gap-0 md:px-8 py-4 text-lg"
               >
                 <Phone className="mr-1 md:mr-2 h-5 w-5" />
-                Emergency: 01627-669222
+                Emergency Call: 01713-260042
               </Button>
             </Link>
-            <Link href={"tel:01710060020"}>
+            <Link href={"tel:01713260042"}>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 px-2 gap-0 md:px-8 py-4 text-lg bg-transparent"
               >
                 <Phone className="mr-1 md:mr-2 h-5 w-5" />
-                Non-Emergency: 017100-60020
+                Non-Emergency: 01710060020
               </Button>
             </Link>
           </div>

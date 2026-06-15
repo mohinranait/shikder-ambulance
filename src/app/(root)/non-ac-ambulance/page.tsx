@@ -17,15 +17,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Affordable Non-AC Ambulance Service in Bangladesh | Shikder Ambulance",
+    "Non-AC Ambulance Service in Dhaka | 24/7 Emergency Support",
   description:
-    "Affordable Non-AC ambulance Service in Bangladesh. We provide different types of Ambulance service in all districts of Bangladesh. We Are Just A Call Away",
+    "Non-AC ambulance Service in Dhaka, Bangladesh. We provide different types of Ambulance in all districts of Bangladesh. We Are Just A Call Away",
   keywords:
-    "non-AC ambulance, basic ambulance service, affordable ambulance Bangladesh, emergency medical transport, patient transport Dhaka, cheap ambulance service, basic life support ambulance, near ambulance, top ambulance, fast ambulance",
+    "non-AC ambulance, emergency non-Ac ambulance service in Dhaka and Nearby area. basic ambulance service, affordable ambulance Bangladesh, emergency medical transport, patient transport Dhaka, cheap ambulance service, basic life support ambulance, near ambulance, top ambulance, fast ambulance",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
     title:
-      "Affordable Non-AC Ambulance Service in Bangladesh | Shikder Ambulance",
+      "Affordable Non-AC Ambulance Service | Shikder Ambulance",
     description:
       "Affordable Non-AC ambulance Service in Bangladesh. We provide different types of Ambulance service in all districts of Bangladesh. We Are Just A Call Away",
     url: "https://shikderambulance.com/non-ac-ambulance",
@@ -74,11 +74,11 @@ export default function NonAcAmbulancePage() {
             <div className="space-y-4">
               <Badge className="bg-green-100 text-green-800 hover:bg-green-100">
                 <DollarSign className="h-3 w-3 mr-1" />
-                Affordable Emergency Transport
+                Fast Patient Transport
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Non-Ac Ambulance service in{" "}
-                <span className="text-blue-600">Bangladesh</span>
+                Fast Non-Ac Ambulance service in{" "}
+                <span className="text-blue-600">Dhaka, Bangladesh</span>
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
                 Non-Ac Ambulance service in Dhaka, Bangladesh. We provide
@@ -118,36 +118,13 @@ export default function NonAcAmbulancePage() {
               </h3>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Non-Ac ambulance service is for those who cannot afford the
-                  cost of an Ac ambulance. Though it does not cost you as Ac
-                  ambulance service, it serves you with everything except the
-                  facility of AC. Like Ac ambulance service, you will get all
-                  the important equipment such as wheelchairs, stretchers,
-                  oxygen cylinders etc. Also, our team members are highly
-                  trained. You can rely on us for any type of ambulance service
-                  Our Ac ambulance is 24/7 open for you. Call at our emergency
-                  number, we will be there for you.
+                  Shikder Ambulance provides reliable Non-AC Ambulance Service for affordable and safe patient transport in Dhaka and nearby areas. Our Non-AC ambulance is suitable for emergency pickup, hospital transfer, clinic visits, patient discharge, home-to-hospital movement, and regular medical transport. We offer quick response, experienced drivers, clean ambulance vehicles, and careful patient handling 24/7. If you need a budget-friendly ambulance service with dependable support, Shikder Ambulance is ready anytime. Our team focuses on safe transport, timely arrival, and responsible service for patients and families.
                 </p>
-                <p>
-                  The Non-Ac ambulance service is simple and Normal. This rent
-                  is low of others ambulance, so it is very comfortable for all
-                  people. Non-Ac ambulance mainly provide for people and who
-                  wants to rent it. 24 hours ambulance available in Dhaka. You
-                  will be satisfied with all our arrangements. Our ambulances
-                  are full-furnished with all the necessary equipment such as
-                  stretchers, wheelchair, oxygen cylinders etc. Our ambulances
-                  are clean bed for the patients and comfortable seats for their
-                  companions. We ensure our valuable customers, all sort of
-                  hospital medical care.
-                </p>
-                <p>
-                  The ambulance service 24/7 Hours available in Dhaka city with
-                  all Zila sadar. We provide different types ambulance all
-                  districts of Bangladesh. We are always ready to provide
-                  emergency ambulance service for any patients.
-                </p>
-              </div>
-
+                <p><ul>
+                  <li><b>Emergency Call Now: 01713-260042</b></li>
+                </ul>
+                </p>              
+              </div>              
               <div className="space-y-4">
                 <h4 className="text-xl font-semibold text-gray-900">
                   Key Features
@@ -198,29 +175,97 @@ export default function NonAcAmbulancePage() {
         </div>
       </section>
 
-      {/* Emergency Service Section */}
-      <section className="py-16">
+     {/* Content Adding Section Part-02 */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Emergency Non-Ac Ambulance in Dhaka
+              Emergency Non-Ac Ambulance Service in Dhaka City and Nearby Area
             </h2>
-            <p className="text-lg text-gray-600">
-              Immediate response for medical emergencies
+            <p className="text-center font-semibold">
+              Safe patient transport and hospital transfer
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="bg-blue-50 p-8 rounded-2xl">
-              <p className="text-gray-700 leading-relaxed text-lg">
-                Emergency Ac Ambulance service is available in Dhaka City. This
-                ambulance company provide Emergency ambulance service 24 hours
-                in a day, 7 Days a week, and 365 days a year. The Emergency
-                ambulance in cheap rent of ambulance services. We provide always
-                a Standard ambulance with the proper requirements. Contact us to
-                Get an Emergency ambulance service anywhere in Bangladesh. Fast
-                ambulance service provider Company in Dhaka City. If you need an
-                emergency ambulance than contact us.
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Non-AC Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Get Non-AC Ambulance Service in Dhaka for emergency patient transport, hospital discharge, clinic transfer, and affordable ambulance booking with Shikder Ambulance.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                Best Non-AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance offers the best Non-AC Ambulance Service with fast response, experienced drivers, safe patient handling, and 24/7 emergency support.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Non-AC Ambulance Service Near Me
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for Non-AC Ambulance Service near me? Shikder Ambulance provides quick booking, safe patient transport, and hospital transfer support anytime.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                24/7 Non-AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our 24/7 Non-AC Ambulance Service supports emergency patient transport, hospital transfer, home pickup, discharge support, and affordable ambulance booking anytime.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Emergency Non-AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Emergency Non-AC Ambulance Service is available for sudden illness, accident cases, hospital admission, patient shifting, and urgent medical transport across Dhaka.
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                Affordable Non-AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Affordable Non-AC Ambulance Service from Shikder Ambulance helps patients get safe hospital transfer, emergency pickup, and reliable transport at budget-friendly rates.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Non-AC Ambulance Service Number
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Need a Non-AC Ambulance Service Number? Call Shikder Ambulance for fast booking, safe patient transport, and emergency hospital transfer support.
+              </p>
+              <p><b>Non-AC Ambulance Service Number: 01713260042</b></p>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                Low Cost Non-AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Low Cost Non-AC Ambulance Service is suitable for regular patient transport, hospital discharge, clinic transfer, and safe emergency support in Dhaka.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900">
+                Reliable Non-AC Ambulance Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Reliable Non-AC Ambulance Service ensures safe patient movement, timely pickup, experienced drivers, clean vehicles, and dependable hospital transfer support anytime.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Fast Non-AC Ambulance Service in Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Fast Non-AC Ambulance Service helps patients reach hospitals quickly with easy booking, safe transport, careful handling, and 24/7 emergency response.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Patient Transport Service
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Non-AC Patient Transport Service is ideal for hospital transfer, clinic visits, home pickup, discharge support, and affordable medical transport in Dhaka.
+              </p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Non-AC Ambulance for Long Distance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Non-AC Ambulance for Long Distance supports affordable patient travel, hospital shifting, inter-district transport, and safe medical movement with experienced drivers.
               </p>
             </div>
           </div>
