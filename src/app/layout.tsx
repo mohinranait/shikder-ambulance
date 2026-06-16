@@ -3,7 +3,6 @@
 import type React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
-import AuthProvider from "@/providers/AuthProvider";
 import ImageProvider from "@/providers/ImageProvider";
 import { Toaster } from "react-hot-toast";
 import MediaModal from "@/components/shared/MediaModal";
