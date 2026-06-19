@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Send, AlertCircle } from "lucide-react";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 // Zod validation schema
 const contactFormSchema = z.object({
@@ -233,6 +233,8 @@ const ContactForm = () => {
           </Button>
         </form>
       )}
+
+        <Toaster />
     </>
   );
 };

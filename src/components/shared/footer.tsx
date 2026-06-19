@@ -82,7 +82,7 @@ const FooterComponent = () => {
               Bangladesh. We offer you the all types of
               Ambulances in comfortable price.
             </p>
-            
+
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -93,9 +93,11 @@ const FooterComponent = () => {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit our ${social.name} page`}
                   >
                     <Button
                       size="sm"
+                      aria-label={`Visit our ${social.name} page`}
                       variant="outline"
                       className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
                     >

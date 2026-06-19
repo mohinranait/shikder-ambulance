@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 
 import Image from "next/image";
 import React, { FC } from "react";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -202,6 +202,8 @@ const CommentForm: FC<Props> = ({ blogId }) => {
           </div>
         </form>
       </CardContent>
+
+       <Toaster />
     </Card>
   );
 };
