@@ -30,7 +30,7 @@ const BlogView: FC<Props> = ({ blog, commentsPromise }) => {
                 {blog?.postName || blog?.seoTitle || blog?.postTitle}
               </h1>
               <p
-                className={`md:text-lg text-center text-muted-foreground mx-auto max-w-2xl`}
+                className={`md:text-lg text-center text-black mx-auto max-w-2xl`}
               >
                 {blog?.shortDescription || blog?.seoDescription}
               </p>
