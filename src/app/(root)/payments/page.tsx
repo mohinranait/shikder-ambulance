@@ -173,7 +173,7 @@ export default function PaymentPage() {
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p> লোকেশন যেখানেই হোক, ঘরে বসেই অনলাইনে সহজেই অ্যাম্বুলেন্স বুকিং করা যায়। </p>
+                     <p>লোকেশন যেখানেই হোক, ঘরে বসেই অনলাইনে সহজেই অ্যাম্বুলেন্স বুকিং করা যায়। </p>
                     </span>
                   </div>
                     <div className="flex items-center space-x-3">
@@ -233,13 +233,13 @@ export default function PaymentPage() {
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p> হোয়ার্টআপ, ইমেই বা প্রিন্ট আকারে রিসিট প্রদান করা হয়। </p>
+                     <p> হোয়ার্টআপ, ইমেই বা প্রিন্ট আকারে রিসিট প্রদান করা হয়।</p>
                     </span>
                     </div>
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p>পরবর্তী কোনো সমস্যা বা বুকিংয়ের সময় এই রিসিট রেফারেন্স হিসেবে ব্যবহার করা যায়।</p>
+                     <p> পরবর্তী কোনো সমস্যা বা বুকিংয়ের সময় এই রিসিট রেফারেন্স হিসেবে ব্যবহার করা যায়।</p>
                     </span>
                     </div>
                     <div className="flex items-center space-x-3">
