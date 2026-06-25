@@ -173,92 +173,91 @@ export default function PaymentPage() {
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p><b>ঘরে বসেই বুকিং সুবিধা:</b> যেকোন সময়, যেকোন এলাকা থেকে কল দিয়ে সহজেই অ্যাম্বুলেন্স বুক করা যায়। </p>
+                     <p> লোকেশন যেখানেই হোক, ঘরে বসেই অনলাইনে সহজেই অ্যাম্বুলেন্স বুকিং করা যায়। </p>
                     </span>
                   </div>
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p><b>দ্রুত সেবা নিশ্চিত:</b> মাত্র কয়েক সেকেন্ডেই বুকিং নিশ্চয়তা এবং দ্রুত অ্যাম্বুলেন্স সেবা পাওয়ার সুবিধা। </p>
+                     <p> মাত্র কয়েক সেকেন্ডেই বুকিং নিশ্চয়তা এবং দ্রুত অ্যাম্বুলেন্স সেবা পাওয়ার সুবিধা। </p>
                     </span>
                   </div>
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p><b>জরুরি মুহূর্তে সময় বাঁচায়ঃ</b> কল করার মাধ্যমে দ্রুত বুকিং সুবিধা হওয়ায় গুরুত্বপূর্ণ সময় সাশ্রয় হয় এবং দ্রুত গাড়ি পাওয়া যায়। </p>
+                     <p> কল করার মাধ্যমে দ্রুত বুকিং সুবিধা হওয়ায় গুরুত্বপূর্ণ সময় সাশ্রয় হয় এবং জরুরি মুহূর্তে সময় বাঁচায়। </p>
+                    </span>
+                  </div>                                    
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> প্রতিটি বুকিংয়ের জন্য অফিসিয়াল কনফার্মেশন ও মানি রিসিট প্রদান করা হয়। </p>
                     </span>
                   </div>
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p><b>সহজ পেমেন্ট সুবিধাঃ</b> বিকাশ, নগদ, ব্যাংক বা ক্যাশ - সব ধরনের পেমেন্ট সুবিধা আছে। </p>
+                     <p> দিন-রাত যেকোন সময় অনলাইনে বুকিং ও সাপোর্ট সুবিধা।</p>
                     </span>
-                  </div>                  
-                    <div className="flex items-center space-x-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">
-                     <p><b>মানি রিসিট প্রদানঃ </b> প্রতিটি বুকিংয়ের জন্য অফিসিয়াল কনফার্মেশন ও মানি রিসিট প্রদান করা হয়। </p>
-                    </span>
-                  </div>
-                  
-                    <div className="flex items-center space-x-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">
-                     <p><b>বুকিং সুবিধা:</b> লোকেশন যেখানেই হোক, অনলাইনে সহজেই অ্যাম্বুলেন্স বুকিং করা যায়। </p>
-                    </span>
-                  </div>                  
-                    <div className="flex items-center space-x-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">
-                     <p><b>২৪/৭ সাপোর্ট সুবিধা:</b> দিন-রাত যেকোনো সময় অনলাইনে বুকিং ও সহায়তা পাওয়া যায়।</p>
-                    </span>
-                  </div>
+                  </div> 
                 </div>
                 </div>
                 {/* Payment Terms */}
                 <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-foreground mb-5">মানি রিসিট (Money Receipt) সুবিধা </h2>
-                    <div>
+                    <h2 className="text-2xl font-bold text-foreground mb-5">মানি রিসিটের সুবিধা </h2>
+                    <div>                 
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b>মানি রিসিট হলো আপনার টাকা ও সেবার নিরাপদ প্রমাণ।</b></p>
+                    </span>
+                    </div>
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
                      <p> প্রতিটি পেমেন্টের বিপরীতে একটি অফিসিয়াল রিসিট পাওয়া যায়, যা বৈধ প্রমাণ হিসেবে কাজ করে। </p>
                     </span>
-                  </div>
+                    </div>
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p> কত টাকা নেওয়া হয়েছে এবং কোন সেবার জন্য নেওয়া হয়েছে - সব পরিষ্কারভাবে উল্লেখ থাকে। </p>
+                     <p> কত টাকা নেওয়া হয়েছে এবং কোন সেবার জন্য নেওয়া হয়েছে, তা সব পরিষ্কারভাবে উল্লেখ থাকে। </p>
                     </span>
-                  </div>                  
+                    </div>                  
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p> রিসিট ভবিষ্যতের জন্য সংরক্ষণ করা যায়, প্রয়োজনে যাচাই করা সম্ভব। </p>
+                     <p> রিসিট ভবিষ্যতের জন্য সংরক্ষণ করা হয়, প্রয়োজনে যাচাই করা সম্ভব। </p>
                     </span>
-                  </div>                  
+                    </div>                  
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
-                     <p> হোয়ার্টআপ, ইমেই বা প্রিন্ট আকারে রিসিট পাওয়া যায়। </p>
+                     <p> হোয়ার্টআপ, ইমেই বা প্রিন্ট আকারে রিসিট প্রদান করা হয়। </p>
                     </span>
-                  </div>
-                    <div className="flex items-center space-x-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-600" />
-                    <span className="text-gray-700">
-                     <p> রিসিট পাওয়ার মাধ্যমে নিশ্চিত হয় যে আপনার বুকিং ও পেমেন্ট গ্রহণ করা হয়েছে। </p>
-                    </span>
-                  </div>
+                    </div>
                     <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
                      <p>পরবর্তী কোনো সমস্যা বা বুকিংয়ের সময় এই রিসিট রেফারেন্স হিসেবে ব্যবহার করা যায়।</p>
                     </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
+                    </div>
+                    <div className="flex items-center space-x-3">
                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
                      <p> অফিসিয়াল রিসিট থাকায় ভুল বা অসৎ লেনদেনের ঝুঁকি কমে যায় এবং প্রতারণা প্রতিরোধ করে। </p>
+                    </span>
+                    </div>                  
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> ভবিষ্যৎ কোনো সমস্যায় প্রমাণ হিসেবে ব্যবহারযোগ্য। </p>
+                    </span>
+                    </div>                  
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> মানি রিসিট ছাড়া কোনো অফিসে টাকা ক্লেইম বা গ্রহণ প্রক্রিয়া সম্পূর্ণ করা কঠিন হতে পারে। </p>
                     </span>
                   </div>                                 
                 </div>
@@ -268,7 +267,6 @@ export default function PaymentPage() {
                     <h2 className="text-2xl font-bold text-foreground mb-5">আমাদের প্রতিশ্রুতি</h2>
                     <div>
                     <div className="flex items-center space-x-3">
-                    <CheckCircle2 className="h-5 w-5 text-green-600" />
                     <span className="text-gray-700">
                      <p><b> শিকদার অ্যাম্বুলেন্স সার্ভিস একটি বিশ্বস্ত সেবা প্রতিষ্ঠান, যা দ্রুত, নিরাপদ এবং মানবিক অ্যাম্বুলেন্স সেবা নিশ্চিত করে।</b></p>
                     </span>
