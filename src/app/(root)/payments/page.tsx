@@ -18,22 +18,23 @@ interface PaymentMethod {
 
 const paymentMethods: PaymentMethod[] = [
     
+
     {
-        id: "nagad",
-        name: "Nagad",
-        logo: 'nagad.png',
+        id: "bkash",
+        name: " বিকাশ (bKash)",
+        logo: 'bkash.png',
         description: "মোবাইল ব্যাংকিং সেবা",
-        details: [" 017100-60020", "সর্বোচ্চ নিরাপদ লেনদেন "],
-        color: "bg-red-50 border-red-200 hover:bg-red-100",
+        details: [" সর্বোচ্চ নিরাপদ লেনদেন", " 01710060020"],
+        color: "bg-pink-50 border-pink-200 hover:bg-pink-100",
 
     }, 
     {
-        id: "bkash",
-        name: "bKash",
-        logo: 'bkash.png',
+        id: "nagad",
+        name: " নগদ (Nagad)",
+        logo: 'nagad.png',
         description: "মোবাইল ব্যাংকিং সেবা",
-        details: [" 017100-60020", "সর্বোচ্চ নিরাপদ লেনদেন"],
-        color: "bg-pink-50 border-pink-200 hover:bg-pink-100",
+        details: [" সর্বোচ্চ নিরাপদ লেনদেন", "01710060020 "],
+        color: "bg-red-50 border-red-200 hover:bg-red-100",
 
     }, 
     {
@@ -41,7 +42,7 @@ const paymentMethods: PaymentMethod[] = [
         name: "ডাচ-বাংলা ব্যাংক অ্যাকাউন্ট",
         logo: 'Dutch-Bangla.png',
         description: "ব্যাংক অ্যাকাউন্ট ট্রান্সফার",
-        details: ["3091 5702 86782", "Name: Sahadat"],
+        details: ["Name: Sahadat", " 3091 5702 86782"],
         color: "bg-blue-50 border-blue-200 hover:bg-blue-100", 
     },
     {
@@ -49,7 +50,7 @@ const paymentMethods: PaymentMethod[] = [
         name: "ইসলামী ব্যাংক অ্যাকাউন্ট",
         logo: 'islami-bank.png',
         description: "ব্যাংক অ্যাকাউন্ট ট্রান্সফার",
-        details: ["2050 2340 2026 78607", "Name: Sahadat"],
+        details: ["Name: Sahadat", " 2050 2340 2026 78607"],
         color: "bg-amber-50 border-amber-200 hover:bg-amber-100",
     },
     {
@@ -58,6 +59,14 @@ const paymentMethods: PaymentMethod[] = [
         icon: <HandCoins className="w-8 h-8" />,
         description: "সরাসরি নগদ অর্থ প্রদান",
         details: ["চালক বা কর্মীর কাছে সরাসরি পরিশোধ করুন", " পরিশোধের সময় অফিসে অবগত করুন"], 
+        color: "bg-emerald-50 border-emerald-200 hover:bg-emerald-100",
+    },
+    {
+        id: "cash",
+        name: " সরাসরি অফিস",
+        icon: <HandCoins className="w-8 h-8" />,
+        description: "অফিসের ম্যানেজারের কাছে সরাসরি বিল জমা দিন",
+        details: [" অফিসে এসে নগদ ক্যাশ পরিশোধ করুন", " পরিশোধের পরে মানি রিসিট গ্রহন করুন"], 
         color: "bg-emerald-50 border-emerald-200 hover:bg-emerald-100",
     },
 ]
@@ -120,15 +129,14 @@ export default function PaymentPage() {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <div className="flex items-center justify-center gap-3 mb-4">
-
                         <h1 className="text-4xl font-bold text-foreground"> নিরাপদ ও দ্রুত পেমেন্ট সিস্টেম </h1>
                     </div>
-                    <p className="text-lg text-muted-foreground"> শিকদার অ্যাম্বুলেন্স সার্ভিস </p>
+                    <p className="text-lg text-muted-foreground"> আপনার জরুরি অ্যাম্বুলেন্স বুকিং আরও সহজ, দ্রুত ও নিরাপদ করতে আমরা নিয়ে এসেছি আধুনিক অনলাইন পেমেন্ট সিস্টেম। ১০০% বিশ্বাস্থতার সাথে অনলাইনে বুকিং করুন। <b>শিকদার অ্যাম্বুলেন্স সার্ভিস।</b> </p>
                 </div>
 
                 {/* Payment Methods */}
                 <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-foreground mb-6">পেমেন্ট সিস্টেম</h2>
+                    <h2 className="text-2xl font-bold text-foreground mb-6">পেমেন্ট মাধ্যম (Payment Methods)</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {paymentMethods.map((method) => (
                             <button
@@ -158,7 +166,117 @@ export default function PaymentPage() {
                         ))}
                     </div>
                 </div>
+                {/* Money Recipt Facilitce */}
+                <div className="mb-8">
+                    <h2 className="text-2xl font-bold text-foreground mb-5">অনলাইনে অ্যাম্বুলেন্স বুকিং সুবিধা </h2>
+                    <div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b>ঘরে বসেই বুকিং সুবিধা:</b> যেকোন সময়, যেকোন এলাকা থেকে কল দিয়ে সহজেই অ্যাম্বুলেন্স বুক করা যায়। </p>
+                    </span>
+                  </div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b>দ্রুত সেবা নিশ্চিত:</b> মাত্র কয়েক সেকেন্ডেই বুকিং নিশ্চয়তা এবং দ্রুত অ্যাম্বুলেন্স সেবা পাওয়ার সুবিধা। </p>
+                    </span>
+                  </div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b>জরুরি মুহূর্তে সময় বাঁচায়ঃ</b> কল করার মাধ্যমে দ্রুত বুকিং সুবিধা হওয়ায় গুরুত্বপূর্ণ সময় সাশ্রয় হয় এবং দ্রুত গাড়ি পাওয়া যায়। </p>
+                    </span>
+                  </div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b>সহজ পেমেন্ট সুবিধাঃ</b> বিকাশ, নগদ, ব্যাংক বা ক্যাশ - সব ধরনের পেমেন্ট সুবিধা আছে। </p>
+                    </span>
+                  </div>                  
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b>মানি রিসিট প্রদানঃ </b> প্রতিটি বুকিংয়ের জন্য অফিসিয়াল কনফার্মেশন ও মানি রিসিট প্রদান করা হয়। </p>
+                    </span>
+                  </div>
+                  
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b>বুকিং সুবিধা:</b> লোকেশন যেখানেই হোক, অনলাইনে সহজেই অ্যাম্বুলেন্স বুকিং করা যায়। </p>
+                    </span>
+                  </div>                  
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b>২৪/৭ সাপোর্ট সুবিধা:</b> দিন-রাত যেকোনো সময় অনলাইনে বুকিং ও সহায়তা পাওয়া যায়।</p>
+                    </span>
+                  </div>
+                </div>
+                </div>
+                {/* Payment Terms */}
+                <div className="mb-8">
+                    <h2 className="text-2xl font-bold text-foreground mb-5">মানি রিসিট (Money Receipt) সুবিধা </h2>
+                    <div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> প্রতিটি পেমেন্টের বিপরীতে একটি অফিসিয়াল রিসিট পাওয়া যায়, যা বৈধ প্রমাণ হিসেবে কাজ করে। </p>
+                    </span>
+                  </div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> কত টাকা নেওয়া হয়েছে এবং কোন সেবার জন্য নেওয়া হয়েছে - সব পরিষ্কারভাবে উল্লেখ থাকে। </p>
+                    </span>
+                  </div>                  
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> রিসিট ভবিষ্যতের জন্য সংরক্ষণ করা যায়, প্রয়োজনে যাচাই করা সম্ভব। </p>
+                    </span>
+                  </div>                  
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> হোয়ার্টআপ, ইমেই বা প্রিন্ট আকারে রিসিট পাওয়া যায়। </p>
+                    </span>
+                  </div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> রিসিট পাওয়ার মাধ্যমে নিশ্চিত হয় যে আপনার বুকিং ও পেমেন্ট গ্রহণ করা হয়েছে। </p>
+                    </span>
+                  </div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p>পরবর্তী কোনো সমস্যা বা বুকিংয়ের সময় এই রিসিট রেফারেন্স হিসেবে ব্যবহার করা যায়।</p>
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p> অফিসিয়াল রিসিট থাকায় ভুল বা অসৎ লেনদেনের ঝুঁকি কমে যায় এবং প্রতারণা প্রতিরোধ করে। </p>
+                    </span>
+                  </div>                                 
+                </div>
+                </div>
+                {/* Payment Terms */}
+                <div className="mb-8">
+                    <h2 className="text-2xl font-bold text-foreground mb-5">আমাদের প্রতিশ্রুতি</h2>
+                    <div>
+                    <div className="flex items-center space-x-3">
+                    <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    <span className="text-gray-700">
+                     <p><b> শিকদার অ্যাম্বুলেন্স সার্ভিস একটি বিশ্বস্ত সেবা প্রতিষ্ঠান, যা দ্রুত, নিরাপদ এবং মানবিক অ্যাম্বুলেন্স সেবা নিশ্চিত করে।</b></p>
+                    </span>
+                  </div>                                                   
+                </div>
+                </div>
             </div>
         </div>
     )
 }
+

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Freezing Ambulance Service in Dhaka | Shikder Ambulance",
+    title: "Freezing Ambulance Service in Dhaka",
     description:
       "Freezing Ambulance Service in Dhaka. Professional 24/7 freezing ambulance service across Bangladesh.",
     images: ["/images/Freezing Ambulance Service-shikder-ambulance.jpg"],

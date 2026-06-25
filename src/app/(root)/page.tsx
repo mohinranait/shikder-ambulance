@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title:
     "Shikder Ambulance Service in Dhaka | Best Available 24/7",
   description:
-    "Shikder Ambulance service in Dhaka. We offers emergency Ac, Non-Ac Ambulance and freezing ambulance service in Dhaka and Nearby area. Need Ambulance? Call Now.",
+    "Shikder Ambulance service in Dhaka. We offers emergency Ac, Non-Ac Ambulance and freezing ambulance service in Dhaka and Nearby area. Call Now.",
   keywords:
     "ambulance service, nearby ambulance servaice, best ambulance number, Shikder Ambulance service, best ambulance service, near ambulance service, online ambulance, best ambulance near me, top ambulance, freezing ambulance near me, fast ambulance, 24 Hours Ambulance service, Dhaka Ambulance service, dead body carrier ambulance, emergency ambulances, emergency medical service, Dhaka ambulance, Bangladesh ambulance, AC ambulance, non-ac ambulance, life support ambulance, freezing ambulance, ICU ambulance, life support ambulance service, NICU Ambulance service, best Ambulance service number, top Ambulance service, Quality Ambulance service, Oxygen Ambulance service, long distance Ambulance service, Dhaka to out districts Ambulance service, Out districts Ambulance service, nearby Ambulance service, fast Ambulance service in Dhaka",
   alternates: {
