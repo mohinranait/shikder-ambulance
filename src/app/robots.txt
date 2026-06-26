@@ -1,4 +1,4 @@
-# robots.txt of Shikder Ambulance
+# Robots.txt of Shikder Ambulance
 
 User-agent: *
 Allow: /
@@ -8,6 +8,7 @@ Disallow: /wp-admin/
 Disallow: /cgi-bin/
 Disallow: /temp/
 Disallow: /search
+Disallow: /services
 
 # Sitemap link
 Sitemap: https://shikderambulance.com/sitemap.xml
