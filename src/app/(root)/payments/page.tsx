@@ -1,7 +1,7 @@
 
 
 import type React from "react"
-import {   HandCoins } from "lucide-react"
+import {   CheckCircle2, HandCoins } from "lucide-react"
 import Image from "next/image"
 import { Metadata } from "next"
 
