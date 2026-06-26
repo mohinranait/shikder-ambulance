@@ -166,7 +166,7 @@ export default function PaymentPage() {
                         ))}
                     </div>
                 </div>
-                {/* Money Recipt Facilitce */}
+                {/* Money Recipt Facilitce cha */}
                 <div className="mb-8">
                     <h2 className="text-2xl font-bold text-foreground mb-5">অনলাইনে অ্যাম্বুলেন্স বুকিং সুবিধা </h2>
                     <div>
