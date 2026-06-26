@@ -71,11 +71,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="author" content="Shikder Ambulance" />
         <meta name="rating" content="general" />
-        <link
+        {/* <link
           rel="icon"
           href="/favicon.ico"
           type="image/x-icon"
-        />
+        /> */}
         <meta
           name="google-site-verification"
           content="k9w6p571W9qlAmJr2Q9B-mCZ0Ab9xGP3mgZ9zuv5ssk"
