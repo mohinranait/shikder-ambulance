@@ -1,8 +1,7 @@
 
 
 import type React from "react"
-import { useState } from "react"
-import { CheckCircle2, Phone, DollarSign, Smartphone, Building2, HandCoins } from "lucide-react"
+import {   HandCoins } from "lucide-react"
 import Image from "next/image"
 import { Metadata } from "next"
 

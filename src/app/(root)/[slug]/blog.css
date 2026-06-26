@@ -18,7 +18,7 @@
 .blog-post-preview p {
   margin: 1rem 0;
   font-size: 1rem;
-  color: #333;
+  color: #1f2937;
 }
 
 /* Headings */
@@ -54,13 +54,14 @@
 
 /* Links */
 .blog-post-preview a {
-  color: #007bff;
+   color: #1d4ed8;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
+
 .blog-post-preview a:hover {
-  color: #0056b3;
+  color: #1e40af;
 }
 
 /* Bold and Italic */
