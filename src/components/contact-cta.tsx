@@ -18,7 +18,7 @@ export function ContactCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link href={"tel:+8801627669222"}>
+            <Link href={"tel:+8801713260042"}>
               <Button
                 size="lg"
                 variant="secondary"
@@ -28,7 +28,7 @@ export function ContactCTA() {
                 Emergency Call: 01713-260042
               </Button>
             </Link>
-            <Link href={"tel:01713260042"}>
+            <Link href={"tel:01710060020"}>
               <Button
                 size="lg"
                 variant="outline"
@@ -49,8 +49,7 @@ export function ContactCTA() {
               </div>
               <h3 className="text-lg font-semibold mb-2">24/7 Availability</h3>
               <p className="text-blue-100">
-                Round-the-clock emergency medical services, every day of the
-                year.
+                Round-the-clock emergency Ambulance service, every day of the year.
               </p>
             </CardContent>
           </Card>
@@ -64,8 +63,7 @@ export function ContactCTA() {
                 Dhaka City Coverage
               </h3>
               <p className="text-blue-100">
-                Comprehensive Ambulance coverage across the metropolitan area
-                with multiple stations.
+                Comprehensive Ambulance coverage in the all Dhaka City with Nearby Area.
               </p>
             </CardContent>
           </Card>

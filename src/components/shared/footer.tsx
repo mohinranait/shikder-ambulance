@@ -13,6 +13,7 @@ import {
   Shield,
   BookmarkCheck,
   Banknote,
+  AmbulanceIcon,
 } from "lucide-react";
 import Link from "next/link";
 const quickLinks = [
@@ -78,9 +79,9 @@ const FooterComponent = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Shikder Ambulance company is the largest and trusted company in
+              Shikder Ambulance is the largest and trusted company in
               Bangladesh. We offer you the all types of
-              Ambulances in comfortable price.
+              Ambulance from Dhaka and Nearby Area to all districts.
             </p>
 
             <div className="flex space-x-4">
@@ -109,48 +110,65 @@ const FooterComponent = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Our Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3">
-              {quickLinks?.map((link) => (
-                <li key={link?.label}>
-                  <Link
-                    href={link?.link}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {link?.label}
-                  </Link>
-                </li>
-              ))}
+              <li className="flex items-center text-gray-300">
+                <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
+                Emergency Ambulance Service
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
+                Patient Transport Service
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
+                Dead body Transportation Service
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
+                Dead Body Safty Service
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Shield className="h-4 w-4 mr-2 text-blue-400"/>
+                Dhaka to All Districts Ambulance Service
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Shield className="h-4 w-4 mr-2 text-blue-400"/>
+                <b>Your Safety is Our First Priority </b>
+              </li>              
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-6">Our Offices</h4>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
-                <Heart className="h-4 w-4 mr-2 text-red-400" />
-                Dhaka and Nearby Area
+                <MapPin className="h-4 w-4 mr-2 text-blue-300"/>
+                Eskaton Road, Mogbazar, Dhaka-1217
               </li>
               <li className="flex items-center text-gray-300">
-                <Shield className="h-4 w-4 mr-2 text-blue-400" />
-                Dhaka to All Districts Ambulance
+                <MapPin className="h-4 w-4 mr-2 text-blue-300"/>
+                Wireless Gate, Mohakhali, Dhaka-1212
               </li>
               <li className="flex items-center text-gray-300">
-                <Shield className="h-4 w-4 mr-2 text-blue-400" />
-                Quick response & reliable service
+                <MapPin className="h-4 w-4 mr-2 text-blue-300"/>
+                New Airport Road, Dhaka-1230
               </li>
               <li className="flex items-center text-gray-300">
-                <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
-                Patient safety is our first priority
+                <MapPin className="h-4 w-4 mr-2 text-blue-300"/>
+                Mirpur-10, Mirpur, Dhaka-1216
               </li>
               <li className="flex items-center text-gray-300">
-                <Ambulance className="h-4 w-4 mr-2 text-green-400" />
-                <b>Manager: Shahadat Shikder</b>
+                <MapPin className="h-4 w-4 mr-2 text-blue-300"/>
+                Khilgaw, Bashaboo, Dhaka-1214 
               </li>
-
+              <li className="flex items-center text-gray-300">
+                <MapPin className="h-4 w-4 mr-2 text-blue-300"/>
+                Dhanmondi-15, Dhaka-1209 
+              </li>            
             </ul>
           </div>
 
@@ -170,16 +188,15 @@ const FooterComponent = () => {
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3 text-blue-400" />
                 <p>shikderambulance@gmail.com</p>
-              </div>
-              <div className="flex items-start text-gray-300">
-                <MapPin className="h-5 w-5 mr-3 mt-1 text-green-400" />
-                <div>
-                  <p>Eskaton Road, Mogbazar, Dhaka-1217</p>
-                </div>
-              </div>
-
+              </div>              
               <div className="flex items-start text-gray-300">
                 <BookmarkCheck className="h-5 w-5 mr-3 mt-1 text-purple-400" />
+                <div>
+                  <p><b>Manager:</b> Shahadat Shikder</p>
+                </div>
+              </div>              
+              <div className="flex items-start text-gray-300">
+                <BookmarkCheck className="h-5 w-5 mr-3 mt-1 text-purple-400"/>
                 <div>
                   <p><b>Trade No:</b> TRAD/DSCC/017141/2024</p>
                 </div>
@@ -187,7 +204,7 @@ const FooterComponent = () => {
               <div className="flex items-start text-gray-300">
                 <Banknote className="h-5 w-5 mr-3 mt-1 text-purple-400" />
                 <Link href="/payments" target="_blank">
-                  <p>Payment System</p>
+                  <p><b>Payment System</b></p>
                 </Link>
               </div>
 
@@ -206,7 +223,7 @@ const FooterComponent = () => {
           <div className="text-gray-400 text-sm">
             <p>
               {" "}
-              Copyright-2025 &copy; Shikder Ambulance, All Rights Reserved.
+              Copyright-2026 &copy; Shikder Ambulance, All Rights Reserved.
             </p>
           </div>
           <div className="flex space-x-6 text-sm">

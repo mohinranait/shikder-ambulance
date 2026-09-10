@@ -193,12 +193,12 @@ export default function PrivacyPage() {
                 <p className="text-gray-700 mb-4">
                   For privacy-related questions or concerns, contact us:
                 </p>
-                <div className="space-y-2 text-gray-700">
+                <div className="space-y-2 text-gray-700">                  
                   <p>
-                    <strong>Email:</strong> shikderambulance@gmail.com
+                    <strong>Phone:</strong> 01713-260042
                   </p>
                   <p>
-                    <strong>Phone:</strong> 017100-60020
+                    <strong>Email:</strong> shikderambulance@gmail.com
                   </p>
                   <p>
                     <strong>Address:</strong> Mogbazar Road, Dhaka

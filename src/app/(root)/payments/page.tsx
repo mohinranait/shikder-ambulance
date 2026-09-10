@@ -20,7 +20,7 @@ const paymentMethods: PaymentMethod[] = [
 
     {
         id: "bkash",
-        name: " বিকাশ (bKash)",
+        name: " বিকাশ - bKash",
         logo: 'bkash.png',
         description: "মোবাইল ব্যাংকিং সেবা",
         details: [" সর্বোচ্চ নিরাপদ লেনদেন", " 01710060020"],
@@ -29,7 +29,7 @@ const paymentMethods: PaymentMethod[] = [
     }, 
     {
         id: "nagad",
-        name: " নগদ (Nagad)",
+        name: " নগদ - Nagad",
         logo: 'nagad.png',
         description: "মোবাইল ব্যাংকিং সেবা",
         details: [" সর্বোচ্চ নিরাপদ লেনদেন", "01710060020 "],
@@ -54,7 +54,7 @@ const paymentMethods: PaymentMethod[] = [
     },
     {
         id: "cash",
-        name: "হ্যান্ড ক্যাশ (নগদ)",
+        name: "নগদ ক্যাশ",
         icon: <HandCoins className="w-8 h-8" />,
         description: "সরাসরি নগদ অর্থ প্রদান",
         details: ["চালক বা কর্মীর কাছে সরাসরি পরিশোধ করুন", " পরিশোধের সময় অফিসে অবগত করুন"], 

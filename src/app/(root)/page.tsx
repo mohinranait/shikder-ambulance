@@ -10,17 +10,17 @@ import { BlogTeasers } from "./components/BlogTeasers";
 
 export const metadata: Metadata = {
   title:
-    "Shikder Ambulance Service in Dhaka | Best Available 24/7",
+    "Emergency Ambulance Service in Dhaka | Best Available 24/7",
   description:
-    "Shikder Ambulance service in Dhaka. We offers emergency Ac, Non-Ac Ambulance and freezing ambulance service in Dhaka and Nearby area. Call Now.",
+    "Emergency Ambulance service in Dhaka, Bangladesh. Shikder Ambulance offers emergency Ac, Non-Ac Ambulance and freezing ambulance service in Dhaka and Nearby area. Need Ambulance? Call Now.",
   keywords:
-    "ambulance service, nearby ambulance servaice, best ambulance number, Shikder Ambulance service, best ambulance service, near ambulance service, online ambulance, best ambulance near me, top ambulance, freezing ambulance near me, fast ambulance, 24 Hours Ambulance service, Dhaka Ambulance service, dead body carrier ambulance, emergency ambulances, emergency medical service, Dhaka ambulance, Bangladesh ambulance, AC ambulance, non-ac ambulance, life support ambulance, freezing ambulance, ICU ambulance, life support ambulance service, NICU Ambulance service, best Ambulance service number, top Ambulance service, Quality Ambulance service, Oxygen Ambulance service, long distance Ambulance service, Dhaka to out districts Ambulance service, Out districts Ambulance service, nearby Ambulance service, fast Ambulance service in Dhaka",
+    "ambulance service, Shikder Ambulance, Emergency Ambulance service, nearby ambulance servaice, best ambulance number, Shikder Ambulance service, best ambulance service, near ambulance service, online ambulance, best ambulance near me, top ambulance, freezing ambulance near me, fast ambulance, 24 Hours Ambulance service, Dhaka Ambulance service, dead body carrier ambulance, emergency ambulances, emergency medical service, Dhaka ambulance, Bangladesh ambulance, AC ambulance, non-ac ambulance, life support ambulance, freezing ambulance, ICU ambulance, life support ambulance service, NICU Ambulance service, best Ambulance service number, top Ambulance service, Quality Ambulance service, Oxygen Ambulance service, long distance Ambulance service, Dhaka to out districts Ambulance service, Out districts Ambulance service, nearby Ambulance service, all districts ambulance service, Quality Ambulance service in Dhaka, Top Ambulance service, fast Ambulance service in Dhaka",
   alternates: {
     canonical: "https://shikderambulance.com",
   },
   openGraph: {
-    title: "Shikder Ambulance Service | Best Available 24/7",
-    description: "Shikder Ambulance service in Dhaka. We offers emergency Ac, Non-Ac Ambulance and freezing ambulance service in Dhaka and Nearby area. Need Ambulance? Call Now",
+    title: "Emergency Ambulance Service | Available 24/7",
+    description: "Emergency Ambulance service in Dhaka. Shikder Ambulance offers emergency Ac, Non-Ac Ambulance and freezing ambulance service in Dhaka and Nearby area. Need Ambulance? Call Now",
     url: "https://shikderambulance.com",
     siteName: "Shikder Ambulance",
     locale: "bn_BD",

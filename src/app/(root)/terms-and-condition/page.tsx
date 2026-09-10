@@ -257,7 +257,7 @@ export default function TermsPage() {
                 </p>
                 <div className="space-y-2 text-gray-700">
                   <p>
-                    <strong>Emergency Line:</strong> 01627-669222
+                    <strong>Emergency Line:</strong> 01713-260042
                   </p>
                   <p>
                     <strong>Customer Service:</strong> 017100-60020
@@ -266,16 +266,16 @@ export default function TermsPage() {
                     <strong>Email:</strong> shikderambulance@gmail.com
                   </p>
                   <p>
-                    <strong>Address:</strong> Mobgazar Holy family Road, Dhaka
+                    <strong>Address:</strong> Mobgazar Holy family Hospital Road, Dhaka
                     1217, Bangladesh
                   </p>
                   <p>
                     <strong>Business Hours:</strong> 24/7 Available (for
-                    emergency inquiries)
+                    emergency)
                   </p>
                   <p>
-                    <strong>Business Hours:</strong> 5:00 AM - 11:00 PM (for
-                    Non-emergency inquiries)
+                    <strong>Business Hours:</strong> 5:00 AM - 11:00 PM ( Emergncy & 
+                    Non-emergency)
                   </p>
                 </div>
               </CardContent>

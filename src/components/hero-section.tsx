@@ -13,19 +13,20 @@ export function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge className="bg-red-500 hover:bg-red-600 text-white px-4 py-2">
-                We’re Always Ready to Service
+                Welcome to Shikder Ambulance
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal">
-                Shikder Ambulance Service in Dhaka, 
-                <span className="text-primary"> Always Available</span>
+                Emergency Ambulance Service in Dhaka - 
+                <span className="text-primary"> Available 24/7</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Welcome to <b>Shikder Ambulance Service</b> in Dhaka,
-                Bangladesh. Looking for a reliable Ambulance? You have come to
-                the right place. We guarantee your safe and comfortable arrival
-                at your destination. <b>Online Booking and Money Receipt</b> is
-                Available.
-              </p>
+                <b>Emergency Ambulance Service in Dhaka, Bangladesh.</b> Looking for a fast and reliable Ambulance? You have come to
+                the right place. <b>Shikder Ambulance</b> provide reliable, and comfortable patient transportation with a commitment to timely service. We are always ready to serve you. Need an Emergency Ambulance? Call Now Shikder Ambulance.</p>
+                <p><b>24/7 Emergency Ambulance Service</b></p>
+                <p><b>Fast & Reliable Response</b></p>
+                <p><b>Safe & Comfortable Patient Transport</b></p>
+                <p><b>Your safety and comfort are our first priority.</b></p>
+                <p><b>Online Booking & Money Receipt is Available.</b></p>
             </div>
 
             {/* Emergency Contact */}
@@ -36,7 +37,7 @@ export function HeroSection() {
                   className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Now: 01710060020
+                  Call Now : 01713-260042
                 </Button>
               </Link>
               <Link href={"/contact-us"}>
@@ -101,7 +102,7 @@ export function HeroSection() {
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-premium border">
               <div className="flex items-center space-x-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-100">
-                  <Phone className="h-6 w-6 text-red-600" />
+                  <Phone className="h-6 w-6 text-red-600"/>
                 </div>
                 <div>
                   <p className="font-semibold">Emergency Helpline</p>

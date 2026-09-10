@@ -6,7 +6,7 @@ export function WhyChooseUs() {
     {
       icon: Clock,
       title: "Fast Response Time",
-      description: "Average 10-minutes response time with our strategically located fleet across the Dhaka City.",
+      description: "Average 10-minutes response time with our strategically located fleet in the Dhaka City.",
       color: "text-primary",
       bgColor: "bg-blue-50",
     },
@@ -53,8 +53,7 @@ export function WhyChooseUs() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Why Choose Shikder Ambulance Service?</h2>
           <p className=" text-muted-foreground max-w-3xl mx-auto">
-            We provide reliable, professional emergency Ambulance services with a commitment to saving lives and ensuring
-            the best possible patient care. Anytime, Anywhere is Available.
+            <b>Shikder Ambulance Service</b> is committed to providing fast, reliable, safe, and comfortable patient transportation whenever you need it. With 24/7 emergency Ambulance support, professional service, easy online booking, and coverage in Dhaka with all districts. We are always ready to serve you when every moment matters.
           </p>
         </div>
 

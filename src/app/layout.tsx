@@ -6,9 +6,9 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Shikder Ambulance Service in Dhaka | Best, Fast & Reliable 24/7 ",
+  title: "Emergency Ambulance Service in Dhaka | Best Available 24/7 ",
   description:
-    "Shikder Ambulance Service in Dhaka provides 24/7 emergency medical transport, freezing ambulance, ICU ambulance, and dead body carrier service. Fast, safe, and reliable assistance across Bangladesh.",
+    "Emergency Ambulance Service in Dhaka. Shikder Ambulance provide Ac, Non-Ac Ambulance, freezing ambulance, and dead body carrier freezing Ambulance service. Need Ambulance? Call Now Shikder Ambulance.",
   keywords:
     "ambulance service, ambulance near me, Dhaka ambulance, 24/7 ambulance, freezing ambulance, ICU ambulance, life support ambulance, non-AC ambulance, AC ambulance, emergency medical service, dead body carrier, Shikder ambulance, Bangladesh ambulance, online ambulance service, fast ambulance in Dhaka",
   // authors: [{ name: "Shikder Ambulance" }],
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://shikderambulance.com"),
 
   openGraph: {
-    title: "Shikder Ambulance Service in Dhaka | Best Reliable 24/7",
+    title: "Shikder Ambulance Service in Dhaka | Best Available 24/7",
     description:
       "Reliable 24/7 ambulance service in Dhaka. Shikder Ambulance ensures safe, fast, and comfortable transport with AC, non-AC, ICU, and freezing ambulances.",
     url: "https://shikderambulance.com",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shikder Ambulance Service in Dhaka | 24/7 Reliable & Fast",
+    title: "Shikder Ambulance Service in Dhaka | Fast Available 24/7",
     description:
       "Looking for a 24-hour ambulance in Dhaka? Shikder Ambulance offers ICU, AC, non-AC, and freezing ambulances for emergencies across Bangladesh.",
     images: [
