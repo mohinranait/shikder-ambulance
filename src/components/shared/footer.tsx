@@ -100,7 +100,7 @@ const FooterComponent = () => {
                       size="sm"
                       aria-label={`Visit our ${social.name} page`}
                       variant="outline"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
+                      className="border-gray-600 text-gray-300 hover:text-white bg-transparent hover:bg-transparent"
                     >
                       <Icon className="h-4 w-4" />
                     </Button>
