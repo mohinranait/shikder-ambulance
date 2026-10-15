@@ -71,14 +71,14 @@ export default function AboutPage() {
     },
     {
       name: "Musa Shikder Mahir",
-      role: "Director",
+      role: "Developer",
       experience: "10 years",
       image: "/default.png",
       specialization: "Software Engineer",
     },
     {
       name: "Mohin Rana",
-      role: "Developer",
+      role: "Software Engineer",
       experience: "10 years",
       image: "/default.png",
       specialization: "Software Developer",
@@ -88,7 +88,7 @@ export default function AboutPage() {
       role: "Manager",
       experience: "8 years",
       image: "/default.png",
-      specialization: "Digital Marketing Manager",
+      specialization: "Manager",
     },
   ];
 

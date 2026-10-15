@@ -6,11 +6,11 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Emergency Ambulance Service in Dhaka | Best Available 24/7 ",
+  title: "Emergency Ambulance Service in Dhaka | Shikder Ambulance ",
   description:
-    "Emergency Ambulance Service in Dhaka. Shikder Ambulance provide Ac, Non-Ac Ambulance, freezing ambulance, and dead body carrier freezing Ambulance service. Need Ambulance? Call Now Shikder Ambulance.",
+    "Emergency Ambulance Service in Dhaka. Shikder Ambulance provide Ac, Non-Ac Ambulance, ICU Ambulance, and dead body carrier freezing Ambulance service. Need Ambulance? Call Now: 01713260042",
   keywords:
-    "ambulance service, ambulance near me, Dhaka ambulance, 24/7 ambulance, freezing ambulance, ICU ambulance, life support ambulance, non-AC ambulance, AC ambulance, emergency medical service, dead body carrier, Shikder ambulance, Bangladesh ambulance, online ambulance service, fast ambulance in Dhaka",
+    "Ambulance service, ambulance near me, Dhaka ambulance, 24/7 ambulance, freezing ambulance, ICU ambulance, life support ambulance, non-AC ambulance, AC ambulance, emergency medical service, dead body carrier, Shikder ambulance, Bangladesh ambulance, online ambulance service, fast ambulance in Dhaka, Ambulance Service in Dhaka, Ambulance Service Dhaka, Ambulance Service Near Me, Emergency Ambulance Service in Dhaka, Best Ambulance Service in Dhaka, 24/7 Ambulance Service Dhaka, Ambulance Number in Dhaka, Ambulance Service Contact Number, Private Ambulance Service in Dhaka, Ambulance Booking in Dhaka, ICU Ambulance Service in Dhaka, AC Ambulance Service in Dhaka, Freezing Ambulance Service in Dhaka, Dead Body Ambulance Service in Dhaka, Dead Body Freezing Ambulance Dhaka, Patient Transport Service Dhaka, Hospital Transfer Ambulance Dhaka, Long Distance Ambulance Service Dhaka, Affordable Ambulance Service in Dhaka, Online Ambulance Booking Dhaka, Emergency Ambulance Dhaka, Emergency Ambulance Number Dhaka, Ambulance Call Number Dhaka, Ambulance Booking Number Dhaka, Ambulance Contact Number Dhaka, Ambulance Phone Number Dhaka, Ambulance Available Near Me, Book an Ambulance in Dhaka, Quick Ambulance Service Dhaka, 24 Hour Ambulance Service Dhaka, 24/7 Emergency Ambulance Dhaka, Private Ambulance Number Dhaka, Hospital Ambulance Service Dhaka, Ambulance Service Open 24 Hours, Immediate Ambulance Booking Dhaka, ICU Ambulance Service Dhaka, Mobile ICU Ambulance Dhaka, Life Support Ambulance Dhaka, Ventilator Ambulance Service Dhaka, Critical Care Ambulance Dhaka, AC Ambulance Service Dhaka, Non AC Ambulance Dhaka, Patient Transport Service Dhaka, Hospital to Home Ambulance Dhaka, Hospital to Hospital Ambulance Dhaka, Freezing Ambulance Service Dhaka, Dead Body Freezing Ambulance Dhaka, Dead Body Transport Service Dhaka, Mortuary Ambulance Dhaka, Dead Body Carrying Ambulance Dhaka, Long Distance Ambulance Service Dhaka, Dhaka to Chittagong Ambulance, Dhaka to Chattogram Ambulance, Dhaka to Sylhet Ambulance, Dhaka to Barisal Ambulance, Out of Dhaka Ambulance Service, Ambulance Service in Gulshan, Ambulance Service in Banani, Ambulance Service in Mohakhali, Ambulance Service in Badda, Ambulance Service in Rampura, Ambulance Service in Malibag, Ambulance Service in Uttara, Ambulance Service in Mirpur, Ambulance Service in Dhanmondi, Ambulance Service in Mohammadpur, Ambulance Service in Jatrabari, Ambulance Service in Kuril, Ambulance Service in Natun Bazar, Ambulance Service in Agargaon, Ambulance Service in Basabo, Ambulance Service in Motijheel, Ambulance Service in Tejgaon, Ambulance Service in Shantinagar, Ambulance Service in Aftabnagar, Ambulance Service in Demra, ঢাকা অ্যাম্বুলেন্স সার্ভিস, ঢাকায় অ্যাম্বুলেন্স সার্ভিস, জরুরি অ্যাম্বুলেন্স সার্ভিস ঢাকা, ঢাকায় অ্যাম্বুলেন্স নাম্বার, ২৪ ঘণ্টা অ্যাম্বুলেন্স সার্ভিস ঢাকা, আইসিইউ অ্যাম্বুলেন্স সার্ভিস ঢাকা, এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা, ফ্রিজিং অ্যাম্বুলেন্স সার্ভিস ঢাকা, লাশবাহী অ্যাম্বুলেন্স ঢাকা, লাশবাহী ফ্রিজিং অ্যাম্বুলেন্স ঢাকা, রোগী পরিবহনের অ্যাম্বুলেন্স ঢাকা, ঢাকার বাইরে যাওয়ার অ্যাম্বুলেন্স, কম খরচে অ্যাম্বুলেন্স সার্ভিস ঢাকা, ঢাকায় অ্যাম্বুলেন্স বুকিং, Shikder Ambulance, Shikder Ambulance Service, Shikder Freezing Ambulance Service",
   // authors: [{ name: "Shikder Ambulance" }],
   creator: "Shikder Ambulance",
   publisher: "Shikder Ambulance",
@@ -69,7 +69,7 @@ export default function RootLayout({
         /> */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="theme-color" content="#ffffff" />
-        <meta name="author" content="Shikder Ambulance" />
+        <meta name="author" content="Shikder Ambulance"/>
         <meta name="rating" content="general" />
         {/* <link
           rel="icon"

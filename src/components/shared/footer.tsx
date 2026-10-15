@@ -13,7 +13,10 @@ import {
   Shield,
   BookmarkCheck,
   Banknote,
-  AmbulanceIcon,
+  Pinterest,
+  User,
+  Linkedin,
+  PointerIcon,
 } from "lucide-react";
 import Link from "next/link";
 const quickLinks = [
@@ -43,13 +46,18 @@ const socialLinks = [
   },
   {
     name: "LinkedIn ",
-    icon: Twitter,
+    icon: Linkedin, 
     link: "https://bd.linkedin.com/in/shikder-ambulance",
   },
   {
     name: "Instagram",
     icon: Instagram,
     link: "https://www.instagram.com/shikderambulanceservicedhaka/",
+  },
+  {
+    name: "Pinterest",
+    icon: Youtube,
+    link: "https://www.pinterest.com/shikderambulance/",
   },
   {
     name: "YouTube",
@@ -74,7 +82,7 @@ const FooterComponent = () => {
               <div>
                 <h3 className="text-xl font-bold">Shikder Ambulance</h3>
                 <p className="text-gray-400 text-sm">
-                  Patient Transport Service
+                  রোগী ও লাশ পরিবহন সেবা 
                 </p>
               </div>
             </div>
@@ -102,7 +110,7 @@ const FooterComponent = () => {
                       variant="outline"
                       className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
                     >
-                      <Icon className="h-4 w-4" />
+                      <Icon className="h-4 w-4"/>
                     </Button>
                   </Link>
                 );
@@ -124,26 +132,26 @@ const FooterComponent = () => {
               </li>
               <li className="flex items-center text-gray-300">
                 <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
-                Dead body Transportation Service
+                Dead Body Transportation Service
               </li>
               <li className="flex items-center text-gray-300">
                 <Ambulance className="h-4 w-4 mr-2 text-purple-400" />
-                Dead Body Safty Service
-              </li>
-              <li className="flex items-center text-gray-300">
-                <Shield className="h-4 w-4 mr-2 text-blue-400"/>
                 Dhaka to All Districts Ambulance Service
               </li>
               <li className="flex items-center text-gray-300">
+                <Ambulance className="h-4 w-4 mr-2 text-purple-400"/>
+                Any districts to Dhaka Ambulance Service
+              </li>
+              <li className="flex items-center text-gray-300">
                 <Shield className="h-4 w-4 mr-2 text-blue-400"/>
-                <b>Your Safety is Our First Priority </b>
+                <b>Your Safety is Our First Priority</b>
               </li>              
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Offices</h4>
+            <h4 className="text-lg font-semibold mb-6">Offices Location</h4>
             <ul className="space-y-3">
               <li className="flex items-center text-gray-300">
                 <MapPin className="h-4 w-4 mr-2 text-blue-300"/>
@@ -168,7 +176,7 @@ const FooterComponent = () => {
               <li className="flex items-center text-gray-300">
                 <MapPin className="h-4 w-4 mr-2 text-blue-300"/>
                 Dhanmondi-15, Dhaka-1209 
-              </li>            
+              </li>
             </ul>
           </div>
 
@@ -176,25 +184,26 @@ const FooterComponent = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact Us</h4>
             <div className="space-y-4 mb-6">
-              <Link href={'tel:01710060020'}>
+              <Link href={'tel:01713260042'}>
                 <div className="flex items-center text-gray-300">
                   <Phone className="h-5 w-5 mr-3 text-red-400" />
                   <div>
-                    <p className="font-bold text-white -400">01710060020</p>
+                    <p className="font-bold text-white -400">01713-260042</p>
                   </div>
                 </div>
               </Link>
 
-              <div className="flex items-center text-gray-300">
-                <Mail className="h-5 w-5 mr-3 text-blue-400" />
-                <p>shikderambulance@gmail.com</p>
-              </div>              
+
               <div className="flex items-start text-gray-300">
-                <BookmarkCheck className="h-5 w-5 mr-3 mt-1 text-purple-400" />
+                <User className="h-5 w-5 mr-3 mt-1 text-purple-400" />
                 <div>
                   <p><b>Manager:</b> Shahadat Shikder</p>
                 </div>
-              </div>              
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="h-5 w-5 mr-3 text-blue-400" />
+                <p>shikderambulance@gmail.com</p>
+              </div>
               <div className="flex items-start text-gray-300">
                 <BookmarkCheck className="h-5 w-5 mr-3 mt-1 text-purple-400"/>
                 <div>
@@ -223,7 +232,7 @@ const FooterComponent = () => {
           <div className="text-gray-400 text-sm">
             <p>
               {" "}
-              Copyright-2026 &copy; Shikder Ambulance, All Rights Reserved.
+              Copyright-2026 &copy; Shikder Ambulance. All Rights Reserved.
             </p>
           </div>
           <div className="flex space-x-6 text-sm">
@@ -255,7 +264,7 @@ const FooterComponent = () => {
           <div className="flex items-center justify-center space-x-4 text-center">
             <Phone className="h-5 w-5" />
             <p className="font-normal">
-              Need Emergency Ambulance? Call Now
+              Need Ambulance? Call Now
             </p>
           </div>
         </div>

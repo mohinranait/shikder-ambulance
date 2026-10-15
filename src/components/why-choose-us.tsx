@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Clock, Users, MapPin, DollarSign, Shield, Stethoscope } from "lucide-react"
+import { Clock, Users, MapPin, DollarSign, Shield, Stethoscope, Ambulance, AmbulanceIcon } from "lucide-react"
 
 export function WhyChooseUs() {
   const features = [
@@ -45,6 +45,27 @@ export function WhyChooseUs() {
       color: "text-teal-600",
       bgColor: "bg-teal-50",
     },
+    {
+      icon: Ambulance,
+      title: "Different Types of Ambulance Services",
+      description: "We offer general ambulance, AC and Non-AC ambulance, and freezing ambulance services for different transportation requirements.",
+      color: "text-teal-600",
+      bgColor: "bg-teal-50",
+    },
+    {
+      icon: Ambulance,
+      title: " Freezing Ambulance for Dead Body Transportation",
+      description: "Our freezing ambulance service supports families who need to transport deceased loved ones, including long-distance transportation to their hometowns or villages.",
+      color: "text-teal-600",
+      bgColor: "bg-teal-50",
+    },
+    {
+      icon: Ambulance,
+      title: " Long-Distance Ambulance Service",
+      description: "We assist with ambulance transportation from Dhaka to different districts, towns, and villages of Bangladesh.",
+      color: "text-teal-600",
+      bgColor: "bg-teal-50",
+    },
   ]
 
   return (
@@ -53,7 +74,7 @@ export function WhyChooseUs() {
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Why Choose Shikder Ambulance Service?</h2>
           <p className=" text-muted-foreground max-w-3xl mx-auto">
-            <b>Shikder Ambulance Service</b> is committed to providing fast, reliable, safe, and comfortable patient transportation whenever you need it. With 24/7 emergency Ambulance support, professional service, easy online booking, and coverage in Dhaka with all districts. We are always ready to serve you when every moment matters.
+            <b>Shikder Ambulance</b> is the largest and Trusted partner in your life. We are always ready to provide emergency ambulance service in Dhaka city. The best Ambulance Service is available from Dhaka and nearby area to all districts and any districts to Dhaka. Our goal is to make ambulance booking easier and provide respectful assistance according to your needs. If you Need the <b>best Ambulance Service</b> then Call Shikder Ambulance.
           </p>
         </div>
 

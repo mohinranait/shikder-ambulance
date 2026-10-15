@@ -32,9 +32,8 @@ export default function PremiumReviewSection() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Shikder Ambulance is the Trusted Partner to the people by serve. We
-            are always ready to provode emergency ambulance service in the all
-            districts of Bangladesh.
+            Shikder Ambulance is the Largest and Trusted Partner to the people by serve. They
+            are always ready to provide <b>emergency ambulance service in Dhaka</b> and Nearby area. Need the best quality Ambulance Service? Contact Now Shikder Ambulance.
           </p>
         </div>
 
@@ -49,7 +48,7 @@ export default function PremiumReviewSection() {
             </div>
             <div className="w-px h-6 bg-gray-200"></div>
             <div className="flex items-center space-x-2">
-              <Award className="w-5 h-5 text-blue-500" />
+              <Award className="w-5 h-5 text-blue-500"/>
               <span className="text-sm font-medium text-gray-600">
                 500+ Reviews
               </span>
