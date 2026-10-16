@@ -10,7 +10,7 @@ import { BlogTeasers } from "./components/BlogTeasers";
 
 export const metadata: Metadata = {
   title:
-    "Emergency Ambulance Service in Dhaka | Best Available 24/7",
+    "Emergency Ambulance Service in Dhaka | Shikder Ambulance",
   description:
     "Emergency Ambulance service in Dhaka, Bangladesh. Shikder Ambulance offers emergency Ac, Non-Ac Ambulance and freezing ambulance service in Dhaka and Nearby area. Need Ambulance? Call Now.",
   keywords:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://shikderambulance.com",
   },
   openGraph: {
-    title: "Emergency Ambulance Service | Available 24/7",
+    title: "Emergency Ambulance Service in Dhaka | Shikder Ambulance",
     description: "Emergency Ambulance service in Dhaka. Shikder Ambulance offers emergency Ac, Non-Ac Ambulance and freezing ambulance service in Dhaka and Nearby area. Need Ambulance? Call Now",
     url: "https://shikderambulance.com",
     siteName: "Shikder Ambulance",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shikder Ambulance Service Dhaka",
+    title: "Shikder Ambulance Service",
     description:
       "Fast, reliable 24/7 ambulance support in Dhaka including ICU, life support & freezing ambulance services.",
     images: [

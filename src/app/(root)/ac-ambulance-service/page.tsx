@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   description:
     "Best AC Ambulance Service. Shikder Ambulance offers the best ac ambulance in Dhaka city and nearby areas. Need Ac Ambulance? Call Now: 01713260042",
   keywords:
-    "AC ambulance, air conditioned ambulance, best Ambulance, top ambulance company, Dhaka city Ambulance, Near Ambulance, free Ambulance in Dhaka city. ambulance service Dhaka, emergency medical service, temperature controlled ambulance, patient transport Bangladesh",
+    "AC ambulance, air conditioned ambulance, best Ambulance, top ambulance company, Dhaka city Ambulance, Near Ambulance, free Ambulance in Dhaka city. ambulance service Dhaka, emergency medical service, temperature controlled ambulance, patient transport Bangladesh, AC Ambulance Service, AC Ambulance Service Dhaka, AC Ambulance in Dhaka, Best AC Ambulance Service in Dhaka, AC Ambulance Service Near Me, AC Ambulance Number Dhaka, AC Ambulance Contact Number, AC Ambulance Booking Dhaka, 24/7 AC Ambulance Service Dhaka, Emergency AC Ambulance Service Dhaka, Affordable AC Ambulance Service Dhaka, Private AC Ambulance Service Dhaka, Air Conditioned Ambulance Service Dhaka, Air Conditioned Ambulance in Dhaka, Patient Transport AC Ambulance Dhaka, AC Patient Transport Service, Hospital Transfer AC Ambulance Dhaka, Hospital to Home AC Ambulance Dhaka, Hospital to Hospital AC Ambulance Dhaka, Long Distance AC Ambulance Service Dhaka, AC Ambulance for Patient Transfer, AC Ambulance for Hospital Discharge, AC Ambulance for Elderly Patients, AC Ambulance for Bedridden Patients, AC Ambulance Booking Number Dhaka, AC Ambulance Phone Number Dhaka, AC Ambulance Hire Dhaka, AC Ambulance Rental Dhaka, AC Ambulance Service in Gulshan, AC Ambulance Service in Banani, AC Ambulance Service in Mohakhali, AC Ambulance Service in Badda, AC Ambulance Service in Rampura, AC Ambulance Service in Malibag, AC Ambulance Service in Uttara, AC Ambulance Service in Mirpur, AC Ambulance Service in Dhanmondi, AC Ambulance Service in Mohammadpur, AC Ambulance Service in Jatrabari, AC Ambulance Service in Kuril, AC Ambulance Service in Natun Bazar, AC Ambulance Service in Agargaon, AC Ambulance Service in Basabo, AC Ambulance Service in Motijheel, AC Ambulance Service in Tejgaon, AC Ambulance Service in Shantinagar, AC Ambulance Service in Aftabnagar, AC Ambulance Service in Demra, AC Ambulance Service Bangladesh, AC Ambulance Booking Online, Shikder AC Ambulance Service, Shikder Ambulance Service Dhaka, এসি অ্যাম্বুলেন্স সার্ভিস, ঢাকায় এসি অ্যাম্বুলেন্স সার্ভিস, এসি অ্যাম্বুলেন্স ঢাকা, ঢাকার সেরা এসি অ্যাম্বুলেন্স সার্ভিস, এসি অ্যাম্বুলেন্স নাম্বার ঢাকা, এসি অ্যাম্বুলেন্স যোগাযোগ নম্বর, এসি অ্যাম্বুলেন্স বুকিং ঢাকা, ২৪ ঘণ্টা এসি অ্যাম্বুলেন্স সার্ভিস, জরুরি এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা, কম খরচে এসি অ্যাম্বুলেন্স সার্ভিস, প্রাইভেট এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা, শীতাতপ নিয়ন্ত্রিত অ্যাম্বুলেন্স সার্ভিস, রোগী পরিবহনের এসি অ্যাম্বুলেন্স, রোগী বহনের এসি অ্যাম্বুলেন্স, হাসপাতাল থেকে বাসায় নেওয়ার অ্যাম্বুলেন্স, বাসা থেকে হাসপাতালে নেওয়ার অ্যাম্বুলেন্স, এক হাসপাতাল থেকে অন্য হাসপাতালে রোগী নেওয়ার অ্যাম্বুলেন্স, দূরপাল্লার এসি অ্যাম্বুলেন্স সার্ভিস, রোগী স্থানান্তরের এসি অ্যাম্বুলেন্স, বয়স্ক রোগী পরিবহনের অ্যাম্বুলেন্স, শয্যাশায়ী রোগী পরিবহনের অ্যাম্বুলেন্স, হাসপাতাল থেকে বাসায় রোগী নেওয়ার অ্যাম্বুলেন্স, এসি অ্যাম্বুলেন্স ভাড়া ঢাকা, এসি অ্যাম্বুলেন্স বুকিং নাম্বার, এসি অ্যাম্বুলেন্স ফোন নম্বর ঢাকা, অনলাইনে এসি অ্যাম্বুলেন্স বুকিং, ঢাকায় রোগী পরিবহন সার্ভিস, ঢাকায় প্রাইভেট অ্যাম্বুলেন্স সার্ভিস, গুলশানে এসি অ্যাম্বুলেন্স সার্ভিস, বনানীতে এসি অ্যাম্বুলেন্স সার্ভিস, মহাখালীতে এসি অ্যাম্বুলেন্স সার্ভিস, বাড্ডায় এসি অ্যাম্বুলেন্স সার্ভিস, রামপুরায় এসি অ্যাম্বুলেন্স সার্ভিস, মালিবাগে এসি অ্যাম্বুলেন্স সার্ভিস, উত্তরা এসি অ্যাম্বুলেন্স সার্ভিস, মিরপুরে এসি অ্যাম্বুলেন্স সার্ভিস, ধানমন্ডিতে এসি অ্যাম্বুলেন্স সার্ভিস, মোহাম্মদপুরে এসি অ্যাম্বুলেন্স সার্ভিস, যাত্রাবাড়ীতে এসি অ্যাম্বুলেন্স সার্ভিস, কুড়িলে এসি অ্যাম্বুলেন্স সার্ভিস, নতুন বাজারে এসি অ্যাম্বুলেন্স সার্ভিস, আগারগাঁওয়ে এসি অ্যাম্বুলেন্স সার্ভিস, বাসাবোতে এসি অ্যাম্বুলেন্স সার্ভিস, মতিঝিলে এসি অ্যাম্বুলেন্স সার্ভিস, তেজগাঁওয়ে এসি অ্যাম্বুলেন্স সার্ভিস, শান্তিনগরে এসি অ্যাম্বুলেন্স সার্ভিস, আফতাবনগরে এসি অ্যাম্বুলেন্স সার্ভিস, ডেমরায় এসি অ্যাম্বুলেন্স সার্ভিস, বাংলাদেশে এসি অ্যাম্বুলেন্স সার্ভিস, শিকদার এসি অ্যাম্বুলেন্স সার্ভিস, শিকদার অ্যাম্বুলেন্স সার্ভিস ঢাকা",
   authors: [{ name: "Shikder Ambulance" }],
   alternates: {
     canonical: "https://shikderambulance.com/ac-ambulance-service",
   },
   openGraph: {
-    title: "Best AC Ambulance Service in Dhaka and nearby area",
+    title: "AC Ambulance Service in Dhaka and nearby area",
     description:
       "Best AC Ambulance Service in Dhaka. Shikder Ambulance provides reliable AC Ambulance Service in Dhaka for safe, comfortable, and 24/7 emergency patient transport, hospital transfer, and long-distance ambulance support.",
     url: "https://shikderambulance.com/ac-ambulance-service",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: "/images/Ac Ambulance Service -Shikder  Ambulance.jpg",
         width: 1200,
         height: 630,
-        alt: "Best AC Ambulance Service in Dhaka by Shikder Ambulance",
+        alt: "Best AC Ambulance Service in Dhaka",
       },
     ],
     locale: "en_US",
@@ -70,7 +70,7 @@ export default function AcAmbulancePage() {
             <div className="space-y-4">
               <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
                 <Wind className="h-3 w-3 mr-1" />
-                The Best Quality Ambulance Service
+                Best Quality Ambulance Service
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Best Ac Ambulance Service in Dhaka{" "}
@@ -103,7 +103,7 @@ export default function AcAmbulancePage() {
               Reliable Ac Ambulance Service in Bangladesh
             </h2>
             <p className="text-center font-semibold">
-              Patient Safety, Our Priority.
+              Patient Safety, Our Priority
             </p>
           </div>
           
@@ -170,7 +170,7 @@ export default function AcAmbulancePage() {
                 </div>
               </div>
             </div>
-
+            
             <div className="flex justify-center">
               <Image
                 src="/best-Ac-Ambulance-Service-Shikder-Ambulance.jpg"
@@ -199,7 +199,7 @@ export default function AcAmbulancePage() {
           <div className="grid gap-12 items-start">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">
-                Shikder Ambulance is the best
+                Best Shikder Ac Ambulance Service in Dhaka
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Shikder Ambulance is a trusted ambulance service provider in Dhaka and nearby areas, offering fast, safe, and reliable ambulance support for emergency patients, hospital transfers, ICU patients, and dead body carrying needs. Our team helps families arrange the right ambulance quickly based on patient condition, destination, and emergency situation.
@@ -382,7 +382,7 @@ export default function AcAmbulancePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Best Ambulance Service in Dhaka
+              Best Ac Ambulance Service in Dhaka
             </h2>
             <p className="text-center font-semibold">
               The Quality Ambulance is Granted
@@ -444,38 +444,38 @@ export default function AcAmbulancePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 Best AC Ambulance Service
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Shikder Ambulance provides the best AC ambulance service with comfortable transport, fast response, experienced drivers, clean vehicles, and 24/7 support for patients across Dhaka city.
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 AC Ambulance Service Near Me
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Looking for AC ambulance service near me? Shikder Ambulance offers quick booking, comfortable vehicles, safe patient transport, and emergency support anytime in Dhaka nearby areas.
               </p>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 Emergency AC Ambulance Service
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Shikder Ambulance provides emergency AC ambulance service for sudden illness, hospital admission, patient shifting, discharge support, and urgent medical transport day and night in Dhaka.
               </p>              
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 Comfortable AC Ambulance Service in Dhaka
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Comfortable AC ambulance service provides air-conditioned patient transport for hospital transfer, elderly movement, long-distance travel, discharge support, and emergency medical needs.
               </p>              
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl  text-gray-900">
                 AC Ambulance Service in Dhaka City
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 AC ambulance service in Dhaka city is available 24/7 for patient transport, hospital transfer, emergency pickup, and comfortable medical journey support.
               </p>              
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 AC Ambulance Service for Safe Patient Transport
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -483,7 +483,7 @@ export default function AcAmbulancePage() {
               </p>
             </div>
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 AC Ambulance Service Number
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -491,36 +491,190 @@ export default function AcAmbulancePage() {
               </p>
               <p><b>AC Ambulance Service Number: 01713260042</b></p>
 
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 AC Ambulance for Patient Transfer
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 AC ambulance for patient transfer helps move patients safely from home, hospital, clinic, or diagnostic center with comfort, care, and reliable transport support.
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 AC Ambulance Service for Long Distance
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Shikder Ambulance offers AC ambulance service for long distance travel, ensuring comfortable patient movement, safe driving, clean vehicles, and dependable support anytime.
               </p>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 Fast AC Ambulance Service in Dhaka
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Fast AC ambulance service helps patients reach hospitals quickly with comfortable transport, careful handling, easy booking, and emergency support from Shikder Ambulance.
               </p>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 Private AC Ambulance Service
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Private AC ambulance service is available for emergency patient transport, hospital transfer, home pickup, discharge support, and comfortable medical travel in Dhaka.
               </p>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl text-gray-900">
                 Reliable AC Ambulance Service
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Reliable AC ambulance service from Shikder Ambulance ensures safe patient transport, quick response, comfortable vehicles, experienced drivers, and 24/7 emergency support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Coverd Area - Find AC Ambulance Service in Your Area */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Find AC Ambulance Service in Your Area
+            </h2>
+            <p className="text-center font-semibold">
+              AC Ambulance Service in Dhaka and Nearby Areas
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                AC Ambulance Service in Moghbazar, Dhaka
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for AC Ambulance Service in Moghbazar, Dhaka? Contact Shikder Ambulance for patient transportation, hospital transfers, and long-distance ambulance booking.
+              </p>
+              <p><b>Nearby Areas:</b> Wireless, Mouchak, Malibag, Shantinagar, Eskaton, and Tejgaon</p>
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Gulshan
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance provides AC ambulance service in Gulshan, Dhaka, for comfortable patient transportation, hospital transfers, and long-distance journeys. Call 01713-260042 to discuss your requirements.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Banani
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Need an AC ambulance in Banani? Shikder Ambulance assists with patient transfers, hospital discharge transportation, and planned medical journeys from Banani to destinations across Dhaka and beyond.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                Comfortable AC Ambulance Service in Uttara
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance offers Comfortable AC ambulance transportation for patients in Uttara, Dhaka. Arrange hospital visits, home transfers, and long-distance patient transportation by calling 01713-260042.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Mirpur
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for AC ambulance service in Mirpur? Contact Shikder Ambulance for patient transportation, hospital-to-home transfers, and planned journeys to hospitals throughout Dhaka.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Mohakhali
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance supports patient transportation in Mohakhali with AC ambulance arrangements for hospital transfers, medical appointments, and journeys to destinations inside and outside Dhaka.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Khilkhet
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for AC ambulance service in Khilkhet? Contact Shikder Ambulance to arrange patient transportation, hospital transfers, and planned journeys within Dhaka or to other districts.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Dhanmondi
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance helps arrange AC ambulance service in Dhanmondi for patient transfers, hospital discharge, medical appointments, and long-distance transportation. Call 01713-260042 for booking assistance.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Mohammadpur
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Need patient transportation in Mohammadpur? Shikder Ambulance offers AC ambulance booking assistance for hospital visits, home transfers, and journeys from Dhaka to other destinations.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Malibag
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance helps arrange AC ambulance transportation in Malibag for patients requiring hospital transfers, medical appointments, or long-distance journeys. Call 01713-260042 to discuss availability.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Shantinagar
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Find AC ambulance booking assistance in Shantinagar through Shikder Ambulance. Arrange patient transportation to hospitals, residences, or destinations outside Dhaka by calling 01713-260042
+              </p>
+            </div>
+            <div className="space-y-6">
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Tejgaon
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Find AC ambulance transportation in Tejgaon through Shikder Ambulance. Arrange patient pickup, hospital transfers, and long-distance transportation according to your patient's needs and destination.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Badda
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance helps arrange AC ambulance transportation in Badda, Dhaka, for hospital visits, patient transfers, and long-distance journeys. Call 01713-260042 to discuss booking requirements.
+              </p>
+
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Rampura
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Need an AC ambulance in Rampura? Shikder Ambulance provides patient transportation arrangements for hospital admissions, hospital discharge, and journeys to destinations within and outside Dhaka.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Aftabnagar
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance offers AC ambulance booking assistance in Aftabnagar for patient transportation, hospital transfers, and planned medical journeys. Call 01713-260042 to discuss your needs.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Jatrabari
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Arrange AC ambulance transportation in Jatrabari through Shikder Ambulance for hospital visits, patient transfers, and long-distance journeys. Contact 01713-260042 to discuss your destination and requirements.
+              </p>
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Demra
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance assists with AC ambulance arrangements in Demra, Dhaka, for patient transportation, hospital transfers, and journeys to other districts. Call 01713-260042 for booking information.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Motijheel
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Shikder Ambulance assists patients and families in Motijheel with AC ambulance arrangements for hospital transfers, medical visits, and planned patient transportation across Dhaka.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Basabo
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Looking for an AC ambulance in Basabo? Contact Shikder Ambulance for patient transportation arrangements, hospital-to-home transfers, and long-distance journeys. Call 01713-260042 for assistance.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Kuril from Mohakhali
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Arrange AC ambulance transportation in Kuril through Shikder Ambulance for hospital transfers, patient pickup, and long-distance journeys. Call 01713-260042 to discuss your transportation requirements.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Agargaon
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Need AC ambulance transportation in Agargaon? Shikder Ambulance helps arrange patient transfers, hospital discharge transportation, and journeys to medical facilities across Dhaka and other districts.
+              </p>              
+              <h3 className="text-2xl text-gray-900">
+                AC Ambulance Service in Banasree
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Arrange AC ambulance transportation in Banasree through Shikder Ambulance for hospital visits, patient transfers, and journeys to other districts. Call 01713-260042 to discuss availability.
               </p>
             </div>
           </div>
@@ -538,27 +692,27 @@ export default function AcAmbulancePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <div>
-                <h3>What is Ac Ambulance Service?</h3>
+                <h3 className="text-2xl">What is Ac Ambulance Service?</h3>
                 <p>
                   AC Ambulance Service is an air-conditioned ambulance service used for safe, clean, and comfortable patient transport, hospital transfer, discharge support, and long-distance medical travel.
                 </p>
               </div>
               <div>
-                <h3>Why should I choose an AC Ambulance?</h3>
+                <h3 className="text-2xl">Why should I choose an AC Ambulance?</h3>
                 <p>
                   You should choose an AC ambulance for comfortable patient movement, especially for elderly patients, sick patients, long-distance travel, and hospital-to-home transfer during hot weather.
                 </p>
               </div>
               <div>
-                <h3>Can I book an AC Ambulance for long-distance travel?</h3>
+                <h3 className="text-2xl">Can I book an AC Ambulance for long-distance travel?</h3>
                 <p>
                   Yes, AC Ambulance Service is suitable for long-distance patient transport because it provides a comfortable and air-conditioned environment during the journey.
                 </p>
               </div>
                 <div>
-                <h4>How can I book an AC Ambulance?</h4>
+                <h4 className="text-2xl">How can I book an AC Ambulance?</h4>
                 <p>
-                  You can book an AC Ambulance by calling Shikder Ambulance anytime. Emergency Call: 01713-260042
+                  You can book an AC Ambulance by calling Shikder Ambulance anytime. Emergency Call Now: 01713-260042
                 </p>
               </div>
             </div>
@@ -583,7 +737,7 @@ export default function AcAmbulancePage() {
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call Now: 01627-669222
+                Call Now: 01713-260042
               </Button>
               <Button
                 size="lg"

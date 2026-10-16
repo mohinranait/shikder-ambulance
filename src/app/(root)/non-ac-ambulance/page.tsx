@@ -17,11 +17,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Non-AC Ambulance Service in Dhaka | 24/7 Emergency Support",
+    "Non-AC Ambulance Service in Dhaka | Shikder Ambulance",
   description:
-    "Non-AC ambulance Service in Dhaka, Bangladesh. We provide different types of Ambulance in all districts of Bangladesh. We Are Just A Call Away",
+    "Affordable Non-Ac ambulance Service in Dhaka, Bangladesh. We provide different types of Ambulance in all districts of Bangladesh. We Are Just A Call Away",
   keywords:
-    "non-AC ambulance, emergency non-Ac ambulance service in Dhaka and Nearby area. basic ambulance service, affordable ambulance Bangladesh, emergency medical transport, patient transport Dhaka, cheap ambulance service, basic life support ambulance, near ambulance, top ambulance, fast ambulance",
+    "Non-AC Ambulance Service, Non-AC Ambulance Service Dhaka, Non AC Ambulance in Dhaka, Best Non-AC Ambulance Service in Dhaka, Non-AC Ambulance Near Me, Non-AC Ambulance Number Dhaka, Non-AC Ambulance Contact Number, Non-AC Ambulance Booking Dhaka, 24-Hour Non-AC Ambulance Service Dhaka, Emergency Non-AC Ambulance Service Dhaka, Affordable Non-AC Ambulance Service Dhaka, Low-Cost Non-AC Ambulance Dhaka, Private Non-AC Ambulance Service Dhaka, Patient Transport Non-AC Ambulance Dhaka, Hospital Transfer Non-AC Ambulance Dhaka, Hospital to Home Non-AC Ambulance Dhaka, Hospital to Hospital Non-AC Ambulance Dhaka, Long-Distance Non-AC Ambulance Service Dhaka, Non-AC Ambulance Rental Dhaka, Non-AC Ambulance Booking Number Dhaka, Non-AC Ambulance Phone Number Dhaka, Non-AC Ambulance Service Bangladesh, Non-AC Ambulance Service in Gulshan, Non-AC Ambulance Service in Banani, Non-AC Ambulance Service in Mohakhali, Non-AC Ambulance Service in Badda, Non-AC Ambulance Service in Rampura, Non-AC Ambulance Service in Malibag, Non-AC Ambulance Service in Moghbazar, Non-AC Ambulance Service in Uttara, Non-AC Ambulance Service in Mirpur, Non-AC Ambulance Service in Dhanmondi, Non-AC Ambulance Service in Mohammadpur, Non-AC Ambulance Service in Jatrabari, Non-AC Ambulance Service in Kuril, Non-AC Ambulance Service in Natun Bazar, Non-AC Ambulance Service in Agargaon, Non-AC Ambulance Service in Basabo, Non-AC Ambulance Service in Motijheel, Non-AC Ambulance Service in Tejgaon, Non-AC Ambulance Service in Shantinagar, Non-AC Ambulance Service in Aftabnagar, Non-AC Ambulance Service in Demra, নন-এসি অ্যাম্বুলেন্স সার্ভিস, ঢাকায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, নন-এসি অ্যাম্বুলেন্স ঢাকা, ঢাকার নন-এসি অ্যাম্বুলেন্স সার্ভিস, নন-এসি অ্যাম্বুলেন্স নাম্বার ঢাকা, নন-এসি অ্যাম্বুলেন্স বুকিং ঢাকা, ২৪ ঘণ্টা নন-এসি অ্যাম্বুলেন্স সার্ভিস, জরুরি নন-এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা, কম খরচে নন-এসি অ্যাম্বুলেন্স ঢাকা, সাশ্রয়ী নন-এসি অ্যাম্বুলেন্স সার্ভিস, রোগী পরিবহনের নন-এসি অ্যাম্বুলেন্স, হাসপাতাল থেকে বাসায় নেওয়ার অ্যাম্বুলেন্স, বাসা থেকে হাসপাতালে নেওয়ার অ্যাম্বুলেন্স, হাসপাতাল থেকে হাসপাতালে রোগী নেওয়ার অ্যাম্বুলেন্স, দূরপাল্লার নন-এসি অ্যাম্বুলেন্স সার্ভিস, নন-এসি অ্যাম্বুলেন্স ভাড়া ঢাকা, নন-এসি অ্যাম্বুলেন্স যোগাযোগ নম্বর, ঢাকায় রোগী পরিবহন সার্ভিস, গুলশানে নন-এসি অ্যাম্বুলেন্স সার্ভিস, বনানীতে নন-এসি অ্যাম্বুলেন্স সার্ভিস, মহাখালীতে নন-এসি অ্যাম্বুলেন্স সার্ভিস, বাড্ডায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, রামপুরায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, মালিবাগে নন-এসি অ্যাম্বুলেন্স সার্ভিস, মগবাজারে নন-এসি অ্যাম্বুলেন্স সার্ভিস, উত্তরায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, মিরপুরে নন-এসি অ্যাম্বুলেন্স সার্ভিস, ধানমন্ডিতে নন-এসি অ্যাম্বুলেন্স সার্ভিস, মোহাম্মদপুরে নন-এসি অ্যাম্বুলেন্স সার্ভিস, যাত্রাবাড়ীতে নন-এসি অ্যাম্বুলেন্স সার্ভিস, কুড়িলে নন-এসি অ্যাম্বুলেন্স সার্ভিস, নতুন বাজারে নন-এসি অ্যাম্বুলেন্স সার্ভিস, আগারগাঁওয়ে নন-এসি অ্যাম্বুলেন্স সার্ভিস, বাসাবোতে নন-এসি অ্যাম্বুলেন্স সার্ভিস, মতিঝিলে নন-এসি অ্যাম্বুলেন্স সার্ভিস, তেজগাঁওয়ে নন-এসি অ্যাম্বুলেন্স সার্ভিস, শান্তিনগরে নন-এসি অ্যাম্বুলেন্স সার্ভিস, আফতাবনগরে নন-এসি অ্যাম্বুলেন্স সার্ভিস, ডেমরায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, শিকদার অ্যাম্বুলেন্স সার্ভিস, Shikder Ambulance Service, Shikder Non-AC Ambulance Service",
   authors: [{ name: "Shikder Ambulance" }],
   openGraph: {
     title:
@@ -77,8 +77,8 @@ export default function NonAcAmbulancePage() {
                 Fast Patient Transport
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Fast Non-Ac Ambulance service in{" "}
-                <span className="text-blue-600">Dhaka, Bangladesh</span>
+                Emergency Non-Ac Ambulance service in Dhaka, {" "}
+                <span className="text-blue-600">Bangladesh</span>
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
                 Non-Ac Ambulance service in Dhaka, Bangladesh. We provide
@@ -104,10 +104,10 @@ export default function NonAcAmbulancePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Emergency Non-Ac Ambulance Service in Bangladesh
+              Reliable Non-Ac Ambulance Service in Bangladesh
             </h2>
             <p className="text-lg text-gray-600">
-              Cost-effective emergency medical transport for everyone
+              Cost-effective emergency patient transport for everyone
             </p>
           </div>
 
@@ -272,40 +272,29 @@ export default function NonAcAmbulancePage() {
         </div>
       </section>
 
-      {/* Service Areas */}
+           {/* Service Area with  Keywords */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Find Non-Ac Ambulance
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Find Non-Ac Ambulance Service in Dhaka and Nearby Area
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Find Non-Ac Ambulance in Dhaka
               </h3>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  Emergency Ac Ambulance service is available in Dhaka City.
-                  This ambulance company provide Emergency ambulance service 24
-                  hours in a day, 7 Days a week, and 365 days a year. The
-                  Emergency ambulance in cheap rent of ambulance services. We
-                  provide always a Standard ambulance with the proper
-                  requirements. Contact us to Get an Emergency ambulance service
-                  anywhere in Bangladesh. Fast ambulance service provider
-                  Company in Dhaka City. If you need an emergency ambulance than
-                  contact us.
-                </p>
-                <p>
-                  Online Ambulance service, Non-Ac Ambulance service, Ac
-                  Ambulance service. The best Ambulance services in Dhaka city,
-                  Normal ambulance service, Dhaka Ambulance service, Quality
-                  Ambulance service, Dhaka city Ambulance service.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Find Ambulance Near Area you
-              </h3>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
+                Emergency Ac Ambulance service is available in Dhaka City. This ambulance company provide Emergency ambulance service 24
+                hours in a day, 7 Days a week, and 365 days a year. The
+                Emergency ambulance in cheap rent of ambulance services. We
+                provide always a Standard ambulance with the proper
+                requirements. Contact us to Get an Emergency ambulance service
+                anywhere in Bangladesh. Fast ambulance service provider
+                Company in Dhaka City. If you need an emergency ambulance than
+                contact us.
+              </p>
                 <p>
                   The Non-Ac Ambulance Online booking is available in Dhaka
                   city. We provide emergency ambulance service to carry the
@@ -322,7 +311,58 @@ export default function NonAcAmbulancePage() {
                   24 ambulance service, ambulances latest ambulance service,
                   fast ambulance service in Dhaka.
                 </p>
-              </div>
+            </div>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                Non-AC Ambulance Service in Mohakhali 
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Non-AC Ambulance Service in Mohakhali, Non-AC Ambulance Service in Badda, Non-AC Ambulance Service in Rampura, Non-AC Ambulance Service in Malibag, Non-AC Ambulance Service in Moghbazar, Non-AC Ambulance Service in Uttara, Non-AC Ambulance Service in Mirpur, Non-AC Ambulance Service in Dhanmondi, Non-AC Ambulance Service in Mohammadpur, Non-AC Ambulance Service in Jatrabari, Non-AC Ambulance Service in Kuril, Non-AC Ambulance Service in Natun Bazar, Non-AC Ambulance Service in Agargaon, Non-AC Ambulance Service in Basabo, Non-AC Ambulance Service in Motijheel, Non-AC Ambulance Service in Tejgaon, Non-AC Ambulance Service in Shantinagar, Non-AC Ambulance Service in Aftabnagar, Non-AC Ambulance Service in Demra.
+                </p>                
+                <p>
+                  Non-AC Ambulance Service in Dhaka, Non AC Ambulance Dhaka, Non-AC Ambulance Service Dhaka, Best Non-AC Ambulance Service in Dhaka, Non-AC Ambulance Near Me, Non-AC Ambulance Number Dhaka, Non-AC Ambulance Contact Number, Non-AC Ambulance Booking Dhaka, 24/7 Non-AC Ambulance Service Dhaka, Emergency Non-AC Ambulance Service Dhaka, Affordable Non-AC Ambulance Service Dhaka, Cheap Non-AC Ambulance Service Dhaka, Private Non-AC Ambulance Service Dhaka, Non-AC Patient Transport Service Dhaka, Non-AC Hospital Transfer Ambulance Dhaka, Hospital to Home Non-AC Ambulance Dhaka, Hospital to Hospital Non-AC Ambulance Dhaka, Patient Transfer Ambulance Dhaka, Long Distance Non-AC Ambulance Service Dhaka, Non-AC Ambulance Booking Number Dhaka, Non-AC Ambulance Phone Number Dhaka, Non-AC Ambulance Hire Dhaka, Non-AC Ambulance Rental Dhaka, Non-AC Ambulance Service Bangladesh, Non-AC Ambulance Service in Gulshan, Non-AC Ambulance Service in Banani.
+                </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Bangla Keywords */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              নন-এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                নন-এসি অ্যাম্বুলেন্স সার্ভিস
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                শিকদার অ্যাম্বুলেন্স সার্ভিস ঢাকায় রোগী পরিবহনের জন্য নন-এসি অ্যাম্বুলেন্স বুকিংয়ের ব্যবস্থা করে। বাসা থেকে হাসপাতালে, হাসপাতাল থেকে বাসায় এবং এক হাসপাতাল থেকে অন্য হাসপাতালে রোগী স্থানান্তরের জন্য আমাদের সঙ্গে যোগাযোগ করুন।
+              </p>
+              <p>ঢাকায় নন-এসি অ্যাম্বুলেন্স সার্ভিস খুঁজছেন? রোগী পরিবহন, হাসপাতাল ট্রান্সফার ও দূরপাল্লার অ্যাম্বুলেন্স বুকিংয়ের জন্য যোগাযোগ করুন শিকদার অ্যাম্বুলেন্সে।</p>
+              <p>ঢাকার বিভিন্ন এলাকায় নন-এসি অ্যাম্বুলেন্সের বুকিং ও প্রাপ্যতা জানতে কল করুন।</p>
+              <p><b>ফোন:</b> 01713-260042</p>
+              <p><b>হোয়ার্টআপ নাম্বার:</b> 01710060020</p>
+            </div>
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                জরুরি নন-এসি অ্যাম্বুলেন্স সার্ভিস
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                জরুরি রোগী পরিবহনের জন্য শিকদার অ্যাম্বুলেন্স সার্ভিসের সঙ্গে যোগাযোগ করুন। ঢাকায় বাসা থেকে হাসপাতালে, হাসপাতাল থেকে বাসায় এবং এক হাসপাতাল থেকে অন্য হাসপাতালে রোগী স্থানান্তরের জন্য নন-এসি অ্যাম্বুলেন্স বুকিংয়ের ব্যবস্থা রয়েছে।
+              </p>              
+              <h3 className="text-2xl font-bold text-gray-900">
+                গুলশান নন-এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা 
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                গুলশান নন-এসি অ্যাম্বুলেন্স সার্ভিস, বনানীতে নন-এসি অ্যাম্বুলেন্স সার্ভিস, মহাখালীতে নন-এসি অ্যাম্বুলেন্স সার্ভিস, বাড্ডায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, রামপুরায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, মালিবাগে নন-এসি অ্যাম্বুলেন্স সার্ভিস, মগবাজারে নন-এসি অ্যাম্বুলেন্স সার্ভিস, উত্তরায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, মিরপুরে নন-এসি অ্যাম্বুলেন্স সার্ভিস, ধানমন্ডিতে নন-এসি অ্যাম্বুলেন্স সার্ভিস, মোহাম্মদপু নন-এসি অ্যাম্বুলেন্স সার্ভিস, যাত্রাবাড়ী নন-এসি অ্যাম্বুলেন্স সার্ভিস, কুড়িলে নন-এসি অ্যাম্বুলেন্স সার্ভিস, নতুন বাজারে নন-এসি অ্যাম্বুলেন্স সার্ভিস, আগারগাঁওয়ে নন-এসি অ্যাম্বুলেন্স সার্ভিস, বাসাবো নন-এসি অ্যাম্বুলেন্স সার্ভিস, মতিঝিলে নন-এসি অ্যাম্বুলেন্স সার্ভিস, তেজগাঁও নন-এসি অ্যাম্বুলেন্স সার্ভিস, শান্তিনগ নন-এসি অ্যাম্বুলেন্স সার্ভিস, আফতাবনগরে নন-এসি অ্যাম্বুলেন্স সার্ভিস, ডেমরায় নন-এসি অ্যাম্বুলেন্স সার্ভিস, শিকদার অ্যাম্বুলেন্স সার্ভিস।.
+                </p>
+              <p className="text-gray-600 leading-relaxed">
+                নন-এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা, ঢাকায় নন-এসি অ্যাম্বুলেন্স, নন-এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা, ঢাকার নন-এসি অ্যাম্বুলেন্স সার্ভিস, নন-এসি অ্যাম্বুলেন্স নাম্বার ঢাকা, নন-এসি অ্যাম্বুলেন্স বুকিং ঢাকা, ২৪ ঘণ্টা নন-এসি অ্যাম্বুলেন্স সার্ভিস, জরুরি নন-এসি অ্যাম্বুলেন্স সার্ভিস ঢাকা, কম খরচে নন-এসি অ্যাম্বুলেন্স ঢাকা, সাশ্রয়ী নন-এসি অ্যাম্বুলেন্স সার্ভিস, রোগী পরিবহনের নন-এসি অ্যাম্বুলেন্স, হাসপাতাল থেকে বাসায় নেওয়ার অ্যাম্বুলেন্স, বাসা থেকে হাসপাতালে নেওয়ার অ্যাম্বুলেন্স, হাসপাতাল থেকে হাসপাতালে রোগী নেওয়ার অ্যাম্বুলেন্স, দূরপাল্লার নন-এসি অ্যাম্বুলেন্স সার্ভিস, নন-এসি অ্যাম্বুলেন্স ভাড়া ঢাকা, নন-এসি অ্যাম্বুলেন্স যোগাযোগ নম্বর, ঢাকায় রোগী পরিবহন সার্ভিস।
+              </p>
             </div>
           </div>
         </div>
@@ -578,14 +618,14 @@ export default function NonAcAmbulancePage() {
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call: 01627-669222
+                Emergency Helpline: 01713-260042
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
               >
-                WhatsApp: 017100-60020
+                WhatsApp Now: 01710060020
               </Button>
             </div>
           </div>

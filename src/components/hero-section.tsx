@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Clock, MapPin } from "lucide-react";
+import { Phone, Clock, MapPin, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
@@ -15,18 +15,35 @@ export function HeroSection() {
               <Badge className="bg-red-500 hover:bg-red-600 text-white px-4 py-2">
                 Welcome to Shikder Ambulance
               </Badge>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-normal">
-                Emergency Ambulance Service in Dhaka - 
-                <span className="text-primary"> Available 24/7</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-foreground leading-normal">
+                <span className="text-red-600">Emergency</span> Ambulance Service in Dhaka - 
+                <span className="text-primary"> 24/7 Available</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 <b>Emergency Ambulance Service in Dhaka, Bangladesh.</b> Looking for a fast and reliable Ambulance? You have come to
-                the right place. <b>Shikder Ambulance</b> provide reliable, and comfortable patient transportation with a commitment to timely service. We are always ready to serve you. Need an Emergency Ambulance? Call Now Shikder Ambulance.</p>
-                <p><b>24/7 Emergency Ambulance Service</b></p>
-                <p><b>Fast & Reliable Response</b></p>
-                <p><b>Safe & Comfortable Patient Transport</b></p>
-                <p><b>Your safety and comfort are our first priority.</b></p>
-                <p><b>Online Booking & Money Receipt is Available.</b></p>
+                the right place. <b>Shikder Ambulance</b> provides all types of ambulance services from Dhaka and nearby areas to all districts of Bangladesh. We provide safe, reliable, and comfortable patient transportation with a strong commitment to timely service. Need an Emergency Ambulance? <b>Call Now Shikder Ambulance.</b></p>
+            </div>
+            <div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">24/7 Customer Support</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">Fast & Reliable Response</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">Patient and dead body transportation</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">Dhaka to All districts Ambulance service</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-green-700"><b>Online Booking & Money Receipt is Available</b></span>
+                </div>              
             </div>
 
             {/* Emergency Contact */}
@@ -37,7 +54,7 @@ export function HeroSection() {
                   className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Now : 01713-260042
+                  Call Now: 01713-260042
                 </Button>
               </Link>
               <Link href={"/contact-us"}>
@@ -55,7 +72,7 @@ export function HeroSection() {
             <div className="grid sm:grid-cols-3 gap-6 pt-8">
               <div className="flex items-center space-x-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/20">
-                  <Clock className="h-5 w-5 text-primary" />
+                  <Clock className="h-5 w-5 text-primary"/>
                 </div>
                 <div>
                   <p className="font-semibold">10 Min Response</p>
@@ -81,7 +98,7 @@ export function HeroSection() {
                 </div>
                 <div>
                   <p className="font-semibold">24/7 Available</p>
-                  <p className="text-sm text-muted-foreground">Always ready</p>
+                  <p className="text-sm text-muted-foreground">Always Ready</p>
                 </div>
               </div>
             </div>
