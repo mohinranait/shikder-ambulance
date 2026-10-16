@@ -67,7 +67,7 @@ export default function AboutPage() {
       role: "Director",
       experience: "10 years",
       image: "/default.png",
-      specialization: "Customer Support: 24/7",
+      specialization: "Director",
     },
     {
       name: "Musa Shikder Mahir",
@@ -81,7 +81,7 @@ export default function AboutPage() {
       role: "Software Engineer",
       experience: "10 years",
       image: "/default.png",
-      specialization: "Software Developer",
+      specialization: "Software Engineer",
     },
     {
       name: "Kamrul Islam",
@@ -301,7 +301,7 @@ export default function AboutPage() {
               Our Mission and Vission
             </h2>
             <p className="text-xl leading-relaxed mb-8">
-              " Shikder Ambulance's mission is to deliver swift, compassionate,
+              "Shikder Ambulance's mission is to deliver swift, compassionate,
               and life-saving emergency medical transport, prioritizing patient
               well-being and community safety. Our vision is to be Bangladesh's
               most trusted and advanced ambulance service, setting the standard

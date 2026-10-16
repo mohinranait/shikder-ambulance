@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Clock, MapPin } from "lucide-react";
+import { Phone, Clock, MapPin, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
@@ -22,10 +22,28 @@ export function HeroSection() {
               <p className="text-lg text-muted-foreground max-w-2xl">
                 <b>Emergency Ambulance Service in Dhaka, Bangladesh.</b> Looking for a fast and reliable Ambulance? You have come to
                 the right place. <b>Shikder Ambulance</b> provides all types of ambulance services from Dhaka and nearby areas to all districts of Bangladesh. We provide safe, reliable, and comfortable patient transportation with a strong commitment to timely service. Need an Emergency Ambulance? <b>Call Now Shikder Ambulance.</b></p>
-                <p>Fast & Reliable Response</p>
-                <p>Patient and dead body transportation</p>
-                <p>Dhaka to All districts Ambulance service</p>
-                <p><b>Online Booking & Money Receipt is Available</b></p>
+            </div>
+            <div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">24/7 Customer Support</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">Fast & Reliable Response</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">Patient and dead body transportation</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-gray-700">Dhaka to All districts Ambulance service</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span className="text-green-700"><b>Online Booking & Money Receipt is Available</b></span>
+                </div>              
             </div>
 
             {/* Emergency Contact */}

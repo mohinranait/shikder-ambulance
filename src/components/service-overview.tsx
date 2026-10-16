@@ -14,7 +14,7 @@ export function ServiceOverview() {
       image: "/Shikder-Ambulance-Service-Ac-Ambulance.jpg",
       features: [
         "Quality Ambulance",
-        "Controled tempreture of Ambulance",
+        "controlled tempreture of Ambulance",
         "Oxygen is free in Dhaka City",
         " Anytime, Anywhere is Available",
       ],
@@ -69,7 +69,7 @@ export function ServiceOverview() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Types of Emergency Ambulance Service
+            Types of Shikder Ambulance Service
           </h2>
           <p className=" text-muted-foreground max-w-3xl mx-auto">
             Shikder Ambulance provides different types of emergency ambulance service for patients and families based on medical needs, distance, and urgency. Comprehensive the best Ambulance services in Bangladesh. The best{" "}

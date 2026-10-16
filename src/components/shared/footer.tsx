@@ -13,7 +13,6 @@ import {
   Shield,
   BookmarkCheck,
   Banknote,
-  Pinterest,
   User,
   Linkedin,
   PointerIcon,
