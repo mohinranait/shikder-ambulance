@@ -183,7 +183,7 @@ export default function NonAcAmbulancePage() {
               Emergency Non-Ac Ambulance Service in Dhaka City and Nearby Area
             </h2>
             <p className="text-center font-semibold">
-              Safe patient transport and hospital transfer
+              Safe patient transport and
             </p>
           </div>
 
