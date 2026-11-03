@@ -16,10 +16,18 @@ export async function GET() {
 
     await connectDB();
 
-    const user = await User.findById(decodedUser.id).select("-password");
+    const user = await User.findById(decodedUser.id)
+      .select("-password")
+      .populate("profile");
 
     if (!user) {
       return NextResponse.json({ success: false, error: "User not found" }, { status: 404 });
+    }
+
+    // Auto-activate user if pending
+    if (user.status === "Pending") {
+      user.status = "Active";
+      await user.save();
     }
 
     return NextResponse.json({
@@ -33,13 +41,9 @@ export async function GET() {
   }
 }
 
-
-
 // Logout user
 export async function DELETE() {
   try {
-
-    
     // Clear the access_token cookie by setting it with past expiry
     const response = NextResponse.json(
       { message: "User logout", success: true },
@@ -50,19 +54,14 @@ export async function DELETE() {
       name: "access_token",
       value: "",
       path: "/",
+      expires: new Date(0),
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-      expires: new Date(0), 
+      sameSite: "lax",
     });
 
     return response;
-  } catch (error) {
-    return NextResponse.json(
-      { message: "Logout failed", success: false },
-      { status: 500 }
-    );
+  } catch (err: unknown) {
+    const errorMessage = err instanceof Error ? err.message : "An unknown error occurred";
+    return NextResponse.json({ success: false, error: errorMessage }, { status: 500 });
   }
 }
-
-
