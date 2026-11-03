@@ -5,6 +5,7 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import NotificationDropdown from "./NotificationDropdown";
 import { ProfileDropdown } from "./ProfileDropdown";
+import { CreateNewDropdown } from "./CreateNewDropdown";
 
 interface HeaderProps {
   fixed?: boolean;
@@ -52,8 +53,14 @@ export const Navbar = ({
           className="scale-125 text-black sm:scale-100"
         />
 
-        <div className=" justify-between items-center space-x-4">
-          <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-3 sm:space-x-4">
+          {/* Quick Create Dropdown Shortcut */}
+          <CreateNewDropdown />
+
+          <div className="h-5 w-[1px] bg-slate-200 hidden sm:block" />
+
+          {/* Action Notifications & Profile */}
+          <div className="flex items-center space-x-3 sm:space-x-4">
             <NotificationDropdown />
             <ProfileDropdown />
           </div>
