@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import {
   Plus,
@@ -16,6 +16,9 @@ import {
   TrendingUp,
   Loader2,
   Link2,
+  ChevronLeft,
+  ChevronRight,
+  RotateCcw,
 } from "lucide-react";
 import moment from "moment";
 import toast from "react-hot-toast";
@@ -24,6 +27,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Table,
   TableBody,
@@ -46,7 +56,6 @@ import {
   getReceiptShareToken,
 } from "@/actions/moneyReceiptApi";
 import PDFComponent from "@/components/admin/pages/receipt/PDFComponent";
-import MoneyReceiptForm from "@/components/admin/pages/receipt/MoneyReceiptForm";
 import { Navbar } from "@/components/admin/shared/Navbar";
 import { Main } from "@/components/ui/main";
 import { generateReceiptPdf } from "@/lib/receiptPdf";
@@ -55,9 +64,18 @@ const MoneyReceiptManage = () => {
   const [isSelected, setIsSelected] = useState<TReceipt | null>(null);
   const [receipts, setReceipts] = useState<TReceipt[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [search, setSearch] = useState("");
 
-  // Direct download states
+  // Search & Filter states
+  const [search, setSearch] = useState("");
+  const [paymentFilter, setPaymentFilter] = useState("all");
+  const [dateFilter, setDateFilter] = useState("");
+  const [datePreset, setDatePreset] = useState("all");
+
+  // Pagination states
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
+
+  // Direct download & Copy states
   const [downloadingId, setDownloadingId] = useState<string | null>(null);
   const [copyingId, setCopyingId] = useState<string | null>(null);
 
@@ -94,26 +112,75 @@ const MoneyReceiptManage = () => {
   // Filtered receipts
   const filteredReceipts = useMemo(() => {
     return receipts.filter((receipt) => {
+      // 1. Search Query Filter
       const q = search.toLowerCase().trim();
-      if (!q) return true;
-      return (
+      const matchesSearch =
+        !q ||
         receipt.patientName?.toLowerCase().includes(q) ||
         receipt.uid?.toLowerCase().includes(q) ||
         receipt.phone?.toLowerCase().includes(q) ||
+        receipt.address?.toLowerCase().includes(q) ||
         receipt.destination?.toLowerCase().includes(q) ||
         receipt.carType?.toLowerCase().includes(q) ||
         receipt.carNo?.toLowerCase().includes(q) ||
         receipt.paymentMethod?.toLowerCase().includes(q) ||
-        receipt.serviceType?.toLowerCase().includes(q)
-      );
+        receipt.serviceType?.toLowerCase().includes(q);
+
+      if (!matchesSearch) return false;
+
+      // 2. Payment Method Filter
+      if (paymentFilter !== "all") {
+        if (
+          receipt.paymentMethod?.toLowerCase() !== paymentFilter.toLowerCase()
+        ) {
+          return false;
+        }
+      }
+
+      // 3. Date Filter (Custom or Preset)
+      if (dateFilter) {
+        const receiptDate = moment(receipt.date || receipt.createdAt).format(
+          "YYYY-MM-DD"
+        );
+        if (receiptDate !== dateFilter) {
+          return false;
+        }
+      } else if (datePreset !== "all") {
+        const receiptDate = moment(receipt.date || receipt.createdAt);
+        const today = moment().startOf("day");
+
+        if (datePreset === "today") {
+          if (!receiptDate.isSame(today, "day")) return false;
+        } else if (datePreset === "yesterday") {
+          const yesterday = moment().subtract(1, "day").startOf("day");
+          if (!receiptDate.isSame(yesterday, "day")) return false;
+        } else if (datePreset === "this_month") {
+          if (!receiptDate.isSame(today, "month")) return false;
+        }
+      }
+
+      return true;
     });
-  }, [receipts, search]);
+  }, [receipts, search, paymentFilter, dateFilter, datePreset]);
+
+  // Reset to first page when any filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, paymentFilter, dateFilter, datePreset, itemsPerPage]);
+
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredReceipts.length / itemsPerPage) || 1;
+  const paginatedReceipts = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    return filteredReceipts.slice(startIndex, startIndex + itemsPerPage);
+  }, [filteredReceipts, currentPage, itemsPerPage]);
 
   // Statistics calculation
   const stats = useMemo(() => {
     const totalCount = receipts.length;
     const totalAmount = receipts.reduce((acc, curr) => {
-      const val = parseFloat(String(curr.totalPrice).replace(/[^0-9.]/g, "")) || 0;
+      const val =
+        parseFloat(String(curr.totalPrice).replace(/[^0-9.]/g, "")) || 0;
       return acc + val;
     }, 0);
     const today = moment().format("YYYY-MM-DD");
@@ -189,7 +256,7 @@ const MoneyReceiptManage = () => {
     setIsSelectAll(isChecked);
     if (isChecked) {
       const allIds = new Set(
-        filteredReceipts
+        paginatedReceipts
           .filter((receipt) => receipt._id)
           .map((receipt) => receipt._id as string)
       );
@@ -216,7 +283,7 @@ const MoneyReceiptManage = () => {
     }
     setSelectedRows(newSelectedRows);
 
-    const validReceipts = filteredReceipts.filter((receipt) => receipt._id);
+    const validReceipts = paginatedReceipts.filter((receipt) => receipt._id);
     if (
       newSelectedRows.size === validReceipts.length &&
       validReceipts.length > 0
@@ -308,7 +375,7 @@ const MoneyReceiptManage = () => {
                 Money Receipts Management
               </h1>
               <p className="text-sm text-muted-foreground mt-0.5">
-                Generate, manage, preview, and download HD money receipts
+                Generate, manage, preview, filter, and download HD money receipts
               </p>
             </div>
 
@@ -365,26 +432,99 @@ const MoneyReceiptManage = () => {
             </div>
           </div>
 
-          {/* Table Controls (Search & Batch Action) */}
-          <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 bg-white p-4 rounded-xl border shadow-xs">
-            {/* Search Input */}
-            <div className="relative w-full sm:w-80">
-              <Search
-                size={16}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
-              />
-              <Input
-                placeholder="Search by name, phone, SL.No..."
-                type="search"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="pl-9 h-9 text-sm"
-              />
+          {/* Table Controls (Search, Filters & Batch Action) */}
+          <div className="flex flex-col lg:flex-row justify-between items-stretch lg:items-center gap-4 bg-white p-4 rounded-xl border shadow-xs">
+            {/* Left: Search & Filter Controls */}
+            <div className="flex flex-wrap items-center gap-3 flex-1">
+              {/* Search Input */}
+              <div className="relative w-full sm:w-64">
+                <Search
+                  size={16}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+                />
+                <Input
+                  placeholder="Search name, phone, ID..."
+                  type="search"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="pl-9 h-9 text-xs"
+                />
+              </div>
+
+              {/* Payment Filter */}
+              <div className="w-36">
+                <Select value={paymentFilter} onValueChange={setPaymentFilter}>
+                  <SelectTrigger className="h-9 text-xs">
+                    <SelectValue placeholder="Payment Method" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Payments</SelectItem>
+                    <SelectItem value="Cash">Cash</SelectItem>
+                    <SelectItem value="Bkash">Bkash</SelectItem>
+                    <SelectItem value="Nagad">Nagad</SelectItem>
+                    <SelectItem value="Bank">Bank</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Date Preset Filter */}
+              <div className="w-36">
+                <Select
+                  value={datePreset}
+                  onValueChange={(val) => {
+                    setDatePreset(val);
+                    if (val !== "custom") setDateFilter("");
+                  }}
+                >
+                  <SelectTrigger className="h-9 text-xs">
+                    <SelectValue placeholder="Date Filter" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Dates</SelectItem>
+                    <SelectItem value="today">Today</SelectItem>
+                    <SelectItem value="yesterday">Yesterday</SelectItem>
+                    <SelectItem value="this_month">This Month</SelectItem>
+                    <SelectItem value="custom">Specific Date</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Custom Date Input */}
+              {datePreset === "custom" && (
+                <div className="w-38">
+                  <Input
+                    type="date"
+                    value={dateFilter}
+                    onChange={(e) => setDateFilter(e.target.value)}
+                    className="h-9 text-xs"
+                  />
+                </div>
+              )}
+
+              {/* Reset Filters Button */}
+              {(search ||
+                paymentFilter !== "all" ||
+                datePreset !== "all" ||
+                dateFilter) && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    setSearch("");
+                    setPaymentFilter("all");
+                    setDatePreset("all");
+                    setDateFilter("");
+                  }}
+                  className="h-9 text-xs gap-1 text-muted-foreground hover:text-slate-900"
+                >
+                  <RotateCcw size={13} /> Reset
+                </Button>
+              )}
             </div>
 
-            {/* Batch Delete actions */}
+            {/* Right: Batch Actions */}
             {selectedRows.size > 0 && (
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 shrink-0">
                 <span className="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">
                   {selectedRows.size} selected
                 </span>
@@ -423,7 +563,7 @@ const MoneyReceiptManage = () => {
                   No Receipts Found
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
-                  Try adjusting your search criteria or create a new receipt
+                  Try adjusting your search or filter criteria
                 </p>
               </div>
             ) : (
@@ -446,8 +586,8 @@ const MoneyReceiptManage = () => {
                     <TableHead className="font-bold text-slate-900">
                       Care of & Phone
                     </TableHead>
-                    <TableHead className="font-bold text-slate-900">
-                      Destination
+                    <TableHead className="font-bold text-slate-900 min-w-[220px]">
+                      Pickup & Destination
                     </TableHead>
                     <TableHead className="font-bold text-slate-900">
                       Amount
@@ -464,7 +604,7 @@ const MoneyReceiptManage = () => {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {filteredReceipts
+                  {paginatedReceipts
                     .filter((receipt) => receipt._id)
                     .map((receipt) => (
                       <TableRow
@@ -492,9 +632,21 @@ const MoneyReceiptManage = () => {
                           <p className="font-semibold text-slate-900 leading-tight">
                             {receipt.patientName}
                           </p>
-                          <span className="text-xs text-muted-foreground">
-                            {receipt.serviceType || "Patient"}
-                          </span>
+                          <div className="flex flex-wrap items-center gap-1.5 mt-1">
+                            <span className="text-xs ">
+                              {receipt.serviceType || "Patient"}
+                            </span>
+                            {receipt.carType && (
+                              <span className="text-xs bg-blue-100 text-blue-800 px-2  rounded-full">
+                                {receipt.carType}
+                              </span>
+                            )}
+                          </div>
+                          {receipt.carNo && (
+                            <p className="text-[10px] text-muted-foreground mt-0.5 font-mono">
+                              Car: {receipt.carNo}
+                            </p>
+                          )}
                         </TableCell>
 
                         {/* Care of & Phone */}
@@ -507,20 +659,50 @@ const MoneyReceiptManage = () => {
                           </p>
                         </TableCell>
 
-                        {/* Destination */}
-                        <TableCell>
-                          <p
-                            className="text-xs text-slate-700 max-w-[150px] truncate"
-                            title={receipt.destination}
-                          >
-                            {receipt.destination || "—"}
-                          </p>
-                          <p
-                            className="text-[11px] text-muted-foreground truncate max-w-[150px]"
-                            title={receipt.carNo}
-                          >
-                            {receipt.carType}
-                          </p>
+                        {/* Pickup & Destination */}
+                        <TableCell className="min-w-[240px] max-w-[340px]">
+                          <div className="flex flex-col gap-1 text-xs py-0.5">
+                            {/* Pickup */}
+                            <div className="flex items-start gap-1.5">
+                              <span
+                                className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 shrink-0 mt-0.5"
+                                title="Pickup Address"
+                              >
+                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
+                              </span>
+                              <div className="min-w-0">
+                                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-700 mr-1.5">
+                                  Pickup:
+                                </span>
+                                <span className="text-slate-700 font-medium break-words leading-snug">
+                                  {receipt.address || "—"}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Connecting Line */}
+                            <div className="pl-2 -my-0.5">
+                              <div className="w-[1.5px] h-2 bg-slate-200" />
+                            </div>
+
+                            {/* Destination */}
+                            <div className="flex items-start gap-1.5">
+                              <span
+                                className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-rose-100 text-rose-700 shrink-0 mt-0.5"
+                                title="Destination"
+                              >
+                                <span className="w-1.5 h-1.5 rounded-full bg-rose-600" />
+                              </span>
+                              <div className="min-w-0">
+                                <span className="text-[10px] font-bold uppercase tracking-wider text-rose-700 mr-1.5">
+                                  Drop:
+                                </span>
+                                <span className="text-slate-900 font-semibold break-words leading-snug">
+                                  {receipt.destination || "—"}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
                         </TableCell>
 
                         {/* Amount */}
@@ -640,9 +822,110 @@ const MoneyReceiptManage = () => {
             )}
           </div>
 
+          {/* Pagination Controls */}
+          {filteredReceipts.length > 0 && (
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-4 py-3 bg-white rounded-xl border shadow-xs">
+              {/* Left: Entries Info & Rows Per Page */}
+              <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+                <span>
+                  Showing{" "}
+                  <strong className="text-slate-800">
+                    {Math.min(
+                      (currentPage - 1) * itemsPerPage + 1,
+                      filteredReceipts.length
+                    )}
+                  </strong>{" "}
+                  to{" "}
+                  <strong className="text-slate-800">
+                    {Math.min(
+                      currentPage * itemsPerPage,
+                      filteredReceipts.length
+                    )}
+                  </strong>{" "}
+                  of{" "}
+                  <strong className="text-slate-800">
+                    {filteredReceipts.length}
+                  </strong>{" "}
+                  receipts
+                </span>
 
+                <div className="flex items-center gap-1.5 pl-3 border-l border-slate-200">
+                  <span>Per page:</span>
+                  <select
+                    value={itemsPerPage}
+                    onChange={(e) => setItemsPerPage(Number(e.target.value))}
+                    className="border border-slate-200 rounded-md px-2 py-0.5 text-xs bg-white text-slate-800 outline-none"
+                  >
+                    <option value={10}>10</option>
+                    <option value={20}>20</option>
+                    <option value={50}>50</option>
+                    <option value={100}>100</option>
+                  </select>
+                </div>
+              </div>
 
+              {/* Right: Page Navigation */}
+              <div className="flex items-center gap-1">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled={currentPage === 1}
+                  onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+                  className="h-8 px-2.5 text-xs gap-1"
+                >
+                  <ChevronLeft size={14} /> Previous
+                </Button>
 
+                {/* Page Numbers */}
+                <div className="flex items-center gap-1 px-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter((page) => {
+                      return (
+                        page === 1 ||
+                        page === totalPages ||
+                        Math.abs(page - currentPage) <= 1
+                      );
+                    })
+                    .map((page, index, array) => {
+                      const prevPage = array[index - 1];
+                      return (
+                        <React.Fragment key={page}>
+                          {prevPage && page - prevPage > 1 && (
+                            <span className="text-xs text-muted-foreground px-1">
+                              ...
+                            </span>
+                          )}
+                          <Button
+                            variant={currentPage === page ? "default" : "outline"}
+                            size="sm"
+                            onClick={() => setCurrentPage(page)}
+                            className={`h-8 w-8 p-0 text-xs font-semibold ${
+                              currentPage === page
+                                ? "bg-primary text-white"
+                                : "text-slate-700"
+                            }`}
+                          >
+                            {page}
+                          </Button>
+                        </React.Fragment>
+                      );
+                    })}
+                </div>
+
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled={currentPage === totalPages}
+                  onClick={() =>
+                    setCurrentPage((prev) => Math.min(totalPages, prev + 1))
+                  }
+                  className="h-8 px-2.5 text-xs gap-1"
+                >
+                  Next <ChevronRight size={14} />
+                </Button>
+              </div>
+            </div>
+          )}
 
           {/* View PDF Modal (Sheet) */}
           <Sheet open={viewModalOpen} onOpenChange={setViewModalOpen}>
@@ -666,7 +949,10 @@ const MoneyReceiptManage = () => {
                     className="flex items-center gap-1.5 text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 border-indigo-200"
                   >
                     {copyingId === isSelected?._id ? (
-                      <Loader2 size={15} className="animate-spin text-indigo-600" />
+                      <Loader2
+                        size={15}
+                        className="animate-spin text-indigo-600"
+                      />
                     ) : (
                       <Link2 size={15} />
                     )}

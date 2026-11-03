@@ -1,56 +1,61 @@
-
-
 import { BASE_URL } from "@/config/accessEnv";
 import connectDB from "@/config/mongodb";
 import Post from "@/models/Post";
 import { TPostFormData } from "@/types/post.types";
 import { cache } from "react";
-type TQuery = {
+
+export type TPostQuery = {
   limit?: string;
   access?: string;
   search?: string;
   page?: string;
+  status?: string;
+  sort?: string;
 };
-
-
 
 // Create new post
 export const createPost = async (data: TPostFormData) => {
   const res = await fetch(`/api/posts`, {
     method: "POST",
     headers: {
-      "Content-type": "Application/json"
+      "Content-type": "Application/json",
     },
-    credentials: 'include',
-    body: JSON.stringify(data)
-  })
+    credentials: "include",
+    body: JSON.stringify(data),
+  });
   return await res.json();
-}
+};
 
 // Update post
-export const updatePostById = async ({ data, id }: { data: TPostFormData; id: string }) => {
+export const updatePostById = async ({
+  data,
+  id,
+}: {
+  data: TPostFormData;
+  id: string;
+}) => {
   const res = await fetch(`/api/posts/${id}`, {
     method: "PATCH",
     headers: {
-      "Content-type": "Application/json"
+      "Content-type": "Application/json",
     },
-    credentials: 'include',
-    body: JSON.stringify(data)
-  })
+    credentials: "include",
+    body: JSON.stringify(data),
+  });
   return await res.json();
-}
+};
 
 // Delete post by POST ID
 export const deletePostById = async (id: string) => {
   const res = await fetch(`/api/posts/${id}`, {
     method: "DELETE",
     headers: {
-      "Content-type": "Application/json"
+      "Content-type": "Application/json",
     },
-    credentials: 'include',
-  })
+    credentials: "include",
+  });
   return await res.json();
-}
+};
 
 export const getAllMedia = async () => {
   try {
@@ -60,41 +65,49 @@ export const getAllMedia = async () => {
     });
     return await res.json();
   } catch (error) {
-    return error
+    return error;
   }
-}
+};
 
-// Get all posts with query for
+// Get all posts with query
 export const getPosts = async ({
   limit = "20",
   access = "user",
   search = "",
-  page = '1'
-}) => {
-  const query: TQuery = {
+  page = "1",
+  status = "all",
+  sort = "newest",
+}: TPostQuery) => {
+  const query: TPostQuery = {
     limit,
     access,
     search,
     page,
+    status,
+    sort,
   };
 
   const queryString = new URLSearchParams(
-    Object.fromEntries(Object.entries(query).filter(([_, v]) => v != null))
+    Object.fromEntries(
+      Object.entries(query).filter(([_, v]) => v != null && v !== "")
+    )
   ).toString();
   try {
-    const url = access === 'user' ? `/api/posts?${queryString}` : `/api/posts/admin?${queryString}`;
+    const url =
+      access === "user"
+        ? `/api/posts?${queryString}`
+        : `/api/posts/admin?${queryString}`;
     const res = await fetch(url);
-    const data = await res.json()
+    const data = await res.json();
     return data;
   } catch (error) {
-    return error
+    return error;
   }
-}
-
+};
 
 /**
  * Get single post by slug
-*/
+ */
 export const getSinglePostBySlug = async (slug: string) => {
   const origin =
     typeof window !== "undefined" ? window.location.origin : BASE_URL;
@@ -104,22 +117,20 @@ export const getSinglePostBySlug = async (slug: string) => {
   });
   return await res.json();
 };
+
 export const getSinglePostBySlugForDetailsPage = async (slug: string) => {
   const origin =
     typeof window !== "undefined" ? window.location.origin : BASE_URL;
 
   const res = await fetch(`${origin}/api/posts/slug/${slug}`, {
-    next: { revalidate: 60 }
+    next: { revalidate: 60 },
   });
   return await res.json();
 };
 
 export const getPostBySlug = async (slug: string) => {
- 
   const res = await fetch(`${BASE_URL}/api/posts/slug/${slug}`, {
-    next: { revalidate: 60 }
+    next: { revalidate: 60 },
   });
   return await res.json();
 };
-
-
