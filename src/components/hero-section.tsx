@@ -11,7 +11,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-2">
               <Badge className="bg-red-500 hover:bg-red-600 text-white px-4 py-2">
                 Welcome to Shikder Ambulance
               </Badge>
@@ -20,8 +20,7 @@ export function HeroSection() {
                 <span className="text-primary"> 24/7 Available</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
-                <b>Emergency Ambulance Service in Dhaka, Bangladesh.</b> Looking for a fast and reliable Ambulance? You have come to
-                the right place. <b>Shikder Ambulance</b> provides all types of ambulance services from Dhaka and nearby areas to all districts of Bangladesh. We provide safe, reliable, and comfortable patient transportation with a strong commitment to timely service. Need an Emergency Ambulance? <b>Call Now Shikder Ambulance.</b></p>
+                <b>Emergency Ambulance Service in Dhaka, Bangladesh.</b> Looking for a fast and reliable Ambulance? You have come to the right place. <b>Shikder Ambulance</b> provides all types of ambulance from Dhaka and nearby areas to all districts of Bangladesh. Need an Emergency Ambulance? <b>Call Now Shikder Ambulance.</b></p>
             </div>
             <div>
                 <div className="flex items-center space-x-3">
@@ -42,13 +41,13 @@ export function HeroSection() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span className="text-green-700"><b>Online Booking & Money Receipt is Available</b></span>
+                  <span className="text-green-600 font-bold">Online Booking & Money Receipt is Available</span>
                 </div>              
             </div>
 
             {/* Emergency Contact */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href={"tel:01710060020"}>
+              <Link href={"tel:01713-260042"}>
                 <Button
                   size="lg"
                   className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg"
@@ -75,7 +74,7 @@ export function HeroSection() {
                   <Clock className="h-5 w-5 text-primary"/>
                 </div>
                 <div>
-                  <p className="font-semibold">10 Min Response</p>
+                  <p className="font-semibold">20 Min Response</p>
                   <p className="text-sm text-muted-foreground">
                     Average arrival time
                   </p>

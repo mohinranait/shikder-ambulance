@@ -159,12 +159,12 @@ const MoneyReceiptForm = ({ data, close, setIsSelected }: TProps) => {
 
           <div className="grid grid-cols-2 gap-5">
             <div className="space-y-2">
-              <Label htmlFor="careOfName">Care of Name (C/o)</Label>
+              <Label htmlFor="careOfName">Care of Name</Label>
               <Input
                 id="careOfName"
                 name="careOfName"
                 type="text"
-                placeholder="Care of Name (C/o)"
+                placeholder="Care of Name"
                 className="border-slate-200"
                 value={form?.careOfName}
                 onChange={(e) =>
@@ -196,7 +196,7 @@ const MoneyReceiptForm = ({ data, close, setIsSelected }: TProps) => {
 
           <div className="grid grid-cols-2 gap-5">
             <div className="space-y-2">
-              <Label htmlFor="carType">Car type</Label>
+              <Label htmlFor="carType">Ambulance type</Label>
               <Select
                 value={form?.carType}
                 onValueChange={(value) =>
@@ -214,8 +214,8 @@ const MoneyReceiptForm = ({ data, close, setIsSelected }: TProps) => {
                   <SelectItem value="Freezing Ambulance">
                     Freezing Ambulance
                   </SelectItem>
-                  <SelectItem value="Life Support Ambulance">
-                    Life Support Ambulance
+                  <SelectItem value="ICU Ambulance">
+                    ICU Ambulance
                   </SelectItem>
                 </SelectContent>
               </Select>
@@ -261,10 +261,13 @@ const MoneyReceiptForm = ({ data, close, setIsSelected }: TProps) => {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Dhaka Metro Cha: 75-0426">
-                      Dhaka Metro Cha: 75-0426
+                      শিকদার এসি (Dhaka Metro Cha: 75-0426)
                     </SelectItem>
-                    <SelectItem value="Dhaka Metro Sha: 00-0776">
-                      Dhaka Metro Sha: 00-0776
+                    <SelectItem value="Dhaka Metro Sha: 13-0341">
+                      শিকদার ফ্রিজার (Dhaka Metro Sha 13-0341)
+                    </SelectItem>
+                    <SelectItem value="Dhaka Metro Tha: 15-0066">
+                      দাদার ডাবল কেবিন (Dhaka Metro Tha: 15-0066)
                     </SelectItem>
                   </SelectContent>
                 </Select>
@@ -324,7 +327,7 @@ const MoneyReceiptForm = ({ data, close, setIsSelected }: TProps) => {
 
           <div className="grid grid-cols-2 gap-5">
             <div className="space-y-2">
-              <Label htmlFor="totalPrice">Rent</Label>
+              <Label htmlFor="totalPrice">Total Rent</Label>
               <Input
                 id="totalPrice"
                 name="totalPrice"
@@ -341,7 +344,7 @@ const MoneyReceiptForm = ({ data, close, setIsSelected }: TProps) => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="amountInWord">Amount in word</Label>
+              <Label htmlFor="amountInWord">Amount In Word</Label>
               <Input
                 id="amountInWord"
                 name="amountInWord"
@@ -398,7 +401,7 @@ const MoneyReceiptForm = ({ data, close, setIsSelected }: TProps) => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="Patient">Patient</SelectItem>
-                  <SelectItem value="Dead body">Dead Body</SelectItem>
+                  <SelectItem value="Dead Body">Dead Body</SelectItem>
                 </SelectContent>
               </Select>
             </div>

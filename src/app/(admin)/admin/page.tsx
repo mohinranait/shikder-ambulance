@@ -13,7 +13,7 @@ export default function AdminDashboard() {
           <div className="text-2xl text-primary font-bold flex items-center gap-2">
             Dashboard
           </div>
-          <p className="text-gray text-sm">Manage dashboard</p>
+          <p className="text-gray text-sm">Manage Dashboard</p>
         </div>
         <DashboardStats />
       </Main>

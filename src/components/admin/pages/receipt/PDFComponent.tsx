@@ -27,18 +27,18 @@ const PDFComponent = ({ data: form }: Props) => {
         </div>
         <div className=" z-[2]  relative p-10">
           <div className="">
-            <div className="flex justify-between ">
+            <div className="flex justify-between">
               <div>
-                <h1 className="uppercase text-left text-[27px] font-bold  mb-1 text-primary">
+                <h1 className="uppercase text-left text-[28px] font-bold  mb-1 text-primary">
                   Shikder Ambulance Service
                 </h1>
-                <p className=" text-base text-left  font-bold">
+                <p className="text-base text-left font-bold">
                   Address: Eskaton Road, Mogbazar, Dhaka-1217
                 </p>
-                <p className=" text-base text-left font-bold">
-                  Helpline: 01710060020, 01911148584
+                <p className="text-base text-left font-bold">
+                  Helpline: 01713-260042, 01710060020
                 </p>
-                <p className=" text-base text-left italic  font-semibold">
+                <p className="text-base text-left italic font-bold">
                   www.shikderambulance.com
                 </p>
               </div>
@@ -53,7 +53,7 @@ const PDFComponent = ({ data: form }: Props) => {
               </div>
             </div>
 
-            <div className="flex  items-center justify-center mt-2">
+            <div className="flex  items-center justify-center mt-5">
               <p className="px-6  w-[280px] h-[50px] flex items-center justify-center  font-bold text-slate-900 text-3xl">
                 Money Receipt
               </p>
@@ -79,7 +79,7 @@ const PDFComponent = ({ data: form }: Props) => {
             </div>
             <div className="grid grid-cols-2 gap-2">
               <p>
-                <span className="font-semibold">C/o:</span> {form?.careOfName}{" "}
+                <span className="font-semibold">Care of Name:</span> {form?.careOfName}{" "}
               </p>
               <p>
                 <span className="font-semibold">Phone:</span> {form?.phone}{" "}
@@ -119,11 +119,11 @@ const PDFComponent = ({ data: form }: Props) => {
             </div>
             <div className="flex  gap-2">
               <p className="min-w-[250px]">
-                <span className="font-semibold">Rental Price:</span>{" "}
+                <span className="font-semibold">Total Rent:</span>{" "}
                 {form?.totalPrice}
               </p>
               <p>
-                <span className="font-semibold">Amount In Word:</span>{" "}
+                <span className="font-semibold">In Words:</span>{" "}
                 {form?.amountInWord}
               </p>
             </div>
